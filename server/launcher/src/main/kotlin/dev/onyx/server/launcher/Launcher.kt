@@ -7,6 +7,8 @@ import dev.onyx.server.common.get
 import dev.onyx.server.config.ConfigModule
 import dev.onyx.server.config.impl.ServerConfig
 import dev.onyx.server.config.impl.xtea.XteaConfig
+import dev.onyx.server.engine.Engine
+import dev.onyx.server.engine.EngineModule
 import org.koin.core.context.startKoin
 import org.tinylog.kotlin.Logger
 import java.io.File
@@ -15,7 +17,8 @@ object Launcher {
 
     private val DI_MODULES = listOf(
         ConfigModule,
-        CacheModule
+        CacheModule,
+        EngineModule
     )
 
     private fun init() {
@@ -50,7 +53,10 @@ object Launcher {
     private fun launch() {
         this.init()
 
-        Logger.info("Preparing Onyx server...")
+        /*
+         * Start the game engine.
+         */
+        get<Engine>().start()
     }
 
     private fun checkDirs() {
