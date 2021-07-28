@@ -1,20 +1,24 @@
 package dev.onyx.server.engine
 
+import dev.onyx.server.common.inject
+import dev.onyx.server.engine.net.NetworkServer
 import org.tinylog.kotlin.Logger
 
 class Engine {
+
+    private val networkServer: NetworkServer by inject()
 
     private var running = false
 
     fun start() {
         if(running) return
 
-        Logger.info("Starting Onyx game engine...")
+        Logger.info("Preparing game engine.")
 
         /*
-         * Start the game engine components.
+         * Start the network server
          */
-
+        networkServer.start()
 
         running = true
     }
@@ -22,7 +26,7 @@ class Engine {
     fun stop() {
         if(!running) return
 
-        Logger.info("Stopping Onyx game engine...")
+        Logger.info("Stopping game engine...")
 
         /*
          * Shutdown game engine components.

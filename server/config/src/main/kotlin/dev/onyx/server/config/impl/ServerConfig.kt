@@ -28,6 +28,8 @@ class ServerConfig : BaseConfig("data/configs/server.yml", Spec) {
         val devMode get() = config[Spec.devMode]
         val tickRate get() = config[Spec.tickRate]
 
+
+        val network = Network
         object Network {
             val address get() = config[Spec.Network.address]
             val port get() = config[Spec.Network.port]
