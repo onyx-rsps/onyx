@@ -4,3 +4,5 @@ plugins {
 
 rootProject.name = "onyx"
 
+include(":client")
+include(":server")
