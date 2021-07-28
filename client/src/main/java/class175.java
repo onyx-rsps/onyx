@@ -1,135 +1,65 @@
-public class class175 implements class188 {
-   int field2022;
-   int field2023;
-   int field2024;
-   int field2025;
-   int field2026;
-   int field2027;
-   int field2028;
-   int field2029;
-   int field2030;
-   int field2031;
-   int field2032;
-   int field2033;
-   int field2034;
-   int field2035;
+import java.awt.Component;
 
-   public static class377 method3143(int var0) {
-      int var2 = class375.field4155[var0];
-      if (1 == var2) {
-         return class377.field4164;
-      } else if (var2 == 2) {
-         return class377.field4165;
-      } else {
-         return 3 == var2 ? class377.field4160 : null;
-      }
+public class class175 implements class289 {
+   static final class175 field2038;
+   static final class175 field2039;
+   static final class175 field2042;
+   static final class175 field2044;
+   final byte field2041;
+   final int field2037;
+
+   static {
+      field2038 = new class175(1, (byte)0);
+      field2042 = new class175(3, (byte)1);
+      field2044 = new class175(2, (byte)2);
+      field2039 = new class175(0, (byte)3);
    }
 
-   class175() {
+   class175(int var1, byte var2) {
+      this.field2037 = var1;
+      this.field2041 = var2;
    }
 
-   public void method3245(class168 var1) {
-      if (var1.field1953 > this.field2026) {
-         var1.field1953 = this.field2026;
-      }
-
-      if (var1.field1951 < this.field2026) {
-         var1.field1951 = this.field2026;
-      }
-
-      if (var1.field1952 > this.field2033) {
-         var1.field1952 = this.field2033;
-      }
-
-      if (var1.field1957 < this.field2033) {
-         var1.field1957 = this.field2033;
-      }
-
+   public int vmethod6962() {
+      return this.field2041;
    }
 
-   public static int method3139(int var0) {
-      class152 var3 = (class152)class152.field1689.method3880((long)var0);
-      class152 var2;
-      if (null != var3) {
-         var2 = var3;
-      } else {
-         byte[] var4 = class152.field1692.method4412(14, var0);
-         var3 = new class152();
-         if (null != var4) {
-            var3.method2534(new class385(var4));
+   static class175[] method3527() {
+      return new class175[]{field2039, field2044, field2038, field2042};
+   }
+
+   static void method3534(Component var0) {
+      var0.removeMouseListener(class19.field134);
+      var0.removeMouseMotionListener(class19.field134);
+      var0.removeFocusListener(class19.field134);
+      class19.field142 = 0;
+   }
+
+   public static String method3535(class384 var0) {
+      String var2;
+      try {
+         int var3 = var0.method6574();
+         if (var3 > 32767) {
+            var3 = 32767;
          }
 
-         class152.field1689.method3882(var3, (long)var0);
-         var2 = var3;
+         byte[] var4 = new byte[var3];
+         var0.field4181 = (var0.field4181 * -1084587701 + class251.field3116.method4751(var0.payload, var0.field4181 * -1084587701, var4, 0, var3)) * 99;
+         String var5 = class292.method5168(var4, 0, var3);
+         var2 = var5;
+      } catch (Exception var7) {
+         var2 = "Cabbage";
       }
 
-      int var8 = var2.field1690;
-      int var5 = var2.field1695;
-      int var6 = var2.field1688;
-      int var7 = class244.field2917[var6 - var5];
-      return class244.field2911[var8] >> var5 & var7;
+      return var2;
    }
 
-   public boolean method3248(int var1, int var2, int var3) {
-      if (var1 >= this.field2032 && var1 < this.field2032 + this.field2023) {
-         return var2 >= (this.field2028 << 3) + (this.field2029 << 6) && var2 <= 7 + (this.field2029 << 6) + (this.field2030 << 3) && var3 >= (this.field2027 << 6) + (this.field2031 << 3) && var3 <= 7 + (this.field2027 << 6) + (this.field2025 << 3);
+   static final void method3536(class248 var0, int var1, int var2, int var3) {
+      if (var0.field2993 == null) {
+         throw new RuntimeException();
       } else {
-         return false;
-      }
-   }
-
-   public boolean method3246(int var1, int var2) {
-      return var1 >= (this.field2022 << 3) + (this.field2026 << 6) && var1 <= (this.field2026 << 6) + (this.field2034 << 3) + 7 && var2 >= (this.field2033 << 6) + (this.field2024 << 3) && var2 <= 7 + (this.field2035 << 3) + (this.field2033 << 6);
-   }
-
-   public int[] method3247(int var1, int var2, int var3) {
-      if (!this.method3248(var1, var2, var3)) {
-         return null;
-      } else {
-         int[] var5 = new int[]{var2 + (this.field2026 * 64 - this.field2029 * 64) + (this.field2022 * 8 - this.field2028 * 8), this.field2024 * 8 - this.field2031 * 8 + this.field2033 * 64 - this.field2027 * 64 + var3};
-         return var5;
-      }
-   }
-
-   public class245 method3249(int var1, int var2) {
-      if (!this.method3246(var1, var2)) {
-         return null;
-      } else {
-         int var4 = this.field2028 * 8 - this.field2022 * 8 + this.field2029 * 64 - this.field2026 * 64 + var1;
-         int var5 = this.field2027 * 64 - this.field2033 * 64 + var2 + (this.field2031 * 8 - this.field2024 * 8);
-         return new class245(this.field2032, var4, var5);
-      }
-   }
-
-   public void method3256(class385 var1) {
-      this.field2032 = var1.method5948();
-      this.field2023 = var1.method5948();
-      this.field2029 = var1.method6043();
-      this.field2028 = var1.method5948();
-      this.field2030 = var1.method5948();
-      this.field2027 = var1.method6043();
-      this.field2031 = var1.method5948();
-      this.field2025 = var1.method5948();
-      this.field2026 = var1.method6043();
-      this.field2022 = var1.method5948();
-      this.field2034 = var1.method5948();
-      this.field2033 = var1.method6043();
-      this.field2024 = var1.method5948();
-      this.field2035 = var1.method5948();
-      this.method3141();
-   }
-
-   void method3141() {
-   }
-
-   static final void method3140() {
-      if (client.field571 > 0) {
-         class145.method2449();
-      } else {
-         client.field458.method5056();
-         class17.method128(40);
-         client.field645 = client.field453.method1968();
-         client.field453.method1961();
+         var0.field2993[var1] = var2;
+         var0.field3035[var1] = var3;
       }
    }
 }

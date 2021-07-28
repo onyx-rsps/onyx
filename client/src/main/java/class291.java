@@ -1,148 +1,158 @@
-import java.util.HashMap;
+import java.util.Locale;
 
-public class class291 {
-   static int field3679;
+public class class291 implements class289 {
+   public static final class291 field3685;
+   public static final class291 field3690;
+   public static final class291 field3693;
+   static class274 field3692;
+   static int field3694;
+   static final class291 field3681;
+   static final class291 field3683;
+   static final class291 field3684;
+   static final class291 field3686;
+   static final class291[] field3682;
+   final int field3680;
+   final String field3687;
+   final String field3688;
 
    static {
-      new HashMap();
-   }
+      field3693 = new class291("EN", "en", "English", class292.field3715, 0, "GB");
+      field3681 = new class291("DE", "de", "German", class292.field3715, 1, "DE");
+      field3690 = new class291("FR", "fr", "French", class292.field3715, 2, "FR");
+      field3683 = new class291("PT", "pt", "Portuguese", class292.field3715, 3, "BR");
+      field3684 = new class291("NL", "nl", "Dutch", class292.field3700, 4, "NL");
+      field3685 = new class291("ES", "es", "Spanish", class292.field3700, 5, "ES");
+      field3686 = new class291("ES_MX", "es-mx", "Spanish (Latin American)", class292.field3715, 6, "MX");
+      class291[] var0 = method5139();
+      field3682 = new class291[var0.length];
+      class291[] var1 = var0;
 
-   static boolean method4622(class277 var0, int var1, int var2) {
-      byte[] var4 = var0.method4412(var1, var2);
-      if (var4 == null) {
-         return false;
-      } else {
-         class204.method3698(var4);
-         return true;
-      }
-   }
-
-   static final void method4625(class148 var0, int var1, int var2, int var3) {
-      if (client.field545 < 400) {
-         if (null != var0.field1646) {
-            var0 = var0.method2471();
+      for(int var2 = 0; var2 < var1.length; ++var2) {
+         class291 var3 = var1[var2];
+         if (field3682[var3.field3680] != null) {
+            throw new IllegalStateException();
          }
 
-         if (var0 != null) {
-            if (var0.field1649) {
-               if (!var0.field1651 || var1 == client.field510) {
-                  String var5 = var0.field1620;
-                  int var8;
-                  int var9;
-                  if (0 != var0.field1616) {
-                     var8 = var0.field1616;
-                     var9 = class20.field140.field991;
-                     int var10 = var9 - var8;
-                     String var7;
-                     if (var10 < -9) {
-                        var7 = class44.method770(16711680);
-                     } else if (var10 < -6) {
-                        var7 = class44.method770(16723968);
-                     } else if (var10 < -3) {
-                        var7 = class44.method770(16740352);
-                     } else if (var10 < 0) {
-                        var7 = class44.method770(16756736);
-                     } else if (var10 > 9) {
-                        var7 = class44.method770(65280);
-                     } else if (var10 > 6) {
-                        var7 = class44.method770(4259584);
-                     } else if (var10 > 3) {
-                        var7 = class44.method770(8453888);
-                     } else if (var10 > 0) {
-                        var7 = class44.method770(12648192);
-                     } else {
-                        var7 = class44.method770(16776960);
-                     }
+         field3682[var3.field3680] = var3;
+      }
 
-                     var5 = var5 + var7 + " " + class79.field1141 + class270.field3386 + var0.field1616 + class79.field1139;
-                  }
+   }
 
-                  if (var0.field1651 && client.field408) {
-                     class8.method38(class270.field3381, class44.method770(16776960) + var5, 1003, var1, var2, var3);
-                  }
+   class291(String var1, String var2, String var3, class292 var4, int var5, String var6) {
+      this.field3687 = var1;
+      this.field3688 = var2;
+      this.field3680 = var5;
+      if (var6 != null) {
+         new Locale(var2.substring(0, 2), var6);
+      } else {
+         new Locale(var2.substring(0, 2));
+      }
 
-                  if (1 == client.field561) {
-                     class8.method38(class270.field3380, client.field530 + " " + class79.field1143 + " " + class44.method770(16776960) + var5, 7, var1, var2, var3);
-                  } else if (client.field563) {
-                     if ((class208.field2474 & 2) == 2) {
-                        class8.method38(client.field566, client.field466 + " " + class79.field1143 + " " + class44.method770(16776960) + var5, 8, var1, var2, var3);
-                     }
-                  } else {
-                     int var6 = var0.field1651 && client.field408 ? 2000 : 0;
-                     String[] var12 = var0.field1636;
-                     if (var12 != null) {
-                        for(var8 = 4; var8 >= 0; --var8) {
-                           if (var12[var8] != null && !var12[var8].equalsIgnoreCase(class270.field3382)) {
-                              var9 = 0;
-                              if (var8 == 0) {
-                                 var9 = var6 + 9;
-                              }
+   }
 
-                              if (1 == var8) {
-                                 var9 = var6 + 10;
-                              }
+   String method5135() {
+      return this.field3688;
+   }
 
-                              if (var8 == 2) {
-                                 var9 = 11 + var6;
-                              }
+   public int vmethod6962() {
+      return this.field3680;
+   }
 
-                              if (3 == var8) {
-                                 var9 = var6 + 12;
-                              }
+   public String toString() {
+      return this.method5135().toLowerCase(Locale.ENGLISH);
+   }
 
-                              if (4 == var8) {
-                                 var9 = 13 + var6;
-                              }
+   public static class291 method5137(int var0) {
+      return var0 >= 0 && var0 < field3682.length ? field3682[var0] : null;
+   }
 
-                              class8.method38(var12[var8], class44.method770(16776960) + var5, var9, var1, var2, var3);
-                           }
-                        }
-                     }
+   public static void method5149(String[] var0, short[] var1, int var2, int var3) {
+      if (var2 < var3) {
+         int var5 = (var3 + var2) / 2;
+         int var6 = var2;
+         String var7 = var0[var5];
+         var0[var5] = var0[var3];
+         var0[var3] = var7;
+         short var8 = var1[var5];
+         var1[var5] = var1[var3];
+         var1[var3] = var8;
 
-                     if (null != var12) {
-                        for(var8 = 4; var8 >= 0; --var8) {
-                           if (var12[var8] != null && var12[var8].equalsIgnoreCase(class270.field3382)) {
-                              short var11 = 0;
-                              if (class81.field1160 != client.field433) {
-                                 if (client.field433 == class81.field1156 || class81.field1154 == client.field433 && var0.field1616 > class20.field140.field991) {
-                                    var11 = 2000;
-                                 }
-
-                                 var9 = 0;
-                                 if (0 == var8) {
-                                    var9 = var11 + 9;
-                                 }
-
-                                 if (var8 == 1) {
-                                    var9 = var11 + 10;
-                                 }
-
-                                 if (var8 == 2) {
-                                    var9 = 11 + var11;
-                                 }
-
-                                 if (var8 == 3) {
-                                    var9 = 12 + var11;
-                                 }
-
-                                 if (4 == var8) {
-                                    var9 = var11 + 13;
-                                 }
-
-                                 class8.method38(var12[var8], class44.method770(16776960) + var5, var9, var1, var2, var3);
-                              }
-                           }
-                        }
-                     }
-
-                     if (!var0.field1651 || !client.field408) {
-                        class8.method38(class270.field3381, class44.method770(16776960) + var5, 1003, var1, var2, var3);
-                     }
-                  }
-
-               }
+         for(int var9 = var2; var9 < var3; ++var9) {
+            if (var7 == null || var0[var9] != null && var0[var9].compareTo(var7) < (var9 & 1)) {
+               String var10 = var0[var9];
+               var0[var9] = var0[var6];
+               var0[var6] = var10;
+               short var11 = var1[var9];
+               var1[var9] = var1[var6];
+               var1[var6++] = var11;
             }
          }
+
+         var0[var3] = var0[var6];
+         var0[var6] = var7;
+         var1[var3] = var1[var6];
+         var1[var6] = var8;
+         method5149(var0, var1, var2, var6 - 1);
+         method5149(var0, var1, var6 + 1, var3);
       }
+
+   }
+
+   static class291[] method5139() {
+      return new class291[]{field3683, field3690, field3681, field3685, field3693, field3686, field3684};
+   }
+
+   static void method5153(int var0, int var1) {
+      int[] var3 = new int[4];
+      int[] var4 = new int[4];
+      var3[0] = var0;
+      var4[0] = var1;
+      int var5 = 1;
+
+      for(int var6 = 0; var6 < 4; ++var6) {
+         if (class47.field695[var6] != var0) {
+            var3[var5] = class47.field695[var6];
+            var4[var5] = class47.field694[var6];
+            ++var5;
+         }
+      }
+
+      class47.field695 = var3;
+      class47.field694 = var4;
+      class83.method1973(class15.field85, 0, class15.field85.length - 1, class47.field695, class47.field694);
+   }
+
+   static class80[] method5152() {
+      return new class80[]{class80.field1153, class80.field1157, class80.field1155, class80.field1156, class80.field1159};
+   }
+
+   static final void method5155(int var0, int var1, int var2) {
+      int var4;
+      for(var4 = 0; var4 < 8; ++var4) {
+         for(int var5 = 0; var5 < 8; ++var5) {
+            class61.field910[var0][var4 + var1][var5 + var2] = 0;
+         }
+      }
+
+      if (var1 > 0) {
+         for(var4 = 1; var4 < 8; ++var4) {
+            class61.field910[var0][var1][var4 + var2] = class61.field910[var0][var1 - 1][var4 + var2];
+         }
+      }
+
+      if (var2 > 0) {
+         for(var4 = 1; var4 < 8; ++var4) {
+            class61.field910[var0][var4 + var1][var2] = class61.field910[var0][var4 + var1][var2 - 1];
+         }
+      }
+
+      if (var1 > 0 && class61.field910[var0][var1 - 1][var2] != 0) {
+         class61.field910[var0][var1][var2] = class61.field910[var0][var1 - 1][var2];
+      } else if (var2 > 0 && class61.field910[var0][var1][var2 - 1] != 0) {
+         class61.field910[var0][var1][var2] = class61.field910[var0][var1][var2 - 1];
+      } else if (var1 > 0 && var2 > 0 && class61.field910[var0][var1 - 1][var2 - 1] != 0) {
+         class61.field910[var0][var1][var2] = class61.field910[var0][var1 - 1][var2 - 1];
+      }
+
    }
 }

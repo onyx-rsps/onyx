@@ -1,82 +1,147 @@
-public final class class50 extends class354 {
-   static class296 field720;
-   static class398 field736;
-   class156 field733;
-   class30 field725;
-   class30 field727;
-   int field719;
-   int field721;
-   int field722;
-   int field723;
-   int field724;
-   int field726;
-   int field728;
-   int field729;
-   int field731;
-   int field734;
-   int[] field730;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.LinkedHashMap;
+
+public class class50 {
+   static boolean field740;
+   static boolean field752;
+   static class248 field749;
+   static class43[] field748;
+   static int field742;
+   static int field745;
+   static int field747;
+   static int[] field746;
+   static int[] field750;
+   static int[][] field743;
+   static String[] field737;
+   static String[] field741;
+   static ArrayList field754;
+   static Calendar field744;
+   static final double field756;
+   static final String[] field751;
 
    static {
-      field720 = new class296();
+      field750 = new int[5];
+      field743 = new int[5][5000];
+      field746 = new int[1000];
+      field737 = new String[1000];
+      field747 = 0;
+      field748 = new class43[50];
+      field744 = Calendar.getInstance();
+      field751 = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+      field752 = false;
+      field740 = false;
+      field754 = new ArrayList();
+      field742 = 0;
+      field756 = Math.log(2.0D);
    }
 
-   static final class363 method1392(class385 var0, class363 var1) {
-      int var3 = var0.method5948();
-      int var4;
-      if (var1 == null) {
-         var4 = class27.method470(var3);
-         var1 = new class363(var4);
-      }
+   static final void method1511(boolean var0) {
+      if (var0) {
+         client.field447 = class55.field820 ? class99.field1268 : class99.field1270;
+      } else {
+         LinkedHashMap var2 = class37.field307.field1114;
+         String var4 = class55.field808;
+         int var5 = var4.length();
+         int var6 = 0;
 
-      for(var4 = 0; var4 < var3; ++var4) {
-         boolean var5 = var0.method5948() == 1;
-         int var6 = var0.method5952();
-         Object var7;
-         if (var5) {
-            var7 = new class350(var0.method5957());
-         } else {
-            var7 = new class353(var0.method6172());
+         for(int var7 = 0; var7 < var5; ++var7) {
+            var6 = (var6 << 5) - var6 + var4.charAt(var7);
          }
 
-         var1.method5727((class354)var7, (long)var6);
+         client.field447 = var2.containsKey(var6) ? class99.field1276 : class99.field1267;
       }
 
-      return var1;
    }
 
-   class50() {
-   }
+   static final void method1568(int var0, int var1, int var2, int var3, boolean var4) {
+      if (var2 < 1) {
+         var2 = 1;
+      }
 
-   void method1386() {
-      int var2 = this.field734;
-      class156 var3 = this.field733.method2638();
-      if (null != var3) {
-         this.field734 = var3.field1766;
-         this.field719 = var3.field1780 * 128;
-         this.field728 = var3.field1756;
-         this.field729 = var3.field1782;
-         this.field730 = var3.field1781;
+      if (var3 < 1) {
+         var3 = 1;
+      }
+
+      int var6 = var3 - 334;
+      int var7;
+      if (var6 < 0) {
+         var7 = client.field660;
+      } else if (var6 >= 100) {
+         var7 = client.field631;
       } else {
-         this.field734 = -1;
-         this.field719 = 0;
-         this.field728 = 0;
-         this.field729 = 0;
-         this.field730 = null;
+         var7 = (client.field631 - client.field660) * var6 / 100 + client.field660;
       }
 
-      if (var2 != this.field734 && this.field727 != null) {
-         class82.field1163.method336(this.field727);
-         this.field727 = null;
+      int var8 = var3 * var7 * 512 / (var2 * 334);
+      int var9;
+      int var10;
+      short var19;
+      if (var8 < client.field666) {
+         var19 = client.field666;
+         var7 = var19 * var2 * 334 / (var3 * 512);
+         if (var7 > client.field542) {
+            var7 = client.field542;
+            var9 = var3 * var7 * 512 / (var19 * 334);
+            var10 = (var2 - var9) / 2;
+            if (var4) {
+               class393.method6910();
+               class393.method6880(var0, var1, var10, var3, -16777216);
+               class393.method6880(var0 + var2 - var10, var1, var10, var3, -16777216);
+            }
+
+            var0 += var10;
+            var2 -= var10 * 2;
+         }
+      } else if (var8 > client.field667) {
+         var19 = client.field667;
+         var7 = var19 * var2 * 334 / (var3 * 512);
+         if (var7 < client.field472) {
+            var7 = client.field472;
+            var9 = var19 * var2 * 334 / (var7 * 512);
+            var10 = (var3 - var9) / 2;
+            if (var4) {
+               class393.method6910();
+               class393.method6880(var0, var1, var2, var10, -16777216);
+               class393.method6880(var0, var3 + var1 - var10, var2, var10, -16777216);
+            }
+
+            var1 += var10;
+            var3 -= var10 * 2;
+         }
       }
 
+      client.field594 = var3 * var7 / 334;
+      if (var2 != client.field670 || var3 != client.field671) {
+         int[] var18 = new int[9];
+
+         for(var10 = 0; var10 < var18.length; ++var10) {
+            int var11 = var10 * 32 + 15 + 128;
+            int var12 = var11 * 3 + 600;
+            int var14 = class197.field2265[var11];
+            int var16 = var3 - 334;
+            if (var16 < 0) {
+               var16 = 0;
+            } else if (var16 > 100) {
+               var16 = 100;
+            }
+
+            int var17 = (client.field448 - client.field662) * var16 / 100 + client.field662;
+            int var15 = var12 * var17 / 256;
+            var18[var10] = var14 * var15 >> 16;
+         }
+
+         class199.method3936(var18, 500, 800, var2 * 334 / var3, 334);
+      }
+
+      client.field668 = var0;
+      client.field478 = var1;
+      client.field670 = var2;
+      client.field671 = var3;
    }
 
-   public static class249 method1394(int var0, int var1) {
-      class249 var3 = class87.method1995(var0);
-      if (var1 == -1) {
-         return var3;
-      } else {
-         return var3 != null && var3.field3061 != null && var1 < var3.field3061.length ? var3.field3061[var1] : null;
-      }
+   static final void method1567() {
+      client.field604 = client.field592;
+      class82.field1182 = true;
    }
 }

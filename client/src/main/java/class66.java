@@ -1,15 +1,20 @@
-import java.applet.Applet;
+public class class66 extends class353 {
+   boolean field947;
+   int field948;
+   int field949;
 
-public class class66 {
-   public static void method1679(Applet var0, String var1) {
-      class17.field90 = var0;
-      if (null != var1) {
-         class17.field88 = var1;
-      }
-
+   class66() {
+      this.field947 = false;
    }
 
-   public static boolean method1680(int var0) {
-      return var0 >= class258.field3151.field3163 && var0 <= class258.field3154.field3163;
+   public static void method1730(class384 var0, int var1) {
+      if (class130.field1470 != null) {
+         try {
+            class130.field1470.method6378(0L);
+            class130.field1470.method6384(var0.payload, var1, 24);
+         } catch (Exception var4) {
+         }
+      }
+
    }
 }

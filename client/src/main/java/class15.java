@@ -1,16 +1,18 @@
-import java.applet.Applet;
-import netscape.javascript.JSObject;
+import javax.imageio.ImageIO;
 
 public class class15 {
-   public static void method112(Applet var0, String var1) throws Throwable {
-      JSObject.getWindow(var0).eval(var1);
+   static class274 field84;
+   static class47[] field85;
+
+   static {
+      ImageIO.setUseCache(false);
    }
 
-   public static Object method113(Applet var0, String var1) throws Throwable {
-      return JSObject.getWindow(var0).call(var1, (Object[])null);
+   static boolean method162(int var0, int var1) {
+      return var0 != 4 || var1 < 8;
    }
 
-   public static Object method120(Applet var0, String var1, Object[] var2) throws Throwable {
-      return JSObject.getWindow(var0).call(var1, var2);
+   static void method161(boolean var0) {
+      client.field554 = var0;
    }
 }

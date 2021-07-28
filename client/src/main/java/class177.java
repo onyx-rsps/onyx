@@ -1,123 +1,85 @@
-import java.util.LinkedList;
+public final class class177 {
+   static long field2066;
+   int field2062;
+   int field2063;
+   int field2064;
+   int field2065;
+   // $FF: synthetic field
+   final class169 this$0;
 
-public abstract class class177 {
-   boolean field2056;
-   boolean field2060;
-   byte[][][] field2057;
-   byte[][][] field2058;
-   class179[][][][] field2059;
-   int field2047;
-   int field2048;
-   int field2049;
-   int field2051;
-   int field2052;
-   int field2053;
-   int field2054;
-   int field2061;
-   short[][][] field2055;
-   short[][][] field2062;
-
-   class177() {
-      this.field2047 = -1;
-      this.field2054 = -1;
-      new LinkedList();
-      this.field2060 = false;
-      this.field2056 = false;
+   class177(class169 var1) {
+      this.this$0 = var1;
    }
 
-   boolean method3161() {
-      return this.field2060 && this.field2056;
-   }
-
-   void method3151(class277 var1) {
-      if (!this.method3161()) {
-         byte[] var3 = var1.method4412(this.field2047, this.field2054);
-         if (var3 != null) {
-            this.method3156(new class385(var3));
-            this.field2060 = true;
-            this.field2056 = true;
-         }
-
+   public static int method3571(int var0, int var1) {
+      int var3;
+      if (var1 > var0) {
+         var3 = var0;
+         var0 = var1;
+         var1 = var3;
       }
+
+      while(var1 != 0) {
+         var3 = var0 % var1;
+         var0 = var1;
+         var1 = var3;
+      }
+
+      return var0;
    }
 
-   void method3149() {
-      this.field2055 = (short[][][])null;
-      this.field2062 = (short[][][])null;
-      this.field2057 = (byte[][][])null;
-      this.field2058 = (byte[][][])null;
-      this.field2059 = (class179[][][][])null;
-      this.field2060 = false;
-      this.field2056 = false;
+   static void method3573(int var0) {
+      client.field481 = var0;
    }
 
-   void method3175(int var1, int var2, class385 var3) {
-      int var5 = var3.method5948();
-      if (0 != var5) {
-         if (0 != (var5 & 1)) {
-            this.method3154(var1, var2, var3, var5);
+   static boolean method3570(char var0) {
+      for(int var2 = 0; var2 < "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\u00a3$%^&*()-_=+[{]};:'@#~,<.>/?\\| ".length(); ++var2) {
+         if (var0 == "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!\"\u00a3$%^&*()-_=+[{]};:'@#~,<.>/?\\| ".charAt(var2)) {
+            return true;
+         }
+      }
+
+      return false;
+   }
+
+   static int method3572(int var0, class58 var1, boolean var2) {
+      if (var0 == 7100) {
+         ++class50.field745;
+         return 1;
+      } else if (var0 == 7101) {
+         class1.field3 += 2;
+         return 1;
+      } else if (var0 != 7102 && var0 != 7103 && var0 != 7104 && var0 != 7105 && var0 != 7109) {
+         if (var0 == 7106) {
+            ++class50.field745;
+            return 1;
+         } else if (var0 == 7107) {
+            ++class50.field745;
+            return 1;
+         } else if (var0 == 7108) {
+            class50.field746[++class50.field745 - 1] = class292.method5171() ? 1 : 0;
+            return 1;
+         } else if (var0 == 7110) {
+            class50.field746[++class50.field745 - 1] = 0;
+            return 1;
+         } else if (var0 == 7120) {
+            --class50.field745;
+            class50.field746[++class50.field745 - 1] = 0;
+            return 1;
+         } else if (var0 == 7121) {
+            class50.field745 -= 2;
+            class50.field746[++class50.field745 - 1] = -1;
+            return 1;
+         } else if (var0 == 7122) {
+            class50.field745 -= 2;
+            class50.field746[++class50.field745 - 1] = 0;
+            return 1;
          } else {
-            this.method3153(var1, var2, var3, var5);
+            return 2;
          }
-
+      } else {
+         ++class50.field745;
+         return 1;
       }
    }
-
-   void method3154(int var1, int var2, class385 var3, int var4) {
-      boolean var6 = (var4 & 2) != 0;
-      if (var6) {
-         this.field2062[0][var1][var2] = (short)var3.method5948();
-      }
-
-      this.field2055[0][var1][var2] = (short)var3.method5948();
-   }
-
-   void method3153(int var1, int var2, class385 var3, int var4) {
-      int var6 = 1 + ((var4 & 24) >> 3);
-      boolean var7 = 0 != (var4 & 2);
-      boolean var8 = 0 != (var4 & 4);
-      this.field2055[0][var1][var2] = (short)var3.method5948();
-      int var9;
-      int var10;
-      int var12;
-      if (var7) {
-         var9 = var3.method5948();
-
-         for(var10 = 0; var10 < var9; ++var10) {
-            int var11 = var3.method5948();
-            if (var11 != 0) {
-               this.field2062[var10][var1][var2] = (short)var11;
-               var12 = var3.method5948();
-               this.field2057[var10][var1][var2] = (byte)(var12 >> 2);
-               this.field2058[var10][var1][var2] = (byte)(var12 & 3);
-            }
-         }
-      }
-
-      if (var8) {
-         for(var9 = 0; var9 < var6; ++var9) {
-            var10 = var3.method5948();
-            if (var10 != 0) {
-               class179[] var15 = this.field2059[var9][var1][var2] = new class179[var10];
-
-               for(var12 = 0; var12 < var10; ++var12) {
-                  int var13 = var3.method5965();
-                  int var14 = var3.method5948();
-                  var15[var12] = new class179(var13, var14 >> 2, var14 & 3);
-               }
-            }
-         }
-      }
-
-   }
-
-   int method3157() {
-      return this.field2049;
-   }
-
-   int method3155() {
-      return this.field2053;
-   }
-
-   abstract void method3156(class385 var1);
 }

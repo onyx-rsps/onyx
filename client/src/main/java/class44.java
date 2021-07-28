@@ -1,122 +1,111 @@
-public class class44 {
-   static class340 field372;
-   static int field373;
-   static int[] field376;
-   static int[][] field370;
-   class59 field368;
-   int field366;
-   int[] field374;
-   String[] field369;
+public class class44 extends class348 {
+   static class396[] field385;
+   class328 field376;
+   class328 field381;
+   class405 field380;
+   int field377;
+   int field378;
+   int field388;
+   String field379;
+   String field384;
+   String field387;
 
-   class44() {
-      this.field366 = -1;
+   class44(int var1, String var2, String var3, String var4) {
+      this.field381 = class328.field3873;
+      this.field376 = class328.field3873;
+      this.method853(var1, var2, var3, var4);
    }
 
-   static String method770(int var0) {
-      return "<col=" + Integer.toHexString(var0) + ">";
+   void method854() {
+      this.field376 = class12.field79.field712.method5754(this.field380) ? class328.field3871 : class328.field3872;
    }
 
-   static final void method769(class384 var0) {
-      var0.method5892();
-      int var2 = client.field665;
-      class70 var3 = class20.field140 = client.field524[var2] = new class70();
-      var3.field1000 = var2;
-      int var4 = var0.method5893(30);
-      byte var5 = (byte)(var4 >> 28);
-      int var6 = var4 >> 14 & 16383;
-      int var7 = var4 & 16383;
-      var3.field1076[0] = var6 - class281.field3625;
-      var3.field1069 = (var3.field1076[0] << 7) + (var3.method1710() << 6);
-      var3.field1077[0] = var7 - class78.field1134;
-      var3.field1059 = (var3.field1077[0] << 7) + (var3.method1710() << 6);
-      class285.field3652 = var3.field999 = var5;
-      if (class83.field1168[var2] != null) {
-         var3.method1700(class83.field1168[var2]);
-      }
-
-      class83.field1172 = 0;
-      class83.field1178[++class83.field1172 - 1] = var2;
-      class83.field1175[var2] = 0;
-      class83.field1174 = 0;
-
-      for(int var8 = 1; var8 < 2048; ++var8) {
-         if (var8 != var2) {
-            int var9 = var0.method5893(18);
-            int var10 = var9 >> 16;
-            int var11 = var9 >> 8 & 597;
-            int var12 = var9 & 597;
-            class83.field1177[var8] = var12 + (var11 << 14) + (var10 << 28);
-            class83.field1176[var8] = 0;
-            class83.field1179[var8] = -1;
-            class83.field1170[++class83.field1174 - 1] = var8;
-            class83.field1175[var8] = 0;
-         }
-      }
-
-      var0.method5913();
+   void method856() {
+      this.field381 = class12.field79.field711.method5754(this.field380) ? class328.field3871 : class328.field3872;
    }
 
-   public static int method772(CharSequence var0, int var1, boolean var2) {
-      if (var1 >= 2 && var1 <= 36) {
-         boolean var4 = false;
-         boolean var5 = false;
-         int var6 = 0;
-         int var7 = var0.length();
+   void method853(int var1, String var2, String var3, String var4) {
+      this.field377 = class303.method5478();
+      this.field388 = client.field451;
+      this.field378 = var1;
+      this.field379 = var2;
+      this.method860();
+      this.field384 = var3;
+      this.field387 = var4;
+      this.method861();
+      this.method857();
+   }
 
-         for(int var8 = 0; var8 < var7; ++var8) {
-            char var9 = var0.charAt(var8);
-            if (0 == var8) {
-               if ('-' == var9) {
-                  var4 = true;
-                  continue;
-               }
-
-               if ('+' == var9 && var2) {
-                  continue;
-               }
-            }
-
-            int var11;
-            if (var9 >= '0' && var9 <= '9') {
-               var11 = var9 - 48;
-            } else if (var9 >= 'A' && var9 <= 'Z') {
-               var11 = var9 - 55;
-            } else {
-               if (var9 < 'a' || var9 > 'z') {
-                  throw new NumberFormatException();
-               }
-
-               var11 = var9 - 87;
-            }
-
-            if (var11 >= var1) {
-               throw new NumberFormatException();
-            }
-
-            if (var4) {
-               var11 = -var11;
-            }
-
-            int var10 = var11 + var1 * var6;
-            if (var10 / var1 != var6) {
-               throw new NumberFormatException();
-            }
-
-            var6 = var10;
-            var5 = true;
-         }
-
-         if (!var5) {
-            throw new NumberFormatException();
-         } else {
-            return var6;
-         }
+   final void method860() {
+      if (this.field379 != null) {
+         this.field380 = new class405(class52.method1580(this.field379), class51.field760);
       } else {
-         throw new IllegalArgumentException("" + var1);
+         this.field380 = null;
       }
+
    }
 
-   public static void method771() {
-      class141.field1541.method3883();
+   void method861() {
+      this.field381 = class328.field3873;
+   }
+
+   void method857() {
+      this.field376 = class328.field3873;
+   }
+
+   final boolean method877() {
+      if (this.field381 == class328.field3873) {
+         this.method856();
+      }
+
+      return this.field381 == class328.field3871;
+   }
+
+   final boolean method870() {
+      if (this.field376 == class328.field3873) {
+         this.method854();
+      }
+
+      return this.field376 == class328.field3871;
+   }
+
+   static final void method878(class71 var0) {
+      if (var0.field1067 == client.field451 || var0.field1052 == -1 || var0.field1055 != 0 || var0.field1054 + 1 > class47.method1355(var0.field1052).field1864[var0.field1053]) {
+         int var2 = var0.field1067 - var0.field1073;
+         int var3 = client.field451 - var0.field1073;
+         int var4 = var0.field1062 * 128 + var0.field1023 * 64;
+         int var5 = var0.field1064 * 128 + var0.field1023 * 64;
+         int var6 = var0.field1063 * 128 + var0.field1023 * 64;
+         int var7 = var0.field1065 * 128 + var0.field1023 * 64;
+         var0.field1068 = (var6 * var3 + var4 * (var2 - var3)) / var2;
+         var0.field1058 = (var3 * var7 + var5 * (var2 - var3)) / var2;
+      }
+
+      var0.field1078 = 0;
+      var0.field1042 = var0.field1050;
+      var0.field1021 = var0.field1042;
+   }
+
+   static void method879(String var0) {
+      class149.field1660 = var0;
+
+      try {
+         String var2 = class58.field873.getParameter(Integer.toString(18));
+         String var3 = class58.field873.getParameter(Integer.toString(13));
+         String var4 = var2 + "settings=" + var0 + "; version=1; path=/; domain=" + var3;
+         if (var0.length() == 0) {
+            var4 = var4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
+         } else {
+            var4 = var4 + "; Expires=" + class64.method1724(class86.currentTime() + 94608000000L) + "; Max-Age=" + 94608000L;
+         }
+
+         class14.method147(class58.field873, "document.cookie=\"" + var4 + "\"");
+      } catch (Throwable var5) {
+      }
+
+   }
+
+   static boolean method865() {
+      return (client.field426 & 8) != 0;
    }
 }

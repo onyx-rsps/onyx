@@ -1,5 +1,16 @@
-public interface class373 {
-   Object method5840(class385 var1);
+final class class373 implements class372 {
+   class373() {
+   }
 
-   void method5843(Object var1, class385 var2);
+   void method6436(Integer var1, class384 var2) {
+      var2.writeInt(var1);
+   }
+
+   public Object vmethod6468(class384 var1) {
+      return var1.method6784();
+   }
+
+   public void vmethod6466(Object var1, class384 var2) {
+      this.method6436((Integer)var1, var2);
+   }
 }

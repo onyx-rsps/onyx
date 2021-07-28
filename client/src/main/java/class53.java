@@ -1,63 +1,76 @@
-import java.math.BigInteger;
-
 public class class53 {
-   static final BigInteger field773;
-   static final BigInteger field776;
+   static int[] field787;
+   int field785;
+   int field786;
+   int field788;
+   int field790;
+   String field789;
 
-   static {
-      field776 = new BigInteger("80782894952180643741752986186714059433953886149239752893425047584684715842049");
-      field773 = new BigInteger("7237300117305667488707183861728052766358166655052137727439795191253340127955075499635575104901523446809299097934591732635674173519120047404024393881551683");
+   class53() {
    }
 
-   public static void method1538() {
-      class159.field1861.method3883();
-      class159.field1858.method3883();
+   public static void method1587() {
+      class142.field1567.method4309();
    }
 
-   static final int method1539(int var0, int var1) {
-      if (var0 == -1) {
-         return 12345678;
-      } else {
-         var1 = var1 * (var0 & 127) / 128;
-         if (var1 < 2) {
-            var1 = 2;
-         } else if (var1 > 126) {
-            var1 = 126;
-         }
-
-         return var1 + (var0 & '\uff80');
-      }
-   }
-
-   static final void method1540() {
-      for(class52 var1 = (class52)client.field539.method4687(); null != var1; var1 = (class52)client.field539.method4678()) {
-         if (class285.field3652 == var1.field760 && !var1.field767) {
-            if (client.field452 >= var1.field759) {
-               var1.method1531(client.field556);
-               if (var1.field767) {
-                  var1.method5437();
-               } else {
-                  class166.field1925.method3508(var1.field760, var1.field758, var1.field762, var1.field763, 60, var1, 0, -1L, false);
-               }
+   static final void method1586(class248 var0, int var1, int var2) {
+      if (client.field645 == 0 || client.field645 == 3) {
+         if (!client.field543 && (class19.field148 == 1 || !class310.field3776 && class19.field148 == 4)) {
+            class242 var4 = var0.method4690(true);
+            if (var4 == null) {
+               return;
             }
-         } else {
-            var1.method5437();
-         }
-      }
 
+            int var5 = class19.field149 - var1;
+            int var6 = class19.field150 - var2;
+            if (var4.method4616(var5, var6)) {
+               var5 -= var4.field2909 / 2;
+               var6 -= var4.field2905 / 2;
+               int var7 = client.field444 & 2047;
+               int var8 = class197.field2265[var7];
+               int var9 = class197.field2272[var7];
+               int var10 = var8 * var6 + var5 * var9 >> 11;
+               int var11 = var6 * var9 - var8 * var5 >> 11;
+               int var12 = var10 + class19.field139.field1068 >> 7;
+               int var13 = class19.field139.field1058 - var11 >> 7;
+               class228 var14 = class148.method2788(class226.field2585, client.field452.field1204);
+               var14.field2690.writeByte(18);
+               var14.field2690.method6689(var12 + class280.field3624);
+               var14.field2690.method6734(var13 + class77.field1133);
+               var14.field2690.writeByte(class10.field45[82] ? (class10.field45[81] ? 2 : 1) : 0);
+               var14.field2690.writeByte(var5);
+               var14.field2690.writeByte(var6);
+               var14.field2690.method6734(client.field444);
+               var14.field2690.writeByte(57);
+               var14.field2690.writeByte(0);
+               var14.field2690.writeByte(0);
+               var14.field2690.writeByte(89);
+               var14.field2690.method6734(class19.field139.field1068);
+               var14.field2690.method6734(class19.field139.field1058);
+               var14.field2690.writeByte(63);
+               client.field452.method2031(var14);
+               client.field643 = var12;
+               client.field596 = var13;
+            }
+         }
+
+      }
    }
 
-   static String method1535(String var0) {
-      class272[] var2 = class85.method1959();
-
-      for(int var3 = 0; var3 < var2.length; ++var3) {
-         class272 var4 = var2[var3];
-         if (var4.field3543 != -1 && var0.startsWith(class77.method1822(var4.field3543))) {
-            var0 = var0.substring(6 + Integer.toString(var4.field3543).length());
-            break;
+   static int method1588(int var0, class58 var1, boolean var2) {
+      if (var0 == 5630) {
+         client.field570 = 250;
+         return 1;
+      } else if (var0 != 5631 && var0 != 5633) {
+         if (var0 == 5632) {
+            class50.field746[++class50.field745 - 1] = 26;
+            return 1;
+         } else {
+            return 2;
          }
+      } else {
+         class1.field3 -= 2;
+         return 1;
       }
-
-      return var0;
    }
 }

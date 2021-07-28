@@ -1,105 +1,169 @@
-public class class142 extends class349 {
-   public static class277 field1561;
-   static class223 field1556;
-   static class25 field1560;
-   public boolean field1557;
+public class class142 extends class348 {
+   public static class27 field1575;
+   public static class276 field1564;
+   public static int field1563;
+   static class222 field1567;
+   static int field1577;
+   int[] field1562;
+   int[] field1566;
+   short[] field1568;
+   short[] field1569;
+   short[] field1570;
+   short[] field1571;
+   public boolean field1572;
+   public int field1565;
 
    static {
-      field1556 = new class223(64);
+      field1567 = new class222(64);
    }
 
    class142() {
-      this.field1557 = false;
+      this.field1565 = -1;
+      this.field1562 = new int[]{-1, -1, -1, -1, -1};
+      this.field1572 = false;
    }
 
-   void method2400(class385 var1) {
+   void method2690(class384 var1, int var2) {
+      if (var2 == 1) {
+         this.field1565 = var1.method6560();
+      } else {
+         int var4;
+         int var5;
+         if (var2 == 2) {
+            var4 = var1.method6560();
+            this.field1566 = new int[var4];
+
+            for(var5 = 0; var5 < var4; ++var5) {
+               this.field1566[var5] = var1.method6655();
+            }
+         } else if (var2 == 3) {
+            this.field1572 = true;
+         } else if (var2 == 40) {
+            var4 = var1.method6560();
+            this.field1571 = new short[var4];
+            this.field1568 = new short[var4];
+
+            for(var5 = 0; var5 < var4; ++var5) {
+               this.field1571[var5] = (short)var1.method6655();
+               this.field1568[var5] = (short)var1.method6655();
+            }
+         } else if (var2 == 41) {
+            var4 = var1.method6560();
+            this.field1569 = new short[var4];
+            this.field1570 = new short[var4];
+
+            for(var5 = 0; var5 < var4; ++var5) {
+               this.field1569[var5] = (short)var1.method6655();
+               this.field1570[var5] = (short)var1.method6655();
+            }
+         } else if (var2 >= 60 && var2 < 70) {
+            this.field1562[var2 - 60] = var1.method6655();
+         }
+      }
+
+   }
+
+   public boolean method2686() {
+      boolean var2 = true;
+
+      for(int var3 = 0; var3 < 5; ++var3) {
+         if (this.field1562[var3] != -1 && !class75.field1119.method5008(this.field1562[var3], 0)) {
+            var2 = false;
+         }
+      }
+
+      return var2;
+   }
+
+   public class192 method2692() {
+      class192[] var2 = new class192[5];
+      int var3 = 0;
+
+      for(int var4 = 0; var4 < 5; ++var4) {
+         if (this.field1562[var4] != -1) {
+            var2[var3++] = class192.method3720(class75.field1119, this.field1562[var4], 0);
+         }
+      }
+
+      class192 var6 = new class192(var2, var3);
+      int var5;
+      if (this.field1571 != null) {
+         for(var5 = 0; var5 < this.field1571.length; ++var5) {
+            var6.method3766(this.field1571[var5], this.field1568[var5]);
+         }
+      }
+
+      if (this.field1569 != null) {
+         for(var5 = 0; var5 < this.field1569.length; ++var5) {
+            var6.method3733(this.field1569[var5], this.field1570[var5]);
+         }
+      }
+
+      return var6;
+   }
+
+   public boolean method2687() {
+      if (this.field1566 == null) {
+         return true;
+      } else {
+         boolean var2 = true;
+
+         for(int var3 = 0; var3 < this.field1566.length; ++var3) {
+            if (!class75.field1119.method5008(this.field1566[var3], 0)) {
+               var2 = false;
+            }
+         }
+
+         return var2;
+      }
+   }
+
+   void method2688(class384 var1) {
       while(true) {
-         int var3 = var1.method5948();
+         int var3 = var1.method6560();
          if (var3 == 0) {
             return;
          }
 
-         this.method2391(var1, var3);
+         this.method2690(var1, var3);
       }
    }
 
-   static void method2389() {
-      for(class50 var1 = (class50)class50.field720.method4687(); null != var1; var1 = (class50)class50.field720.method4678()) {
-         if (null != var1.field733) {
-            var1.method1386();
+   public class192 method2709() {
+      if (this.field1566 == null) {
+         return null;
+      } else {
+         class192[] var2 = new class192[this.field1566.length];
+
+         for(int var3 = 0; var3 < this.field1566.length; ++var3) {
+            var2[var3] = class192.method3720(class75.field1119, this.field1566[var3], 0);
          }
-      }
 
-   }
+         class192 var5;
+         if (var2.length == 1) {
+            var5 = var2[0];
+         } else {
+            var5 = new class192(var2, var2.length);
+         }
 
-   void method2391(class385 var1, int var2) {
-      if (var2 == 2) {
-         this.field1557 = true;
-      }
-
-   }
-
-   static final void method2399(class249[] var0, int var1) {
-      for(int var3 = 0; var3 < var0.length; ++var3) {
-         class249 var4 = var0[var3];
-         if (var4 != null && var1 == var4.field3001 && (!var4.field2993 || !class151.method2531(var4))) {
-            int var6;
-            if (0 == var4.field2977) {
-               if (!var4.field2993 && class151.method2531(var4) && var4 != class245.field2923) {
-                  continue;
-               }
-
-               method2399(var0, var4.field2958);
-               if (null != var4.field3061) {
-                  method2399(var4.field3061, var4.field2958);
-               }
-
-               class67 var5 = (class67)client.field569.method5746((long)var4.field2958);
-               if (null != var5) {
-                  var6 = var5.field950;
-                  if (class251.method4294(var6)) {
-                     method2399(class249.field3039[var6], -1);
-                  }
-               }
-            }
-
-            if (6 == var4.field2977) {
-               if (-1 != var4.field3005 || var4.field3048 != -1) {
-                  boolean var8 = class144.method2447(var4);
-                  if (var8) {
-                     var6 = var4.field3048;
-                  } else {
-                     var6 = var4.field3005;
-                  }
-
-                  if (var6 != -1) {
-                     class159 var7 = class48.method1312(var6);
-
-                     for(var4.field3090 += client.field556; var4.field3090 > var7.field1865[var4.field3094]; class81.method1869(var4)) {
-                        var4.field3090 -= var7.field1865[var4.field3094];
-                        ++var4.field3094;
-                        if (var4.field3094 >= var7.field1863.length) {
-                           var4.field3094 -= var7.field1862;
-                           if (var4.field3094 < 0 || var4.field3094 >= var7.field1863.length) {
-                              var4.field3094 = 0;
-                           }
-                        }
-                     }
-                  }
-               }
-
-               if (var4.field3014 != 0 && !var4.field2993) {
-                  int var9 = var4.field3014 >> 16;
-                  var6 = var4.field3014 << 16 >> 16;
-                  var9 *= client.field556;
-                  var6 *= client.field556;
-                  var4.field3009 = var9 + var4.field3009 & 2047;
-                  var4.field3010 = var6 + var4.field3010 & 2047;
-                  class81.method1869(var4);
-               }
+         int var4;
+         if (this.field1571 != null) {
+            for(var4 = 0; var4 < this.field1571.length; ++var4) {
+               var5.method3766(this.field1571[var4], this.field1568[var4]);
             }
          }
-      }
 
+         if (this.field1569 != null) {
+            for(var4 = 0; var4 < this.field1569.length; ++var4) {
+               var5.method3733(this.field1569[var4], this.field1570[var4]);
+            }
+         }
+
+         return var5;
+      }
+   }
+
+   public static boolean method2710() {
+      return client.field576 >= 2;
    }
 }

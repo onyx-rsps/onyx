@@ -1,29 +1,41 @@
-public class class96 extends class325 {
-   static class397 field1257;
-   static String[] field1254;
-   final boolean field1256;
+public class class96 extends class324 {
+   public static int field1258;
+   public static int field1263;
+   static int field1265;
+   static int[] field1262;
+   final boolean field1260;
 
    public class96(boolean var1) {
-      this.field1256 = var1;
+      this.field1260 = var1;
    }
 
-   int method2060(class328 var1, class328 var2) {
-      if (var1.field3866 != var2.field3866) {
-         return this.field1256 ? var1.field3866 - var2.field3866 : var2.field3866 - var1.field3866;
+   int method2136(class327 var1, class327 var2) {
+      if (var1.field3864 != 0 && var2.field3864 != 0) {
+         return this.field1260 ? var1.method5711().method7144(var2.method5711()) : var2.method5711().method7144(var1.method5711());
       } else {
-         return this.method5180(var1, var2);
+         return this.method5724(var1, var2);
       }
    }
 
    public int compare(Object var1, Object var2) {
-      return this.method2060((class328)var1, (class328)var2);
+      return this.method2136((class327)var1, (class327)var2);
    }
 
-   static final void method2064(double var0) {
-      class198.method3420(var0);
-      ((class205)class198.field2269).method3705(var0);
-      class157.field1837.method3883();
-      class38.field308.field1118 = var0;
-      class135.method2320();
+   public static class147 method2133(int var0) {
+      class147 var2 = (class147)class147.field1617.method4306((long)var0);
+      if (var2 != null) {
+         return var2;
+      } else {
+         byte[] var3 = class147.field1636.method4920(9, var0);
+         var2 = new class147();
+         var2.field1626 = var0;
+         if (var3 != null) {
+            var2.method2757(new class384(var3));
+         }
+
+         var2.method2754();
+         class147.field1617.method4308(var2, (long)var0);
+         return var2;
+      }
    }
 }

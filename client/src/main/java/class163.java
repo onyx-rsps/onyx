@@ -1,92 +1,33 @@
-public class class163 extends class177 {
-   class163() {
-   }
+public class class163 {
+   static class276 field1913;
+   static int[][][] field1914;
 
-   void method2853(class385 var1) {
-      int var3 = var1.method5948();
-      if (class183.field2096.field2094 != var3) {
-         throw new IllegalStateException("");
-      } else {
-         super.field2061 = var1.method5948();
-         super.field2052 = var1.method5948();
-         super.field2051 = var1.method6043();
-         super.field2048 = var1.method6043();
-         super.field2049 = var1.method6043();
-         super.field2053 = var1.method6043();
-         super.field2047 = var1.method5965();
-         super.field2054 = var1.method5965();
-      }
-   }
+   static class397[] method3158() {
+      class397[] var1 = new class397[class398.field4281];
 
-   void method3156(class385 var1) {
-      super.field2052 = Math.min(super.field2052, 4);
-      super.field2055 = new short[1][64][64];
-      super.field2062 = new short[super.field2052][64][64];
-      super.field2057 = new byte[super.field2052][64][64];
-      super.field2058 = new byte[super.field2052][64][64];
-      super.field2059 = new class179[super.field2052][64][64][];
-      int var3 = var1.method5948();
-      if (class182.field2091.field2089 != var3) {
-         throw new IllegalStateException("");
-      } else {
-         int var4 = var1.method5948();
-         int var5 = var1.method5948();
-         if (var4 == super.field2049 && var5 == super.field2053) {
-            for(int var6 = 0; var6 < 64; ++var6) {
-               for(int var7 = 0; var7 < 64; ++var7) {
-                  this.method3175(var6, var7, var1);
-               }
-            }
+      for(int var2 = 0; var2 < class398.field4281; ++var2) {
+         class397 var3 = var1[var2] = new class397();
+         var3.field4273 = class398.field4280;
+         var3.field4274 = class398.field4285;
+         var3.field4271 = class398.field4283[var2];
+         var3.field4276 = class398.field4284[var2];
+         var3.field4269 = class105.field1307[var2];
+         var3.field4270 = class374.field4155[var2];
+         int var4 = var3.field4270 * var3.field4269;
+         byte[] var5 = class398.field4282[var2];
+         var3.field4279 = new int[var4];
 
-         } else {
-            throw new IllegalStateException("");
+         for(int var6 = 0; var6 < var4; ++var6) {
+            var3.field4279[var6] = class118.field1406[var5[var6] & 255];
          }
       }
-   }
 
-   public boolean equals(Object var1) {
-      if (!(var1 instanceof class163)) {
-         return false;
-      } else {
-         class163 var2 = (class163)var1;
-         return var2.field2049 == super.field2049 && super.field2053 == var2.field2053;
-      }
-   }
-
-   public int hashCode() {
-      return super.field2049 | super.field2053 << 8;
-   }
-
-   static int method2861(int var0, class59 var1, boolean var2) {
-      if (var0 >= 7200 && var0 < 7204) {
-         class51.field746 -= 5;
-         class51.field747[++class51.field746 - 1] = -1;
-         return 1;
-      } else if (var0 == 7204) {
-         class51.field746 -= 6;
-         class51.field747[++class51.field746 - 1] = -1;
-         return 1;
-      } else if (var0 >= 7205 && var0 < 7209) {
-         class51.field747[class51.field746 - 1] = -1;
-         return 1;
-      } else if (var0 == 7209) {
-         class51.field746 -= 2;
-         class51.field747[++class51.field746 - 1] = -1;
-         return 1;
-      } else if (var0 >= 7210 && var0 < 7214) {
-         --class51.field746;
-         return 1;
-      } else if (var0 == 7214) {
-         class51.field746 -= 2;
-         return 1;
-      } else {
-         return 2;
-      }
-   }
-
-   static final void method2852(int var0, int var1) {
-      if (class251.method4294(var0)) {
-         class77.method1831(class249.field3039[var0], var1);
-      }
+      class398.field4283 = null;
+      class398.field4284 = null;
+      class105.field1307 = null;
+      class374.field4155 = null;
+      class118.field1406 = null;
+      class398.field4282 = null;
+      return var1;
    }
 }

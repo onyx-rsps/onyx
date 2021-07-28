@@ -1,32 +1,43 @@
-import java.util.zip.Inflater;
-
 public class class403 {
-   Inflater field4302;
+   int[] field4303;
 
-   public class403() {
-      this(-1, 1000000);
-   }
+   public class403(int[] var1) {
+      int var2;
+      for(var2 = 1; var2 <= (var1.length >> 1) + var1.length; var2 <<= 1) {
+      }
 
-   class403(int var1, int var2) {
-   }
+      this.field4303 = new int[var2 + var2];
 
-   public void method6512(class385 var1, byte[] var2) {
-      if (31 == var1.field4184[var1.field4182] && var1.field4184[1 + var1.field4182] == -117) {
-         if (this.field4302 == null) {
-            this.field4302 = new Inflater(true);
+      int var3;
+      for(var3 = 0; var3 < var2 + var2; ++var3) {
+         this.field4303[var3] = -1;
+      }
+
+      int var4;
+      for(var3 = 0; var3 < var1.length; this.field4303[var4 + var4 + 1] = var3++) {
+         for(var4 = var1[var3] & var2 - 1; this.field4303[var4 + var4 + 1] != -1; var4 = var4 + 1 & var2 - 1) {
          }
 
-         try {
-            this.field4302.setInput(var1.field4184, 10 + var1.field4182, var1.field4184.length - (var1.field4182 + 10 + 8));
-            this.field4302.inflate(var2);
-         } catch (Exception var5) {
-            this.field4302.reset();
-            throw new RuntimeException("");
+         this.field4303[var4 + var4] = var1[var3];
+      }
+
+   }
+
+   public int method7136(int var1) {
+      int var3 = (this.field4303.length >> 1) - 1;
+      int var4 = var1 & var3;
+
+      while(true) {
+         int var5 = this.field4303[var4 + var4 + 1];
+         if (var5 == -1) {
+            return -1;
          }
 
-         this.field4302.reset();
-      } else {
-         throw new RuntimeException("");
+         if (this.field4303[var4 + var4] == var1) {
+            return var5;
+         }
+
+         var4 = var4 + 1 & var3;
       }
    }
 }

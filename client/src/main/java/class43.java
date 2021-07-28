@@ -1,96 +1,122 @@
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-
-public class class43 extends class354 {
-   byte[][][] field362;
-   int field358;
-   int field359;
-   int[] field360;
-   int[] field361;
-   int[] field363;
-   Field[] field364;
-   Method[] field365;
+public class class43 {
+   static class339 field371;
+   static int field372;
+   static int[] field375;
+   static int[][] field369;
+   class58 field367;
+   int field365;
+   int[] field373;
+   String[] field368;
 
    class43() {
+      this.field365 = -1;
    }
 
-   static final void method768(class72 var0) {
-      if (0 != var0.field1075) {
-         if (var0.field1047 != -1) {
-            Object var2 = null;
-            if (var0.field1047 < 32768) {
-               var2 = client.field567[var0.field1047];
-            } else if (var0.field1047 >= 32768) {
-               var2 = client.field524[var0.field1047 - '\u8000'];
+   public static int method852(CharSequence var0, int var1, boolean var2) {
+      if (var1 >= 2 && var1 <= 36) {
+         boolean var4 = false;
+         boolean var5 = false;
+         int var6 = 0;
+         int var7 = var0.length();
+
+         for(int var8 = 0; var8 < var7; ++var8) {
+            char var9 = var0.charAt(var8);
+            if (var8 == 0) {
+               if (var9 == '-') {
+                  var4 = true;
+                  continue;
+               }
+
+               if (var9 == '+') {
+                  continue;
+               }
             }
 
-            if (null != var2) {
-               int var3 = var0.field1069 - ((class72)var2).field1069;
-               int var4 = var0.field1059 - ((class72)var2).field1059;
-               if (var3 != 0 || 0 != var4) {
-                  var0.field1043 = (int)(Math.atan2((double)var3, (double)var4) * 325.949D) & 2047;
-               }
-            } else if (var0.field1032) {
-               var0.field1047 = -1;
-               var0.field1032 = false;
-            }
-         }
-
-         if (-1 != var0.field1049 && (var0.field1027 == 0 || var0.field1079 > 0)) {
-            var0.field1043 = var0.field1049;
-            var0.field1049 = -1;
-         }
-
-         int var5 = var0.field1043 - var0.field1022 & 2047;
-         if (var5 == 0 && var0.field1032) {
-            var0.field1047 = -1;
-            var0.field1032 = false;
-         }
-
-         if (0 != var5) {
-            ++var0.field1073;
-            boolean var6;
-            if (var5 > 1024) {
-               var0.field1022 -= var0.field1075;
-               var6 = true;
-               if (var5 < var0.field1075 || var5 > 2048 - var0.field1075) {
-                  var0.field1022 = var0.field1043;
-                  var6 = false;
-               }
-
-               if (var0.field1050 == var0.field1030 && (var0.field1073 > 25 || var6)) {
-                  if (-1 != var0.field1052) {
-                     var0.field1050 = var0.field1052;
-                  } else {
-                     var0.field1050 = var0.field1029;
-                  }
-               }
+            int var11;
+            if (var9 >= '0' && var9 <= '9') {
+               var11 = var9 - 48;
+            } else if (var9 >= 'A' && var9 <= 'Z') {
+               var11 = var9 - 55;
             } else {
-               var0.field1022 += var0.field1075;
-               var6 = true;
-               if (var5 < var0.field1075 || var5 > 2048 - var0.field1075) {
-                  var0.field1022 = var0.field1043;
-                  var6 = false;
+               if (var9 < 'a' || var9 > 'z') {
+                  throw new NumberFormatException();
                }
 
-               if (var0.field1030 == var0.field1050 && (var0.field1073 > 25 || var6)) {
-                  if (var0.field1020 != -1) {
-                     var0.field1050 = var0.field1020;
-                  } else {
-                     var0.field1050 = var0.field1029;
-                  }
-               }
+               var11 = var9 - 87;
             }
 
-            var0.field1022 &= 2047;
-         } else {
-            var0.field1073 = 0;
+            if (var11 >= var1) {
+               throw new NumberFormatException();
+            }
+
+            if (var4) {
+               var11 = -var11;
+            }
+
+            int var10 = var6 * var1 + var11;
+            if (var10 / var1 != var6) {
+               throw new NumberFormatException();
+            }
+
+            var6 = var10;
+            var5 = true;
          }
 
+         if (!var5) {
+            throw new NumberFormatException();
+         } else {
+            return var6;
+         }
+      } else {
+         throw new IllegalArgumentException("" + var1);
       }
    }
 
-   static boolean method767() {
-      return client.field555;
+   static String method850(int var0) {
+      return "<col=" + Integer.toHexString(var0) + ">";
+   }
+
+   public static void method851() {
+      class140.field1540.method4309();
+   }
+
+   static final void method849(class383 var0) {
+      var0.method6504();
+      int var2 = client.field664;
+      class69 var3 = class19.field139 = client.field523[var2] = new class69();
+      var3.field999 = var2;
+      int var4 = var0.method6505(30);
+      byte var5 = (byte)(var4 >> 28);
+      int var6 = var4 >> 14 & 16383;
+      int var7 = var4 & 16383;
+      var3.field1075[0] = var6 - class280.field3624;
+      var3.field1068 = (var3.field1075[0] << 7) + (var3.method1759() << 6);
+      var3.field1076[0] = var7 - class77.field1133;
+      var3.field1058 = (var3.field1076[0] << 7) + (var3.method1759() << 6);
+      class284.field3651 = var3.field998 = var5;
+      if (class82.field1167[var2] != null) {
+         var3.method1749(class82.field1167[var2]);
+      }
+
+      class82.field1171 = 0;
+      class82.field1177[++class82.field1171 - 1] = var2;
+      class82.field1174[var2] = 0;
+      class82.field1173 = 0;
+
+      for(int var8 = 1; var8 < 2048; ++var8) {
+         if (var8 != var2) {
+            int var9 = var0.method6505(18);
+            int var10 = var9 >> 16;
+            int var11 = var9 >> 8 & 597;
+            int var12 = var9 & 597;
+            class82.field1176[var8] = (var11 << 14) + var12 + (var10 << 28);
+            class82.field1175[var8] = 0;
+            class82.field1178[var8] = -1;
+            class82.field1169[++class82.field1173 - 1] = var8;
+            class82.field1174[var8] = 0;
+         }
+      }
+
+      var0.method6525();
    }
 }

@@ -1,22 +1,20 @@
-import java.io.IOException;
-
 public class class232 {
-   static final void method3924(boolean var0) {
-      class263.method4333();
-      ++client.field453.field1216;
-      if (client.field453.field1216 >= 50 || var0) {
-         client.field453.field1216 = 0;
-         if (!client.field456 && client.field453.method1968() != null) {
-            class229 var2 = class149.method2495(class227.field2574, client.field453.field1205);
-            client.field453.method1963(var2);
+   static int[] field2801;
 
-            try {
-               client.field453.method1962();
-            } catch (IOException var4) {
-               client.field456 = true;
-            }
-         }
+   static {
+      new Object();
+      field2801 = new int[33];
+      field2801[0] = 0;
+      int var0 = 2;
 
+      for(int var1 = 1; var1 < 33; ++var1) {
+         field2801[var1] = var0 - 1;
+         var0 += var0;
       }
+
+   }
+
+   public static void method4380() {
+      class157.field1842.method4309();
    }
 }

@@ -1,3 +1,3 @@
 public class class407 {
-   static class277 field4313;
+   static int field4313;
 }

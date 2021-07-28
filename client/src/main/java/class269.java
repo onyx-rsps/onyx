@@ -1,34 +1,52 @@
+import java.net.URL;
+
 public class class269 {
+   public static String field3298;
+   public static String field3319;
+   public static String field3354;
+   public static String field3467;
+   public static String field3495;
+   static int field3397;
+
    static {
-      int var0 = 0;
-      int var1 = 0;
-      class264[] var2 = class258.method4330();
-
-      for(int var3 = 0; var3 < var2.length; ++var3) {
-         class264 var4 = var2[var3];
-         if (var4.field3191 > var0) {
-            var0 = var4.field3191;
-         }
-
-         if (var4.field3193 > var1) {
-            var1 = var4.field3193;
-         }
-      }
-
+      field3298 = "Please visit the support page for assistance.";
+      field3467 = "Please visit the support page for assistance.";
+      field3495 = "";
+      field3354 = "Page has opened in a new window.";
+      field3319 = "(Please check your popup blocker.)";
    }
 
-   public static void method4358() {
-      while(true) {
-         class273 var1;
-         synchronized(class274.field3558) {
-            var1 = (class273)class274.field3556.method4699();
-         }
+   static boolean method4848() {
+      try {
+         if (class77.field1134 == null) {
+            class77.field1134 = class169.field1991.method2051(new URL(class309.field3775));
+         } else if (class77.field1134.method2067()) {
+            byte[] var1 = class77.field1134.method2066();
+            class384 var2 = new class384(var1);
+            var2.method6784();
+            class47.field691 = var2.method6655();
+            class15.field85 = new class47[class47.field691];
 
-         if (null == var1) {
-            return;
-         }
+            class47 var4;
+            for(int var3 = 0; var3 < class47.field691; var4.field702 = var3++) {
+               var4 = class15.field85[var3] = new class47();
+               var4.field696 = var2.method6655();
+               var4.field699 = var2.method6784();
+               var4.field700 = var2.method6569();
+               var4.field689 = var2.method6569();
+               var4.field701 = var2.method6560();
+               var4.field698 = var2.method6563();
+            }
 
-         var1.field3550.method4382(var1.field3552, (int)var1.field3966, var1.field3551, false);
+            class83.method1973(class15.field85, 0, class15.field85.length - 1, class47.field695, class47.field694);
+            class77.field1134 = null;
+            return true;
+         }
+      } catch (Exception var5) {
+         var5.printStackTrace();
+         class77.field1134 = null;
       }
+
+      return false;
    }
 }

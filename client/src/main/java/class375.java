@@ -1,8 +1,16 @@
-public class class375 {
-   static int[] field4156;
-   static final int[] field4155;
+final class class375 implements class372 {
+   class375() {
+   }
 
-   static {
-      field4155 = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, -1, 1, -1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 3, 3};
+   void method6449(Long var1, class384 var2) {
+      var2.method6548(var1);
+   }
+
+   public Object vmethod6468(class384 var1) {
+      return var1.method6566();
+   }
+
+   public void vmethod6466(Object var1, class384 var2) {
+      this.method6449((Long)var1, var2);
    }
 }

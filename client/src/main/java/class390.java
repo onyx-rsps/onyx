@@ -7,12 +7,12 @@ public class class390 implements Comparator {
       this.field4239 = var1;
    }
 
-   int method6230(class324 var1, class324 var2) {
-      return this.field4239 ? var1.method5158(var2) : var2.method5158(var1);
+   int method6857(class323 var1, class323 var2) {
+      return this.field4239 ? var1.method5711().method7144(var2.method5711()) : var2.method5711().method7144(var1.method5711());
    }
 
    public int compare(Object var1, Object var2) {
-      return this.method6230((class324)var1, (class324)var2);
+      return this.method6857((class323)var1, (class323)var2);
    }
 
    public boolean equals(Object var1) {

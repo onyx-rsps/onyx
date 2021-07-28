@@ -1,39 +1,34 @@
 public class class367 {
-   public static final class367 field4122;
-   public static final class367 field4123;
-   static final class367 field4115;
-   static final class367 field4116;
-   static final class367 field4117;
-   static final class367 field4118;
-   static final class367 field4119;
-   static final class367 field4120;
-   static final class367 field4121;
-   final int field4114;
-   final String field4124;
+   public static class287 field4127;
+   static final char[] field4124;
+   static final char[] field4126;
 
    static {
-      field4123 = new class367(7, 0, "", "");
-      field4115 = new class367(2, 1, "", "");
-      field4116 = new class367(4, 2, "", "");
-      field4117 = new class367(8, 3, "", "");
-      field4118 = new class367(1, 4, "", "");
-      field4119 = new class367(0, 5, "", "");
-      field4121 = new class367(5, 6, "", "");
-      field4120 = new class367(6, 7, "", "");
-      field4122 = new class367(3, -1, "", "", true, new class367[]{field4123, field4115, field4116, field4118, field4117});
+      field4124 = new char[]{' ', '\u00a0', '_', '-', '\u00e0', '\u00e1', '\u00e2', '\u00e4', '\u00e3', '\u00c0', '\u00c1', '\u00c2', '\u00c4', '\u00c3', '\u00e8', '\u00e9', '\u00ea', '\u00eb', '\u00c8', '\u00c9', '\u00ca', '\u00cb', '\u00ed', '\u00ee', '\u00ef', '\u00cd', '\u00ce', '\u00cf', '\u00f2', '\u00f3', '\u00f4', '\u00f6', '\u00f5', '\u00d2', '\u00d3', '\u00d4', '\u00d6', '\u00d5', '\u00f9', '\u00fa', '\u00fb', '\u00fc', '\u00d9', '\u00da', '\u00db', '\u00dc', '\u00e7', '\u00c7', '\u00ff', '\u0178', '\u00f1', '\u00d1', '\u00df'};
+      field4126 = new char[]{'[', ']', '#'};
    }
 
-   class367(int var1, int var2, String var3, String var4) {
-      this.field4114 = var1;
-      this.field4124 = var4;
-   }
+   static void method6346(int var0, int var1, int var2, boolean var3, int var4, boolean var5) {
+      if (var0 < var1) {
+         int var7 = (var0 + var1) / 2;
+         int var8 = var0;
+         class47 var9 = class15.field85[var7];
+         class15.field85[var7] = class15.field85[var1];
+         class15.field85[var1] = var9;
 
-   class367(int var1, int var2, String var3, String var4, boolean var5, class367[] var6) {
-      this.field4114 = var1;
-      this.field4124 = var4;
-   }
+         for(int var10 = var0; var10 < var1; ++var10) {
+            if (class57.method1645(class15.field85[var10], var9, var2, var3, var4, var5) <= 0) {
+               class47 var11 = class15.field85[var10];
+               class15.field85[var10] = class15.field85[var8];
+               class15.field85[var8++] = var11;
+            }
+         }
 
-   public String toString() {
-      return this.field4124;
+         class15.field85[var1] = class15.field85[var8];
+         class15.field85[var8] = var9;
+         method6346(var0, var8 - 1, var2, var3, var4, var5);
+         method6346(var8 + 1, var1, var2, var3, var4, var5);
+      }
+
    }
 }

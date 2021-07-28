@@ -1,16 +1,11 @@
-public class class224 extends class225 {
-   Object field2561;
+public abstract class class224 extends class348 {
+   final int field2561;
 
-   class224(Object var1, int var2) {
-      super(var2);
+   class224(int var1) {
       this.field2561 = var1;
    }
 
-   Object method3891() {
-      return this.field2561;
-   }
+   abstract boolean vmethod4327();
 
-   boolean method3893() {
-      return false;
-   }
+   abstract Object vmethod4325();
 }

@@ -1,169 +1,90 @@
-public final class class62 {
-   static byte[][][] field901;
-   static byte[][][] field910;
-   static byte[][][] field916;
-   static class275 field917;
-   static int field900;
-   static int field902;
-   static int field912;
-   static int field914;
-   static int[] field903;
-   static int[][] field905;
-   static int[][][] field911;
-   static final int[] field904;
-   static final int[] field906;
-   static final int[] field908;
-   static final int[] field909;
-   static final int[] field913;
-   static final int[] field915;
+import java.io.File;
+import java.io.RandomAccessFile;
+import java.security.SecureRandom;
+import java.util.concurrent.Callable;
 
-   public static class265[] method1652() {
-      return new class265[]{class265.field3196, class265.field3197, class265.field3199, class265.field3198};
+public class class62 implements Callable {
+   class62() {
    }
 
-   static {
-      field911 = new int[4][105][105];
-      field901 = new byte[4][104][104];
-      field902 = 99;
-      field908 = new int[]{1, 2, 4, 8};
-      field909 = new int[]{16, 32, 64, 128};
-      field906 = new int[]{1, 0, -1, 0};
-      field913 = new int[]{0, -1, 0, 1};
-      field904 = new int[]{1, -1, -1, 1};
-      field915 = new int[]{-1, -1, 1, 1};
-      field914 = (int)(Math.random() * 17.0D) - 8;
-      field900 = (int)(Math.random() * 33.0D) - 16;
+   public Object call() {
+      SecureRandom var2 = new SecureRandom();
+      var2.nextInt();
+      return var2;
    }
 
-   static final void method1630(class384 var0) {
-      int var2 = 0;
-      var0.method5892();
-
-      byte[] var10000;
-      int var3;
-      int var4;
-      int var5;
-      for(var3 = 0; var3 < class83.field1172; ++var3) {
-         var4 = class83.field1178[var3];
-         if ((class83.field1175[var4] & 1) == 0) {
-            if (var2 > 0) {
-               --var2;
-               var10000 = class83.field1175;
-               var10000[var4] = (byte)(var10000[var4] | 2);
-            } else {
-               var5 = var0.method5893(1);
-               if (0 == var5) {
-                  var2 = class250.method4285(var0);
-                  var10000 = class83.field1175;
-                  var10000[var4] = (byte)(var10000[var4] | 2);
-               } else {
-                  class201.method3690(var0, var4);
-               }
-            }
-         }
-      }
-
-      var0.method5913();
-      if (0 != var2) {
-         throw new RuntimeException();
+   static File method1704(String var0) {
+      if (!class132.field1482) {
+         throw new RuntimeException("");
       } else {
-         var0.method5892();
-
-         for(var3 = 0; var3 < class83.field1172; ++var3) {
-            var4 = class83.field1178[var3];
-            if (0 != (class83.field1175[var4] & 1)) {
-               if (var2 > 0) {
-                  --var2;
-                  var10000 = class83.field1175;
-                  var10000[var4] = (byte)(var10000[var4] | 2);
-               } else {
-                  var5 = var0.method5893(1);
-                  if (var5 == 0) {
-                     var2 = class250.method4285(var0);
-                     var10000 = class83.field1175;
-                     var10000[var4] = (byte)(var10000[var4] | 2);
-                  } else {
-                     class201.method3690(var0, var4);
-                  }
-               }
-            }
-         }
-
-         var0.method5913();
-         if (var2 != 0) {
-            throw new RuntimeException();
+         File var2 = (File)class132.field1483.get(var0);
+         if (var2 != null) {
+            return var2;
          } else {
-            var0.method5892();
+            File var3 = new File(class132.field1481, var0);
+            RandomAccessFile var4 = null;
 
-            for(var3 = 0; var3 < class83.field1174; ++var3) {
-               var4 = class83.field1170[var3];
-               if ((class83.field1175[var4] & 1) != 0) {
-                  if (var2 > 0) {
-                     --var2;
-                     var10000 = class83.field1175;
-                     var10000[var4] = (byte)(var10000[var4] | 2);
-                  } else {
-                     var5 = var0.method5893(1);
-                     if (var5 == 0) {
-                        var2 = class250.method4285(var0);
-                        var10000 = class83.field1175;
-                        var10000[var4] = (byte)(var10000[var4] | 2);
-                     } else if (class103.method2081(var0, var4)) {
-                        var10000 = class83.field1175;
-                        var10000[var4] = (byte)(var10000[var4] | 2);
-                     }
-                  }
-               }
-            }
-
-            var0.method5913();
-            if (var2 != 0) {
-               throw new RuntimeException();
-            } else {
-               var0.method5892();
-
-               for(var3 = 0; var3 < class83.field1174; ++var3) {
-                  var4 = class83.field1170[var3];
-                  if ((class83.field1175[var4] & 1) == 0) {
-                     if (var2 > 0) {
-                        --var2;
-                        var10000 = class83.field1175;
-                        var10000[var4] = (byte)(var10000[var4] | 2);
-                     } else {
-                        var5 = var0.method5893(1);
-                        if (var5 == 0) {
-                           var2 = class250.method4285(var0);
-                           var10000 = class83.field1175;
-                           var10000[var4] = (byte)(var10000[var4] | 2);
-                        } else if (class103.method2081(var0, var4)) {
-                           var10000 = class83.field1175;
-                           var10000[var4] = (byte)(var10000[var4] | 2);
-                        }
-                     }
-                  }
-               }
-
-               var0.method5913();
-               if (0 != var2) {
-                  throw new RuntimeException();
+            try {
+               File var5 = new File(var3.getParent());
+               if (!var5.exists()) {
+                  throw new RuntimeException("");
                } else {
-                  class83.field1172 = 0;
-                  class83.field1174 = 0;
-
-                  for(var3 = 1; var3 < 2048; ++var3) {
-                     var10000 = class83.field1175;
-                     var10000[var3] = (byte)(var10000[var3] >> 1);
-                     class70 var6 = client.field524[var3];
-                     if (null != var6) {
-                        class83.field1178[++class83.field1172 - 1] = var3;
-                     } else {
-                        class83.field1170[++class83.field1174 - 1] = var3;
-                     }
-                  }
-
+                  var4 = new RandomAccessFile(var3, "rw");
+                  int var6 = var4.read();
+                  var4.seek(0L);
+                  var4.write(var6);
+                  var4.seek(0L);
+                  var4.close();
+                  class132.field1483.put(var0, var3);
+                  return var3;
                }
+            } catch (Exception var9) {
+               try {
+                  if (var4 != null) {
+                     var4.close();
+                     var4 = null;
+                  }
+               } catch (Exception var8) {
+               }
+
+               throw new RuntimeException();
             }
          }
       }
+   }
+
+   static void method1708(class384 var0, int var1) {
+      class144.method2733(var0.payload, var1);
+      class66.method1730(var0, var1);
+   }
+
+   static final void method1709(String var0) {
+      if (class68.field971 != null) {
+         class228 var2 = class148.method2788(class226.field2632, client.field452.field1204);
+         var2.field2690.writeByte(class280.method5040(var0));
+         var2.field2690.method6550(var0);
+         client.field452.method2031(var2);
+      }
+   }
+
+   static final int method1703(int var0, int var1, int var2) {
+      if (var2 > 179) {
+         var1 /= 2;
+      }
+
+      if (var2 > 192) {
+         var1 /= 2;
+      }
+
+      if (var2 > 217) {
+         var1 /= 2;
+      }
+
+      if (var2 > 243) {
+         var1 /= 2;
+      }
+
+      int var4 = (var1 / 32 << 7) + (var0 / 4 << 10) + var2 / 2;
+      return var4;
    }
 }

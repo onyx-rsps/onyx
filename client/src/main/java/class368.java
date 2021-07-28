@@ -1,33 +1,87 @@
-public class class368 {
-   public static class288 field4128;
-   static final char[] field4125;
-   static final char[] field4127;
+import java.io.EOFException;
+import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
+import java.io.SyncFailedException;
 
-   static {
-      field4125 = new char[]{' ', '\u00a0', '_', '-', '\u00e0', '\u00e1', '\u00e2', '\u00e4', '\u00e3', '\u00c0', '\u00c1', '\u00c2', '\u00c4', '\u00c3', '\u00e8', '\u00e9', '\u00ea', '\u00eb', '\u00c8', '\u00c9', '\u00ca', '\u00cb', '\u00ed', '\u00ee', '\u00ef', '\u00cd', '\u00ce', '\u00cf', '\u00f2', '\u00f3', '\u00f4', '\u00f6', '\u00f5', '\u00d2', '\u00d3', '\u00d4', '\u00d6', '\u00d5', '\u00f9', '\u00fa', '\u00fb', '\u00fc', '\u00d9', '\u00da', '\u00db', '\u00dc', '\u00e7', '\u00c7', '\u00ff', '\u0178', '\u00f1', '\u00d1', '\u00df'};
-      field4127 = new char[]{'[', ']', '#'};
+public final class class368 {
+   RandomAccessFile field4130;
+   long field4128;
+   final long field4129;
+
+   public class368(File var1, String var2, long var3) throws IOException {
+      if (-1L == var3) {
+         var3 = Long.MAX_VALUE;
+      }
+
+      if (var1.length() > var3) {
+         var1.delete();
+      }
+
+      this.field4130 = new RandomAccessFile(var1, var2);
+      this.field4129 = var3;
+      this.field4128 = 0L;
+      int var5 = this.field4130.read();
+      if (var5 != -1 && !var2.equals("r")) {
+         this.field4130.seek(0L);
+         this.field4130.write(var5);
+      }
+
+      this.field4130.seek(0L);
    }
 
-   static void method5762(int var0, int var1, int var2, boolean var3, int var4, boolean var5) {
-      if (var0 < var1) {
-         int var7 = (var0 + var1) / 2;
-         int var8 = var0;
-         class48 var9 = class16.field86[var7];
-         class16.field86[var7] = class16.field86[var1];
-         class16.field86[var1] = var9;
-
-         for(int var10 = var0; var10 < var1; ++var10) {
-            if (class58.method1598(class16.field86[var10], var9, var2, var3, var4, var5) <= 0) {
-               class48 var11 = class16.field86[var10];
-               class16.field86[var10] = class16.field86[var8];
-               class16.field86[var8++] = var11;
+   public final void method6371(boolean var1) throws IOException {
+      if (this.field4130 != null) {
+         if (var1) {
+            try {
+               this.field4130.getFD().sync();
+            } catch (SyncFailedException var4) {
             }
          }
 
-         class16.field86[var1] = class16.field86[var8];
-         class16.field86[var8] = var9;
-         method5762(var0, var8 - 1, var2, var3, var4, var5);
-         method5762(1 + var8, var1, var2, var3, var4, var5);
+         this.field4130.close();
+         this.field4130 = null;
+      }
+
+   }
+
+   public final long method6357() throws IOException {
+      return this.field4130.length();
+   }
+
+   public final void method6360() throws IOException {
+      this.method6371(false);
+   }
+
+   public final int method6363(byte[] var1, int var2, int var3) throws IOException {
+      int var5 = this.field4130.read(var1, var2, var3);
+      if (var5 > 0) {
+         this.field4128 += (long)var5;
+      }
+
+      return var5;
+   }
+
+   final void method6358(long var1) throws IOException {
+      this.field4130.seek(var1);
+      this.field4128 = var1;
+   }
+
+   public final void method6364(byte[] var1, int var2, int var3) throws IOException {
+      if ((long)var3 + this.field4128 > this.field4129) {
+         this.field4130.seek(this.field4129);
+         this.field4130.write(1);
+         throw new EOFException();
+      } else {
+         this.field4130.write(var1, var2, var3);
+         this.field4128 += (long)var3;
+      }
+   }
+
+   protected void finalize() throws Throwable {
+      if (this.field4130 != null) {
+         System.out.println("");
+         this.method6360();
       }
 
    }

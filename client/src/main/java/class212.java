@@ -1,18 +1,9 @@
-public final class class212 {
-   static class27 field2518;
-   static int field2520;
-   int field2509;
-   int field2510;
-   int field2511;
-   int field2513;
-   int field2517;
-   int field2519;
-   public class201 field2514;
-   public class201 field2515;
-   public long field2516;
+public interface class212 {
+   int vmethod4253(int var1);
 
-   class212() {
-      this.field2516 = 0L;
-      this.field2509 = 0;
-   }
+   int[] vmethod4262(int var1);
+
+   boolean vmethod4252(int var1);
+
+   boolean vmethod4259(int var1);
 }

@@ -1,21 +1,23 @@
-public abstract class class395 {
-   public int field4253;
-   public int field4254;
-   public int[] field4252;
+public class class395 implements class289 {
+   public static final class395 field4254;
+   static int field4259;
+   static final class395 field4255;
+   static final class395 field4256;
+   final int field4258;
+   public final int field4257;
 
-   protected class395() {
+   static {
+      field4254 = new class395(0, 0);
+      field4255 = new class395(1, 1);
+      field4256 = new class395(2, 2);
    }
 
-   public final void method6340() {
-      class394.method6312(this.field4252, this.field4254, this.field4253);
+   class395(int var1, int var2) {
+      this.field4257 = var1;
+      this.field4258 = var2;
    }
 
-   public static void method6339() {
-      class150.field1660.method3883();
-      class150.field1662.method3883();
+   public int vmethod6962() {
+      return this.field4258;
    }
-
-   public abstract void method6332(int var1, int var2, int var3, int var4);
-
-   public abstract void method6333(int var1, int var2);
 }

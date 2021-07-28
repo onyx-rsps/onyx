@@ -1,2 +1,2 @@
-public interface class218 {
+public interface class218 extends Iterable {
 }

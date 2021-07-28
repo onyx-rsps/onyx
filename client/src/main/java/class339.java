@@ -1,24 +1,25 @@
-public class class339 implements class290 {
-   static final class339 field3929;
-   static final class339 field3930;
-   static final class339 field3931;
-   static final class339 field3934;
-   final int field3932;
-   final int field3933;
+public class class339 implements class344 {
+   static byte[][][] field3936;
+   static class274 field3937;
+   static class276 field3934;
+   public final class364 field3935;
 
-   static {
-      field3930 = new class339(0, 1);
-      field3929 = new class339(1, 2);
-      field3934 = new class339(2, 3);
-      field3931 = new class339(3, 10);
+   class339(class365 var1) {
+      this.field3935 = var1;
    }
 
-   class339(int var1, int var2) {
-      this.field3932 = var1;
-      this.field3933 = var2;
+   public class339(class340 var1) {
+      this(new class365(var1));
    }
 
-   public int method4619() {
-      return this.field3933;
+   public int method5966(int var1) {
+      return this.field3935.vmethod6340(var1);
+   }
+
+   static void method5964() {
+      if (client.field481 == 1) {
+         client.field489 = true;
+      }
+
    }
 }

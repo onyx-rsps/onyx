@@ -1,16 +1,8 @@
-final class class374 implements class373 {
-   class374() {
-   }
+public class class374 {
+   static int[] field4155;
+   static final int[] field4154;
 
-   void method5847(Integer var1, class385 var2) {
-      var2.method5934(var1);
-   }
-
-   public Object method5840(class385 var1) {
-      return var1.method6172();
-   }
-
-   public void method5843(Object var1, class385 var2) {
-      this.method5847((Integer)var1, var2);
+   static {
+      field4154 = new int[]{1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, -1, 1, -1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 3, 3};
    }
 }

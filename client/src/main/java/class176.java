@@ -1,65 +1,123 @@
-import java.awt.Component;
+import java.util.LinkedList;
 
-public class class176 implements class290 {
-   static final class176 field2039;
-   static final class176 field2040;
-   static final class176 field2043;
-   static final class176 field2045;
-   final byte field2042;
-   final int field2038;
+public abstract class class176 {
+   boolean field2055;
+   boolean field2059;
+   byte[][][] field2056;
+   byte[][][] field2057;
+   class178[][][][] field2058;
+   int field2046;
+   int field2047;
+   int field2048;
+   int field2050;
+   int field2051;
+   int field2052;
+   int field2053;
+   int field2060;
+   short[][][] field2054;
+   short[][][] field2061;
 
-   static {
-      field2039 = new class176(1, (byte)0);
-      field2043 = new class176(3, (byte)1);
-      field2045 = new class176(2, (byte)2);
-      field2040 = new class176(0, (byte)3);
+   class176() {
+      this.field2046 = -1;
+      this.field2053 = -1;
+      new LinkedList();
+      this.field2059 = false;
+      this.field2055 = false;
    }
 
-   static class176[] method3144() {
-      return new class176[]{field2040, field2045, field2039, field2043};
+   boolean method3549() {
+      return this.field2059 && this.field2055;
    }
 
-   class176(int var1, byte var2) {
-      this.field2038 = var1;
-      this.field2042 = var2;
+   void method3537() {
+      this.field2054 = null;
+      this.field2061 = null;
+      this.field2056 = null;
+      this.field2057 = null;
+      this.field2058 = null;
+      this.field2059 = false;
+      this.field2055 = false;
    }
 
-   public int method4619() {
-      return this.field2042;
-   }
+   void method3541(int var1, int var2, class384 var3, int var4) {
+      int var6 = ((var4 & 24) >> 3) + 1;
+      boolean var7 = (var4 & 2) != 0;
+      boolean var8 = (var4 & 4) != 0;
+      this.field2054[0][var1][var2] = (short)var3.method6560();
+      int var9;
+      int var10;
+      int var12;
+      if (var7) {
+         var9 = var3.method6560();
 
-   public static String method3147(class385 var0) {
-      String var2;
-      try {
-         int var3 = var0.method5962();
-         if (var3 > 32767) {
-            var3 = 32767;
+         for(var10 = 0; var10 < var9; ++var10) {
+            int var11 = var3.method6560();
+            if (var11 != 0) {
+               this.field2061[var10][var1][var2] = (short)var11;
+               var12 = var3.method6560();
+               this.field2056[var10][var1][var2] = (byte)(var12 >> 2);
+               this.field2057[var10][var1][var2] = (byte)(var12 & 3);
+            }
          }
-
-         byte[] var4 = new byte[var3];
-         var0.field4182 += class252.field3117.method4288(var0.field4184, var0.field4182, var4, 0, var3);
-         String var5 = class293.method4653(var4, 0, var3);
-         var2 = var5;
-      } catch (Exception var6) {
-         var2 = "Cabbage";
       }
 
-      return var2;
+      if (var8) {
+         for(var9 = 0; var9 < var6; ++var9) {
+            var10 = var3.method6560();
+            if (var10 != 0) {
+               class178[] var15 = this.field2058[var9][var1][var2] = new class178[var10];
+
+               for(var12 = 0; var12 < var10; ++var12) {
+                  int var13 = var3.method6577();
+                  int var14 = var3.method6560();
+                  var15[var12] = new class178(var13, var14 >> 2, var14 & 3);
+               }
+            }
+         }
+      }
+
    }
 
-   static void method3146(Component var0) {
-      var0.removeMouseListener(class20.field135);
-      var0.removeMouseMotionListener(class20.field135);
-      var0.removeFocusListener(class20.field135);
-      class20.field143 = 0;
+   void method3542(int var1, int var2, class384 var3, int var4) {
+      boolean var6 = (var4 & 2) != 0;
+      if (var6) {
+         this.field2061[0][var1][var2] = (short)var3.method6560();
+      }
+
+      this.field2054[0][var1][var2] = (short)var3.method6560();
    }
 
-   static final void method3148(class249 var0, int var1, int var2, int var3) {
-      if (var0.field2994 == null) {
-         throw new RuntimeException();
-      } else {
-         var0.field2994[var1] = var2;
-         var0.field3036[var1] = var3;
+   void method3539(class276 var1) {
+      if (!this.method3549()) {
+         byte[] var3 = var1.method4920(this.field2046, this.field2053);
+         if (var3 != null) {
+            this.vmethod3544(new class384(var3));
+            this.field2059 = true;
+            this.field2055 = true;
+         }
+
+      }
+   }
+
+   int method3545() {
+      return this.field2048;
+   }
+
+   int method3543() {
+      return this.field2052;
+   }
+
+   abstract void vmethod3544(class384 var1);
+
+   void method3563(int var1, int var2, class384 var3) {
+      int var5 = var3.method6560();
+      if (var5 != 0) {
+         if ((var5 & 1) != 0) {
+            this.method3542(var1, var2, var3, var5);
+         } else {
+            this.method3541(var1, var2, var3, var5);
+         }
+
       }
    }
 }

@@ -1,25 +1,58 @@
 import java.io.IOException;
+import java.net.Socket;
 
-public abstract class class330 {
-   static int field3875;
+public class class330 extends class329 {
+   static class190 field3878;
+   class331 field3877;
+   class332 field3875;
+   Socket field3876;
 
-   protected class330() {
+   public class330(Socket var1, int var2, int var3) throws IOException {
+      this.field3876 = var1;
+      this.field3876.setSoTimeout(30000);
+      this.field3876.setTcpNoDelay(true);
+      this.field3876.setReceiveBufferSize(65536);
+      this.field3876.setSendBufferSize(65536);
+      this.field3877 = new class331(this.field3876.getInputStream(), var2);
+      this.field3875 = new class332(this.field3876.getOutputStream(), var3);
    }
 
-   static void method5287() {
-      class56.field812 = 24;
-      client.method1272(class270.field3462, class270.field3327, class270.field3464);
+   public void vmethod5858() {
+      this.field3875.method5903();
+
+      try {
+         this.field3876.close();
+      } catch (IOException var3) {
+      }
+
+      this.field3877.method5882();
    }
 
-   public abstract void method5279();
+   public boolean vmethod5862(int var1) throws IOException {
+      return this.field3877.method5877(var1);
+   }
 
-   public abstract int method5280() throws IOException;
+   public int vmethod5856(byte[] var1, int var2, int var3) throws IOException {
+      return this.field3877.method5879(var1, var2, var3);
+   }
 
-   public abstract int method5281() throws IOException;
+   public void write(byte[] var1, int var2, int var3) throws IOException {
+      this.field3875.method5916(var1, var2, var3);
+   }
 
-   public abstract int method5282(byte[] var1, int var2, int var3) throws IOException;
+   public int available() throws IOException {
+      return this.field3877.method5897();
+   }
 
-   public abstract void method5283(byte[] var1, int var2, int var3) throws IOException;
+   public int read() throws IOException {
+      return this.field3877.method5875();
+   }
 
-   public abstract boolean method5294(int var1) throws IOException;
+   protected void finalize() {
+      this.vmethod5858();
+   }
+
+   public static void method5869(class276 var0) {
+      class152.field1697 = var0;
+   }
 }

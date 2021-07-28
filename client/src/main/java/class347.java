@@ -1,29 +1,16 @@
 public class class347 {
-   static final int[] field3952;
-   static final int[] field3954;
+   public class347 field3955;
+   public class347 field3956;
 
-   static {
-      field3952 = new int[2048];
-      field3954 = new int[2048];
-      double var0 = 0.0030679615757712823D;
-
-      for(int var2 = 0; var2 < 2048; ++var2) {
-         field3952[var2] = (int)(65536.0D * Math.sin((double)var2 * var0));
-         field3954[var2] = (int)(65536.0D * Math.cos((double)var2 * var0));
-      }
-
+   public class347() {
    }
 
-   static final int method5429(class367 var0) {
-      if (null == var0) {
-         return 12;
-      } else {
-         switch(var0.field4114) {
-         case 0:
-            return 20;
-         default:
-            return 12;
-         }
+   public void method6009() {
+      if (this.field3955 != null) {
+         this.field3955.field3956 = this.field3956;
+         this.field3956.field3955 = this.field3955;
+         this.field3956 = null;
+         this.field3955 = null;
       }
    }
 }

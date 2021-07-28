@@ -1,61 +1,169 @@
-public class class61 {
-   static byte[][][] field895;
-   static class397[] field897;
-   class45[] field898;
-   int field894;
+public final class class61 {
+   static byte[][][] field900;
+   static byte[][][] field909;
+   static byte[][][] field915;
+   static class274 field916;
+   static int field899;
+   static int field901;
+   static int field911;
+   static int field913;
+   static int[] field902;
+   static int[][] field904;
+   static int[][][] field910;
+   static final int[] field903;
+   static final int[] field905;
+   static final int[] field907;
+   static final int[] field908;
+   static final int[] field912;
+   static final int[] field914;
 
-   class61() {
-      this.field898 = new class45[100];
+   static {
+      field910 = new int[4][105][105];
+      field900 = new byte[4][104][104];
+      field901 = 99;
+      field907 = new int[]{1, 2, 4, 8};
+      field908 = new int[]{16, 32, 64, 128};
+      field905 = new int[]{1, 0, -1, 0};
+      field912 = new int[]{0, -1, 0, 1};
+      field903 = new int[]{1, -1, -1, 1};
+      field914 = new int[]{-1, -1, 1, 1};
+      field913 = (int)(Math.random() * 17.0D) - 8;
+      field899 = (int)(Math.random() * 33.0D) - 16;
    }
 
-   class45 method1616(int var1, String var2, String var3, String var4) {
-      class45 var6 = this.field898[99];
+   public static class264[] method1701() {
+      return new class264[]{class264.field3195, class264.field3196, class264.field3198, class264.field3197};
+   }
 
-      for(int var7 = this.field894; var7 > 0; --var7) {
-         if (var7 != 100) {
-            this.field898[var7] = this.field898[var7 - 1];
+   static final void method1679(class383 var0) {
+      int var2 = 0;
+      var0.method6504();
+
+      byte[] var10000;
+      int var3;
+      int var4;
+      int var5;
+      for(var3 = 0; var3 < class82.field1171; ++var3) {
+         var4 = class82.field1177[var3];
+         if ((class82.field1174[var4] & 1) == 0) {
+            if (var2 > 0) {
+               --var2;
+               var10000 = class82.field1174;
+               var10000[var4] = (byte)(var10000[var4] | 2);
+            } else {
+               var5 = var0.method6505(1);
+               if (var5 == 0) {
+                  var2 = class249.method4748(var0);
+                  var10000 = class82.field1174;
+                  var10000[var4] = (byte)(var10000[var4] | 2);
+               } else {
+                  class200.method4094(var0, var4);
+               }
+            }
          }
       }
 
-      if (null == var6) {
-         var6 = new class45(var1, var2, var4, var3);
+      var0.method6525();
+      if (var2 != 0) {
+         throw new RuntimeException();
       } else {
-         var6.method5437();
-         var6.method5435();
-         var6.method773(var1, var2, var4, var3);
-      }
+         var0.method6504();
 
-      this.field898[0] = var6;
-      if (this.field894 < 100) {
-         ++this.field894;
-      }
-
-      return var6;
-   }
-
-   class45 method1613(int var1) {
-      return var1 >= 0 && var1 < this.field894 ? this.field898[var1] : null;
-   }
-
-   int method1611() {
-      return this.field894;
-   }
-
-   public static class398[] method1618(class277 var0, String var1, String var2) {
-      int var4 = var0.method4428(var1);
-      int var5 = var0.method4430(var4, var2);
-      return class72.method1761(var0, var4, var5);
-   }
-
-   static final void method1617() {
-      if (class90.field1232) {
-         if (null != class69.field972) {
-            class69.field972.method5197();
+         for(var3 = 0; var3 < class82.field1171; ++var3) {
+            var4 = class82.field1177[var3];
+            if ((class82.field1174[var4] & 1) != 0) {
+               if (var2 > 0) {
+                  --var2;
+                  var10000 = class82.field1174;
+                  var10000[var4] = (byte)(var10000[var4] | 2);
+               } else {
+                  var5 = var0.method6505(1);
+                  if (var5 == 0) {
+                     var2 = class249.method4748(var0);
+                     var10000 = class82.field1174;
+                     var10000[var4] = (byte)(var10000[var4] | 2);
+                  } else {
+                     class200.method4094(var0, var4);
+                  }
+               }
+            }
          }
 
-         class153.method2549();
-         class90.field1232 = false;
-      }
+         var0.method6525();
+         if (var2 != 0) {
+            throw new RuntimeException();
+         } else {
+            var0.method6504();
 
+            for(var3 = 0; var3 < class82.field1173; ++var3) {
+               var4 = class82.field1169[var3];
+               if ((class82.field1174[var4] & 1) != 0) {
+                  if (var2 > 0) {
+                     --var2;
+                     var10000 = class82.field1174;
+                     var10000[var4] = (byte)(var10000[var4] | 2);
+                  } else {
+                     var5 = var0.method6505(1);
+                     if (var5 == 0) {
+                        var2 = class249.method4748(var0);
+                        var10000 = class82.field1174;
+                        var10000[var4] = (byte)(var10000[var4] | 2);
+                     } else if (class102.method2172(var0, var4)) {
+                        var10000 = class82.field1174;
+                        var10000[var4] = (byte)(var10000[var4] | 2);
+                     }
+                  }
+               }
+            }
+
+            var0.method6525();
+            if (var2 != 0) {
+               throw new RuntimeException();
+            } else {
+               var0.method6504();
+
+               for(var3 = 0; var3 < class82.field1173; ++var3) {
+                  var4 = class82.field1169[var3];
+                  if ((class82.field1174[var4] & 1) == 0) {
+                     if (var2 > 0) {
+                        --var2;
+                        var10000 = class82.field1174;
+                        var10000[var4] = (byte)(var10000[var4] | 2);
+                     } else {
+                        var5 = var0.method6505(1);
+                        if (var5 == 0) {
+                           var2 = class249.method4748(var0);
+                           var10000 = class82.field1174;
+                           var10000[var4] = (byte)(var10000[var4] | 2);
+                        } else if (class102.method2172(var0, var4)) {
+                           var10000 = class82.field1174;
+                           var10000[var4] = (byte)(var10000[var4] | 2);
+                        }
+                     }
+                  }
+               }
+
+               var0.method6525();
+               if (var2 != 0) {
+                  throw new RuntimeException();
+               } else {
+                  class82.field1171 = 0;
+                  class82.field1173 = 0;
+
+                  for(var3 = 1; var3 < 2048; ++var3) {
+                     var10000 = class82.field1174;
+                     var10000[var3] = (byte)(var10000[var3] >> 1);
+                     class69 var6 = client.field523[var3];
+                     if (var6 != null) {
+                        class82.field1177[++class82.field1171 - 1] = var3;
+                     } else {
+                        class82.field1169[++class82.field1173 - 1] = var3;
+                     }
+                  }
+
+               }
+            }
+         }
+      }
    }
 }

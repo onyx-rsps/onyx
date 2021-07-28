@@ -1,147 +1,101 @@
-public class class21 extends class31 {
-   class296 field157;
-   class296 field159;
-   int field156;
-   int field158;
+public class class21 {
+   class39[] field160;
+   int field161;
+   int field162;
 
-   public class21() {
-      this.field159 = new class296();
-      this.field157 = new class296();
-      this.field156 = 0;
-      this.field158 = -1;
-   }
+   class21(class384 var1) {
+      this.field160 = new class39[10];
 
-   public final synchronized void method329(class31 var1) {
-      this.field159.method4673(var1);
-   }
-
-   public final synchronized void method336(class31 var1) {
-      var1.method5437();
-   }
-
-   void method331() {
-      if (this.field156 > 0) {
-         for(class36 var1 = (class36)this.field157.method4687(); var1 != null; var1 = (class36)this.field157.method4678()) {
-            var1.field299 -= this.field156;
+      for(int var2 = 0; var2 < 10; ++var2) {
+         int var3 = var1.method6560();
+         if (var3 != 0) {
+            var1.field4181 -= 99;
+            this.field160[var2] = new class39();
+            this.field160[var2].method826(var1);
          }
-
-         this.field158 -= this.field156;
-         this.field156 = 0;
       }
 
+      this.field162 = var1.method6655();
+      this.field161 = var1.method6655();
    }
 
-   void method330(class354 var1, class36 var2) {
-      while(var1 != this.field157.field3718 && ((class36)var1).field299 <= var2.field299) {
-         var1 = var1.field3965;
+   final byte[] method413() {
+      int var1 = 0;
+
+      int var2;
+      for(var2 = 0; var2 < 10; ++var2) {
+         if (this.field160[var2] != null && this.field160[var2].field343 + this.field160[var2].field339 > var1) {
+            var1 = this.field160[var2].field343 + this.field160[var2].field339;
+         }
       }
 
-      class296.method4674(var2, var1);
-      this.field158 = ((class36)this.field157.field3718.field3965).field299;
-   }
-
-   void method332(class36 var1) {
-      var1.method5437();
-      var1.method710();
-      class354 var2 = this.field157.field3718.field3965;
-      if (var2 == this.field157.field3718) {
-         this.field158 = -1;
+      if (var1 == 0) {
+         return new byte[0];
       } else {
-         this.field158 = ((class36)var2).field299;
-      }
+         var2 = var1 * 22050 / 1000;
+         byte[] var3 = new byte[var2];
 
-   }
+         for(int var4 = 0; var4 < 10; ++var4) {
+            if (this.field160[var4] != null) {
+               int var5 = this.field160[var4].field343 * 22050 / 1000;
+               int var6 = this.field160[var4].field339 * 22050 / 1000;
+               int[] var7 = this.field160[var4].method835(var5, this.field160[var4].field343);
 
-   protected class31 method643() {
-      return (class31)this.field159.method4687();
-   }
+               for(int var8 = 0; var8 < var5; ++var8) {
+                  int var9 = (var7[var8] >> 8) + var3[var8 + var6];
+                  if ((var9 + 128 & -256) != 0) {
+                     var9 = var9 >> 31 ^ 127;
+                  }
 
-   protected class31 method631() {
-      return (class31)this.field159.method4678();
-   }
-
-   protected int method632() {
-      return 0;
-   }
-
-   public final synchronized void method641(int[] var1, int var2, int var3) {
-      do {
-         if (this.field158 < 0) {
-            this.method334(var1, var2, var3);
-            return;
-         }
-
-         if (this.field156 + var3 < this.field158) {
-            this.field156 += var3;
-            this.method334(var1, var2, var3);
-            return;
-         }
-
-         int var4 = this.field158 - this.field156;
-         this.method334(var1, var2, var4);
-         var2 += var4;
-         var3 -= var4;
-         this.field156 += var4;
-         this.method331();
-         class36 var5 = (class36)this.field157.method4687();
-         synchronized(var5) {
-            int var7 = var5.method711(this);
-            if (var7 < 0) {
-               var5.field299 = 0;
-               this.method332(var5);
-            } else {
-               var5.field299 = var7;
-               this.method330(var5.field3965, var5);
+                  var3[var8 + var6] = (byte)var9;
+               }
             }
          }
-      } while(var3 != 0);
 
+         return var3;
+      }
    }
 
-   void method334(int[] var1, int var2, int var3) {
-      for(class31 var4 = (class31)this.field159.method4687(); var4 != null; var4 = (class31)this.field159.method4678()) {
-         var4.method633(var1, var2, var3);
+   public class22 method411() {
+      byte[] var1 = this.method413();
+      return new class22(22050, var1, this.field162 * 22050 / 1000, this.field161 * 22050 / 1000);
+   }
+
+   public final int method421() {
+      int var1 = 9999999;
+
+      int var2;
+      for(var2 = 0; var2 < 10; ++var2) {
+         if (this.field160[var2] != null && this.field160[var2].field339 / 20 < var1) {
+            var1 = this.field160[var2].field339 / 20;
+         }
       }
 
-   }
+      if (this.field162 < this.field161 && this.field162 / 20 < var1) {
+         var1 = this.field162 / 20;
+      }
 
-   public final synchronized void method635(int var1) {
-      do {
-         if (this.field158 < 0) {
-            this.method328(var1);
-            return;
-         }
-
-         if (this.field156 + var1 < this.field158) {
-            this.field156 += var1;
-            this.method328(var1);
-            return;
-         }
-
-         int var2 = this.field158 - this.field156;
-         this.method328(var2);
-         var1 -= var2;
-         this.field156 += var2;
-         this.method331();
-         class36 var3 = (class36)this.field157.method4687();
-         synchronized(var3) {
-            int var5 = var3.method711(this);
-            if (var5 < 0) {
-               var3.field299 = 0;
-               this.method332(var3);
-            } else {
-               var3.field299 = var5;
-               this.method330(var3.field3965, var3);
+      if (var1 != 9999999 && var1 != 0) {
+         for(var2 = 0; var2 < 10; ++var2) {
+            if (this.field160[var2] != null) {
+               class39 var10000 = this.field160[var2];
+               var10000.field339 -= var1 * 20;
             }
          }
-      } while(var1 != 0);
 
+         if (this.field162 < this.field161) {
+            this.field162 -= var1 * 20;
+            this.field161 -= var1 * 20;
+         }
+
+         return var1;
+      } else {
+         return 0;
+      }
    }
 
-   void method328(int var1) {
-      for(class31 var2 = (class31)this.field159.method4687(); var2 != null; var2 = (class31)this.field159.method4678()) {
-         var2.method635(var1);
-      }
-
+   public static class21 method417(class276 var0, int var1, int var2) {
+      byte[] var3 = var0.method4920(var1, var2);
+      return var3 == null ? null : new class21(new class384(var3));
    }
 }

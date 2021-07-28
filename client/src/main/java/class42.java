@@ -1,90 +1,96 @@
-import java.awt.Desktop;
-import java.awt.Desktop.Action;
-import java.net.URI;
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
-public class class42 {
-   public static class298 field356;
-   static class115 field355;
-   static int[] field357;
+public class class42 extends class353 {
+   byte[][][] field361;
+   int field357;
+   int field358;
+   int[] field359;
+   int[] field360;
+   int[] field362;
+   Field[] field363;
+   Method[] field364;
 
-   static {
-      field356 = new class298();
+   class42() {
    }
 
-   static void method766(String var0, boolean var1, String var2, boolean var3) {
-      if (var1) {
-         if (!var3 && Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Action.BROWSE)) {
-            try {
-               Desktop.getDesktop().browse(new URI(var0));
-               return;
-            } catch (Exception var6) {
+   static final void method848(class71 var0) {
+      if (var0.field1074 != 0) {
+         if (var0.field1046 != -1) {
+            Object var2 = null;
+            if (var0.field1046 < 32768) {
+               var2 = client.field566[var0.field1046];
+            } else if (var0.field1046 >= 32768) {
+               var2 = client.field523[var0.field1046 - '\u8000'];
+            }
+
+            if (var2 != null) {
+               int var3 = var0.field1068 - ((class71)var2).field1068;
+               int var4 = var0.field1058 - ((class71)var2).field1058;
+               if (var3 != 0 || var4 != 0) {
+                  var0.field1042 = (int)(Math.atan2((double)var3, (double)var4) * 325.949D) & 2047;
+               }
+            } else if (var0.field1031) {
+               var0.field1046 = -1;
+               var0.field1031 = false;
             }
          }
 
-         if (class17.field88.startsWith("win") && !var3) {
-            class156.method2653(var0, 0, "openjs");
-            return;
+         if (var0.field1048 != -1 && (var0.field1026 == 0 || var0.field1078 > 0)) {
+            var0.field1042 = var0.field1048;
+            var0.field1048 = -1;
          }
 
-         if (class17.field88.startsWith("mac")) {
-            class156.method2653(var0, 1, var2);
-            return;
+         int var5 = var0.field1042 - var0.field1021 & 2047;
+         if (var5 == 0 && var0.field1031) {
+            var0.field1046 = -1;
+            var0.field1031 = false;
          }
 
-         class156.method2653(var0, 2, "openjs");
-      } else {
-         class156.method2653(var0, 3, "openjs");
-      }
+         if (var5 != 0) {
+            ++var0.field1072;
+            boolean var7;
+            if (var5 > 1024) {
+               var0.field1021 -= var0.field1074;
+               var7 = true;
+               if (var5 < var0.field1074 || var5 > 2048 - var0.field1074) {
+                  var0.field1021 = var0.field1042;
+                  var7 = false;
+               }
 
-   }
+               if (var0.field1049 == var0.field1029 && (var0.field1072 > 25 || var7)) {
+                  if (var0.field1051 != -1) {
+                     var0.field1049 = var0.field1051;
+                  } else {
+                     var0.field1049 = var0.field1028;
+                  }
+               }
+            } else {
+               var0.field1021 += var0.field1074;
+               var7 = true;
+               if (var5 < var0.field1074 || var5 > 2048 - var0.field1074) {
+                  var0.field1021 = var0.field1042;
+                  var7 = false;
+               }
 
-   static int method757(int var0) {
-      class61 var2 = (class61)class85.field1196.get(var0);
-      return null == var2 ? 0 : var2.method1611();
-   }
+               if (var0.field1029 == var0.field1049 && (var0.field1072 > 25 || var7)) {
+                  if (var0.field1019 != -1) {
+                     var0.field1049 = var0.field1019;
+                  } else {
+                     var0.field1049 = var0.field1028;
+                  }
+               }
+            }
 
-   static int method756(char var0, class292 var1) {
-      int var3 = var0 << 4;
-      if (Character.isUpperCase(var0) || Character.isTitleCase(var0)) {
-         var0 = Character.toLowerCase(var0);
-         var3 = (var0 << 4) + 1;
-      }
-
-      if (241 == var0 && var1 == class292.field3686) {
-         var3 = 1762;
-      }
-
-      return var3;
-   }
-
-   static void method764(int var0) {
-      if (-1 == var0 && !client.field648) {
-         class60.method1610();
-      } else if (-1 != var0 && var0 != client.field640 && 0 != class38.field308.field1119 && !client.field648) {
-         class92.method2026(2, class109.field1326, var0, 0, class38.field308.field1119, false);
-      }
-
-      client.field640 = var0;
-   }
-
-   static final void method765(int var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
-      if (class251.method4294(var0)) {
-         class88.field1225 = null;
-         class154.method2586(class249.field3039[var0], -1, var1, var2, var3, var4, var5, var6, var7);
-         if (null != class88.field1225) {
-            class154.method2586(class88.field1225, -1412584499, var1, var2, var3, var4, class25.field192, class69.field977, var7);
-            class88.field1225 = null;
-         }
-
-      } else {
-         if (var7 != -1) {
-            client.field617[var7] = true;
+            var0.field1021 &= 2047;
          } else {
-            for(int var9 = 0; var9 < 100; ++var9) {
-               client.field617[var9] = true;
-            }
+            var0.field1072 = 0;
          }
 
       }
+   }
+
+   static boolean method847() {
+      return client.field554;
    }
 }

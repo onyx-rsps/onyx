@@ -29,7 +29,6 @@ class JS5Protocol(session: Session) : Protocol(session) {
                     val group = buf.readUnsignedShort()
                     val request = JS5Request(archive, group)
                     out.add(request)
-                    println("decode: [archive: $archive group: $group]")
                 } else {
                     buf.resetReaderIndex()
                 }
@@ -50,7 +49,7 @@ class JS5Protocol(session: Session) : Protocol(session) {
         out.writeInt(msg.compressedLength)
 
         msg.data.forEach { byte ->
-            if(out.writerIndex() % 512 == 0) {
+            if(out.writerIndex() % BLOCK_SIZE == 0) {
                 out.writeByte(-1)
             }
             out.writeByte(byte.toInt())
@@ -70,8 +69,6 @@ class JS5Protocol(session: Session) : Protocol(session) {
         if(!cached) {
             generateCachedResponses()
         }
-
-        println("archive: ${msg.archive} group: ${msg.group}")
 
         session.writeAndFlush(msg.createResponse())
     }
@@ -135,7 +132,7 @@ class JS5Protocol(session: Session) : Protocol(session) {
             val compressionType = data.readUnsignedByte().toInt()
             val compressedLength = data.readInt()
 
-            val bytes = ByteArray(data.readerIndex() - Byte.SIZE_BYTES - Int.SIZE_BYTES)
+            val bytes = ByteArray(data.writerIndex() - Byte.SIZE_BYTES - Int.SIZE_BYTES)
             data.readBytes(bytes)
 
             return JS5Response(archive, group, compressionType, compressedLength, bytes)

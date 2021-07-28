@@ -1,72 +1,47 @@
-public class class68 extends class354 {
-   boolean field964;
-   class249 field958;
-   class249 field961;
-   int field953;
-   int field956;
-   int field957;
-   int field959;
-   int field960;
-   int field962;
-   int field963;
-   Object[] field955;
-   String field952;
+public class class68 implements Runnable {
+   public static int field970;
+   static class265 field975;
+   static class319 field971;
+   static int field976;
+   boolean field965;
+   int field966;
+   int[] field967;
+   int[] field968;
+   Object field974;
+   long[] field969;
 
-   public class68() {
-      this.field963 = 76;
+   class68() {
+      this.field965 = true;
+      this.field974 = new Object();
+      this.field966 = 0;
+      this.field967 = new int[500];
+      this.field968 = new int[500];
+      this.field969 = new long[500];
    }
 
-   public void method1683(Object[] var1) {
-      this.field955 = var1;
-   }
-
-   public void method1684(int var1) {
-      this.field963 = var1;
-   }
-
-   static void method1692(String[] var0, int[] var1, int var2, int var3) {
-      if (var2 < var3) {
-         int var5 = (var2 + var3) / 2;
-         int var6 = var2;
-         String var7 = var0[var5];
-         var0[var5] = var0[var3];
-         var0[var3] = var7;
-         int var8 = var1[var5];
-         var1[var5] = var1[var3];
-         var1[var3] = var8;
-
-         for(int var9 = var2; var9 < var3; ++var9) {
-            if (var7 == null || null != var0[var9] && var0[var9].compareTo(var7) < (var9 & 1)) {
-               String var10 = var0[var9];
-               var0[var9] = var0[var6];
-               var0[var6] = var10;
-               int var11 = var1[var9];
-               var1[var9] = var1[var6];
-               var1[var6++] = var11;
+   public void run() {
+      for(; this.field965; class209.method4249(50L)) {
+         synchronized(this.field974) {
+            if (this.field966 < 500) {
+               this.field967[this.field966] = class19.field141;
+               this.field968[this.field966] = class19.field144;
+               this.field969[this.field966] = class19.field143;
+               ++this.field966;
             }
          }
-
-         var0[var3] = var0[var6];
-         var0[var6] = var7;
-         var1[var3] = var1[var6];
-         var1[var6] = var8;
-         method1692(var0, var1, var2, var6 - 1);
-         method1692(var0, var1, 1 + var6, var3);
       }
 
    }
 
-   static int method1690() {
-      if (client.field681 != null && client.field682 < client.field681.size()) {
-         int var1 = 0;
-
-         for(int var2 = 0; var2 <= client.field682; ++var2) {
-            var1 += ((class64)client.field681.get(var2)).field927;
-         }
-
-         return var1 * 10000 / client.field683;
+   static int method1743(int var0, class58 var1, boolean var2) {
+      if (var0 == 6900) {
+         class50.field737[++class1.field3 - 1] = "";
+         return 1;
+      } else if (var0 == 6950) {
+         class50.field746[++class50.field745 - 1] = -1;
+         return 1;
       } else {
-         return 10000;
+         return 2;
       }
    }
 }

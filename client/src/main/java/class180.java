@@ -1,20 +1,22 @@
-public final class class180 {
-   static class205 field2077;
-   final int[] field2078;
+import java.awt.Component;
 
-   class180() {
-      this.field2078 = new int[4096];
+public class class180 {
+   public static class239 field2079;
+   class164 field2081;
+   int field2078;
+   int field2084;
+   String field2080;
+
+   class180(String var1, int var2, int var3, class164 var4) {
+      this.field2080 = var1;
+      this.field2078 = var2;
+      this.field2084 = var3;
+      this.field2081 = var4;
    }
 
-   class180(int[] var1) {
-      this.field2078 = var1;
-   }
-
-   public static class271[] method3188() {
-      return new class271[]{class271.field3537, class271.field3534, class271.field3531, class271.field3532};
-   }
-
-   final int method3186(int var1, int var2) {
-      return this.field2078[var1 + var2 * 64];
+   static void method3577(Component var0) {
+      var0.addMouseListener(class19.field134);
+      var0.addMouseMotionListener(class19.field134);
+      var0.addFocusListener(class19.field134);
    }
 }
