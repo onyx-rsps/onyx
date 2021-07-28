@@ -64,6 +64,10 @@ class GameCache {
         return readArchive(archive).readGroup(group).files[file]?.data ?: Unpooled.EMPTY_BUFFER
     }
 
+    fun readFile(archive: Int, group: String, file: Int, xteas: IntArray = XTEA_ZERO_KEY): ByteBuf {
+        return readArchive(archive).readGroup(group, xteas).files.getValue(file).data.retain()
+    }
+
     fun getGroupFiles(archive: Int, group: Int): Map<Int, ByteBuf> {
         return readArchive(archive).readGroup(group).files.mapValues { it.value.data.retain() }
     }

@@ -39,7 +39,7 @@ class Session(val ctx: ChannelHandlerContext) {
         val p = channel.pipeline()
         p.addBefore("handler", "decoder", decoder)
         p.addBefore("decoder", "encoder", encoder)
-        p.addBefore("encoder", "status_response_encoder", statusResponseEncoder)
+        p.addAfter("encoder", "response_encoder", statusResponseEncoder)
 
         /*
          * Set the initial protocol to the Handshake protocol.
