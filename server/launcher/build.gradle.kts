@@ -11,6 +11,7 @@ dependencies {
     implementation(project(":server:common"))
     implementation(project(":server:config"))
     implementation(project(":server:cache"))
+    implementation("ch.qos.logback:logback-classic:_")
 }
 
 tasks.register("run server") {

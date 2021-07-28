@@ -1,5 +1,7 @@
 package dev.onyx.server.launcher
 
+import dev.onyx.server.cache.CacheModule
+import dev.onyx.server.cache.GameCache
 import dev.onyx.server.common.get
 import dev.onyx.server.config.ConfigModule
 import dev.onyx.server.config.impl.ServerConfig
@@ -11,7 +13,8 @@ import java.io.File
 object Launcher {
 
     private val DI_MODULES = listOf(
-        ConfigModule
+        ConfigModule,
+        CacheModule
     )
 
     private fun init() {
@@ -31,6 +34,11 @@ object Launcher {
          * Check configs.
          */
         this.checkConfigs()
+
+        /*
+         * Check game cache files.
+         */
+        this.checkCache()
     }
 
     private fun launch() {
@@ -74,6 +82,11 @@ object Launcher {
          */
         val xteaConfig = get<XteaConfig>()
         xteaConfig.load()
+    }
+
+    private fun checkCache() {
+        val gameCache = get<GameCache>()
+        gameCache.load()
     }
 
     @JvmStatic
