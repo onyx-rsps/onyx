@@ -1,7 +1,9 @@
 package dev.onyx.server.engine.net
 
+import dev.onyx.server.engine.net.handshake.HandshakeProtocol
 import dev.onyx.server.engine.net.pipeline.GameChannelDecoder
 import dev.onyx.server.engine.net.pipeline.GameChannelEncoder
+import dev.onyx.server.engine.net.pipeline.StatusResponseEncoder
 import io.guthix.js5.util.XTEA_ZERO_KEY
 import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandlerContext
@@ -32,15 +34,17 @@ class Session(val ctx: ChannelHandlerContext) {
          */
         val encoder = GameChannelEncoder(this)
         val decoder = GameChannelDecoder(this)
+        val statusResponseEncoder = StatusResponseEncoder()
 
         val p = channel.pipeline()
         p.addBefore("handler", "decoder", decoder)
         p.addBefore("decoder", "encoder", encoder)
+        p.addBefore("encoder", "status_response_encoder", statusResponseEncoder)
 
         /*
          * Set the initial protocol to the Handshake protocol.
          */
-
+        protocol.set(HandshakeProtocol(this))
     }
 
     /**

@@ -1,0 +1,72 @@
+package dev.onyx.server.engine.net.handshake
+
+import dev.onyx.server.config.impl.ServerConfig
+import dev.onyx.server.engine.net.Message
+import dev.onyx.server.engine.net.Protocol
+import dev.onyx.server.engine.net.Session
+import dev.onyx.server.engine.net.StatusResponse
+import io.netty.buffer.ByteBuf
+
+class HandshakeProtocol(session: Session) : Protocol(session) {
+
+    /**
+     * DECODER METHODS
+     */
+
+    override fun decode(buf: ByteBuf, out: MutableList<Any>) {
+        if(!buf.isReadable) return
+
+        /*
+         * Decode either the JS5 or LOGIN handshakes.
+         */
+        when(HandshakeType.fromOpcode(buf.readUnsignedByte().toInt())) {
+            HandshakeType.JS5 -> this.decodeJS5Handshake(buf, out)
+            HandshakeType.LOGIN -> this.decodeLoginHandshake(buf, out)
+        }
+    }
+
+    private fun decodeJS5Handshake(buf: ByteBuf, out: MutableList<Any>) {
+        /*
+         * Verify the client revision matches the servers.
+         */
+        val serverRevision = ServerConfig.revision
+        val revision = buf.readInt()
+
+        if(revision != serverRevision) {
+            session.writeAndClose(StatusResponse.OUT_OF_DATE)
+            return
+        }
+
+        val request = HandshakeRequest(HandshakeType.JS5)
+        session.writeAndFlush(request)
+    }
+
+    private fun decodeLoginHandshake(buf: ByteBuf, out: MutableList<Any>) {
+        println("handshake: login")
+    }
+
+    /**
+     * HANDLER METHODS
+     */
+
+    override fun handle(msg: Message) {
+        if(msg !is HandshakeRequest) return
+
+        when(msg.type) {
+            /*
+             * Handle JS5 Handshake
+             */
+            HandshakeType.JS5 -> {
+                session.writeAndFlush(StatusResponse.SUCCESSFUL)
+            }
+
+            /*
+             * Handle LOGIN Handshake
+             */
+            HandshakeType.LOGIN -> {
+
+            }
+        }
+    }
+
+}
