@@ -2,6 +2,7 @@ package dev.onyx.server.launcher
 
 import dev.onyx.server.cache.CacheModule
 import dev.onyx.server.cache.GameCache
+import dev.onyx.server.common.RSA
 import dev.onyx.server.common.get
 import dev.onyx.server.config.ConfigModule
 import dev.onyx.server.config.impl.ServerConfig
@@ -39,6 +40,11 @@ object Launcher {
          * Check game cache files.
          */
         this.checkCache()
+
+        /*
+         * Check RSA key files.
+         */
+        this.checkRSA()
     }
 
     private fun launch() {
@@ -87,6 +93,10 @@ object Launcher {
     private fun checkCache() {
         val gameCache = get<GameCache>()
         gameCache.load()
+    }
+
+    private fun checkRSA() {
+        RSA.load()
     }
 
     @JvmStatic
