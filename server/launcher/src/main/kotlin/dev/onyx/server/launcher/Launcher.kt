@@ -1,15 +1,18 @@
 package dev.onyx.server.launcher
 
 import dev.onyx.server.common.get
+import dev.onyx.server.config.ConfigModule
 import dev.onyx.server.config.impl.ServerConfig
+import dev.onyx.server.config.impl.xtea.XteaConfig
 import org.koin.core.context.startKoin
-import org.koin.core.module.Module
 import org.tinylog.kotlin.Logger
 import java.io.File
 
 object Launcher {
 
-    private val DI_MODULES = listOf<Module>()
+    private val DI_MODULES = listOf(
+        ConfigModule
+    )
 
     private fun init() {
         Logger.info("Initializing...")
@@ -65,6 +68,12 @@ object Launcher {
          */
         val serverConfig = get<ServerConfig>()
         serverConfig.load()
+
+        /*
+         * Check region XTEA file (xteas.json)
+         */
+        val xteaConfig = get<XteaConfig>()
+        xteaConfig.load()
     }
 
     @JvmStatic

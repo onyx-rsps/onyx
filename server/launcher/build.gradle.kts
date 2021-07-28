@@ -17,3 +17,7 @@ tasks.register("run server") {
     group = "onyx"
     dependsOn(tasks.run)
 }
+
+tasks.named<JavaExec>("run") {
+    workingDir = rootProject.projectDir
+}

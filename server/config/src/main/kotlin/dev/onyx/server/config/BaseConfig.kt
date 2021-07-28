@@ -3,21 +3,24 @@ package dev.onyx.server.config
 import com.uchuhimo.konf.Config
 import com.uchuhimo.konf.ConfigSpec
 import com.uchuhimo.konf.Item
+import com.uchuhimo.konf.source.json.toJson
 import com.uchuhimo.konf.source.yaml
 import com.uchuhimo.konf.source.yaml.toYaml
 import org.tinylog.kotlin.Logger
 import java.io.File
 import java.io.FileNotFoundException
 
-abstract class BaseConfig(filePath: String, private val spec: ConfigSpec) {
+abstract class BaseConfig(filePath: String, private val spec: ConfigSpec = ConfigSpec()) {
 
-    private lateinit var config: Config
+    internal lateinit var config: Config
 
-    private val file = File(filePath)
+    internal val file = File(filePath)
 
     abstract val createIfFileNotFound: Boolean
 
-    fun load() {
+    open val fileFormat: FileFormat = FileFormat.YAML
+
+    open fun load() {
         if(!file.exists()) {
             if(!createIfFileNotFound) {
                 Logger.error("Unable to find config ${this::class.java.simpleName} file at path: ${file.path}.")
@@ -30,11 +33,17 @@ abstract class BaseConfig(filePath: String, private val spec: ConfigSpec) {
             this.save()
         }
 
-        config = Config { addSpec(spec) }.from.yaml.file(file)
+        config = when(fileFormat) {
+            FileFormat.YAML -> Config { addSpec(spec) }.from.yaml.file(file)
+            FileFormat.JSON -> Config { addSpec(spec) }.from.json.file(file)
+        }
     }
 
-    fun save() {
-        config.toYaml.toFile(file)
+    open fun save() {
+        when(fileFormat) {
+            FileFormat.YAML -> config.toYaml.toFile(file)
+            FileFormat.JSON -> config.toJson.toFile(file)
+        }
     }
 
     fun isLoaded(): Boolean = this::config.isInitialized
@@ -50,6 +59,5 @@ abstract class BaseConfig(filePath: String, private val spec: ConfigSpec) {
     operator fun <T> set(key: String, value: T) {
         config[key] = value
     }
-
 
 }
