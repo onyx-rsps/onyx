@@ -25,4 +25,7 @@ allprojects {
         targetCompatibility = JavaVersion.VERSION_11
     }
 
+    tasks.build {
+        group = "onyx"
+    }
 }

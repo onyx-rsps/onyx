@@ -6,8 +6,6 @@ import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridLayout
 import java.net.URL
-import javax.imageio.ImageIO
-import javax.swing.ImageIcon
 import javax.swing.JDialog
 import javax.swing.JFrame
 
