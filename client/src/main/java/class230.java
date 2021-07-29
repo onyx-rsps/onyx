@@ -1,30 +1,234 @@
-public class class230 implements class225 {
-   public static final class230 field2789;
-   public static final class230 field2791;
-   public static final class230 field2792;
-   public static final class230 field2793;
-   static final class230 field2790;
-   static final class230 field2796;
-   static final class230[] field2794;
-   public final int field2795;
+import java.io.File;
+
+public class class230 {
+   public static final class230 field2692;
+   public static final class230 field2693;
+   public static final class230 field2694;
+   public static final class230 field2695;
+   public static final class230 field2696;
+   public static final class230 field2697;
+   public static final class230 field2698;
+   public static final class230 field2699;
+   public static final class230 field2700;
+   public static final class230 field2701;
+   public static final class230 field2702;
+   public static final class230 field2703;
+   public static final class230 field2704;
+   public static final class230 field2705;
+   public static final class230 field2706;
+   public static final class230 field2707;
+   public static final class230 field2708;
+   public static final class230 field2709;
+   public static final class230 field2710;
+   public static final class230 field2711;
+   public static final class230 field2712;
+   public static final class230 field2713;
+   public static final class230 field2714;
+   public static final class230 field2715;
+   public static final class230 field2716;
+   public static final class230 field2717;
+   public static final class230 field2718;
+   public static final class230 field2719;
+   public static final class230 field2720;
+   public static final class230 field2721;
+   public static final class230 field2722;
+   public static final class230 field2723;
+   public static final class230 field2724;
+   public static final class230 field2725;
+   public static final class230 field2726;
+   public static final class230 field2727;
+   public static final class230 field2728;
+   public static final class230 field2729;
+   public static final class230 field2730;
+   public static final class230 field2731;
+   public static final class230 field2732;
+   public static final class230 field2733;
+   public static final class230 field2734;
+   public static final class230 field2735;
+   public static final class230 field2736;
+   public static final class230 field2737;
+   public static final class230 field2738;
+   public static final class230 field2739;
+   public static final class230 field2741;
+   public static final class230 field2742;
+   public static final class230 field2743;
+   public static final class230 field2744;
+   public static final class230 field2745;
+   public static final class230 field2746;
+   public static final class230 field2747;
+   public static final class230 field2748;
+   public static final class230 field2749;
+   public static final class230 field2750;
+   public static final class230 field2751;
+   public static final class230 field2752;
+   public static final class230 field2753;
+   public static final class230 field2754;
+   public static final class230 field2755;
+   public static final class230 field2756;
+   public static final class230 field2757;
+   public static final class230 field2758;
+   public static final class230 field2759;
+   public static final class230 field2760;
+   public static final class230 field2761;
+   public static final class230 field2762;
+   public static final class230 field2763;
+   public static final class230 field2764;
+   public static final class230 field2765;
+   public static final class230 field2766;
+   public static final class230 field2767;
+   public static final class230 field2768;
+   public static final class230 field2769;
+   public static final class230 field2770;
+   public static final class230 field2771;
+   public static final class230 field2772;
+   public static final class230 field2773;
+   public static final class230 field2774;
+   public static final class230 field2775;
+   public static final class230 field2776;
+   public static final class230 field2777;
+   public static final class230 field2778;
+   public static final class230 field2779;
+   public static final class230 field2780;
+   public static final class230 field2781;
+   public static final class230 field2782;
+   public static final class230 field2783;
+   public static final class230 field2784;
+   public static final class230 field2785;
+   public static final class230 field2786;
+   public static final class230 field2788;
+   static class356 field2789;
+   public final int field2740;
+   public final int field2787;
 
    static {
-      field2791 = new class230(14);
-      field2796 = new class230(15);
-      field2789 = new class230(16);
-      field2792 = new class230(18);
-      field2793 = new class230(19);
-      field2790 = new class230(27);
-      field2794 = new class230[32];
-      class230[] var0 = class358.method6273();
-
-      for(int var1 = 0; var1 < var0.length; ++var1) {
-         field2794[var0[var1].field2795] = var0[var1];
-      }
-
+      field2788 = new class230(0, -2);
+      field2747 = new class230(1, -2);
+      field2694 = new class230(2, -2);
+      field2693 = new class230(3, 0);
+      field2696 = new class230(4, 1);
+      field2769 = new class230(5, 0);
+      field2698 = new class230(6, 5);
+      field2720 = new class230(7, 0);
+      field2700 = new class230(8, 2);
+      field2701 = new class230(9, 8);
+      field2702 = new class230(10, 3);
+      field2703 = new class230(11, -1);
+      field2768 = new class230(12, 4);
+      field2705 = new class230(13, 12);
+      field2706 = new class230(14, 2);
+      field2707 = new class230(15, -2);
+      field2708 = new class230(16, 4);
+      field2758 = new class230(17, -2);
+      field2756 = new class230(18, 2);
+      field2711 = new class230(19, -1);
+      field2695 = new class230(20, -2);
+      field2713 = new class230(21, 20);
+      field2714 = new class230(22, -1);
+      field2715 = new class230(23, 2);
+      field2749 = new class230(24, -2);
+      field2712 = new class230(25, 7);
+      field2751 = new class230(26, 4);
+      field2719 = new class230(27, 1);
+      field2718 = new class230(28, 0);
+      field2729 = new class230(29, -2);
+      field2722 = new class230(30, 6);
+      field2704 = new class230(31, 6);
+      field2724 = new class230(32, 8);
+      field2725 = new class230(33, 8);
+      field2726 = new class230(34, -1);
+      field2727 = new class230(35, -2);
+      field2757 = new class230(36, -2);
+      field2716 = new class230(37, -2);
+      field2730 = new class230(38, -2);
+      field2731 = new class230(39, 1);
+      field2732 = new class230(40, 4);
+      field2775 = new class230(41, 6);
+      field2734 = new class230(42, -2);
+      field2735 = new class230(43, 4);
+      field2736 = new class230(44, 0);
+      field2737 = new class230(45, 6);
+      field2738 = new class230(46, -2);
+      field2739 = new class230(47, 10);
+      field2710 = new class230(48, 2);
+      field2741 = new class230(49, -1);
+      field2742 = new class230(50, 1);
+      field2743 = new class230(51, 0);
+      field2721 = new class230(52, 1);
+      field2745 = new class230(53, 6);
+      field2746 = new class230(54, 14);
+      field2728 = new class230(55, 0);
+      field2733 = new class230(56, -2);
+      field2782 = new class230(57, 2);
+      field2750 = new class230(58, 5);
+      field2771 = new class230(59, 4);
+      field2752 = new class230(60, 8);
+      field2753 = new class230(61, -2);
+      field2748 = new class230(62, 10);
+      field2755 = new class230(63, 0);
+      field2723 = new class230(64, -1);
+      field2770 = new class230(65, 5);
+      field2699 = new class230(66, 28);
+      field2759 = new class230(67, 2);
+      field2760 = new class230(68, 6);
+      field2761 = new class230(69, 3);
+      field2762 = new class230(70, 6);
+      field2763 = new class230(71, 1);
+      field2764 = new class230(72, 6);
+      field2709 = new class230(73, 0);
+      field2766 = new class230(74, -1);
+      field2767 = new class230(75, 6);
+      field2717 = new class230(76, 4);
+      field2784 = new class230(77, 2);
+      field2778 = new class230(78, -1);
+      field2744 = new class230(79, -2);
+      field2772 = new class230(80, 15);
+      field2773 = new class230(81, 5);
+      field2774 = new class230(82, -2);
+      field2692 = new class230(83, 7);
+      field2776 = new class230(84, 6);
+      field2777 = new class230(85, -2);
+      field2765 = new class230(86, -2);
+      field2779 = new class230(87, 2);
+      field2780 = new class230(88, 5);
+      field2781 = new class230(89, -2);
+      field2754 = new class230(90, 6);
+      field2783 = new class230(91, -2);
+      field2697 = new class230(92, -2);
+      field2785 = new class230(93, -1);
+      field2786 = new class230(94, 2);
    }
 
-   class230(int var1) {
-      this.field2795 = var1;
+   static void method3920(File var0) {
+      class133.field1482 = var0;
+      if (!class133.field1482.exists()) {
+         throw new RuntimeException("");
+      } else {
+         class133.field1483 = true;
+      }
+   }
+
+   class230(int var1, int var2) {
+      this.field2787 = var1;
+      this.field2740 = var2;
+   }
+
+   public static class302 method3918(class277 var0, class277 var1, String var2, String var3) {
+      int var5 = var0.method4428(var2);
+      int var6 = var0.method4430(var5, var3);
+      return class252.method4299(var0, var1, var5, var6);
+   }
+
+   static final int method3921(int var0, int var1, int var2) {
+      int var4 = var0 / var2;
+      int var5 = var0 & var2 - 1;
+      int var6 = var1 / var2;
+      int var7 = var1 & var2 - 1;
+      int var8 = class282.method4540(var4, var6);
+      int var9 = class282.method4540(var4 + 1, var6);
+      int var10 = class282.method4540(var4, 1 + var6);
+      int var11 = class282.method4540(var4 + 1, 1 + var6);
+      int var12 = class47.method808(var8, var9, var5, var2);
+      int var13 = class47.method808(var10, var11, var5, var2);
+      return class47.method808(var12, var13, var7, var2);
    }
 }

@@ -1,32 +1,3 @@
-public class class392 {
-   public Object field4241;
-   public final int field4240;
-
-   public class392(int var1) {
-      this.field4240 = var1;
-   }
-
-   public class392(int var1, Object var2) {
-      this.field4240 = var1;
-      this.field4241 = var2;
-   }
-
-   public boolean equals(Object var1) {
-      if (!(var1 instanceof class392)) {
-         return false;
-      } else {
-         class392 var2 = (class392)var1;
-         if (var2.field4241 == null && this.field4241 != null) {
-            return false;
-         } else if (this.field4241 == null && var2.field4241 != null) {
-            return false;
-         } else {
-            return this.field4240 == var2.field4240 && var2.field4241.equals(this.field4241);
-         }
-      }
-   }
-
-   public int hashCode() {
-      return super.hashCode();
-   }
+public interface class392 {
+   Object method6250(int var1);
 }

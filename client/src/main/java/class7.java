@@ -1,115 +1,82 @@
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
+import java.awt.Font;
 
-public class class7 {
-   public static short[] field25;
-   static int field26;
-   ExecutorService field21;
-   Future field23;
-   final class3 field24;
-   final Buffer field22;
+public class class7 implements class290 {
+   public static final class7 field17;
+   static class69 field14;
+   static class74 field16;
+   static int field15;
+   static Font field13;
+   final int field21;
+   public final int field11;
 
-   public class7(Buffer var1, class3 var2) {
-      this.field21 = Executors.newSingleThreadExecutor();
-      this.field22 = var1;
-      this.field24 = var2;
-      this.method48();
+   static {
+      field17 = new class7(0, 0);
    }
 
-   void method48() {
-      this.field23 = this.field21.submit(new class1(this, this.field22, this.field24));
+   class7(int var1, int var2) {
+      this.field11 = var1;
+      this.field21 = var2;
    }
 
-   public boolean method46() {
-      return this.field23.isDone();
+   public static int method35(int var0) {
+      return var0 >> 17 & 7;
    }
 
-   public Buffer method57() {
-      try {
-         return (Buffer)this.field23.get();
-      } catch (Exception var3) {
-         return null;
-      }
+   public int method4619() {
+      return this.field21;
    }
 
-   public void method49() {
-      this.field21.shutdown();
-      this.field21 = null;
-   }
-
-   public static class202 method59(class276 var0, class276 var1, int var2, boolean var3) {
-      boolean var5 = true;
-      int[] var6 = var0.method4989(var2);
-
-      for(int var7 = 0; var7 < var6.length; ++var7) {
-         byte[] var8 = var0.method4928(var2, var6[var7]);
-         if (var8 == null) {
-            var5 = false;
-         } else {
-            int var9 = (var8[0] & 255) << 8 | var8[1] & 255;
-            byte[] var10;
-            if (var3) {
-               var10 = var1.method4928(0, var9);
-            } else {
-               var10 = var1.method4928(var9, 0);
-            }
-
-            if (var10 == null) {
-               var5 = false;
-            }
-         }
-      }
-
-      if (!var5) {
-         return null;
+   static int method34(int var0, class59 var1, boolean var2) {
+      class249 var4 = var2 ? class286.field3660 : class51.field750;
+      if (var0 == 1600) {
+         class51.field747[++class51.field746 - 1] = var4.field3054;
+         return 1;
+      } else if (var0 == 1601) {
+         class51.field747[++class51.field746 - 1] = var4.field2968;
+         return 1;
+      } else if (1602 == var0) {
+         class51.field738[++class2.field4 - 1] = var4.field3042;
+         return 1;
+      } else if (var0 == 1603) {
+         class51.field747[++class51.field746 - 1] = var4.field2981;
+         return 1;
+      } else if (var0 == 1604) {
+         class51.field747[++class51.field746 - 1] = var4.field3091;
+         return 1;
+      } else if (var0 == 1605) {
+         class51.field747[++class51.field746 - 1] = var4.field3000;
+         return 1;
+      } else if (1606 == var0) {
+         class51.field747[++class51.field746 - 1] = var4.field3009;
+         return 1;
+      } else if (var0 == 1607) {
+         class51.field747[++class51.field746 - 1] = var4.field3011;
+         return 1;
+      } else if (1608 == var0) {
+         class51.field747[++class51.field746 - 1] = var4.field3010;
+         return 1;
+      } else if (var0 == 1609) {
+         class51.field747[++class51.field746 - 1] = var4.field2989;
+         return 1;
+      } else if (var0 == 1610) {
+         class51.field747[++class51.field746 - 1] = var4.field3103;
+         return 1;
+      } else if (var0 == 1611) {
+         class51.field747[++class51.field746 - 1] = var4.field2983;
+         return 1;
+      } else if (var0 == 1612) {
+         class51.field747[++class51.field746 - 1] = var4.field2984;
+         return 1;
+      } else if (1613 == var0) {
+         class51.field747[++class51.field746 - 1] = var4.field3071.method4619();
+         return 1;
+      } else if (var0 == 1614) {
+         class51.field747[++class51.field746 - 1] = var4.field3016 ? 1 : 0;
+         return 1;
+      } else if (1615 != var0 && 1616 != var0) {
+         return 2;
       } else {
-         try {
-            return new class202(var0, var1, var2, var3);
-         } catch (Exception var12) {
-            return null;
-         }
-      }
-   }
-
-   public static void method58() {
-      class155.field1783.method4309();
-      class155.field1737.method4309();
-      class155.field1738.method4309();
-      class155.field1739.method4309();
-   }
-
-   public static final void method47(String var0, String var1, int var2, int var3, int var4, int var5) {
-      class24.method460(var0, var1, var2, var3, var4, var5, false);
-   }
-
-   static class58 method45(int var0) {
-      class58 var2 = (class58)class58.field861.method4306((long)var0);
-      if (var2 != null) {
-         return var2;
-      } else {
-         byte[] var3 = class45.field390.method4920(var0, 0);
-         if (var3 == null) {
-            return null;
-         } else {
-            var2 = class210.method4251(var3);
-            class58.field861.method4308(var2, (long)var0);
-            return var2;
-         }
-      }
-   }
-
-   static int method52(int var0, class58 var1, boolean var2) {
-      if (var0 != 3700 && var0 != 3701) {
-         if (var0 == 3702) {
-            ++class50.field745;
-            return 1;
-         } else {
-            return 2;
-         }
-      } else {
-         --class50.field745;
-         --class1.field3;
+         ++class51.field746;
          return 1;
       }
    }

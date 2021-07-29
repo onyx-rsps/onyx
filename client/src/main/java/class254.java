@@ -1,22 +1,20 @@
-import java.nio.ByteBuffer;
+import java.util.Calendar;
+import java.util.TimeZone;
 
-public class class254 extends class252 {
-   static String[] field3126;
-   ByteBuffer field3125;
+public class class254 {
+   static Calendar field3123;
+   static final String[] field3122;
+   static final String[][] field3121;
 
-   public class254() {
+   static {
+      field3121 = new String[][]{{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}, {"Jan", "Feb", "M\u00e4r", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"}, {"jan", "f\u00e9v", "mars", "avr", "mai", "juin", "juil", "ao\u00fbt", "sept", "oct", "nov", "d\u00e9c"}, {"jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"}, {"jan", "feb", "mrt", "apr", "mei", "jun", "jul", "aug", "sep", "okt", "nov", "dec"}, {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"}, {"ene", "feb", "mar", "abr", "may", "jun", "jul", "ago", "sep", "oct", "nov", "dic"}};
+      field3122 = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
+      Calendar.getInstance();
+      field3123 = Calendar.getInstance(TimeZone.getTimeZone("GMT"));
    }
 
-   byte[] vmethod4786() {
-      byte[] var2 = new byte[this.field3125.capacity()];
-      this.field3125.position(0);
-      this.field3125.get(var2);
-      return var2;
-   }
-
-   public void vmethod4787(byte[] var1) {
-      this.field3125 = ByteBuffer.allocateDirect(var1.length);
-      this.field3125.position(0);
-      this.field3125.put(var1);
+   static void method4322() {
+      class56.field812 = 24;
+      client.method1272(class270.field3292, class270.field3264, class270.field3467);
    }
 }

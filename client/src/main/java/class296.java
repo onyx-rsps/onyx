@@ -1,44 +1,119 @@
-import java.util.Iterator;
+public class class296 {
+   class354 field3719;
+   public class354 field3718;
 
-public class class296 implements Iterator {
-   class297 field3719;
-   class353 field3720;
-   class353 field3721;
-
-   class296(class297 var1) {
-      this.field3721 = null;
-      this.method5219(var1);
+   public class296() {
+      this.field3718 = new class354();
+      this.field3718.field3965 = this.field3718;
+      this.field3718.field3967 = this.field3718;
    }
 
-   void method5220() {
-      this.field3720 = this.field3719 != null ? this.field3719.field3722.field3964 : null;
-      this.field3721 = null;
+   public void method4671() {
+      while(true) {
+         class354 var1 = this.field3718.field3965;
+         if (var1 == this.field3718) {
+            this.field3719 = null;
+            return;
+         }
+
+         var1.method5437();
+      }
    }
 
-   void method5219(class297 var1) {
-      this.field3719 = var1;
-      this.method5220();
-   }
-
-   public Object next() {
-      class353 var1 = this.field3720;
-      if (var1 == this.field3719.field3722) {
-         var1 = null;
-         this.field3720 = null;
-      } else {
-         this.field3720 = var1.field3964;
+   public void method4672(class354 var1) {
+      if (var1.field3967 != null) {
+         var1.method5437();
       }
 
-      this.field3721 = var1;
-      return var1;
+      var1.field3967 = this.field3718.field3967;
+      var1.field3965 = this.field3718;
+      var1.field3967.field3965 = var1;
+      var1.field3965.field3967 = var1;
    }
 
-   public void remove() {
-      this.field3721.method6014();
-      this.field3721 = null;
+   public void method4673(class354 var1) {
+      if (var1.field3967 != null) {
+         var1.method5437();
+      }
+
+      var1.field3967 = this.field3718;
+      var1.field3965 = this.field3718.field3965;
+      var1.field3967.field3965 = var1;
+      var1.field3965.field3967 = var1;
    }
 
-   public boolean hasNext() {
-      return this.field3719.field3722 != this.field3720 && this.field3720 != null;
+   public static void method4674(class354 var0, class354 var1) {
+      if (var0.field3967 != null) {
+         var0.method5437();
+      }
+
+      var0.field3967 = var1.field3967;
+      var0.field3965 = var1;
+      var0.field3967.field3965 = var0;
+      var0.field3965.field3967 = var0;
+   }
+
+   public class354 method4699() {
+      class354 var1 = this.field3718.field3965;
+      if (var1 == this.field3718) {
+         return null;
+      } else {
+         var1.method5437();
+         return var1;
+      }
+   }
+
+   public class354 method4675() {
+      class354 var1 = this.field3718.field3967;
+      if (var1 == this.field3718) {
+         return null;
+      } else {
+         var1.method5437();
+         return var1;
+      }
+   }
+
+   public class354 method4687() {
+      class354 var1 = this.field3718.field3965;
+      if (var1 == this.field3718) {
+         this.field3719 = null;
+         return null;
+      } else {
+         this.field3719 = var1.field3965;
+         return var1;
+      }
+   }
+
+   public class354 method4694() {
+      class354 var1 = this.field3718.field3967;
+      if (var1 == this.field3718) {
+         this.field3719 = null;
+         return null;
+      } else {
+         this.field3719 = var1.field3967;
+         return var1;
+      }
+   }
+
+   public class354 method4678() {
+      class354 var1 = this.field3719;
+      if (var1 == this.field3718) {
+         this.field3719 = null;
+         return null;
+      } else {
+         this.field3719 = var1.field3965;
+         return var1;
+      }
+   }
+
+   public class354 method4679() {
+      class354 var1 = this.field3719;
+      if (var1 == this.field3718) {
+         this.field3719 = null;
+         return null;
+      } else {
+         this.field3719 = var1.field3967;
+         return var1;
+      }
    }
 }

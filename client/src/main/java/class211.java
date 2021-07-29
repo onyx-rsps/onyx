@@ -1,18 +1,55 @@
-public final class class211 {
-   static class26 field2517;
-   static int field2519;
-   int field2508;
-   int field2509;
-   int field2510;
-   int field2512;
-   int field2516;
-   int field2518;
-   public class200 field2513;
-   public class200 field2514;
-   public long field2515;
-
+public class class211 {
    class211() {
-      this.field2515 = 0L;
-      this.field2508 = 0;
+   }
+
+   static class59 method3833(byte[] var0) {
+      class59 var2 = new class59();
+      class385 var3 = new class385(var0);
+      var3.field4182 = var3.field4184.length - 2;
+      int var4 = var3.method6043();
+      int var5 = var3.field4184.length - 2 - var4 - 12;
+      var3.field4182 = var5;
+      int var6 = var3.method6172();
+      var2.field864 = var3.method6043();
+      var2.field868 = var3.method6043();
+      var2.field869 = var3.method6043();
+      var2.field867 = var3.method6043();
+      int var7 = var3.method5948();
+      int var8;
+      int var9;
+      if (var7 > 0) {
+         var2.field871 = var2.method1600(var7);
+
+         for(var8 = 0; var8 < var7; ++var8) {
+            var9 = var3.method6043();
+            class363 var10 = new class363(var9 > 0 ? class27.method470(var9) : 1);
+            var2.field871[var8] = var10;
+
+            while(var9-- > 0) {
+               int var11 = var3.method6172();
+               int var12 = var3.method6172();
+               var10.method5727(new class353(var12), (long)var11);
+            }
+         }
+      }
+
+      var3.field4182 = 0;
+      var2.field863 = var3.method5956();
+      var2.field865 = new int[var6];
+      var2.field870 = new int[var6];
+      var2.field866 = new String[var6];
+
+      for(var8 = 0; var3.field4182 < var5; var2.field865[var8++] = var9) {
+         var9 = var3.method6043();
+         if (var9 == 3) {
+            var2.field866[var8] = var3.method5957();
+         } else if (var9 < 100 && 21 != var9 && 38 != var9 && 39 != var9) {
+            var2.field870[var8] = var3.method6172();
+         } else {
+            var2.field870[var8] = var3.method5948();
+         }
+      }
+
+      return var2;
    }
 }

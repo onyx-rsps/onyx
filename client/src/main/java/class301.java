@@ -1,89 +1,87 @@
-public final class class301 extends class302 {
-   public class301(byte[] var1, int[] var2, int[] var3, int[] var4, int[] var5, int[] var6, byte[][] var7) {
-      super(var1, var2, var3, var4, var5, var6, var7);
+import java.util.Iterator;
+
+public class class301 implements Iterable {
+   class349 field3730;
+   public class349 field3731;
+
+   public class301() {
+      this.field3731 = new class349();
+      this.field3731.field3959 = this.field3731;
+      this.field3731.field3960 = this.field3731;
    }
 
-   public class301(byte[] var1) {
-      super(var1);
+   public void method4811() {
+      while(this.field3731.field3959 != this.field3731) {
+         this.field3731.field3959.method5435();
+      }
+
    }
 
-   final void vmethod5393(byte[] var1, int var2, int var3, int var4, int var5, int var6) {
-      int var7 = var3 * class393.field4244 + var2;
-      int var8 = class393.field4244 - var4;
-      int var9 = 0;
-      int var10 = 0;
-      int var11;
-      if (var3 < class393.field4246) {
-         var11 = class393.field4246 - var3;
-         var5 -= var11;
-         var3 = class393.field4246;
-         var10 += var11 * var4;
-         var7 += var11 * class393.field4244;
+   public void method4812(class349 var1) {
+      if (var1.field3960 != null) {
+         var1.method5435();
       }
 
-      if (var3 + var5 > class393.field4243) {
-         var5 -= var3 + var5 - class393.field4243;
+      var1.field3960 = this.field3731.field3960;
+      var1.field3959 = this.field3731;
+      var1.field3960.field3959 = var1;
+      var1.field3959.field3960 = var1;
+   }
+
+   public static void method4813(class349 var0, class349 var1) {
+      if (var0.field3960 != null) {
+         var0.method5435();
       }
 
-      if (var2 < class393.field4248) {
-         var11 = class393.field4248 - var2;
-         var4 -= var11;
-         var2 = class393.field4248;
-         var10 += var11;
-         var7 += var11;
-         var9 += var11;
-         var8 += var11;
-      }
+      var0.field3960 = var1;
+      var0.field3959 = var1.field3959;
+      var0.field3960.field3959 = var0;
+      var0.field3959.field3960 = var0;
+   }
 
-      if (var2 + var4 > class393.field4247) {
-         var11 = var2 + var4 - class393.field4247;
-         var4 -= var11;
-         var9 += var11;
-         var8 += var11;
-      }
-
-      if (var4 > 0 && var5 > 0) {
-         class302.method5388(class393.field4249, var1, var6, var10, var7, var4, var5, var8, var9);
+   public class349 method4814() {
+      class349 var1 = this.field3731.field3959;
+      if (var1 == this.field3731) {
+         return null;
+      } else {
+         var1.method5435();
+         return var1;
       }
    }
 
-   final void vmethod5364(byte[] var1, int var2, int var3, int var4, int var5, int var6, int var7) {
-      int var8 = var3 * class393.field4244 + var2;
-      int var9 = class393.field4244 - var4;
-      int var10 = 0;
-      int var11 = 0;
-      int var12;
-      if (var3 < class393.field4246) {
-         var12 = class393.field4246 - var3;
-         var5 -= var12;
-         var3 = class393.field4246;
-         var11 += var12 * var4;
-         var8 += var12 * class393.field4244;
+   public class349 method4815() {
+      return this.method4816((class349)null);
+   }
+
+   class349 method4816(class349 var1) {
+      class349 var2;
+      if (var1 == null) {
+         var2 = this.field3731.field3959;
+      } else {
+         var2 = var1;
       }
 
-      if (var3 + var5 > class393.field4243) {
-         var5 -= var3 + var5 - class393.field4243;
+      if (var2 == this.field3731) {
+         this.field3730 = null;
+         return null;
+      } else {
+         this.field3730 = var2.field3959;
+         return var2;
       }
+   }
 
-      if (var2 < class393.field4248) {
-         var12 = class393.field4248 - var2;
-         var4 -= var12;
-         var2 = class393.field4248;
-         var11 += var12;
-         var8 += var12;
-         var10 += var12;
-         var9 += var12;
+   public class349 method4817() {
+      class349 var1 = this.field3730;
+      if (var1 == this.field3731) {
+         this.field3730 = null;
+         return null;
+      } else {
+         this.field3730 = var1.field3959;
+         return var1;
       }
+   }
 
-      if (var2 + var4 > class393.field4247) {
-         var12 = var2 + var4 - class393.field4247;
-         var4 -= var12;
-         var10 += var12;
-         var9 += var12;
-      }
-
-      if (var4 > 0 && var5 > 0) {
-         class302.method5390(class393.field4249, var1, var6, var11, var8, var4, var5, var9, var10, var7);
-      }
+   public Iterator iterator() {
+      return new class300(this);
    }
 }

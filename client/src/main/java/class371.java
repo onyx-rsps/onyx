@@ -1,46 +1,46 @@
 import java.util.Iterator;
 
-public class class371 extends class340 implements class218 {
-   final class220 field4151;
-   final class276 field4150;
-   final int field4149;
+class class371 implements Iterator {
+   int field4148;
+   // $FF: synthetic field
+   final class372 this$0;
 
-   public class371(class265 var1, int var2, class291 var3, class276 var4) {
-      super(var1, var3, var4 != null ? var4.method4946(var2) : 0);
-      this.field4151 = new class220(64);
-      this.field4150 = var4;
-      this.field4149 = var2;
-   }
+   public static boolean method5829(class277 var0, class277 var1) {
+      class141.field1549 = var1;
+      if (!var0.method4417()) {
+         return false;
+      } else {
+         class141.field1532 = var0.method4438(35);
+         class141.field1544 = new class141[class141.field1532];
 
-   protected class342 vmethod6414(int var1) {
-      synchronized(this.field4151) {
-         class341 var3 = (class341)this.field4151.method4275((long)var1);
-         if (var3 == null) {
-            var3 = this.method6415(var1);
-            this.field4151.method4278(var3, (long)var1);
+         for(int var3 = 0; var3 < class141.field1532; ++var3) {
+            byte[] var4 = var0.method4412(35, var3);
+            class141.field1544[var3] = new class141(var3);
+            if (var4 != null) {
+               class141.field1544[var3].method2377(new class385(var4));
+               class141.field1544[var3].method2383();
+            }
          }
 
-         return var3;
+         return true;
       }
    }
 
-   class341 method6415(int var1) {
-      byte[] var3 = this.field4150.method4920(this.field4149, var1);
-      class341 var4 = new class341(var1);
-      if (var3 != null) {
-         var4.method5988(new Buffer(var3));
-      }
-
-      return var4;
+   class371(class372 var1) {
+      this.this$0 = var1;
    }
 
-   public void method6416() {
-      synchronized(this.field4151) {
-         this.field4151.method4281();
-      }
+   public boolean hasNext() {
+      return this.field4148 < this.this$0.method5397();
    }
 
-   public Iterator iterator() {
-      return new class370(this);
+   public Object next() {
+      int var1 = ++this.field4148 - 1;
+      class342 var2 = (class342)this.this$0.field4152.method3857((long)var1);
+      return var2 != null ? var2 : this.this$0.method5831(var1);
+   }
+
+   public void remove() {
+      throw new UnsupportedOperationException();
    }
 }

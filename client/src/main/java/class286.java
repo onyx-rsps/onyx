@@ -1,60 +1,122 @@
-import java.util.Comparator;
+public class class286 {
+   static class249 field3660;
+   byte field3655;
+   public int field3653;
+   public int field3654;
+   public int field3656;
+   public int field3657;
+   public int field3659;
 
-final class class286 implements Comparator {
-   static class371 field3663;
-
-   class286() {
+   public class286() {
    }
 
-   int method5098(class284 var1, class284 var2) {
-      return var1.field3646.field3655 < var2.field3646.field3655 ? -1 : (var2.field3646.field3655 == var1.field3646.field3655 ? 0 : 1);
+   public class286(class385 var1, boolean var2) {
+      this.field3655 = var1.method5949();
+      this.field3654 = var1.method6043();
+      this.field3656 = var1.method6172();
+      this.field3653 = var1.method6172();
+      this.field3657 = var1.method6172();
+      this.field3659 = var1.method6172();
+      if (var2) {
+         int var4 = 0;
+         boolean var5 = false;
+
+         while(true) {
+            int var6 = var1.method5948();
+            if (255 == var6) {
+               Integer var3 = var5 ? var4 : null;
+               this.method4568(var3);
+               break;
+            }
+
+            if (0 != var6) {
+               throw new IllegalStateException("");
+            }
+
+            while(true) {
+               int var7 = var1.method5948();
+               if (var7 == 255) {
+                  break;
+               }
+
+               --var1.field4182;
+               if (var1.method6043() != 0) {
+                  throw new IllegalStateException("");
+               }
+
+               if (var5) {
+                  throw new IllegalStateException("");
+               }
+
+               var4 = var1.method6172();
+               var5 = true;
+            }
+         }
+      }
+
    }
 
-   public int compare(Object var1, Object var2) {
-      return this.method5098((class284)var1, (class284)var2);
+   void method4568(Integer var1) {
    }
 
-   public boolean equals(Object var1) {
-      return super.equals(var1);
+   public int method4570() {
+      return this.field3655 & 7;
    }
 
-   static void method5100(class248 var0, int var1, int var2, boolean var3) {
-      int var5 = var0.field2972;
-      int var6 = var0.field2989;
-      if (var0.field3032 == 0) {
-         var0.field2972 = var0.field2968;
-      } else if (var0.field3032 == 1) {
-         var0.field2972 = var1 - var0.field2968;
-      } else if (var0.field3032 == 2) {
-         var0.field2972 = var0.field2968 * var1 >> 14;
+   public int method4573() {
+      return (this.field3655 & 8) == 8 ? 1 : 0;
+   }
+
+   static void method4582() {
+      class85.field1196.clear();
+      class85.field1194.method5715();
+      class85.field1195.method4811();
+      class85.field1200 = 0;
+   }
+
+   void method4571(int var1) {
+      this.field3655 &= -8;
+      this.field3655 = (byte)(this.field3655 | var1 & 7);
+   }
+
+   void method4572(int var1) {
+      this.field3655 &= -9;
+      if (var1 == 1) {
+         this.field3655 = (byte)(this.field3655 | 8);
       }
 
-      if (var0.field3091 == 0) {
-         var0.field2989 = var0.field2969;
-      } else if (var0.field3091 == 1) {
-         var0.field2989 = var2 - var0.field2969;
-      } else if (var0.field3091 == 2) {
-         var0.field2989 = var2 * var0.field2969 >> 14;
+   }
+
+   public static String method4581(String var0) {
+      int var2 = var0.length();
+      char[] var3 = new char[var2];
+      byte var4 = 2;
+
+      for(int var5 = 0; var5 < var2; ++var5) {
+         char var6 = var0.charAt(var5);
+         if (var4 == 0) {
+            var6 = Character.toLowerCase(var6);
+         } else if (2 == var4 || Character.isUpperCase(var6)) {
+            var6 = class137.method2327(var6);
+         }
+
+         if (Character.isLetter(var6)) {
+            var4 = 0;
+         } else if ('.' != var6 && var6 != '?' && '!' != var6) {
+            if (Character.isSpaceChar(var6)) {
+               if (var4 != 2) {
+                  var4 = 1;
+               }
+            } else {
+               var4 = 1;
+            }
+         } else {
+            var4 = 2;
+         }
+
+         var3[var5] = var6;
       }
 
-      if (var0.field3032 == 4) {
-         var0.field2972 = var0.field2989 * var0.field2974 / var0.field2975;
-      }
-
-      if (var0.field3091 == 4) {
-         var0.field2989 = var0.field2975 * var0.field2972 / var0.field2974;
-      }
-
-      if (var0.field2961 == 1337) {
-         client.field579 = var0;
-      }
-
-      if (var3 && var0.field3071 != null && (var5 != var0.field2972 || var6 != var0.field2989)) {
-         class67 var7 = new class67();
-         var7.field960 = var0;
-         var7.field954 = var0.field3071;
-         client.field610.method5187(var7);
-      }
-
+      return new String(var3);
    }
 }

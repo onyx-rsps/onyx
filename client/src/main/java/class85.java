@@ -1,88 +1,79 @@
-import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class class85 {
-   boolean field1210;
-   class229 field1205;
-   class229 field1211;
-   class229 field1212;
-   class229 field1213;
-   class297 field1201;
-   class329 field1207;
-   class383 field1200;
-   Buffer field1203;
-   int field1202;
-   int field1208;
-   int field1209;
-   int field1215;
-   public class400 field1204;
+   protected static class137 field1199;
+   static class330 field1197;
+   static int field1200;
+   static final class301 field1195;
+   static final class363 field1194;
+   static final Map field1196;
 
-   class85() {
-      this.field1201 = new class297();
-      this.field1202 = 0;
-      this.field1203 = new Buffer(5000);
-      this.field1200 = new class383(40000);
-      this.field1205 = null;
-      this.field1208 = 0;
-      this.field1210 = true;
-      this.field1209 = 0;
-      this.field1215 = 0;
+   static {
+      field1196 = new HashMap();
+      field1194 = new class363(1024);
+      field1195 = new class301();
+      field1200 = 0;
    }
 
-   class329 method2036() {
-      return this.field1207;
+   public static class272[] method1959() {
+      return new class272[]{class272.field3545, class272.field3544, class272.field3549, class272.field3540, class272.field3541, class272.field3542, class272.field3539};
    }
 
-   void method2033() {
-      if (this.field1207 != null) {
-         this.field1207.vmethod5858();
-         this.field1207 = null;
-      }
-
-   }
-
-   void method2029() {
-      this.field1207 = null;
-   }
-
-   public final void method2031(class228 var1) {
-      this.field1201.method5236(var1);
-      var1.field2687 = var1.field2690.field4181 * -1084587701;
-      var1.field2690.field4181 = 0;
-      this.field1202 += var1.field2687;
-   }
-
-   final void method2043() {
-      this.field1201.method5275();
-      this.field1202 = 0;
-   }
-
-   final void method2030() throws IOException {
-      if (this.field1207 != null && this.field1202 > 0) {
-         this.field1203.field4181 = 0;
-
-         while(true) {
-            class228 var2 = (class228)this.field1201.method5239();
-            if (var2 == null || var2.field2687 > this.field1203.payload.length - this.field1203.field4181 * -1084587701) {
-               this.field1207.write(this.field1203.payload, 0, this.field1203.field4181 * -1084587701);
-               this.field1215 = 0;
-               break;
-            }
-
-            this.field1203.method6615(var2.field2690.payload, 0, var2.field2687);
-            this.field1202 -= var2.field2687;
-            var2.method6014();
-            var2.field2690.method6553();
-            var2.method4337();
+   static int method1936(int var0, int var1) {
+      if (-2 == var0) {
+         return 12345678;
+      } else if (-1 == var0) {
+         if (var1 < 0) {
+            var1 = 0;
+         } else if (var1 > 127) {
+            var1 = 127;
          }
+
+         var1 = 127 - var1;
+         return var1;
+      } else {
+         var1 = (var0 & 127) * var1 / 128;
+         if (var1 < 2) {
+            var1 = 2;
+         } else if (var1 > 126) {
+            var1 = 126;
+         }
+
+         return var1 + (var0 & '\uff80');
+      }
+   }
+
+   static final void method1958(class71 var0) {
+      long var2 = 0L;
+      int var4 = -1;
+      int var5 = 0;
+      int var6 = 0;
+      if (0 == var0.field1009) {
+         var2 = class166.field1925.method3523(var0.field1018, var0.field1016, var0.field1011);
       }
 
-   }
+      if (var0.field1009 == 1) {
+         var2 = class166.field1925.method3524(var0.field1018, var0.field1016, var0.field1011);
+      }
 
-   void method2032(class329 var1) {
-      this.field1207 = var1;
-   }
+      if (var0.field1009 == 2) {
+         var2 = class166.field1925.method3525(var0.field1018, var0.field1016, var0.field1011);
+      }
 
-   public static int method2049(int var0) {
-      return class345.field3945[var0 & 16383];
+      if (3 == var0.field1009) {
+         var2 = class166.field1925.method3628(var0.field1018, var0.field1016, var0.field1011);
+      }
+
+      if (0L != var2) {
+         int var7 = class166.field1925.method3527(var0.field1018, var0.field1016, var0.field1011, var2);
+         var4 = class79.method1843(var2);
+         var5 = var7 & 31;
+         var6 = var7 >> 6 & 3;
+      }
+
+      var0.field1012 = var4;
+      var0.field1010 = var5;
+      var0.field1013 = var6;
    }
 }

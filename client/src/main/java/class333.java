@@ -1,294 +1,186 @@
-import java.io.EOFException;
+import java.io.DataInputStream;
 import java.io.IOException;
-import java.util.concurrent.ScheduledExecutorService;
+import java.io.OutputStream;
+import java.net.URL;
 
-public final class class333 {
-   static byte[] field3900;
-   static ScheduledExecutorService field3902;
-   class369 field3898;
-   class369 field3899;
-   int field3897;
-   int field3901;
+public class class333 implements Runnable {
+   static int[] field3897;
+   boolean field3894;
+   byte[] field3896;
+   int field3887;
+   int field3892;
+   int field3895;
+   IOException field3893;
+   OutputStream field3891;
+   Thread field3889;
 
-   static {
-      field3900 = new byte[520];
-   }
+   public static void method5330(String var0, Throwable var1) {
+      try {
+         String var3 = "";
+         if (var1 != null) {
+            var3 = class399.method6498(var1);
+         }
 
-   public class333(int var1, class369 var2, class369 var3, int var4) {
-      this.field3898 = null;
-      this.field3899 = null;
-      this.field3897 = 65000;
-      this.field3901 = var1;
-      this.field3898 = var2;
-      this.field3899 = var3;
-      this.field3897 = var4;
-   }
-
-   boolean method5919(int var1, byte[] var2, int var3, boolean var4) {
-      synchronized(this.field3898) {
-         try {
-            int var7;
-            boolean var10000;
-            if (var4) {
-               if (this.field3899.method6396() < (long)(var1 * 6 + 6)) {
-                  var10000 = false;
-                  return var10000;
-               }
-
-               this.field3899.method6378((long)(var1 * 6));
-               this.field3899.method6394(field3900, 0, 6);
-               var7 = (field3900[5] & 255) + ((field3900[3] & 255) << 16) + ((field3900[4] & 255) << 8);
-               if (var7 <= 0 || (long)var7 > this.field3898.method6396() / 520L) {
-                  var10000 = false;
-                  return var10000;
-               }
-            } else {
-               var7 = (int)((this.field3898.method6396() + 519L) / 520L);
-               if (var7 == 0) {
-                  var7 = 1;
-               }
+         if (var0 != null) {
+            if (null != var1) {
+               var3 = var3 + " | ";
             }
 
-            field3900[0] = (byte)(var3 >> 16);
-            field3900[1] = (byte)(var3 >> 8);
-            field3900[2] = (byte)var3;
-            field3900[3] = (byte)(var7 >> 16);
-            field3900[4] = (byte)(var7 >> 8);
-            field3900[5] = (byte)var7;
-            this.field3899.method6378((long)(var1 * 6));
-            this.field3899.method6384(field3900, 0, 6);
-            int var8 = 0;
-            int var9 = 0;
+            var3 = var3 + var0;
+         }
 
+         System.out.println("Error: " + var3);
+         var3 = var3.replace(':', '.');
+         var3 = var3.replace('@', '_');
+         var3 = var3.replace('&', '_');
+         var3 = var3.replace('#', '_');
+         if (class409.field4318 == null) {
+            return;
+         }
+
+         URL var4 = new URL(class409.field4318.getCodeBase(), "clienterror.ws?c=" + class409.field4317 + "&u=" + class409.field4316 + "&v1=" + class130.field1469 + "&v2=" + class130.field1463 + "&ct=" + class97.field1259 + "&e=" + var3);
+         DataInputStream var5 = new DataInputStream(var4.openStream());
+         var5.read();
+         var5.close();
+      } catch (Exception var6) {
+      }
+
+   }
+
+   class333(OutputStream var1, int var2) {
+      this.field3887 = 0;
+      this.field3892 = 0;
+      this.field3891 = var1;
+      this.field3895 = var2 + 1;
+      this.field3896 = new byte[this.field3895];
+      this.field3889 = new Thread(this);
+      this.field3889.setDaemon(true);
+      this.field3889.start();
+   }
+
+   boolean method5336() {
+      if (this.field3894) {
+         try {
+            this.field3891.close();
+            if (null == this.field3893) {
+               this.field3893 = new IOException("");
+            }
+         } catch (IOException var3) {
+            if (this.field3893 == null) {
+               this.field3893 = new IOException(var3);
+            }
+         }
+
+         return true;
+      } else {
+         return false;
+      }
+   }
+
+   public void run() {
+      do {
+         int var1;
+         synchronized(this) {
             while(true) {
-               if (var8 < var3) {
-                  label154: {
-                     int var10 = 0;
-                     int var11;
-                     if (var4) {
-                        this.field3898.method6378((long)var7 * 520L);
-                        int var12;
-                        int var13;
-                        if (var1 > 65535) {
-                           try {
-                              this.field3898.method6394(field3900, 0, 10);
-                           } catch (EOFException var18) {
-                              break label154;
-                           }
-
-                           var11 = ((field3900[1] & 255) << 16) + ((field3900[0] & 255) << 24) + (field3900[3] & 255) + ((field3900[2] & 255) << 8);
-                           var12 = (field3900[5] & 255) + ((field3900[4] & 255) << 8);
-                           var10 = (field3900[8] & 255) + ((field3900[7] & 255) << 8) + ((field3900[6] & 255) << 16);
-                           var13 = field3900[9] & 255;
-                        } else {
-                           try {
-                              this.field3898.method6394(field3900, 0, 8);
-                           } catch (EOFException var17) {
-                              break label154;
-                           }
-
-                           var11 = (field3900[1] & 255) + ((field3900[0] & 255) << 8);
-                           var12 = (field3900[3] & 255) + ((field3900[2] & 255) << 8);
-                           var10 = ((field3900[5] & 255) << 8) + ((field3900[4] & 255) << 16) + (field3900[6] & 255);
-                           var13 = field3900[7] & 255;
-                        }
-
-                        if (var11 != var1 || var9 != var12 || var13 != this.field3901) {
-                           var10000 = false;
-                           return var10000;
-                        }
-
-                        if (var10 < 0 || (long)var10 > this.field3898.method6396() / 520L) {
-                           var10000 = false;
-                           return var10000;
-                        }
-                     }
-
-                     if (var10 == 0) {
-                        var4 = false;
-                        var10 = (int)((this.field3898.method6396() + 519L) / 520L);
-                        if (var10 == 0) {
-                           ++var10;
-                        }
-
-                        if (var10 == var7) {
-                           ++var10;
-                        }
-                     }
-
-                     if (var1 > 65535) {
-                        if (var3 - var8 <= 510) {
-                           var10 = 0;
-                        }
-
-                        field3900[0] = (byte)(var1 >> 24);
-                        field3900[1] = (byte)(var1 >> 16);
-                        field3900[2] = (byte)(var1 >> 8);
-                        field3900[3] = (byte)var1;
-                        field3900[4] = (byte)(var9 >> 8);
-                        field3900[5] = (byte)var9;
-                        field3900[6] = (byte)(var10 >> 16);
-                        field3900[7] = (byte)(var10 >> 8);
-                        field3900[8] = (byte)var10;
-                        field3900[9] = (byte)this.field3901;
-                        this.field3898.method6378((long)var7 * 520L);
-                        this.field3898.method6384(field3900, 0, 10);
-                        var11 = var3 - var8;
-                        if (var11 > 510) {
-                           var11 = 510;
-                        }
-
-                        this.field3898.method6384(var2, var8, var11);
-                        var8 += var11;
-                     } else {
-                        if (var3 - var8 <= 512) {
-                           var10 = 0;
-                        }
-
-                        field3900[0] = (byte)(var1 >> 8);
-                        field3900[1] = (byte)var1;
-                        field3900[2] = (byte)(var9 >> 8);
-                        field3900[3] = (byte)var9;
-                        field3900[4] = (byte)(var10 >> 16);
-                        field3900[5] = (byte)(var10 >> 8);
-                        field3900[6] = (byte)var10;
-                        field3900[7] = (byte)this.field3901;
-                        this.field3898.method6378(520L * (long)var7);
-                        this.field3898.method6384(field3900, 0, 8);
-                        var11 = var3 - var8;
-                        if (var11 > 512) {
-                           var11 = 512;
-                        }
-
-                        this.field3898.method6384(var2, var8, var11);
-                        var8 += var11;
-                     }
-
-                     var7 = var10;
-                     ++var9;
-                     continue;
-                  }
+               if (this.field3893 != null) {
+                  return;
                }
 
-               var10000 = true;
-               return var10000;
+               if (this.field3887 <= this.field3892) {
+                  var1 = this.field3892 - this.field3887;
+               } else {
+                  var1 = this.field3892 + (this.field3895 - this.field3887);
+               }
+
+               if (var1 > 0) {
+                  break;
+               }
+
+               try {
+                  this.field3891.flush();
+               } catch (IOException var10) {
+                  this.field3893 = var10;
+                  return;
+               }
+
+               if (this.method5336()) {
+                  return;
+               }
+
+               try {
+                  this.wait();
+               } catch (InterruptedException var11) {
+               }
             }
-         } catch (IOException var19) {
-            return false;
          }
-      }
-   }
 
-   public boolean method5922(int var1, byte[] var2, int var3) {
-      synchronized(this.field3898) {
-         if (var3 >= 0 && var3 <= this.field3897) {
-            boolean var6 = this.method5919(var1, var2, var3, true);
-            if (!var6) {
-               var6 = this.method5919(var1, var2, var3, false);
-            }
-
-            return var6;
-         } else {
-            throw new IllegalArgumentException("" + this.field3901 + ',' + var1 + ',' + var3);
-         }
-      }
-   }
-
-   public byte[] method5918(int var1) {
-      synchronized(this.field3898) {
-         Object var10000;
          try {
-            if (this.field3899.method6396() < (long)(var1 * 6 + 6)) {
-               var10000 = null;
-               return (byte[])var10000;
+            if (this.field3887 + var1 <= this.field3895) {
+               this.field3891.write(this.field3896, this.field3887, var1);
+            } else {
+               int var13 = this.field3895 - this.field3887;
+               this.field3891.write(this.field3896, this.field3887, var13);
+               this.field3891.write(this.field3896, 0, var1 - var13);
             }
-
-            this.field3899.method6378((long)(var1 * 6));
-            this.field3899.method6394(field3900, 0, 6);
-            int var4 = ((field3900[0] & 255) << 16) + (field3900[2] & 255) + ((field3900[1] & 255) << 8);
-            int var5 = (field3900[5] & 255) + ((field3900[3] & 255) << 16) + ((field3900[4] & 255) << 8);
-            if (var4 < 0 || var4 > this.field3897) {
-               var10000 = null;
-               return (byte[])var10000;
+         } catch (IOException var9) {
+            IOException var2 = var9;
+            synchronized(this) {
+               this.field3893 = var2;
+               return;
             }
-
-            if (var5 > 0 && (long)var5 <= this.field3898.method6396() / 520L) {
-               byte[] var6 = new byte[var4];
-               int var7 = 0;
-               int var8 = 0;
-
-               while(var7 < var4) {
-                  if (var5 == 0) {
-                     var10000 = null;
-                     return (byte[])var10000;
-                  }
-
-                  this.field3898.method6378(520L * (long)var5);
-                  int var9 = var4 - var7;
-                  int var10;
-                  int var11;
-                  int var12;
-                  int var13;
-                  byte var14;
-                  if (var1 > 65535) {
-                     if (var9 > 510) {
-                        var9 = 510;
-                     }
-
-                     var14 = 10;
-                     this.field3898.method6394(field3900, 0, var14 + var9);
-                     var10 = ((field3900[1] & 255) << 16) + ((field3900[0] & 255) << 24) + (field3900[3] & 255) + ((field3900[2] & 255) << 8);
-                     var11 = (field3900[5] & 255) + ((field3900[4] & 255) << 8);
-                     var12 = (field3900[8] & 255) + ((field3900[7] & 255) << 8) + ((field3900[6] & 255) << 16);
-                     var13 = field3900[9] & 255;
-                  } else {
-                     if (var9 > 512) {
-                        var9 = 512;
-                     }
-
-                     var14 = 8;
-                     this.field3898.method6394(field3900, 0, var14 + var9);
-                     var10 = (field3900[1] & 255) + ((field3900[0] & 255) << 8);
-                     var11 = (field3900[3] & 255) + ((field3900[2] & 255) << 8);
-                     var12 = ((field3900[5] & 255) << 8) + ((field3900[4] & 255) << 16) + (field3900[6] & 255);
-                     var13 = field3900[7] & 255;
-                  }
-
-                  if (var10 == var1 && var11 == var8 && var13 == this.field3901) {
-                     if (var12 >= 0 && (long)var12 <= this.field3898.method6396() / 520L) {
-                        int var15 = var14 + var9;
-
-                        for(int var16 = var14; var16 < var15; ++var16) {
-                           var6[var7++] = field3900[var16];
-                        }
-
-                        var5 = var12;
-                        ++var8;
-                        continue;
-                     }
-
-                     var10000 = null;
-                     return (byte[])var10000;
-                  }
-
-                  var10000 = null;
-                  return (byte[])var10000;
-               }
-
-               byte[] var21 = var6;
-               return var21;
-            }
-
-            var10000 = null;
-         } catch (IOException var19) {
-            return null;
          }
 
-         return (byte[])var10000;
+         synchronized(this) {
+            this.field3887 = (this.field3887 + var1) % this.field3895;
+         }
+      } while(!this.method5336());
+
+   }
+
+   void method5344(byte[] var1, int var2, int var3) throws IOException {
+      if (var3 >= 0 && var2 >= 0 && var2 + var3 <= var1.length) {
+         synchronized(this) {
+            if (this.field3893 != null) {
+               throw new IOException(this.field3893.toString());
+            } else {
+               int var6;
+               if (this.field3887 <= this.field3892) {
+                  var6 = this.field3895 - this.field3892 + this.field3887 - 1;
+               } else {
+                  var6 = this.field3887 - this.field3892 - 1;
+               }
+
+               if (var6 < var3) {
+                  throw new IOException("");
+               } else {
+                  if (var3 + this.field3892 <= this.field3895) {
+                     System.arraycopy(var1, var2, this.field3896, this.field3892, var3);
+                  } else {
+                     int var7 = this.field3895 - this.field3892;
+                     System.arraycopy(var1, var2, this.field3896, this.field3892, var7);
+                     System.arraycopy(var1, var2 + var7, this.field3896, 0, var3 - var7);
+                  }
+
+                  this.field3892 = (this.field3892 + var3) % this.field3895;
+                  this.notifyAll();
+               }
+            }
+         }
+      } else {
+         throw new IOException();
       }
    }
 
-   public String toString() {
-      return "" + this.field3901;
+   void method5331() {
+      synchronized(this) {
+         this.field3894 = true;
+         this.notifyAll();
+      }
+
+      try {
+         this.field3889.join();
+      } catch (InterruptedException var4) {
+      }
+
    }
 }

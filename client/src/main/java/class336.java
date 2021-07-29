@@ -1,79 +1,83 @@
 public class class336 {
-   static int field3923;
-   public int field3920;
-   public int field3921;
-   public int field3922;
-   public int field3924;
+   static class397 field3920;
+   public int field3908;
+   public int field3909;
+   public int field3910;
+   public int field3911;
+   public int field3912;
+   public int field3913;
+   public int field3914;
+   public int field3915;
+   public int field3916;
+   public int field3917;
+   public int field3918;
 
-   public class336(int var1, int var2, int var3, int var4) {
-      this.method5936(var1, var2);
-      this.method5937(var3, var4);
+   public class336() {
+      this.field3917 = -1;
+      this.field3916 = -1;
+      this.field3910 = -1;
+      this.field3908 = -1;
+      this.field3911 = -1;
+      this.field3913 = -1;
+      this.field3909 = -1;
+      this.field3915 = -1;
+      this.field3914 = -1;
+      this.field3912 = -1;
+      this.field3918 = -1;
    }
 
-   public class336(int var1, int var2) {
-      this(0, 0, var1, var2);
-   }
+   public void method5362(class277 var1) {
+      byte[] var3 = var1.method4419(class335.field3905.field3904);
+      class385 var4 = new class385(var3);
 
-   void method5940(class336 var1, class336 var2) {
-      var2.field3924 = this.field3924;
-      var2.field3922 = this.field3922;
-      if (this.field3924 < var1.field3924) {
-         var2.field3922 -= var1.field3924 - this.field3924;
-         var2.field3924 = var1.field3924;
+      while(true) {
+         int var5 = var4.method5948();
+         if (var5 == 0) {
+            return;
+         }
+
+         switch(var5) {
+         case 1:
+            var4.method5952();
+            break;
+         case 2:
+            this.field3917 = var4.method5965();
+            this.field3916 = var4.method5965();
+            this.field3910 = var4.method5965();
+            this.field3908 = var4.method5965();
+            this.field3911 = var4.method5965();
+            this.field3913 = var4.method5965();
+            this.field3909 = var4.method5965();
+            this.field3915 = var4.method5965();
+            this.field3914 = var4.method5965();
+            this.field3912 = var4.method5965();
+            this.field3918 = var4.method5965();
+         }
       }
+   }
 
-      if (var2.method5941() > var1.method5941()) {
-         var2.field3922 -= var2.method5941() - var1.method5941();
+   static int method5365(int var0, class59 var1, boolean var2) {
+      if (var0 == 6800) {
+         class51.field738[++class2.field4 - 1] = "";
+         return 1;
+      } else if (var0 != 6801 && var0 != 6802) {
+         if (6850 == var0) {
+            class51.field738[++class2.field4 - 1] = "";
+            return 1;
+         } else if (var0 != 6851 && var0 != 6852) {
+            if (6853 == var0) {
+               class51.field747[++class51.field746 - 1] = 0;
+               return 1;
+            } else {
+               return 2;
+            }
+         } else {
+            class51.field747[++class51.field746 - 1] = -1;
+            return 1;
+         }
+      } else {
+         class51.field747[++class51.field746 - 1] = -1;
+         return 1;
       }
-
-      if (var2.field3922 < 0) {
-         var2.field3922 = 0;
-      }
-
-   }
-
-   public void method5936(int var1, int var2) {
-      this.field3924 = var1;
-      this.field3921 = var2;
-   }
-
-   void method5944(class336 var1, class336 var2) {
-      var2.field3921 = this.field3921;
-      var2.field3920 = this.field3920;
-      if (this.field3921 < var1.field3921) {
-         var2.field3920 -= var1.field3921 - this.field3921;
-         var2.field3921 = var1.field3921;
-      }
-
-      if (var2.method5942() > var1.method5942()) {
-         var2.field3920 -= var2.method5942() - var1.method5942();
-      }
-
-      if (var2.field3920 < 0) {
-         var2.field3920 = 0;
-      }
-
-   }
-
-   public void method5937(int var1, int var2) {
-      this.field3922 = var1;
-      this.field3920 = var2;
-   }
-
-   int method5941() {
-      return this.field3924 + this.field3922;
-   }
-
-   int method5942() {
-      return this.field3920 + this.field3921;
-   }
-
-   public void method5938(class336 var1, class336 var2) {
-      this.method5940(var1, var2);
-      this.method5944(var1, var2);
-   }
-
-   public String toString() {
-      return null;
    }
 }

@@ -1,173 +1,157 @@
-import java.io.File;
+import java.io.DataInputStream;
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.URL;
 
-public class class130 {
-   public static class369 field1470;
-   public static class369 field1476;
-   public static class369 field1478;
-   static File field1474;
-   static File field1475;
+public class class130 implements Runnable {
+   public static String field1463;
+   public static String field1469;
+   static class302 field1468;
+   boolean field1467;
+   class136 field1462;
+   class136 field1465;
+   Thread field1466;
 
-   static {
-      field1470 = null;
-      field1476 = null;
-      field1478 = null;
+   public class130() {
+      this.field1465 = null;
+      this.field1462 = null;
+      this.field1467 = false;
+      field1469 = "Unknown";
+      field1463 = "1.6";
+
+      try {
+         field1469 = System.getProperty("java.vendor");
+         field1463 = System.getProperty("java.version");
+      } catch (Exception var2) {
+      }
+
+      this.field1467 = false;
+      this.field1466 = new Thread(this);
+      this.field1466.setPriority(10);
+      this.field1466.setDaemon(true);
+      this.field1466.start();
    }
 
-   static final int method2549(class248 var0, int var1) {
-      if (var0.field3079 != null && var1 < var0.field3079.length) {
-         try {
-            int[] var3 = var0.field3079[var1];
-            int var4 = 0;
-            int var5 = 0;
-            byte var6 = 0;
+   static void method2276(int var0, String var1, String var2, String var3) {
+      class61 var5 = (class61)class85.field1196.get(var0);
+      if (null == var5) {
+         var5 = new class61();
+         class85.field1196.put(var0, var5);
+      }
 
+      class45 var6 = var5.method1616(var0, var1, var2, var3);
+      class85.field1194.method5727(var6, (long)var6.field378);
+      class85.field1195.method4812(var6);
+      client.field602 = client.field593;
+   }
+
+   public final void method2268() {
+      synchronized(this) {
+         this.field1467 = true;
+         this.notifyAll();
+      }
+
+      try {
+         this.field1466.join();
+      } catch (InterruptedException var4) {
+      }
+
+   }
+
+   static class45 method2277(int var0) {
+      return (class45)class85.field1194.method5716((long)var0);
+   }
+
+   public final void run() {
+      while(true) {
+         class136 var1;
+         synchronized(this) {
             while(true) {
-               int var7 = var3[var5++];
-               int var8 = 0;
-               byte var9 = 0;
-               if (var7 == 0) {
-                  return var4;
+               if (this.field1467) {
+                  return;
                }
 
-               if (var7 == 1) {
-                  var8 = client.field434[var3[var5++]];
-               }
-
-               if (var7 == 2) {
-                  var8 = client.field540[var3[var5++]];
-               }
-
-               if (var7 == 3) {
-                  var8 = client.field541[var3[var5++]];
-               }
-
-               int var10;
-               class248 var11;
-               int var12;
-               int var13;
-               if (var7 == 4) {
-                  var10 = var3[var5++] << 16;
-                  var10 += var3[var5++];
-                  var11 = class86.method2063(var10);
-                  var12 = var3[var5++];
-                  if (var12 != -1 && (!class10.method105(var12).field1807 || client.field561)) {
-                     for(var13 = 0; var13 < var11.field3085.length; ++var13) {
-                        if (var12 + 1 == var11.field3085[var13]) {
-                           var8 += var11.field3086[var13];
-                        }
-                     }
+               if (this.field1465 != null) {
+                  var1 = this.field1465;
+                  this.field1465 = this.field1465.field1507;
+                  if (null == this.field1465) {
+                     this.field1462 = null;
                   }
+                  break;
                }
 
-               if (var7 == 5) {
-                  var8 = class243.field2910[var3[var5++]];
-               }
-
-               if (var7 == 6) {
-                  var8 = class258.field3167[client.field540[var3[var5++]] - 1];
-               }
-
-               if (var7 == 7) {
-                  var8 = class243.field2910[var3[var5++]] * 100 / '\ub71b';
-               }
-
-               if (var7 == 8) {
-                  var8 = class19.field139.field990;
-               }
-
-               if (var7 == 9) {
-                  for(var10 = 0; var10 < 25; ++var10) {
-                     if (class258.field3169[var10]) {
-                        var8 += client.field540[var10];
-                     }
-                  }
-               }
-
-               if (var7 == 10) {
-                  var10 = var3[var5++] << 16;
-                  var10 += var3[var5++];
-                  var11 = class86.method2063(var10);
-                  var12 = var3[var5++];
-                  if (var12 != -1 && (!class10.method105(var12).field1807 || client.field561)) {
-                     for(var13 = 0; var13 < var11.field3085.length; ++var13) {
-                        if (var12 + 1 == var11.field3085[var13]) {
-                           var8 = 999999999;
-                           break;
-                        }
-                     }
-                  }
-               }
-
-               if (var7 == 11) {
-                  var8 = client.field431;
-               }
-
-               if (var7 == 12) {
-                  var8 = client.field575;
-               }
-
-               if (var7 == 13) {
-                  var10 = class243.field2910[var3[var5++]];
-                  int var14 = var3[var5++];
-                  var8 = (var10 & 1 << var14) != 0 ? 1 : 0;
-               }
-
-               if (var7 == 14) {
-                  var10 = var3[var5++];
-                  var8 = class174.method3506(var10);
-               }
-
-               if (var7 == 15) {
-                  var9 = 1;
-               }
-
-               if (var7 == 16) {
-                  var9 = 2;
-               }
-
-               if (var7 == 17) {
-                  var9 = 3;
-               }
-
-               if (var7 == 18) {
-                  var8 = (class19.field139.field1068 >> 7) + class280.field3624;
-               }
-
-               if (var7 == 19) {
-                  var8 = (class19.field139.field1058 >> 7) + class77.field1133;
-               }
-
-               if (var7 == 20) {
-                  var8 = var3[var5++];
-               }
-
-               if (var9 == 0) {
-                  if (var6 == 0) {
-                     var4 += var8;
-                  }
-
-                  if (var6 == 1) {
-                     var4 -= var8;
-                  }
-
-                  if (var6 == 2 && var8 != 0) {
-                     var4 /= var8;
-                  }
-
-                  if (var6 == 3) {
-                     var4 *= var8;
-                  }
-
-                  var6 = 0;
-               } else {
-                  var6 = var9;
+               try {
+                  this.wait();
+               } catch (InterruptedException var7) {
                }
             }
-         } catch (Exception var15) {
-            return -1;
          }
-      } else {
-         return -2;
+
+         try {
+            int var2 = var1.field1512;
+            if (var2 == 1) {
+               var1.field1510 = new Socket(InetAddress.getByName((String)var1.field1514), var1.field1515);
+            } else if (var2 == 2) {
+               Thread var3 = new Thread((Runnable)var1.field1514);
+               var3.setDaemon(true);
+               var3.start();
+               var3.setPriority(var1.field1515);
+               var1.field1510 = var3;
+            } else if (4 == var2) {
+               var1.field1510 = new DataInputStream(((URL)var1.field1514).openStream());
+            }
+
+            var1.field1511 = 1;
+         } catch (ThreadDeath var5) {
+            throw var5;
+         } catch (Throwable var6) {
+            var1.field1511 = 2;
+         }
       }
+   }
+
+   final class136 method2274(int var1, int var2, int var3, Object var4) {
+      class136 var6 = new class136();
+      var6.field1512 = var1;
+      var6.field1515 = var2;
+      var6.field1514 = var4;
+      synchronized(this) {
+         if (null != this.field1462) {
+            this.field1462.field1507 = var6;
+            this.field1462 = var6;
+         } else {
+            this.field1462 = this.field1465 = var6;
+         }
+
+         this.notify();
+         return var6;
+      }
+   }
+
+   public final class136 method2258(String var1, int var2) {
+      return this.method2274(1, var2, 0, var1);
+   }
+
+   public final class136 method2257(Runnable var1, int var2) {
+      return this.method2274(2, var2, 0, var1);
+   }
+
+   static final void method2259(int var0) {
+      var0 = Math.min(Math.max(var0, 0), 255);
+      if (var0 != class38.field308.field1119) {
+         if (0 == class38.field308.field1119 && client.field640 != -1) {
+            class83.method1886(class109.field1326, client.field640, 0, var0, false);
+            client.field648 = false;
+         } else if (var0 == 0) {
+            class60.method1610();
+            client.field648 = false;
+         } else {
+            class361.method5700(var0);
+         }
+
+         class38.field308.field1119 = var0;
+         class135.method2320();
+      }
+
    }
 }

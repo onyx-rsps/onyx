@@ -1,47 +1,59 @@
-public class class117 extends class103 {
-   static int field1399;
-   int field1401;
+public class class117 extends class120 {
+   static int field1398;
+   byte field1396;
+   int field1392;
+   int field1395;
+   String field1394;
    // $FF: synthetic field
-   final class106 this$0;
+   final class121 this$0;
 
-   class117(class106 var1) {
-      this.this$0 = var1;
-      this.field1401 = -1;
-   }
-
-   void vmethod2499(class114 var1) {
-      var1.method2298(this.field1401);
-   }
-
-   void vmethod2494(Buffer var1) {
-      this.field1401 = var1.method6655();
-   }
-
-   public static class396 method2382(class276 var0, String var1, String var2) {
-      int var4 = var0.method4936(var1);
-      int var5 = var0.method4938(var4, var2);
-      class396 var6;
-      if (!class290.method5130(var0, var4, var5)) {
-         var6 = null;
+   static class59 method2186(int var0, int var1) {
+      class59 var3 = (class59)class59.field862.method3880((long)(var0 << 16));
+      if (var3 != null) {
+         return var3;
       } else {
-         class396 var8 = new class396();
-         var8.field4266 = class398.field4280;
-         var8.field4267 = class398.field4285;
-         var8.field4264 = class398.field4283[0];
-         var8.field4265 = class398.field4284[0];
-         var8.field4262 = class105.field1307[0];
-         var8.field4263 = class374.field4155[0];
-         var8.field4260 = class118.field1406;
-         var8.field4261 = class398.field4282[0];
-         class398.field4283 = null;
-         class398.field4284 = null;
-         class105.field1307 = null;
-         class374.field4155 = null;
-         class118.field1406 = null;
-         class398.field4282 = null;
-         var6 = var8;
-      }
+         String var4 = String.valueOf(var0);
+         int var5 = class46.field391.method4428(var4);
+         if (var5 == -1) {
+            return null;
+         } else {
+            byte[] var6 = class46.field391.method4419(var5);
+            if (null != var6) {
+               if (var6.length <= 1) {
+                  return null;
+               }
 
-      return var6;
+               var3 = class211.method3833(var6);
+               if (null != var3) {
+                  class59.field862.method3882(var3, (long)(var0 << 16));
+                  return var3;
+               }
+            }
+
+            return null;
+         }
+      }
+   }
+
+   class117(class121 var1) {
+      this.this$0 = var1;
+      this.field1395 = -1;
+   }
+
+   void method2191(class385 var1) {
+      var1.method5948();
+      this.field1395 = var1.method6043();
+      this.field1396 = var1.method5949();
+      this.field1392 = var1.method6043();
+      var1.method5954();
+      this.field1394 = var1.method5957();
+      var1.method5948();
+   }
+
+   void method2192(class124 var1) {
+      class106 var3 = (class106)var1.field1436.get(this.field1395);
+      var3.field1306 = this.field1396;
+      var3.field1302 = this.field1392;
+      var3.field1303 = new class406(this.field1394);
    }
 }

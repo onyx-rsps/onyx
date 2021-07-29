@@ -1,26 +1,29 @@
-public class class228 extends class353 {
-   static class228[] field2688;
-   static int field2686;
-   public class226 field2684;
-   public class383 field2690;
-   public int field2685;
-   public int field2687;
+public class class228 {
+   public static final class228 field2675;
+   public static final class228 field2676;
+   public static final class228 field2677;
+   public static final class228 field2678;
+   public static final class228 field2679;
+   public static final class228 field2680;
+   public static final class228 field2681;
+   public static final class228 field2682;
+   public static final class228 field2683;
+   public static final class228 field2684;
+   static int field2674;
 
    static {
-      field2688 = new class228[300];
-      field2686 = 0;
+      field2680 = new class228();
+      field2676 = new class228();
+      field2679 = new class228();
+      field2677 = new class228();
+      field2678 = new class228();
+      field2681 = new class228();
+      field2675 = new class228();
+      field2684 = new class228();
+      field2682 = new class228();
+      field2683 = new class228();
    }
 
    class228() {
-   }
-
-   public void method4337() {
-      if (field2686 < field2688.length) {
-         field2688[++field2686 - 1] = this;
-      }
-   }
-
-   public static int method4345(byte[] var0, int var1) {
-      return class226.method4335(var0, 0, var1);
    }
 }

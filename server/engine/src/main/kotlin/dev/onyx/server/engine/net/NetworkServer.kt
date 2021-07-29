@@ -19,8 +19,6 @@ class NetworkServer {
     private val workerGroup = NioEventLoopGroup(1)
     internal val bootstrap = ServerBootstrap()
 
-    internal val sessions = mutableListOf<Session>()
-
     private val channelInitializer = GameChannelInitializer()
 
     /**
@@ -81,5 +79,12 @@ class NetworkServer {
     private fun onBindFailure(address: InetSocketAddress, cause: Throwable) {
         Logger.error(cause) { "Failed to bind networking socket to ${address.hostString}:${address.port}." }
         exitProcess(0)
+    }
+
+    companion object {
+        /**
+         * The channel attribute key for associating a [Session] to a game channel.
+         */
+        val SESSION_KEY: AttributeKey<Session> = AttributeKey.valueOf("session")
     }
 }

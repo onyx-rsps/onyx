@@ -1,29 +1,23 @@
-import java.awt.Component;
-import java.awt.event.MouseWheelEvent;
-import java.awt.event.MouseWheelListener;
+public class class9 {
+   final int field28;
+   final int field29;
+   final String field30;
 
-public final class class9 implements class131, MouseWheelListener {
-   int field30;
-
-   class9() {
-      this.field30 = 0;
+   class9(int var1, int var2, String var3) {
+      this.field29 = var1;
+      this.field28 = var2;
+      this.field30 = var3;
    }
 
-   void method68(Component var1) {
-      var1.addMouseWheelListener(this);
+   class9(class385 var1) {
+      this(var1.method5948(), var1.method5948(), var1.method5957());
    }
 
-   void method70(Component var1) {
-      var1.removeMouseWheelListener(this);
+   String method52() {
+      return Integer.toHexString(this.field29) + Integer.toHexString(this.field28) + this.field30;
    }
 
-   public synchronized int vmethod2550() {
-      int var2 = this.field30;
-      this.field30 = 0;
-      return var2;
-   }
-
-   public synchronized void mouseWheelMoved(MouseWheelEvent var1) {
-      this.field30 += var1.getWheelRotation();
+   int method58() {
+      return this.field28;
    }
 }

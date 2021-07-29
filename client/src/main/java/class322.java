@@ -1,42 +1,49 @@
-public class class322 extends class327 {
-   static class274 field3847;
-   class328 field3848;
-   class328 field3850;
+public class class322 extends class348 {
+   static class124 field3845;
+   public class406 field3844;
+   public int field3847;
+   public short field3846;
 
-   class322() {
-      this.field3848 = class328.field3873;
-      this.field3850 = class328.field3873;
+   class322(class406 var1, int var2) {
+      this.field3847 = (int)(class87.method1989() / 1000L);
+      this.field3844 = var1;
+      this.field3846 = (short)var2;
    }
 
-   void method5684() {
-      this.field3850 = class12.field79.field712.method5754(super.field3852) ? class328.field3871 : class328.field3872;
+   static final void method5133(String var0, int var1) {
+      class229 var3 = class149.method2495(class227.field2588, client.field453.field1205);
+      var3.field2691.method5931(class281.method4532(var0) + 1);
+      var3.field2691.method5938(var0);
+      var3.field2691.method5931(var1);
+      client.field453.method1963(var3);
    }
 
-   void method5689() {
-      this.field3848 = class12.field79.field711.method5754(super.field3852) ? class328.field3871 : class328.field3872;
-   }
+   static final void method5132(int var0, int var1, int var2) {
+      if (var0 >= 128 && var1 >= 128 && var0 <= 13056 && var1 <= 13056) {
+         int var4 = class123.method2216(var0, var1, class285.field3652) - var2;
+         var0 -= class65.field934;
+         var4 -= class337.field3924;
+         var1 -= class358.field4012;
+         int var5 = class198.field2266[class117.field1398];
+         int var6 = class198.field2273[class117.field1398];
+         int var7 = class198.field2266[class118.field1400];
+         int var8 = class198.field2273[class118.field1400];
+         int var9 = var7 * var1 + var0 * var8 >> 16;
+         var1 = var8 * var1 - var7 * var0 >> 16;
+         var0 = var9;
+         var9 = var4 * var6 - var1 * var5 >> 16;
+         var1 = var4 * var5 + var6 * var1 >> 16;
+         if (var1 >= 50) {
+            client.field506 = client.field595 * var0 / var1 + client.field671 / 2;
+            client.field507 = client.field595 * var9 / var1 + client.field672 / 2;
+         } else {
+            client.field506 = -1;
+            client.field507 = -1;
+         }
 
-   void method5682() {
-      this.field3850 = class328.field3873;
-   }
-
-   void method5695() {
-      this.field3848 = class328.field3873;
-   }
-
-   public final boolean method5678() {
-      if (this.field3848 == class328.field3873) {
-         this.method5689();
+      } else {
+         client.field506 = -1;
+         client.field507 = -1;
       }
-
-      return this.field3848 == class328.field3871;
-   }
-
-   public final boolean method5683() {
-      if (this.field3850 == class328.field3873) {
-         this.method5684();
-      }
-
-      return this.field3850 == class328.field3871;
    }
 }

@@ -1,2 +1,2 @@
-public interface class344 extends class343 {
+public interface class344 {
 }

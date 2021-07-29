@@ -1,17 +1,76 @@
-import java.awt.Image;
-import java.math.BigInteger;
-
 public class class54 {
-   static Image field794;
-   static final BigInteger field791;
-   static final BigInteger field792;
+   static int[] field788;
+   int field786;
+   int field787;
+   int field789;
+   int field791;
+   String field790;
 
-   static {
-      field792 = new BigInteger("10001", 16);
-      field791 = new BigInteger("ab6110302672864008d0185e6afc9b62db423bb9e2814f3eed533d23426d27ca6fdb3a8144af5f336e3260ca6aa42c96a9a97e061b7a041e85d823fb34738b4fd8aa5469a67e898774221bf6cf5ccc1b79c53154299bdafd8ced827edbc9278035bb1c538bbd08676651fe07c901650e509497289e174d6162d7b3b68acf4d0d", 16);
+   public static void method1542() {
+      class143.field1568.method3883();
    }
 
-   public static synchronized byte[] method1589(int var0) {
-      return class309.method5564(var0, false);
+   static int method1543(int var0, class59 var1, boolean var2) {
+      if (var0 == 5630) {
+         client.field571 = 250;
+         return 1;
+      } else if (5631 != var0 && var0 != 5633) {
+         if (5632 == var0) {
+            class51.field747[++class51.field746 - 1] = 26;
+            return 1;
+         } else {
+            return 2;
+         }
+      } else {
+         class2.field4 -= 2;
+         return 1;
+      }
+   }
+
+   static final void method1541(class249 var0, int var1, int var2) {
+      if (client.field646 == 0 || 3 == client.field646) {
+         if (!client.field544 && (class20.field149 == 1 || !class311.field3777 && class20.field149 == 4)) {
+            class243 var4 = var0.method4227(true);
+            if (var4 == null) {
+               return;
+            }
+
+            int var5 = class20.field150 - var1;
+            int var6 = class20.field151 - var2;
+            if (var4.method4148(var5, var6)) {
+               var5 -= var4.field2910 / 2;
+               var6 -= var4.field2906 / 2;
+               int var7 = client.field445 & 2047;
+               int var8 = class198.field2266[var7];
+               int var9 = class198.field2273[var7];
+               int var10 = var8 * var6 + var5 * var9 >> 11;
+               int var11 = var6 * var9 - var8 * var5 >> 11;
+               int var12 = class20.field140.field1069 + var10 >> 7;
+               int var13 = class20.field140.field1059 - var11 >> 7;
+               class229 var14 = class149.method2495(class227.field2586, client.field453.field1205);
+               var14.field2691.method5931(18);
+               var14.field2691.method6077(var12 + class281.field3625);
+               var14.field2691.method6122(class78.field1134 + var13);
+               var14.field2691.method5931(class11.field46[82] ? (class11.field46[81] ? 2 : 1) : 0);
+               var14.field2691.method5931(var5);
+               var14.field2691.method5931(var6);
+               var14.field2691.method6122(client.field445);
+               var14.field2691.method5931(57);
+               var14.field2691.method5931(0);
+               var14.field2691.method5931(0);
+               var14.field2691.method5931(89);
+               var14.field2691.method6122(class20.field140.field1069);
+               var14.field2691.method6122(class20.field140.field1059);
+               var14.field2691.method5931(63);
+               client.field453.method1963(var14);
+               client.field644 = var12;
+               client.field597 = var13;
+            }
+         }
+
+      }
+   }
+
+   class54() {
    }
 }

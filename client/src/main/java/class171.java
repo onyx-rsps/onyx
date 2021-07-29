@@ -1,103 +1,90 @@
-import java.util.Iterator;
-
-public class class171 implements class187 {
-   int field1997;
-   int field1998;
-   int field1999;
-   int field2000;
-   int field2001;
-   int field2002;
-   int field2003;
-   int field2004;
-   int field2005;
-   int field2006;
+public class class171 extends class177 {
+   int field1993;
+   int field1994;
+   int field1995;
+   int field1996;
 
    class171() {
    }
 
-   public boolean vmethod3650(int var1, int var2) {
-      return var1 >= (this.field1998 << 6) + (this.field2000 << 3) && var1 <= (this.field1998 << 6) + (this.field2000 << 3) + 7 && var2 >= (this.field2005 << 6) + (this.field2001 << 3) && var2 <= (this.field2005 << 6) + (this.field2001 << 3) + 7;
+   void method3112(class385 var1) {
+      int var3 = var1.method5948();
+      if (var3 != class183.field2095.field2094) {
+         throw new IllegalStateException("");
+      } else {
+         super.field2061 = var1.method5948();
+         super.field2052 = var1.method5948();
+         super.field2051 = var1.method6043();
+         super.field2048 = var1.method6043();
+         this.field1996 = var1.method5948();
+         this.field1994 = var1.method5948();
+         super.field2049 = var1.method6043();
+         super.field2053 = var1.method6043();
+         this.field1995 = var1.method5948();
+         this.field1993 = var1.method5948();
+         super.field2047 = var1.method5965();
+         super.field2054 = var1.method5965();
+      }
    }
 
-   public boolean vmethod3652(int var1, int var2, int var3) {
-      if (var1 >= this.field1997 && var1 < this.field1997 + this.field2002) {
-         return var2 >= (this.field1999 << 6) + (this.field2003 << 3) && var2 <= (this.field1999 << 6) + (this.field2003 << 3) + 7 && var3 >= (this.field2006 << 6) + (this.field2004 << 3) && var3 <= (this.field2006 << 6) + (this.field2004 << 3) + 7;
+   void method3156(class385 var1) {
+      super.field2052 = Math.min(super.field2052, 4);
+      super.field2055 = new short[1][64][64];
+      super.field2062 = new short[super.field2052][64][64];
+      super.field2057 = new byte[super.field2052][64][64];
+      super.field2058 = new byte[super.field2052][64][64];
+      super.field2059 = new class179[super.field2052][64][64][];
+      int var3 = var1.method5948();
+      if (class182.field2090.field2089 != var3) {
+         throw new IllegalStateException("");
       } else {
+         int var4 = var1.method5948();
+         int var5 = var1.method5948();
+         int var6 = var1.method5948();
+         int var7 = var1.method5948();
+         if (var4 == super.field2049 && super.field2053 == var5 && var6 == this.field1995 && var7 == this.field1993) {
+            for(int var8 = 0; var8 < 8; ++var8) {
+               for(int var9 = 0; var9 < 8; ++var9) {
+                  this.method3175(var8 + this.field1995 * 8, this.field1993 * 8 + var9, var1);
+               }
+            }
+
+         } else {
+            throw new IllegalStateException("");
+         }
+      }
+   }
+
+   public boolean equals(Object var1) {
+      if (!(var1 instanceof class171)) {
          return false;
-      }
-   }
-
-   public void vmethod3649(class167 var1) {
-      if (var1.field1952 > this.field1998) {
-         var1.field1952 = this.field1998;
-      }
-
-      if (var1.field1950 < this.field1998) {
-         var1.field1950 = this.field1998;
-      }
-
-      if (var1.field1951 > this.field2005) {
-         var1.field1951 = this.field2005;
-      }
-
-      if (var1.field1956 < this.field2005) {
-         var1.field1956 = this.field2005;
-      }
-
-   }
-
-   public class244 vmethod3653(int var1, int var2) {
-      if (!this.vmethod3650(var1, var2)) {
-         return null;
       } else {
-         int var4 = this.field1999 * 64 - this.field1998 * 64 + (this.field2003 * 8 - this.field2000 * 8) + var1;
-         int var5 = this.field2006 * 64 - this.field2005 * 64 + var2 + (this.field2004 * 8 - this.field2001 * 8);
-         return new class244(this.field1997, var4, var5);
+         class171 var2 = (class171)var1;
+         if (super.field2049 == var2.field2049 && super.field2053 == var2.field2053) {
+            return var2.field1995 == this.field1995 && var2.field1993 == this.field1993;
+         } else {
+            return false;
+         }
       }
    }
 
-   public int[] vmethod3651(int var1, int var2, int var3) {
-      if (!this.vmethod3652(var1, var2, var3)) {
-         return null;
-      } else {
-         int[] var5 = new int[]{this.field1998 * 64 - this.field1999 * 64 + var2 + (this.field2000 * 8 - this.field2003 * 8), var3 + (this.field2005 * 64 - this.field2006 * 64) + (this.field2001 * 8 - this.field2004 * 8)};
-         return var5;
-      }
+   public int hashCode() {
+      return super.field2049 | super.field2053 << 8 | this.field1995 << 16 | this.field1993 << 24;
    }
 
-   void method3469() {
+   int method3120() {
+      return this.field1996;
    }
 
-   public void vmethod3660(Buffer var1) {
-      this.field1997 = var1.method6560();
-      this.field2002 = var1.method6560();
-      this.field1999 = var1.method6655();
-      this.field2003 = var1.method6560();
-      this.field2006 = var1.method6655();
-      this.field2004 = var1.method6560();
-      this.field1998 = var1.method6655();
-      this.field2000 = var1.method6560();
-      this.field2005 = var1.method6655();
-      this.field2001 = var1.method6560();
-      this.method3469();
+   int method3116() {
+      return this.field1994;
    }
 
-   static void method3482() {
-      Iterator var1 = class84.field1193.iterator();
-
-      while(var1.hasNext()) {
-         class44 var2 = (class44)var1.next();
-         var2.method857();
-      }
-
+   int method3127() {
+      return this.field1995;
    }
 
-   public static long method3480(int var0, int var1, int var2, boolean var3, int var4) {
-      long var6 = (long)((var0 & 127) << 0 | (var1 & 127) << 7 | (var2 & 3) << 14) | ((long)var4 & 4294967295L) << 17;
-      if (var3) {
-         var6 |= 65536L;
-      }
-
-      return var6;
+   int method3117() {
+      return this.field1993;
    }
 }

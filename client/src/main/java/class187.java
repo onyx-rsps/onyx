@@ -1,13 +1,21 @@
-public interface class187 {
-   boolean vmethod3650(int var1, int var2);
+public class class187 {
+   public static final class187 field2115;
+   public static final class187 field2116;
+   public static final class187 field2117;
+   public static final class187 field2118;
+   static long field2120;
+   static final class187 field2119;
+   public final String field2114;
 
-   boolean vmethod3652(int var1, int var2, int var3);
+   static {
+      field2118 = new class187("details");
+      field2116 = new class187("compositemap");
+      field2115 = new class187("compositetexture");
+      field2119 = new class187("area");
+      field2117 = new class187("labels");
+   }
 
-   void vmethod3649(class167 var1);
-
-   class244 vmethod3653(int var1, int var2);
-
-   int[] vmethod3651(int var1, int var2, int var3);
-
-   void vmethod3660(Buffer var1);
+   class187(String var1) {
+      this.field2114 = var1;
+   }
 }

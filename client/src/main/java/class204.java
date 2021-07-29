@@ -1,130 +1,89 @@
-public class class204 implements class212 {
-   class194[] field2377;
-   class276 field2380;
-   class295 field2375;
-   double field2378;
-   int field2374;
-   int field2376;
-   int field2379;
+public final class class204 {
+   int field2355;
+   int field2356;
+   int field2357;
+   int field2358;
+   int field2359;
+   int field2360;
+   int field2361;
+   int field2362;
+   int field2363;
+   int field2364;
+   int field2365;
+   int field2366;
+   int field2367;
+   int field2368;
+   int field2369;
+   int field2370;
+   int field2371;
+   int field2372;
 
-   public class204(class276 var1, class276 var2, int var3, double var4, int var6) {
-      this.field2375 = new class295();
-      this.field2376 = 0;
-      this.field2378 = 1.0D;
-      this.field2379 = 128;
-      this.field2380 = var2;
-      this.field2374 = var3;
-      this.field2376 = this.field2374;
-      this.field2378 = var4;
-      this.field2379 = var6;
-      int[] var7 = var1.method4989(0);
-      int var8 = var7.length;
-      this.field2377 = new class194[var1.method4946(0)];
-
-      for(int var9 = 0; var9 < var8; ++var9) {
-         Buffer var10 = new Buffer(var1.method4920(0, var7[var9]));
-         this.field2377[var7[var9]] = new class194(var10);
-      }
-
+   class204() {
    }
 
-   public void method4109() {
-      for(int var2 = 0; var2 < this.field2377.length; ++var2) {
-         if (this.field2377[var2] != null) {
-            this.field2377[var2].method3806();
+   static void method3698(byte[] var0) {
+      class385 var2 = new class385(var0);
+      var2.field4182 = var0.length - 2;
+      class399.field4282 = var2.method6043();
+      class399.field4284 = new int[class399.field4282];
+      class399.field4285 = new int[class399.field4282];
+      class106.field1308 = new int[class399.field4282];
+      class375.field4156 = new int[class399.field4282];
+      class399.field4283 = new byte[class399.field4282][];
+      var2.field4182 = var0.length - 7 - class399.field4282 * 8;
+      class399.field4281 = var2.method6043();
+      class399.field4286 = var2.method6043();
+      int var3 = (var2.method5948() & 255) + 1;
+
+      int var4;
+      for(var4 = 0; var4 < class399.field4282; ++var4) {
+         class399.field4284[var4] = var2.method6043();
+      }
+
+      for(var4 = 0; var4 < class399.field4282; ++var4) {
+         class399.field4285[var4] = var2.method6043();
+      }
+
+      for(var4 = 0; var4 < class399.field4282; ++var4) {
+         class106.field1308[var4] = var2.method6043();
+      }
+
+      for(var4 = 0; var4 < class399.field4282; ++var4) {
+         class375.field4156[var4] = var2.method6043();
+      }
+
+      var2.field4182 = var0.length - 7 - class399.field4282 * 8 - (var3 - 1) * 3;
+      class119.field1407 = new int[var3];
+
+      for(var4 = 1; var4 < var3; ++var4) {
+         class119.field1407[var4] = var2.method5952();
+         if (0 == class119.field1407[var4]) {
+            class119.field1407[var4] = 1;
          }
       }
 
-      this.field2375 = new class295();
-      this.field2376 = this.field2374;
-   }
+      var2.field4182 = 0;
 
-   public int vmethod4253(int var1) {
-      return this.field2377[var1] != null ? this.field2377[var1].field2200 : 0;
-   }
-
-   public int[] vmethod4262(int var1) {
-      class194 var3 = this.field2377[var1];
-      if (var3 != null) {
-         if (var3.field2206 != null) {
-            this.field2375.method5188(var3);
-            var3.field2209 = true;
-            return var3.field2206;
-         }
-
-         boolean var4 = var3.method3815(this.field2378, this.field2379, this.field2380);
-         if (var4) {
-            if (this.field2376 == 0) {
-               class194 var5 = (class194)this.field2375.method5190();
-               var5.method3806();
-            } else {
-               --this.field2376;
+      for(var4 = 0; var4 < class399.field4282; ++var4) {
+         int var5 = class106.field1308[var4];
+         int var6 = class375.field4156[var4];
+         int var7 = var6 * var5;
+         byte[] var8 = new byte[var7];
+         class399.field4283[var4] = var8;
+         int var9 = var2.method5948();
+         int var10;
+         if (0 == var9) {
+            for(var10 = 0; var10 < var7; ++var10) {
+               var8[var10] = var2.method5949();
             }
-
-            this.field2375.method5188(var3);
-            var3.field2209 = true;
-            return var3.field2206;
-         }
-      }
-
-      return null;
-   }
-
-   public boolean vmethod4252(int var1) {
-      return this.field2379 == 64;
-   }
-
-   public boolean vmethod4259(int var1) {
-      return this.field2377[var1].field2201;
-   }
-
-   public int method4104() {
-      int var2 = 0;
-      int var3 = 0;
-      class194[] var4 = this.field2377;
-
-      for(int var5 = 0; var5 < var4.length; ++var5) {
-         class194 var6 = var4[var5];
-         if (var6 != null && var6.field2205 != null) {
-            var2 += var6.field2205.length;
-            int[] var7 = var6.field2205;
-
-            for(int var8 = 0; var8 < var7.length; ++var8) {
-               int var9 = var7[var8];
-               if (this.field2380.method4947(var9)) {
-                  ++var3;
+         } else if (1 == var9) {
+            for(var10 = 0; var10 < var5; ++var10) {
+               for(int var11 = 0; var11 < var6; ++var11) {
+                  var8[var5 * var11 + var10] = var2.method5949();
                }
             }
          }
       }
 
-      if (var2 == 0) {
-         return 0;
-      } else {
-         return var3 * 100 / var2;
-      }
-   }
-
-   public void method4114(double var1) {
-      this.field2378 = var1;
-      this.method4109();
-   }
-
-   public void method4110(int var1) {
-      for(int var3 = 0; var3 < this.field2377.length; ++var3) {
-         class194 var4 = this.field2377[var3];
-         if (var4 != null && var4.field2196 != 0 && var4.field2209) {
-            var4.method3807(var1);
-            var4.field2209 = false;
-         }
-      }
-
-   }
-
-   public static byte[] method4130(byte[] var0) {
-      int var2 = var0.length;
-      byte[] var3 = new byte[var2];
-      System.arraycopy(var0, 0, var3, 0, var2);
-      return var3;
    }
 }

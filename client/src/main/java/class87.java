@@ -1,33 +1,122 @@
+import java.io.DataInputStream;
+import java.io.IOException;
+import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLConnection;
+import java.util.LinkedList;
+import java.util.Queue;
 
-public class class87 {
-   static class248[] field1224;
-   final URL field1221;
-   volatile boolean field1222;
-   volatile byte[] field1223;
+public class class87 implements Runnable {
+   Queue field1220;
+   final Thread field1217;
+   volatile boolean field1218;
 
-   class87(URL var1) {
-      this.field1221 = var1;
+   public static final synchronized long method1989() {
+      long var1 = System.currentTimeMillis();
+      if (var1 < class281.field3626) {
+         class382.field4174 += class281.field3626 - var1;
+      }
+
+      class281.field3626 = var1;
+      return class382.field4174 + var1;
    }
 
-   public boolean method2067() {
-      return this.field1222;
+   public class87() {
+      this.field1220 = new LinkedList();
+      this.field1217 = new Thread(this);
+      this.field1217.setPriority(1);
+      this.field1217.start();
    }
 
-   public byte[] method2066() {
-      return this.field1223;
-   }
+   public void run() {
+      while(!this.field1218) {
+         try {
+            class88 var1;
+            synchronized(this) {
+               var1 = (class88)this.field1220.poll();
+               if (null == var1) {
+                  try {
+                     this.wait();
+                  } catch (InterruptedException var12) {
+                  }
+                  continue;
+               }
+            }
 
-   static void method2068(int var0, int var1) {
-      if (class37.field307.field1118 != 0 && var0 != -1) {
-         class82.method1954(class339.field3937, var0, 0, class37.field307.field1118, false);
-         client.field647 = true;
+            DataInputStream var2 = null;
+            URLConnection var3 = null;
+
+            try {
+               var3 = var1.field1222.openConnection();
+               var3.setConnectTimeout(5000);
+               var3.setReadTimeout(5000);
+               var3.setUseCaches(false);
+               var3.setRequestProperty("Connection", "close");
+               int var4 = var3.getContentLength();
+               if (var4 >= 0) {
+                  byte[] var5 = new byte[var4];
+                  var2 = new DataInputStream(var3.getInputStream());
+                  var2.readFully(var5);
+                  var1.field1224 = var5;
+               }
+
+               var1.field1223 = true;
+            } catch (IOException var13) {
+               var1.field1223 = true;
+            } finally {
+               if (var2 != null) {
+                  var2.close();
+               }
+
+               if (var3 != null && var3 instanceof HttpURLConnection) {
+                  ((HttpURLConnection)var3).disconnect();
+               }
+
+            }
+         } catch (Exception var16) {
+            class333.method5330((String)null, var16);
+         }
       }
 
    }
 
-   public static void method2073(class276 var0, class276 var1) {
-      class149.field1674 = var0;
-      class406.field4312 = var1;
+   public class88 method1983(URL var1) {
+      class88 var3 = new class88(var1);
+      synchronized(this) {
+         this.field1220.add(var3);
+         this.notify();
+         return var3;
+      }
+   }
+
+   public void method1984() {
+      this.field1218 = true;
+
+      try {
+         synchronized(this) {
+            this.notify();
+         }
+
+         this.field1217.join();
+      } catch (InterruptedException var5) {
+      }
+
+   }
+
+   public static class249 method1995(int var0) {
+      int var2 = var0 >> 16;
+      int var3 = var0 & '\uffff';
+      if (null == class249.field3039[var2] || class249.field3039[var2][var3] == null) {
+         boolean var4 = class251.method4294(var2);
+         if (!var4) {
+            return null;
+         }
+      }
+
+      return class249.field3039[var2][var3];
+   }
+
+   public static void method1990() {
+      class247.field2938.method3883();
    }
 }

@@ -1,70 +1,40 @@
-public class class113 extends class103 {
-   int field1356;
-   String field1355;
+public class class113 extends class104 {
+   String field1353;
    // $FF: synthetic field
-   final class106 this$0;
+   final class107 this$0;
 
-   class113(class106 var1) {
+   class113(class107 var1) {
       this.this$0 = var1;
    }
 
-   void vmethod2499(class114 var1) {
-      var1.method2309(this.field1356, this.field1355);
+   void method2083(class385 var1) {
+      this.field1353 = var1.method5957();
+      var1.method6172();
    }
 
-   void vmethod2494(Buffer var1) {
-      this.field1356 = var1.method6784();
-      this.field1355 = var1.method6569();
+   void method2084(class115 var1) {
+      var1.field1368 = this.field1353;
    }
 
-   public static String method2279(CharSequence var0, class366 var1) {
-      if (var0 == null) {
-         return null;
-      } else {
-         int var3 = 0;
+   static class48 method2115() {
+      return class48.field694 < class48.field692 ? class16.field86[++class48.field694 - 1] : null;
+   }
 
-         int var4;
-         boolean var5;
-         char var6;
-         for(var4 = var0.length(); var3 < var4; ++var3) {
-            var6 = var0.charAt(var3);
-            var5 = var6 == 160 || var6 == ' ' || var6 == '_' || var6 == '-';
-            if (!var5) {
-               break;
-            }
-         }
+   static void method2114(int var0) {
+      if (-1 != var0) {
+         if (class251.method4294(var0)) {
+            class249[] var2 = class249.field3039[var0];
 
-         while(var4 > var3) {
-            var6 = var0.charAt(var4 - 1);
-            var5 = var6 == 160 || var6 == ' ' || var6 == '_' || var6 == '-';
-            if (!var5) {
-               break;
-            }
-
-            --var4;
-         }
-
-         int var11 = var4 - var3;
-         if (var11 >= 1 && var11 <= class346.method6006(var1)) {
-            StringBuilder var10 = new StringBuilder(var11);
-
-            for(int var7 = var3; var7 < var4; ++var7) {
-               char var8 = var0.charAt(var7);
-               if (class185.method3641(var8)) {
-                  char var9 = class11.method109(var8);
-                  if (var9 != 0) {
-                     var10.append(var9);
-                  }
+            for(int var3 = 0; var3 < var2.length; ++var3) {
+               class249 var4 = var2[var3];
+               if (null != var4.field3045) {
+                  class68 var5 = new class68();
+                  var5.field961 = var4;
+                  var5.field955 = var4.field3045;
+                  class79.method1844(var5, 5000000, 0);
                }
             }
 
-            if (var10.length() == 0) {
-               return null;
-            } else {
-               return var10.toString();
-            }
-         } else {
-            return null;
          }
       }
    }

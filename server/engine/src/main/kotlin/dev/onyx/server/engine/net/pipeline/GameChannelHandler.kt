@@ -1,6 +1,5 @@
 package dev.onyx.server.engine.net.pipeline
 
-import dev.onyx.server.common.inject
 import dev.onyx.server.engine.net.NetworkServer
 import dev.onyx.server.engine.net.Session
 import io.netty.channel.ChannelHandler
@@ -11,8 +10,6 @@ import java.util.concurrent.atomic.AtomicReference
 @ChannelHandler.Sharable
 class GameChannelHandler : ChannelInboundHandlerAdapter() {
 
-    private val networkServer: NetworkServer by inject()
-
     private val session = AtomicReference<Session>(null)
 
     override fun channelActive(ctx: ChannelHandlerContext) {
@@ -21,7 +18,9 @@ class GameChannelHandler : ChannelInboundHandlerAdapter() {
             return
         }
 
-        networkServer.sessions.add(session.get())
+        val attr = ctx.channel().attr(NetworkServer.SESSION_KEY)
+        attr.set(session.get())
+
         session.get().connect()
     }
 

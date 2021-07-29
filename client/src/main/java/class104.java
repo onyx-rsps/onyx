@@ -1,137 +1,145 @@
-public class class104 extends class103 {
-   boolean field1298;
-   int field1297;
-   // $FF: synthetic field
-   final class106 this$0;
+public abstract class class104 extends class354 {
+   static class124 field1294;
+   static int field1295;
 
-   class104(class106 var1) {
-      this.this$0 = var1;
-      this.field1297 = -1;
+   public static int method2082(int var0) {
+      return var0 >> 11 & 63;
    }
 
-   void vmethod2499(class114 var1) {
-      var1.method2301(this.field1297, this.field1298);
-   }
-
-   void vmethod2494(Buffer var1) {
-      this.field1297 = var1.method6655();
-      this.field1298 = var1.method6560() == 1;
-   }
-
-   static int method2204(int var0, int var1) {
-      class157 var4 = (class157)class157.field1842.method4306((long)var0);
-      class157 var3;
-      if (var4 != null) {
-         var3 = var4;
-      } else {
-         byte[] var5 = class157.field1854.method4920(4, var0);
-         var4 = new class157();
-         if (var5 != null) {
-            var4.method3051(new Buffer(var5), var0);
-         }
-
-         var4.method3050();
-         class157.field1842.method4308(var4, (long)var0);
-         var3 = var4;
-      }
-
-      if (var3 == null) {
-         return var1;
-      } else if (var3.field1847 >= 0) {
-         return var3.field1847 | -16777216;
-      } else {
-         int var7;
-         if (var3.field1855 >= 0) {
-            var7 = class84.method2004(class197.field2268.vmethod4253(var3.field1855), 96);
-            return class197.field2267[var7] | -16777216;
-         } else if (var3.field1843 == 16711935) {
-            return var1;
-         } else {
-            var7 = class81.method1939(var3.field1846, var3.field1848, var3.field1849);
-            int var6 = class84.method2004(var7, 96);
-            return class197.field2267[var6] | -16777216;
-         }
-      }
-   }
-
-   static void method2194(int var0) {
-      class64 var2 = (class64)class64.field934.method6327((long)var0);
-      if (var2 != null) {
-         for(int var3 = 0; var3 < var2.field930.length; ++var3) {
-            var2.field930[var3] = -1;
-            var2.field931[var3] = 0;
-         }
-
-      }
-   }
-
-   public static byte[] method2197(CharSequence var0) {
-      int var2 = var0.length();
-      byte[] var3 = new byte[var2];
-
-      for(int var4 = 0; var4 < var2; ++var4) {
-         char var5 = var0.charAt(var4);
-         if (var5 > 0 && var5 < 128 || var5 >= 160 && var5 <= 255) {
-            var3[var4] = (byte)var5;
-         } else if (var5 == 8364) {
-            var3[var4] = -128;
-         } else if (var5 == 8218) {
-            var3[var4] = -126;
-         } else if (var5 == 402) {
-            var3[var4] = -125;
-         } else if (var5 == 8222) {
-            var3[var4] = -124;
-         } else if (var5 == 8230) {
-            var3[var4] = -123;
-         } else if (var5 == 8224) {
-            var3[var4] = -122;
-         } else if (var5 == 8225) {
-            var3[var4] = -121;
-         } else if (var5 == 710) {
-            var3[var4] = -120;
-         } else if (var5 == 8240) {
-            var3[var4] = -119;
-         } else if (var5 == 352) {
-            var3[var4] = -118;
-         } else if (var5 == 8249) {
-            var3[var4] = -117;
-         } else if (var5 == 338) {
-            var3[var4] = -116;
-         } else if (var5 == 381) {
-            var3[var4] = -114;
-         } else if (var5 == 8216) {
-            var3[var4] = -111;
-         } else if (var5 == 8217) {
-            var3[var4] = -110;
-         } else if (var5 == 8220) {
-            var3[var4] = -109;
-         } else if (var5 == 8221) {
-            var3[var4] = -108;
-         } else if (var5 == 8226) {
-            var3[var4] = -107;
-         } else if (var5 == 8211) {
-            var3[var4] = -106;
-         } else if (var5 == 8212) {
-            var3[var4] = -105;
-         } else if (var5 == 732) {
-            var3[var4] = -104;
-         } else if (var5 == 8482) {
-            var3[var4] = -103;
-         } else if (var5 == 353) {
-            var3[var4] = -102;
-         } else if (var5 == 8250) {
-            var3[var4] = -101;
-         } else if (var5 == 339) {
-            var3[var4] = -100;
-         } else if (var5 == 382) {
-            var3[var4] = -98;
-         } else if (var5 == 376) {
-            var3[var4] = -97;
-         } else {
-            var3[var4] = 63;
+   public static class229 method2090(int var0, String var1, class292 var2, int var3) {
+      class229 var5 = class149.method2495(class227.field2644, client.field453.field1205);
+      var5.field2691.method5931(0);
+      int var6 = var5.field2691.field4182;
+      var5.field2691.method5931(var0);
+      String var7 = var1.toLowerCase();
+      byte var8 = 0;
+      if (var7.startsWith(class270.field3406)) {
+         var8 = 0;
+         var1 = var1.substring(class270.field3406.length());
+      } else if (var7.startsWith(class270.field3391)) {
+         var8 = 1;
+         var1 = var1.substring(class270.field3391.length());
+      } else if (var7.startsWith(class270.field3410)) {
+         var8 = 2;
+         var1 = var1.substring(class270.field3410.length());
+      } else if (var7.startsWith(class270.field3439)) {
+         var8 = 3;
+         var1 = var1.substring(class270.field3439.length());
+      } else if (var7.startsWith(class270.field3497)) {
+         var8 = 4;
+         var1 = var1.substring(class270.field3497.length());
+      } else if (var7.startsWith(class270.field3416)) {
+         var8 = 5;
+         var1 = var1.substring(class270.field3416.length());
+      } else if (var7.startsWith(class270.field3418)) {
+         var8 = 6;
+         var1 = var1.substring(class270.field3418.length());
+      } else if (var7.startsWith(class270.field3529)) {
+         var8 = 7;
+         var1 = var1.substring(class270.field3529.length());
+      } else if (var7.startsWith(class270.field3313)) {
+         var8 = 8;
+         var1 = var1.substring(class270.field3313.length());
+      } else if (var7.startsWith(class270.field3424)) {
+         var8 = 9;
+         var1 = var1.substring(class270.field3424.length());
+      } else if (var7.startsWith(class270.field3426)) {
+         var8 = 10;
+         var1 = var1.substring(class270.field3426.length());
+      } else if (var7.startsWith(class270.field3364)) {
+         var8 = 11;
+         var1 = var1.substring(class270.field3364.length());
+      } else if (class292.field3694 != var2) {
+         if (var7.startsWith(class270.field3492)) {
+            var8 = 0;
+            var1 = var1.substring(class270.field3492.length());
+         } else if (var7.startsWith(class270.field3409)) {
+            var8 = 1;
+            var1 = var1.substring(class270.field3409.length());
+         } else if (var7.startsWith(class270.field3411)) {
+            var8 = 2;
+            var1 = var1.substring(class270.field3411.length());
+         } else if (var7.startsWith(class270.field3413)) {
+            var8 = 3;
+            var1 = var1.substring(class270.field3413.length());
+         } else if (var7.startsWith(class270.field3415)) {
+            var8 = 4;
+            var1 = var1.substring(class270.field3415.length());
+         } else if (var7.startsWith(class270.field3417)) {
+            var8 = 5;
+            var1 = var1.substring(class270.field3417.length());
+         } else if (var7.startsWith(class270.field3419)) {
+            var8 = 6;
+            var1 = var1.substring(class270.field3419.length());
+         } else if (var7.startsWith(class270.field3421)) {
+            var8 = 7;
+            var1 = var1.substring(class270.field3421.length());
+         } else if (var7.startsWith(class270.field3465)) {
+            var8 = 8;
+            var1 = var1.substring(class270.field3465.length());
+         } else if (var7.startsWith(class270.field3425)) {
+            var8 = 9;
+            var1 = var1.substring(class270.field3425.length());
+         } else if (var7.startsWith(class270.field3427)) {
+            var8 = 10;
+            var1 = var1.substring(class270.field3427.length());
+         } else if (var7.startsWith(class270.field3429)) {
+            var8 = 11;
+            var1 = var1.substring(class270.field3429.length());
          }
       }
 
-      return var3;
+      var7 = var1.toLowerCase();
+      byte var9 = 0;
+      if (var7.startsWith(class270.field3430)) {
+         var9 = 1;
+         var1 = var1.substring(class270.field3430.length());
+      } else if (var7.startsWith(class270.field3463)) {
+         var9 = 2;
+         var1 = var1.substring(class270.field3463.length());
+      } else if (var7.startsWith(class270.field3469)) {
+         var9 = 3;
+         var1 = var1.substring(class270.field3469.length());
+      } else if (var7.startsWith(class270.field3436)) {
+         var9 = 4;
+         var1 = var1.substring(class270.field3436.length());
+      } else if (var7.startsWith(class270.field3438)) {
+         var9 = 5;
+         var1 = var1.substring(class270.field3438.length());
+      } else if (var2 != class292.field3694) {
+         if (var7.startsWith(class270.field3431)) {
+            var9 = 1;
+            var1 = var1.substring(class270.field3431.length());
+         } else if (var7.startsWith(class270.field3269)) {
+            var9 = 2;
+            var1 = var1.substring(class270.field3269.length());
+         } else if (var7.startsWith(class270.field3297)) {
+            var9 = 3;
+            var1 = var1.substring(class270.field3297.length());
+         } else if (var7.startsWith(class270.field3373)) {
+            var9 = 4;
+            var1 = var1.substring(class270.field3373.length());
+         } else if (var7.startsWith(class270.field3342)) {
+            var9 = 5;
+            var1 = var1.substring(class270.field3342.length());
+         }
+      }
+
+      var5.field2691.method5931(var8);
+      var5.field2691.method5931(var9);
+      class243.method4149(var5.field2691, var1);
+      if (var0 == class257.field3132.method4619()) {
+         var5.field2691.method5931(var3);
+      }
+
+      var5.field2691.method5945(var5.field2691.field4182 - var6);
+      return var5;
    }
+
+   class104() {
+   }
+
+   abstract void method2083(class385 var1);
+
+   abstract void method2084(class115 var1);
 }

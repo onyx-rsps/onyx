@@ -1,83 +1,21 @@
 public class class304 {
-   public static char[] field3755;
-   static char[] field3756;
-   static char[] field3757;
-   static class396 field3759;
-   static int[] field3760;
+   public static final char[] field3755;
 
    static {
-      field3755 = new char[64];
+      field3755 = new char[]{'\u20ac', '\u0000', '\u201a', '\u0192', '\u201e', '\u2026', '\u2020', '\u2021', '\u02c6', '\u2030', '\u0160', '\u2039', '\u0152', '\u0000', '\u017d', '\u0000', '\u0000', '\u2018', '\u2019', '\u201c', '\u201d', '\u2022', '\u2013', '\u2014', '\u02dc', '\u2122', '\u0161', '\u203a', '\u0153', '\u0000', '\u017e', '\u0178'};
+   }
 
-      int var0;
-      for(var0 = 0; var0 < 26; ++var0) {
-         field3755[var0] = (char)(var0 + 65);
+   static int method4959() {
+      return ++class85.field1200 - 1;
+   }
+
+   public static boolean method4958(char var0) {
+      if (var0 >= ' ' && var0 <= '~') {
+         return true;
+      } else if (var0 >= 160 && var0 <= 255) {
+         return true;
+      } else {
+         return var0 == 8364 || 338 == var0 || var0 == 8212 || 339 == var0 || var0 == 376;
       }
-
-      for(var0 = 26; var0 < 52; ++var0) {
-         field3755[var0] = (char)(var0 + 97 - 26);
-      }
-
-      for(var0 = 52; var0 < 62; ++var0) {
-         field3755[var0] = (char)(var0 + 48 - 52);
-      }
-
-      field3755[62] = '+';
-      field3755[63] = '/';
-      field3756 = new char[64];
-
-      for(var0 = 0; var0 < 26; ++var0) {
-         field3756[var0] = (char)(var0 + 65);
-      }
-
-      for(var0 = 26; var0 < 52; ++var0) {
-         field3756[var0] = (char)(var0 + 97 - 26);
-      }
-
-      for(var0 = 52; var0 < 62; ++var0) {
-         field3756[var0] = (char)(var0 + 48 - 52);
-      }
-
-      field3756[62] = '*';
-      field3756[63] = '-';
-      field3757 = new char[64];
-
-      for(var0 = 0; var0 < 26; ++var0) {
-         field3757[var0] = (char)(var0 + 65);
-      }
-
-      for(var0 = 26; var0 < 52; ++var0) {
-         field3757[var0] = (char)(var0 + 97 - 26);
-      }
-
-      for(var0 = 52; var0 < 62; ++var0) {
-         field3757[var0] = (char)(var0 + 48 - 52);
-      }
-
-      field3757[62] = '-';
-      field3757[63] = '_';
-      field3760 = new int[128];
-
-      for(var0 = 0; var0 < field3760.length; ++var0) {
-         field3760[var0] = -1;
-      }
-
-      for(var0 = 65; var0 <= 90; ++var0) {
-         field3760[var0] = var0 - 65;
-      }
-
-      for(var0 = 97; var0 <= 122; ++var0) {
-         field3760[var0] = var0 - 97 + 26;
-      }
-
-      for(var0 = 48; var0 <= 57; ++var0) {
-         field3760[var0] = var0 - 48 + 52;
-      }
-
-      int[] var2 = field3760;
-      field3760[43] = 62;
-      var2[42] = 62;
-      int[] var1 = field3760;
-      field3760[47] = 63;
-      var1[45] = 63;
    }
 }

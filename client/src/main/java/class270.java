@@ -1,613 +1,648 @@
-public class class270 implements class289 {
-   static class274 field3535;
-   static int field3532;
-   static final class270 field3530;
-   static final class270 field3531;
-   static final class270 field3533;
-   static final class270 field3536;
-   final int field3529;
+import java.net.URL;
+
+public class class270 {
+   public static String field3226;
+   public static String field3227;
+   public static String field3228;
+   public static String field3229;
+   public static String field3230;
+   public static String field3231;
+   public static String field3232;
+   public static String field3233;
+   public static String field3234;
+   public static String field3235;
+   public static String field3236;
+   public static String field3237;
+   public static String field3238;
+   public static String field3239;
+   public static String field3240;
+   public static String field3241;
+   public static String field3242;
+   public static String field3243;
+   public static String field3244;
+   public static String field3245;
+   public static String field3246;
+   public static String field3247;
+   public static String field3248;
+   public static String field3249;
+   public static String field3250;
+   public static String field3251;
+   public static String field3252;
+   public static String field3253;
+   public static String field3254;
+   public static String field3255;
+   public static String field3256;
+   public static String field3257;
+   public static String field3258;
+   public static String field3259;
+   public static String field3260;
+   public static String field3261;
+   public static String field3262;
+   public static String field3263;
+   public static String field3264;
+   public static String field3265;
+   public static String field3266;
+   public static String field3267;
+   public static String field3268;
+   public static String field3269;
+   public static String field3270;
+   public static String field3271;
+   public static String field3272;
+   public static String field3273;
+   public static String field3274;
+   public static String field3275;
+   public static String field3276;
+   public static String field3277;
+   public static String field3278;
+   public static String field3279;
+   public static String field3280;
+   public static String field3281;
+   public static String field3282;
+   public static String field3283;
+   public static String field3284;
+   public static String field3285;
+   public static String field3286;
+   public static String field3287;
+   public static String field3288;
+   public static String field3289;
+   public static String field3290;
+   public static String field3291;
+   public static String field3292;
+   public static String field3293;
+   public static String field3294;
+   public static String field3295;
+   public static String field3296;
+   public static String field3297;
+   public static String field3298;
+   public static String field3299;
+   public static String field3300;
+   public static String field3301;
+   public static String field3302;
+   public static String field3303;
+   public static String field3304;
+   public static String field3305;
+   public static String field3306;
+   public static String field3307;
+   public static String field3308;
+   public static String field3309;
+   public static String field3310;
+   public static String field3311;
+   public static String field3312;
+   public static String field3313;
+   public static String field3314;
+   public static String field3315;
+   public static String field3316;
+   public static String field3317;
+   public static String field3318;
+   public static String field3319;
+   public static String field3320;
+   public static String field3321;
+   public static String field3322;
+   public static String field3323;
+   public static String field3324;
+   public static String field3325;
+   public static String field3326;
+   public static String field3327;
+   public static String field3328;
+   public static String field3329;
+   public static String field3330;
+   public static String field3331;
+   public static String field3332;
+   public static String field3333;
+   public static String field3334;
+   public static String field3335;
+   public static String field3336;
+   public static String field3337;
+   public static String field3338;
+   public static String field3339;
+   public static String field3340;
+   public static String field3341;
+   public static String field3342;
+   public static String field3343;
+   public static String field3344;
+   public static String field3345;
+   public static String field3346;
+   public static String field3347;
+   public static String field3348;
+   public static String field3349;
+   public static String field3350;
+   public static String field3351;
+   public static String field3352;
+   public static String field3353;
+   public static String field3354;
+   public static String field3355;
+   public static String field3356;
+   public static String field3357;
+   public static String field3358;
+   public static String field3359;
+   public static String field3360;
+   public static String field3361;
+   public static String field3362;
+   public static String field3363;
+   public static String field3364;
+   public static String field3365;
+   public static String field3366;
+   public static String field3367;
+   public static String field3368;
+   public static String field3369;
+   public static String field3370;
+   public static String field3371;
+   public static String field3372;
+   public static String field3373;
+   public static String field3374;
+   public static String field3375;
+   public static String field3376;
+   public static String field3377;
+   public static String field3378;
+   public static String field3379;
+   public static String field3380;
+   public static String field3381;
+   public static String field3382;
+   public static String field3383;
+   public static String field3384;
+   public static String field3385;
+   public static String field3386;
+   public static String field3387;
+   public static String field3388;
+   public static String field3389;
+   public static String field3390;
+   public static String field3391;
+   public static String field3392;
+   public static String field3393;
+   public static String field3394;
+   public static String field3395;
+   public static String field3396;
+   public static String field3397;
+   public static String field3399;
+   public static String field3400;
+   public static String field3401;
+   public static String field3402;
+   public static String field3403;
+   public static String field3404;
+   public static String field3405;
+   public static String field3406;
+   public static String field3407;
+   public static String field3408;
+   public static String field3409;
+   public static String field3410;
+   public static String field3411;
+   public static String field3412;
+   public static String field3413;
+   public static String field3414;
+   public static String field3415;
+   public static String field3416;
+   public static String field3417;
+   public static String field3418;
+   public static String field3419;
+   public static String field3420;
+   public static String field3421;
+   public static String field3422;
+   public static String field3423;
+   public static String field3424;
+   public static String field3425;
+   public static String field3426;
+   public static String field3427;
+   public static String field3428;
+   public static String field3429;
+   public static String field3430;
+   public static String field3431;
+   public static String field3432;
+   public static String field3433;
+   public static String field3434;
+   public static String field3435;
+   public static String field3436;
+   public static String field3437;
+   public static String field3438;
+   public static String field3439;
+   public static String field3440;
+   public static String field3441;
+   public static String field3442;
+   public static String field3443;
+   public static String field3444;
+   public static String field3445;
+   public static String field3446;
+   public static String field3447;
+   public static String field3448;
+   public static String field3449;
+   public static String field3450;
+   public static String field3451;
+   public static String field3452;
+   public static String field3453;
+   public static String field3454;
+   public static String field3455;
+   public static String field3456;
+   public static String field3457;
+   public static String field3458;
+   public static String field3459;
+   public static String field3460;
+   public static String field3461;
+   public static String field3462;
+   public static String field3463;
+   public static String field3464;
+   public static String field3465;
+   public static String field3466;
+   public static String field3467;
+   public static String field3468;
+   public static String field3469;
+   public static String field3470;
+   public static String field3471;
+   public static String field3472;
+   public static String field3473;
+   public static String field3474;
+   public static String field3475;
+   public static String field3476;
+   public static String field3477;
+   public static String field3478;
+   public static String field3479;
+   public static String field3480;
+   public static String field3481;
+   public static String field3482;
+   public static String field3483;
+   public static String field3484;
+   public static String field3485;
+   public static String field3486;
+   public static String field3487;
+   public static String field3488;
+   public static String field3489;
+   public static String field3490;
+   public static String field3491;
+   public static String field3492;
+   public static String field3493;
+   public static String field3494;
+   public static String field3495;
+   public static String field3496;
+   public static String field3497;
+   public static String field3498;
+   public static String field3499;
+   public static String field3500;
+   public static String field3501;
+   public static String field3503;
+   public static String field3504;
+   public static String field3505;
+   public static String field3506;
+   public static String field3507;
+   public static String field3508;
+   public static String field3509;
+   public static String field3510;
+   public static String field3511;
+   public static String field3512;
+   public static String field3513;
+   public static String field3514;
+   public static String field3515;
+   public static String field3516;
+   public static String field3517;
+   public static String field3518;
+   public static String field3519;
+   public static String field3520;
+   public static String field3521;
+   public static String field3522;
+   public static String field3523;
+   public static String field3524;
+   public static String field3525;
+   public static String field3526;
+   public static String field3527;
+   public static String field3528;
+   public static String field3529;
+   static int field3398;
+   static String field3502;
 
    static {
-      field3530 = new class270(-1);
-      field3533 = new class270(0);
-      field3531 = new class270(1);
-      field3536 = new class270(2);
+      field3229 = "Members object";
+      field3227 = "Take";
+      field3228 = "Drop";
+      field3525 = "Hidden";
+      field3230 = "Ok";
+      field3231 = "Select";
+      field3232 = "Continue";
+      field3408 = "Discard";
+      field3234 = "null";
+      field3235 = "Trust this computer";
+      field3236 = "for 30 days: ";
+      field3237 = "Loading - please wait.";
+      field3238 = "Connection lost";
+      field3354 = "Please wait - attempting to reestablish";
+      field3240 = "Starting game engine...";
+      field3241 = "Prepared visibility map";
+      field3437 = "Connecting to update server";
+      field3510 = "Checking for updates - ";
+      field3433 = "Loaded update list";
+      field3245 = "Prepared sound engine";
+      field3288 = "Loading fonts - ";
+      field3247 = "Loaded fonts";
+      field3248 = "Loading title screen - ";
+      field3249 = "Loaded title screen";
+      field3420 = "Loading config - ";
+      field3251 = "Loaded config";
+      field3259 = "Loading sprites - ";
+      field3253 = "Loaded sprites";
+      field3254 = "Loading textures - ";
+      field3455 = "Loaded textures";
+      field3256 = "Loaded input handler";
+      field3257 = "Loading wordpack - ";
+      field3258 = "Loaded wordpack";
+      field3484 = "Loading interfaces - ";
+      field3517 = "Loaded interfaces";
+      field3361 = "Loading world map - ";
+      field3262 = "Loaded world map";
+      field3502 = "Please visit the support page for assistance.";
+      field3504 = "Support Page";
+      field3265 = "";
+      field3266 = "Please enter a 6-digit PIN.";
+      field3485 = "";
+      field3268 = "You have only just left another world.";
+      field3348 = "Your profile will be transferred in:";
+      field3371 = " seconds.";
+      field3434 = "Connection timed out.";
+      field3471 = "Please try using a different world.";
+      field3273 = "";
+      field3226 = "Error connecting to server.";
+      field3275 = "Please try using a different world.";
+      field3276 = "";
+      field3277 = "No response from server.";
+      field3278 = "Please try using a different world.";
+      field3365 = "";
+      field3280 = "Your account has been disabled.";
+      field3299 = field3502;
+      field3282 = "";
+      field3283 = "Your account has not logged out from its last";
+      field3284 = "session or the server is too busy right now.";
+      field3285 = "Please try again in a few minutes.";
+      field3298 = "RuneScape has been updated!";
+      field3287 = "Please reload this page.";
+      field3343 = "";
+      field3250 = "This world is full.";
+      field3290 = "Please use a different world.";
+      field3407 = "";
+      field3295 = "Unable to connect.";
+      field3293 = "Login server offline.";
+      field3294 = "";
+      field3384 = "Login limit exceeded.";
+      field3261 = "Too many connections from your address.";
+      field3263 = "";
+      field3450 = "Unable to connect.";
+      field3422 = "Bad session id.";
+      field3300 = "";
+      field3412 = "We suspect someone knows your password.";
+      field3302 = "Press 'change your password' on front page.";
+      field3303 = "";
+      field3324 = "You need a members account to login to this world.";
+      field3305 = "Please subscribe, or use a different world.";
+      field3306 = "";
+      field3307 = "Could not complete login.";
+      field3346 = "Please try using a different world.";
+      field3309 = "";
+      field3310 = "The server is being updated.";
+      field3311 = "Please wait 1 minute and try again.";
+      field3312 = "";
+      field3423 = "Too many login attempts.";
+      field3314 = "Please wait a few minutes before trying again.";
+      field3315 = "";
+      field3316 = "You are standing in a members-only area.";
+      field3498 = "To play on this world move to a free area first";
+      field3318 = "";
+      field3319 = "Account locked as we suspect it has been stolen.";
+      field3468 = field3502;
+      field3321 = "";
+      field3322 = "This world is running a closed Beta.";
+      field3323 = "Sorry invited players only.";
+      field3286 = "Please use a different world.";
+      field3325 = "Invalid loginserver requested.";
+      field3505 = "Please try using a different world.";
+      field3519 = "";
+      field3296 = "Malformed login packet.";
+      field3329 = "Please try again.";
+      field3390 = "";
+      field3331 = "No reply from loginserver.";
+      field3328 = "Please wait 1 minute and try again.";
+      field3333 = "";
+      field3334 = "Error loading your profile.";
+      field3326 = "Please contact customer support.";
+      field3358 = "";
+      field3337 = "Unexpected loginserver response.";
+      field3338 = "Please try using a different world.";
+      field3339 = "";
+      field3340 = "This computers address has been blocked";
+      field3341 = "as it was used to break our rules.";
+      field3243 = "";
+      field3291 = "";
+      field3344 = "Service unavailable.";
+      field3345 = "";
+      field3260 = "";
+      field3347 = "Please enter your username/email address.";
+      field3239 = "";
+      field3377 = "";
+      field3350 = "Please enter your password.";
+      field3351 = "";
+      field3352 = "Your account must have a displayname set";
+      field3353 = "in order to play the game.  Please set it";
+      field3279 = "via the website, or the main game.";
+      field3487 = "Your attempt to log into your account was";
+      field3356 = "unsuccessful.  Don't worry, you can sort";
+      field3357 = "this out by visiting the billing system.";
+      field3317 = "Your account is currently inaccessible.";
+      field3359 = "Please try again in a few minutes.";
+      field3360 = "";
+      field3414 = "You need to vote to play!";
+      field3362 = "Visit runescape.com and vote,";
+      field3363 = "and then come back here!";
+      field3511 = "Sorry, but your account is not eligible to play.";
+      field3481 = "For more information, please take a look at";
+      field3366 = "our privacy policy.";
+      field3367 = "Privacy Policy";
+      field3368 = "Enter the 6-digit code generated by your";
+      field3369 = "authenticator app.";
+      field3370 = "";
+      field3281 = "The code you entered was incorrect.";
+      field3255 = "Please try again.";
+      field3405 = "";
+      field3374 = "Unexpected server response";
+      field3271 = "Please try using a different world.";
+      field3376 = "";
+      field3372 = " has logged in.";
+      field3378 = " has logged out.";
+      field3379 = "Unable to find ";
+      field3380 = "Use";
+      field3381 = "Examine";
+      field3382 = "Attack";
+      field3383 = "Choose Option";
+      field3432 = " more options";
+      field3385 = "Walk here";
+      field3386 = "level-";
+      field3387 = "skill-";
+      field3388 = "Please wait...";
+      field3389 = "Close";
+      field3267 = " ";
+      field3246 = "M";
+      field3392 = "M";
+      field3393 = "K";
+      field3394 = "K";
+      field3395 = "World";
+      field3272 = "Your friend list is full. Max of 200 for free users, and 400 for members";
+      field3397 = " is already on your friend list";
+      field3522 = "Your ignore list is full. Max of 100 for free users, and 400 for members";
+      field3399 = " is already on your ignore list";
+      field3400 = "You can't add yourself to your own friend list";
+      field3401 = "You can't add yourself to your own ignore list";
+      field3402 = "Please remove ";
+      field3403 = " from your ignore list first";
+      field3404 = "Please remove ";
+      field3509 = " from your friend list first";
+      field3406 = "yellow:";
+      field3492 = "yellow:";
+      field3391 = "red:";
+      field3409 = "red:";
+      field3410 = "green:";
+      field3411 = "green:";
+      field3439 = "cyan:";
+      field3413 = "cyan:";
+      field3497 = "purple:";
+      field3415 = "purple:";
+      field3416 = "white:";
+      field3417 = "white:";
+      field3418 = "flash1:";
+      field3419 = "flash1:";
+      field3529 = "flash2:";
+      field3421 = "flash2:";
+      field3313 = "flash3:";
+      field3465 = "flash3:";
+      field3424 = "glow1:";
+      field3425 = "glow1:";
+      field3426 = "glow2:";
+      field3427 = "glow2:";
+      field3364 = "glow3:";
+      field3429 = "glow3:";
+      field3430 = "wave:";
+      field3431 = "wave:";
+      field3463 = "wave2:";
+      field3269 = "wave2:";
+      field3469 = "shake:";
+      field3297 = "shake:";
+      field3436 = "scroll:";
+      field3373 = "scroll:";
+      field3438 = "slide:";
+      field3342 = "slide:";
+      field3440 = "RuneScape is loading - please wait...";
+      field3441 = "";
+      field3335 = "Enter your username/email & password.";
+      field3444 = "";
+      field3301 = "Warning!";
+      field3445 = "This is a <col=ff0000>PvP<col=ffffff> world.";
+      field3470 = "Players can attack each other";
+      field3447 = "almost everywhere.";
+      field3448 = "This is a <col=ffff00>High Risk<col=ffffff> world.";
+      field3449 = "The Protect Item prayer will";
+      field3308 = "not work on this world.";
+      field3451 = "This is a <col=ffff00>High Risk <col=ff0000>PvP<col=ffffff> world.";
+      field3452 = "Players can attack each other almost everywhere";
+      field3453 = "and the Protect Item prayer won't work.";
+      field3454 = "This is a <col=00ffff>Beta<col=ffffff> world.";
+      field3274 = "Your normal account will not be affected.";
+      field3456 = "";
+      field3515 = "Authenticator";
+      field3458 = "<u=ff>Can't Log In?</u>";
+      field3459 = "";
+      field3460 = "Connecting to server...";
+      field3461 = "";
+      field3462 = "The game servers are currently being updated.";
+      field3327 = "Please wait a few minutes and try again.";
+      field3464 = "";
+      field3292 = "";
+      field3264 = "You were disconnected from the server.";
+      field3467 = "";
+      field3475 = "Login: ";
+      field3466 = "Password: ";
+      field3442 = "PIN: ";
+      field3304 = "Welcome to RuneScape";
+      field3472 = "New User";
+      field3473 = "Existing User";
+      field3474 = "Login";
+      field3479 = "Cancel";
+      field3476 = "Remember username";
+      field3477 = "Hide username";
+      field3478 = "Invalid credentials.";
+      field3428 = "For accounts created after 24th November 2010, please use your";
+      field3480 = "email address to login. Otherwise please login with your username.";
+      field3336 = "Try again";
+      field3482 = "Forgotten password?";
+      field3483 = "Forgotten your password?";
+      field3244 = "Username/email: ";
+      field3443 = "Recover";
+      field3486 = "Back";
+      field3457 = "Can't login? Click here.";
+      field3488 = "Still having trouble logging in?";
+      field3489 = "Having trouble logging in?";
+      field3490 = "";
+      field3491 = "Page has opened in a new window.";
+      field3493 = "(Please check your popup blocker.)";
+      field3514 = "Please enter your username.";
+      field3494 = "If you created your account after November";
+      field3495 = "2010, this will be the creation email address.";
+      field3496 = field3490;
+      field3355 = field3491;
+      field3320 = field3493;
+      field3499 = "";
+      field3500 = "Error connecting to server.";
+      field3501 = "";
+      field3396 = "The part of the website you are trying";
+      field3503 = "to connect to is offline at the moment.";
+      field3446 = "Please try again later.";
+      field3233 = "Sorry, there was an error trying to";
+      field3506 = "log you in to this part of the website.";
+      field3507 = "Please try again later.";
+      field3508 = "";
+      field3375 = "Error connecting to server.";
+      field3330 = "";
+      field3242 = "You must enter a valid login to proceed. For accounts";
+      field3512 = "created after 24th November 2010, please use your";
+      field3513 = "email address. Otherwise please use your username.";
+      field3332 = "Your date of birth isn't set.";
+      field3252 = "Please verify your account status by";
+      field3516 = "setting your date of birth.";
+      field3435 = "Set Date of Birth";
+      field3518 = "Select a world";
+      field3289 = "Members only world";
+      field3520 = "Free world";
+      field3521 = "World";
+      field3349 = "Players";
+      field3523 = "Location";
+      field3524 = "Type";
+      field3270 = "OFF";
+      field3526 = "FULL";
+      field3527 = "Loading...";
+      field3528 = "Click to switch";
    }
 
-   class270(int var1) {
-      this.field3529 = var1;
-   }
+   static boolean method4359() {
+      try {
+         if (null == class78.field1135) {
+            class78.field1135 = class170.field1992.method1983(new URL(class310.field3776));
+         } else if (class78.field1135.method1999()) {
+            byte[] var1 = class78.field1135.method1998();
+            class385 var2 = new class385(var1);
+            var2.method6172();
+            class48.field692 = var2.method6043();
+            class16.field86 = new class48[class48.field692];
 
-   public int vmethod6962() {
-      return this.field3529;
-   }
-
-   static final void method4850() {
-      class19.method369("You can't add yourself to your own ignore list");
-   }
-
-   static final void method4858(class248[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7) {
-      for(int var9 = 0; var9 < var0.length; ++var9) {
-         class248 var10 = var0[var9];
-         if (var10 != null && var10.field3000 == var1 && (!var10.field2992 || var10.field2976 == 0 || var10.field3043 || class240.method4608(var10) != 0 || var10 == client.field581 || var10.field2961 == 1338)) {
-            if (var10.field2992) {
-               if (class150.method2824(var10)) {
-                  continue;
-               }
-            } else if (var10.field2976 == 0 && var10 != class244.field2922 && class150.method2824(var10)) {
-               continue;
+            class48 var4;
+            for(int var3 = 0; var3 < class48.field692; var4.field703 = var3++) {
+               var4 = class16.field86[var3] = new class48();
+               var4.field697 = var2.method6043();
+               var4.field700 = var2.method6172();
+               var4.field701 = var2.method5957();
+               var4.field690 = var2.method5957();
+               var4.field702 = var2.method5948();
+               var4.field699 = var2.method5951();
             }
 
-            int var11 = var10.field2970 + var6;
-            int var12 = var7 + var10.field2971;
-            int var13;
-            int var14;
-            int var15;
-            int var16;
-            int var18;
-            int var19;
-            if (var10.field2976 == 2) {
-               var13 = var2;
-               var14 = var3;
-               var15 = var4;
-               var16 = var5;
-            } else {
-               int var17;
-               if (var10.field2976 == 9) {
-                  var17 = var11;
-                  var18 = var12;
-                  var19 = var11 + var10.field2972;
-                  int var20 = var12 + var10.field2989;
-                  if (var19 < var11) {
-                     var17 = var19;
-                     var19 = var11;
-                  }
-
-                  if (var20 < var12) {
-                     var18 = var20;
-                     var20 = var12;
-                  }
-
-                  ++var19;
-                  ++var20;
-                  var13 = var17 > var2 ? var17 : var2;
-                  var14 = var18 > var3 ? var18 : var3;
-                  var15 = var19 < var4 ? var19 : var4;
-                  var16 = var20 < var5 ? var20 : var5;
-               } else {
-                  var17 = var11 + var10.field2972;
-                  var18 = var12 + var10.field2989;
-                  var13 = var11 > var2 ? var11 : var2;
-                  var14 = var12 > var3 ? var12 : var3;
-                  var15 = var17 < var4 ? var17 : var4;
-                  var16 = var18 < var5 ? var18 : var5;
-               }
-            }
-
-            if (var10 == client.field580) {
-               client.field588 = true;
-               client.field678 = var11;
-               client.field676 = var12;
-            }
-
-            boolean var34 = false;
-            if (var10.field3031) {
-               switch(client.field569) {
-               case 0:
-                  var34 = true;
-               case 1:
-               default:
-                  break;
-               case 2:
-                  if (client.field483 == var10.field2957 >>> 16) {
-                     var34 = true;
-                  }
-                  break;
-               case 3:
-                  if (var10.field2957 == client.field483) {
-                     var34 = true;
-                  }
-               }
-            }
-
-            if (var34 || !var10.field2992 || var13 < var15 && var14 < var16) {
-               if (var10.field2992) {
-                  class67 var27;
-                  if (var10.field3101) {
-                     if (class19.field141 >= var13 && class19.field144 >= var14 && class19.field141 < var15 && class19.field144 < var16) {
-                        for(var27 = (class67)client.field610.method5202(); var27 != null; var27 = (class67)client.field610.method5193()) {
-                           if (var27.field963) {
-                              var27.method6014();
-                              var27.field960.field3092 = false;
-                           }
-                        }
-
-                        if (class106.field1318 == 0) {
-                           client.field580 = null;
-                           client.field581 = null;
-                        }
-
-                        if (!client.field543) {
-                           class10.method106();
-                        }
-                     }
-                  } else if (var10.field3077 && class19.field141 >= var13 && class19.field144 >= var14 && class19.field141 < var15 && class19.field144 < var16) {
-                     for(var27 = (class67)client.field610.method5202(); var27 != null; var27 = (class67)client.field610.method5193()) {
-                        if (var27.field963 && var27.field960.field3064 == var27.field954) {
-                           var27.method6014();
-                        }
-                     }
-                  }
-               }
-
-               var18 = class19.field141;
-               var19 = class19.field144;
-               if (class19.field148 != 0) {
-                  var18 = class19.field149;
-                  var19 = class19.field150;
-               }
-
-               boolean var35 = var18 >= var13 && var19 >= var14 && var18 < var15 && var19 < var16;
-               if (var10.field2961 == 1337) {
-                  if (!client.field414 && !client.field543 && var35) {
-                     class264.method4826(var18, var19, var13, var14);
-                  }
-               } else if (var10.field2961 == 1338) {
-                  class53.method1586(var10, var11, var12);
-               } else {
-                  if (var10.field2961 == 1400) {
-                     class24.field201.method6065(class19.field141, class19.field144, var35, var11, var12, var10.field2972, var10.field2989);
-                  }
-
-                  if (!client.field543 && var35) {
-                     if (var10.field2961 == 1400) {
-                        class24.field201.method6077(var11, var12, var10.field2972, var10.field2989, var18, var19);
-                     } else {
-                        class18.method344(var10, var18 - var11, var19 - var12);
-                     }
-                  }
-
-                  boolean var22;
-                  int var24;
-                  if (var34) {
-                     for(int var21 = 0; var21 < var10.field2987.length; ++var21) {
-                        var22 = false;
-                        boolean var23 = false;
-                        if (!var22 && var10.field2987[var21] != null) {
-                           for(var24 = 0; var24 < var10.field2987[var21].length; ++var24) {
-                              boolean var25 = false;
-                              if (var10.field2966 != null) {
-                                 var25 = class10.field45[var10.field2987[var21][var24]];
-                              }
-
-                              if (class310.method5572(var10.field2987[var21][var24]) || var25) {
-                                 var22 = true;
-                                 if (var10.field2966 != null && var10.field2966[var21] > client.field451) {
-                                    break;
-                                 }
-
-                                 byte var26 = var10.field3033[var21][var24];
-                                 if (var26 == 0 || ((var26 & 8) == 0 || !class10.field45[86] && !class10.field45[82] && !class10.field45[81]) && ((var26 & 2) == 0 || class10.field45[86]) && ((var26 & 1) == 0 || class10.field45[82]) && ((var26 & 4) == 0 || class10.field45[81])) {
-                                    var23 = true;
-                                    break;
-                                 }
-                              }
-                           }
-                        }
-
-                        if (var23) {
-                           if (var21 < 10) {
-                              class183.method3588(var21 + 1, var10.field2957, var10.field3030, var10.field3087, "");
-                           } else if (var21 == 10) {
-                              class165.method3179();
-                              class45.method885(var10.field2957, var10.field3030, class103.method2182(class240.method4608(var10)), var10.field3087);
-                              client.field565 = class24.method473(var10);
-                              if (client.field565 == null) {
-                                 client.field565 = "null";
-                              }
-
-                              client.field465 = var10.field3036 + class43.method850(16777215);
-                           }
-
-                           var24 = var10.field2993[var21];
-                           if (var10.field2966 == null) {
-                              var10.field2966 = new int[var10.field2987.length];
-                           }
-
-                           if (var10.field3035 == null) {
-                              var10.field3035 = new int[var10.field2987.length];
-                           }
-
-                           if (var24 != 0) {
-                              if (var10.field2966[var21] == 0) {
-                                 var10.field2966[var21] = var24 + client.field451 + var10.field3035[var21];
-                              } else {
-                                 var10.field2966[var21] = var24 + client.field451;
-                              }
-                           } else {
-                              var10.field2966[var21] = Integer.MAX_VALUE;
-                           }
-                        }
-
-                        if (!var22 && var10.field2966 != null) {
-                           var10.field2966[var21] = 0;
-                        }
-                     }
-                  }
-
-                  if (var10.field2992) {
-                     if (class19.field141 >= var13 && class19.field144 >= var14 && class19.field141 < var15 && class19.field144 < var16) {
-                        var35 = true;
-                     } else {
-                        var35 = false;
-                     }
-
-                     boolean var36 = false;
-                     if ((class19.field140 == 1 || !class310.field3776 && class19.field140 == 4) && var35) {
-                        var36 = true;
-                     }
-
-                     var22 = false;
-                     if ((class19.field148 == 1 || !class310.field3776 && class19.field148 == 4) && class19.field149 >= var13 && class19.field150 >= var14 && class19.field149 < var15 && class19.field150 < var16) {
-                        var22 = true;
-                     }
-
-                     if (var22) {
-                        class64.method1726(var10, class19.field149 - var11, class19.field150 - var12);
-                     }
-
-                     if (var10.field2961 == 1400) {
-                        class24.field201.method6066(var18, var19, var35 & var36, var35 & var22);
-                     }
-
-                     if (client.field580 != null && var10 != client.field580 && var35 && class82.method1953(class240.method4608(var10))) {
-                        client.field584 = var10;
-                     }
-
-                     if (var10 == client.field581) {
-                        client.field585 = true;
-                        client.field586 = var11;
-                        client.field587 = var12;
-                     }
-
-                     if (var10.field3043) {
-                        class67 var28;
-                        if (var35 && client.field656 != 0 && var10.field3064 != null) {
-                           var28 = new class67();
-                           var28.field963 = true;
-                           var28.field960 = var10;
-                           var28.field955 = client.field656;
-                           var28.field954 = var10.field3064;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field580 != null || client.field687 != null || client.field543) {
-                           var22 = false;
-                           var36 = false;
-                           var35 = false;
-                        }
-
-                        if (!var10.field2979 && var22) {
-                           var10.field2979 = true;
-                           if (var10.field3045 != null) {
-                              var28 = new class67();
-                              var28.field963 = true;
-                              var28.field960 = var10;
-                              var28.field952 = class19.field149 - var11;
-                              var28.field955 = class19.field150 - var12;
-                              var28.field954 = var10.field3045;
-                              client.field610.method5187(var28);
-                           }
-                        }
-
-                        if (var10.field2979 && var36 && var10.field3046 != null) {
-                           var28 = new class67();
-                           var28.field963 = true;
-                           var28.field960 = var10;
-                           var28.field952 = class19.field141 - var11;
-                           var28.field955 = class19.field144 - var12;
-                           var28.field954 = var10.field3046;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (var10.field2979 && !var36) {
-                           var10.field2979 = false;
-                           if (var10.field2954 != null) {
-                              var28 = new class67();
-                              var28.field963 = true;
-                              var28.field960 = var10;
-                              var28.field952 = class19.field141 - var11;
-                              var28.field955 = class19.field144 - var12;
-                              var28.field954 = var10.field2954;
-                              client.field685.method5187(var28);
-                           }
-                        }
-
-                        if (var36 && var10.field3048 != null) {
-                           var28 = new class67();
-                           var28.field963 = true;
-                           var28.field960 = var10;
-                           var28.field952 = class19.field141 - var11;
-                           var28.field955 = class19.field144 - var12;
-                           var28.field954 = var10.field3048;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (!var10.field3092 && var35) {
-                           var10.field3092 = true;
-                           if (var10.field3049 != null) {
-                              var28 = new class67();
-                              var28.field963 = true;
-                              var28.field960 = var10;
-                              var28.field952 = class19.field141 - var11;
-                              var28.field955 = class19.field144 - var12;
-                              var28.field954 = var10.field3049;
-                              client.field610.method5187(var28);
-                           }
-                        }
-
-                        if (var10.field3092 && var35 && var10.field3050 != null) {
-                           var28 = new class67();
-                           var28.field963 = true;
-                           var28.field960 = var10;
-                           var28.field952 = class19.field141 - var11;
-                           var28.field955 = class19.field144 - var12;
-                           var28.field954 = var10.field3050;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (var10.field3092 && !var35) {
-                           var10.field3092 = false;
-                           if (var10.field3051 != null) {
-                              var28 = new class67();
-                              var28.field963 = true;
-                              var28.field960 = var10;
-                              var28.field952 = class19.field141 - var11;
-                              var28.field955 = class19.field144 - var12;
-                              var28.field954 = var10.field3051;
-                              client.field685.method5187(var28);
-                           }
-                        }
-
-                        if (var10.field3016 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3016;
-                           client.field611.method5187(var28);
-                        }
-
-                        class67 var33;
-                        int var37;
-                        int var38;
-                        if (var10.field3056 != null && client.field551 > var10.field3095) {
-                           if (var10.field3057 != null && client.field551 - var10.field3095 <= 32) {
-                              label630:
-                              for(var37 = var10.field3095; var37 < client.field551; ++var37) {
-                                 var24 = client.field593[var37 & 31];
-
-                                 for(var38 = 0; var38 < var10.field3057.length; ++var38) {
-                                    if (var24 == var10.field3057[var38]) {
-                                       var33 = new class67();
-                                       var33.field960 = var10;
-                                       var33.field954 = var10.field3056;
-                                       client.field610.method5187(var33);
-                                       break label630;
-                                    }
-                                 }
-                              }
-                           } else {
-                              var28 = new class67();
-                              var28.field960 = var10;
-                              var28.field954 = var10.field3056;
-                              client.field610.method5187(var28);
-                           }
-
-                           var10.field3095 = client.field551;
-                        }
-
-                        if (var10.field3082 != null && client.field574 > var10.field3096) {
-                           if (var10.field3059 != null && client.field574 - var10.field3096 <= 32) {
-                              label606:
-                              for(var37 = var10.field3096; var37 < client.field574; ++var37) {
-                                 var24 = client.field640[var37 & 31];
-
-                                 for(var38 = 0; var38 < var10.field3059.length; ++var38) {
-                                    if (var24 == var10.field3059[var38]) {
-                                       var33 = new class67();
-                                       var33.field960 = var10;
-                                       var33.field954 = var10.field3082;
-                                       client.field610.method5187(var33);
-                                       break label606;
-                                    }
-                                 }
-                              }
-                           } else {
-                              var28 = new class67();
-                              var28.field960 = var10;
-                              var28.field954 = var10.field3082;
-                              client.field610.method5187(var28);
-                           }
-
-                           var10.field3096 = client.field574;
-                        }
-
-                        if (var10.field2995 != null && client.field598 > var10.field3097) {
-                           if (var10.field3061 != null && client.field598 - var10.field3097 <= 32) {
-                              label582:
-                              for(var37 = var10.field3097; var37 < client.field598; ++var37) {
-                                 var24 = client.field427[var37 & 31];
-
-                                 for(var38 = 0; var38 < var10.field3061.length; ++var38) {
-                                    if (var24 == var10.field3061[var38]) {
-                                       var33 = new class67();
-                                       var33.field960 = var10;
-                                       var33.field954 = var10.field2995;
-                                       client.field610.method5187(var33);
-                                       break label582;
-                                    }
-                                 }
-                              }
-                           } else {
-                              var28 = new class67();
-                              var28.field960 = var10;
-                              var28.field954 = var10.field2995;
-                              client.field610.method5187(var28);
-                           }
-
-                           var10.field3097 = client.field598;
-                        }
-
-                        if (client.field601 > var10.field3094 && var10.field3065 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3065;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field609 > var10.field3094 && var10.field3069 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3069;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field603 > var10.field3094 && var10.field3058 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3058;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field604 > var10.field3094 && var10.field3074 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3074;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field605 > var10.field3094 && var10.field3072 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3072;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field606 > var10.field3094 && var10.field2981 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field2981;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field479 > var10.field3094 && var10.field3078 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3078;
-                           client.field610.method5187(var28);
-                        }
-
-                        if (client.field516 > var10.field3094 && var10.field3073 != null) {
-                           var28 = new class67();
-                           var28.field960 = var10;
-                           var28.field954 = var10.field3073;
-                           client.field610.method5187(var28);
-                        }
-
-                        var10.field3094 = client.field592;
-                        if (var10.field3066 != null) {
-                           for(var37 = 0; var37 < client.field450; ++var37) {
-                              class67 var31 = new class67();
-                              var31.field960 = var10;
-                              var31.field958 = client.field430[var37];
-                              var31.field959 = client.field633[var37];
-                              var31.field954 = var10.field3066;
-                              client.field610.method5187(var31);
-                           }
-                        }
-
-                        class67 var32;
-                        int[] var39;
-                        if (var10.field3067 != null) {
-                           var39 = class136.method2613();
-
-                           for(var24 = 0; var24 < var39.length; ++var24) {
-                              var32 = new class67();
-                              var32.field960 = var10;
-                              var32.field958 = var39[var24];
-                              var32.field954 = var10.field3067;
-                              client.field610.method5187(var32);
-                           }
-                        }
-
-                        if (var10.field3068 != null) {
-                           var39 = class75.method1874();
-
-                           for(var24 = 0; var24 < var39.length; ++var24) {
-                              var32 = new class67();
-                              var32.field960 = var10;
-                              var32.field958 = var39[var24];
-                              var32.field954 = var10.field3068;
-                              client.field610.method5187(var32);
-                           }
-                        }
-                     }
-                  }
-
-                  if (!var10.field2992) {
-                     if (client.field580 != null || client.field687 != null || client.field543) {
-                        continue;
-                     }
-
-                     if ((var10.field3011 >= 0 || var10.field2984 != 0) && class19.field141 >= var13 && class19.field144 >= var14 && class19.field141 < var15 && class19.field144 < var16) {
-                        if (var10.field3011 >= 0) {
-                           class244.field2922 = var0[var10.field3011];
-                        } else {
-                           class244.field2922 = var10;
-                        }
-                     }
-
-                     if (var10.field2976 == 8 && class19.field141 >= var13 && class19.field144 >= var14 && class19.field141 < var15 && class19.field144 < var16) {
-                        class292.field3698 = var10;
-                     }
-
-                     if (var10.field3090 > var10.field2989) {
-                        class124.method2468(var10, var11 + var10.field2972, var12, var10.field2989, var10.field3090, class19.field141, class19.field144);
-                     }
-                  }
-
-                  if (var10.field2976 == 0) {
-                     method4858(var0, var10.field2957, var13, var14, var15, var16, var11 - var10.field3053, var12 - var10.field2967);
-                     if (var10.field3060 != null) {
-                        method4858(var10.field3060, var10.field2957, var13, var14, var15, var16, var11 - var10.field3053, var12 - var10.field2967);
-                     }
-
-                     class66 var29 = (class66)client.field568.method6327((long)var10.field2957);
-                     if (var29 != null) {
-                        if (var29.field948 == 0 && class19.field141 >= var13 && class19.field144 >= var14 && class19.field141 < var15 && class19.field144 < var16 && !client.field543) {
-                           for(class67 var30 = (class67)client.field610.method5202(); var30 != null; var30 = (class67)client.field610.method5193()) {
-                              if (var30.field963) {
-                                 var30.method6014();
-                                 var30.field960.field3092 = false;
-                              }
-                           }
-
-                           if (class106.field1318 == 0) {
-                              client.field580 = null;
-                              client.field581 = null;
-                           }
-
-                           if (!client.field543) {
-                              class10.method106();
-                           }
-                        }
-
-                        class245.method4637(var29.field949, var13, var14, var15, var16, var11, var12);
-                     }
-                  }
-               }
-            }
+            class84.method1905(class16.field86, 0, class16.field86.length - 1, class48.field696, class48.field695);
+            class78.field1135 = null;
+            return true;
          }
+      } catch (Exception var5) {
+         var5.printStackTrace();
+         class78.field1135 = null;
       }
 
+      return false;
    }
 }

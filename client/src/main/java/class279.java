@@ -1,18 +1,48 @@
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 
-final class class279 implements Comparator {
-   class279() {
+public class class279 {
+   public static Comparator field3616;
+   public static Comparator field3618;
+   public static Comparator field3619;
+   public static Comparator field3620;
+   public final List field3617;
+
+   static {
+      field3616 = new class282();
+      new class284();
+      field3618 = new class287();
+      field3620 = new class281();
+      field3619 = new class280();
    }
 
-   int method5027(class284 var1, class284 var2) {
-      return var1.field3646.field3652 < var2.field3646.field3652 ? -1 : (var2.field3646.field3652 == var1.field3646.field3652 ? 0 : 1);
+   public class279(class385 var1, boolean var2) {
+      int var3 = var1.method6043();
+      boolean var4 = var1.method5948() == 1;
+      byte var5;
+      if (var4) {
+         var5 = 1;
+      } else {
+         var5 = 0;
+      }
+
+      int var6 = var1.method6043();
+      this.field3617 = new ArrayList(var6);
+
+      for(int var7 = 0; var7 < var6; ++var7) {
+         this.field3617.add(new class285(var1, var5, var3));
+      }
+
    }
 
-   public int compare(Object var1, Object var2) {
-      return this.method5027((class284)var1, (class284)var2);
-   }
+   public void method4510(Comparator var1, boolean var2) {
+      if (var2) {
+         Collections.sort(this.field3617, var1);
+      } else {
+         Collections.sort(this.field3617, Collections.reverseOrder(var1));
+      }
 
-   public boolean equals(Object var1) {
-      return super.equals(var1);
    }
 }

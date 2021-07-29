@@ -1,29 +1,33 @@
-public class class31 {
-   int field255;
-   int field256;
-   int[] field254;
-   int[] field257;
+public abstract class class31 extends class354 {
+   class31 field252;
+   class41 field253;
+   int field254;
+   volatile boolean field251;
 
-   class31() {
-      class34.method752(16);
-      this.field256 = class34.method769() != 0 ? class34.method752(4) + 1 : 1;
-      if (class34.method769() != 0) {
-         class34.method752(8);
-      }
+   protected class31() {
+      this.field251 = true;
+   }
 
-      class34.method752(2);
-      if (this.field256 > 1) {
-         this.field255 = class34.method752(4);
-      }
+   int method636() {
+      return 255;
+   }
 
-      this.field254 = new int[this.field256];
-      this.field257 = new int[this.field256];
-
-      for(int var1 = 0; var1 < this.field256; ++var1) {
-         class34.method752(8);
-         this.field254[var1] = class34.method752(8);
-         this.field257[var1] = class34.method752(8);
+   final void method633(int[] var1, int var2, int var3) {
+      if (this.field251) {
+         this.method641(var1, var2, var3);
+      } else {
+         this.method635(var3);
       }
 
    }
+
+   protected abstract class31 method631();
+
+   protected abstract int method632();
+
+   protected abstract void method635(int var1);
+
+   protected abstract void method641(int[] var1, int var2, int var3);
+
+   protected abstract class31 method643();
 }

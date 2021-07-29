@@ -1,3 +1,2 @@
-public interface class219 {
-   void method4271(Object var1);
+public interface class219 extends Iterable {
 }

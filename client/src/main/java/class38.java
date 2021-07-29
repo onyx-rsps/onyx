@@ -1,131 +1,141 @@
 public class class38 {
-   static float field311;
-   static float[][] field318;
-   static int field319;
-   static int[][] field317;
-   int[] field315;
-   int[] field320;
-   int[][][] field313;
-   int[][][] field314;
+   static class275 field302;
+   static class275 field307;
+   static class76 field308;
+   static class84 field311;
+   int field304;
+   int field305;
+   int[][] field301;
 
-   static {
-      field318 = new float[2][8];
-      field317 = new int[2][8];
-   }
+   public class38(int var1, int var2) {
+      if (var1 != var2) {
+         int var3 = class178.method3183(var1, var2);
+         var1 /= var3;
+         var2 /= var3;
+         this.field304 = var1;
+         this.field305 = var2;
+         this.field301 = new int[var1][14];
 
-   class38() {
-      this.field320 = new int[2];
-      this.field313 = new int[2][2][4];
-      this.field314 = new int[2][2][4];
-      this.field315 = new int[2];
-   }
-
-   float method822(int var1, int var2, float var3) {
-      float var4 = (float)this.field314[var1][0][var2] + var3 * (float)(this.field314[var1][1][var2] - this.field314[var1][0][var2]);
-      var4 *= 0.0015258789F;
-      return 1.0F - (float)Math.pow(10.0D, (double)(-var4 / 20.0F));
-   }
-
-   float method809(int var1, int var2, float var3) {
-      float var4 = (float)this.field313[var1][0][var2] + var3 * (float)(this.field313[var1][1][var2] - this.field313[var1][0][var2]);
-      var4 *= 1.2207031E-4F;
-      return method810(var4);
-   }
-
-   int method820(int var1, float var2) {
-      float var3;
-      if (var1 == 0) {
-         var3 = (float)this.field315[0] + (float)(this.field315[1] - this.field315[0]) * var2;
-         var3 *= 0.0030517578F;
-         field311 = (float)Math.pow(0.1D, (double)(var3 / 20.0F));
-         field319 = (int)(field311 * 65536.0F);
-      }
-
-      if (this.field320[var1] == 0) {
-         return 0;
-      } else {
-         var3 = this.method822(var1, 0, var2);
-         field318[var1][0] = -2.0F * var3 * (float)Math.cos((double)this.method809(var1, 0, var2));
-         field318[var1][1] = var3 * var3;
-
-         float[] var10000;
-         int var4;
-         for(var4 = 1; var4 < this.field320[var1]; ++var4) {
-            var3 = this.method822(var1, var4, var2);
-            float var5 = -2.0F * var3 * (float)Math.cos((double)this.method809(var1, var4, var2));
-            float var6 = var3 * var3;
-            field318[var1][var4 * 2 + 1] = field318[var1][var4 * 2 - 1] * var6;
-            field318[var1][var4 * 2] = field318[var1][var4 * 2 - 1] * var5 + field318[var1][var4 * 2 - 2] * var6;
-
-            for(int var7 = var4 * 2 - 1; var7 >= 2; --var7) {
-               var10000 = field318[var1];
-               var10000[var7] += field318[var1][var7 - 1] * var5 + field318[var1][var7 - 2] * var6;
+         for(int var4 = 0; var4 < var1; ++var4) {
+            int[] var5 = this.field301[var4];
+            double var6 = 6.0D + (double)var4 / (double)var1;
+            int var8 = (int)Math.floor(1.0D + (var6 - 7.0D));
+            if (var8 < 0) {
+               var8 = 0;
             }
 
-            var10000 = field318[var1];
-            var10000[1] += field318[var1][0] * var5 + var6;
-            var10000 = field318[var1];
-            var10000[0] += var5;
-         }
-
-         if (var1 == 0) {
-            for(var4 = 0; var4 < this.field320[0] * 2; ++var4) {
-               var10000 = field318[0];
-               var10000[var4] *= field311;
+            int var9 = (int)Math.ceil(7.0D + var6);
+            if (var9 > 14) {
+               var9 = 14;
             }
-         }
 
-         for(var4 = 0; var4 < this.field320[var1] * 2; ++var4) {
-            field317[var1][var4] = (int)(field318[var1][var4] * 65536.0F);
-         }
-
-         return this.field320[var1] * 2;
-      }
-   }
-
-   final void method812(Buffer var1, class25 var2) {
-      int var3 = var1.method6560();
-      this.field320[0] = var3 >> 4;
-      this.field320[1] = var3 & 15;
-      if (var3 != 0) {
-         this.field315[0] = var1.method6655();
-         this.field315[1] = var1.method6655();
-         int var4 = var1.method6560();
-
-         int var5;
-         int var6;
-         for(var5 = 0; var5 < 2; ++var5) {
-            for(var6 = 0; var6 < this.field320[var5]; ++var6) {
-               this.field313[var5][0][var6] = var1.method6655();
-               this.field314[var5][0][var6] = var1.method6655();
-            }
-         }
-
-         for(var5 = 0; var5 < 2; ++var5) {
-            for(var6 = 0; var6 < this.field320[var5]; ++var6) {
-               if ((var4 & 1 << var5 * 4 << var6) != 0) {
-                  this.field313[var5][1][var6] = var1.method6655();
-                  this.field314[var5][1][var6] = var1.method6655();
-               } else {
-                  this.field313[var5][1][var6] = this.field313[var5][0][var6];
-                  this.field314[var5][1][var6] = this.field314[var5][0][var6];
+            for(double var10 = (double)var2 / (double)var1; var8 < var9; ++var8) {
+               double var12 = ((double)var8 - var6) * 3.141592653589793D;
+               double var14 = var10;
+               if (var12 < -1.0E-4D || var12 > 1.0E-4D) {
+                  var14 = var10 * (Math.sin(var12) / var12);
                }
+
+               var14 *= 0.54D + 0.46D * Math.cos(0.2243994752564138D * ((double)var8 - var6));
+               var5[var8] = (int)Math.floor(0.5D + var14 * 65536.0D);
             }
          }
 
-         if (var4 != 0 || this.field315[1] != this.field315[0]) {
-            var2.method522(var1);
-         }
-      } else {
-         int[] var7 = this.field315;
-         this.field315[1] = 0;
-         var7[0] = 0;
       }
-
    }
 
-   static float method810(float var0) {
-      float var1 = 32.703197F * (float)Math.pow(2.0D, (double)var0);
-      return var1 * 3.1415927F / 11025.0F;
+   byte[] method727(byte[] var1) {
+      if (null != this.field301) {
+         int var3 = (int)((long)var1.length * (long)this.field305 / (long)this.field304) + 14;
+         int[] var4 = new int[var3];
+         int var5 = 0;
+         int var6 = 0;
+
+         int var7;
+         for(var7 = 0; var7 < var1.length; ++var7) {
+            byte var8 = var1[var7];
+            int[] var9 = this.field301[var6];
+
+            int var10;
+            for(var10 = 0; var10 < 14; ++var10) {
+               var4[var10 + var5] += var9[var10] * var8;
+            }
+
+            var6 += this.field305;
+            var10 = var6 / this.field304;
+            var5 += var10;
+            var6 -= this.field304 * var10;
+         }
+
+         var1 = new byte[var3];
+
+         for(var7 = 0; var7 < var3; ++var7) {
+            int var11 = '\u8000' + var4[var7] >> 16;
+            if (var11 < -128) {
+               var1[var7] = -128;
+            } else if (var11 > 127) {
+               var1[var7] = 127;
+            } else {
+               var1[var7] = (byte)var11;
+            }
+         }
+      }
+
+      return var1;
+   }
+
+   int method720(int var1) {
+      if (null != this.field301) {
+         var1 = (int)((long)this.field305 * (long)var1 / (long)this.field304);
+      }
+
+      return var1;
+   }
+
+   int method721(int var1) {
+      if (this.field301 != null) {
+         var1 = 6 + (int)((long)this.field305 * (long)var1 / (long)this.field304);
+      }
+
+      return var1;
+   }
+
+   static final void method726(class249 var0) {
+      int var2 = var0.field2962;
+      if (var2 == 324) {
+         if (client.field675 == -1) {
+            client.field675 = var0.field3084;
+            client.field676 = var0.field3006;
+         }
+
+         if (client.field598.field2931) {
+            var0.field3084 = client.field675;
+         } else {
+            var0.field3084 = client.field676;
+         }
+
+      } else if (var2 == 325) {
+         if (-1 == client.field675) {
+            client.field675 = var0.field3084;
+            client.field676 = var0.field3006;
+         }
+
+         if (client.field598.field2931) {
+            var0.field3084 = client.field676;
+         } else {
+            var0.field3084 = client.field675;
+         }
+
+      } else if (var2 == 327) {
+         var0.field3009 = 150;
+         var0.field3010 = (int)(Math.sin((double)client.field452 / 40.0D) * 256.0D) & 2047;
+         var0.field2950 = 5;
+         var0.field3002 = 0;
+      } else if (328 == var2) {
+         var0.field3009 = 150;
+         var0.field3010 = (int)(Math.sin((double)client.field452 / 40.0D) * 256.0D) & 2047;
+         var0.field2950 = 5;
+         var0.field3002 = 1;
+      }
    }
 }
