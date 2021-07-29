@@ -8,11 +8,11 @@ public class class240 extends class354 {
    }
 
    class240(class385 var1) {
-      var1.field4182 = var1.field4184.length - 3;
+      var1.offset = var1.payload.length - 3;
       int var2 = var1.method5948();
       int var3 = var1.method6043();
       int var4 = 14 + var2 * 10;
-      var1.field4182 = 0;
+      var1.offset = 0;
       int var5 = 0;
       int var6 = 0;
       int var7 = 0;
@@ -66,15 +66,15 @@ public class class240 extends class354 {
       var4 += 5 * var5;
       var4 += 2 * (var7 + var8 + var6 + var9 + var11);
       var4 += var10 + var12;
-      var13 = var1.field4182;
+      var13 = var1.offset;
       var14 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
 
       for(var15 = 0; var15 < var14; ++var15) {
          var1.method5966();
       }
 
-      var4 += var1.field4182 - var13;
-      var15 = var1.field4182;
+      var4 += var1.offset - var13;
+      var15 = var1.offset;
       int var16 = 0;
       int var17 = 0;
       int var18 = 0;
@@ -124,56 +124,56 @@ public class class240 extends class354 {
       }
 
       var29 = 0;
-      int var30 = var1.field4182;
-      var1.field4182 += var26;
-      int var31 = var1.field4182;
-      var1.field4182 += var11;
-      int var32 = var1.field4182;
-      var1.field4182 += var10;
-      int var33 = var1.field4182;
-      var1.field4182 += var9;
-      int var34 = var1.field4182;
-      var1.field4182 += var16;
-      int var35 = var1.field4182;
-      var1.field4182 += var18;
-      int var36 = var1.field4182;
-      var1.field4182 += var20;
-      int var37 = var1.field4182;
-      var1.field4182 += var7 + var8 + var11;
-      int var38 = var1.field4182;
-      var1.field4182 += var7;
-      int var39 = var1.field4182;
-      var1.field4182 += var27;
-      int var40 = var1.field4182;
-      var1.field4182 += var8;
-      int var41 = var1.field4182;
-      var1.field4182 += var17;
-      int var42 = var1.field4182;
-      var1.field4182 += var19;
-      int var43 = var1.field4182;
-      var1.field4182 += var21;
-      int var44 = var1.field4182;
-      var1.field4182 += var12;
-      int var45 = var1.field4182;
-      var1.field4182 += var9;
-      int var46 = var1.field4182;
-      var1.field4182 += var22;
-      int var47 = var1.field4182;
-      var1.field4182 += var23;
-      int var48 = var1.field4182;
-      var1.field4182 += var24;
-      int var49 = var1.field4182;
-      var1.field4182 += var25;
-      int var50 = var1.field4182;
-      var1.field4182 += var5 * 3;
+      int var30 = var1.offset;
+      var1.offset += var26;
+      int var31 = var1.offset;
+      var1.offset += var11;
+      int var32 = var1.offset;
+      var1.offset += var10;
+      int var33 = var1.offset;
+      var1.offset += var9;
+      int var34 = var1.offset;
+      var1.offset += var16;
+      int var35 = var1.offset;
+      var1.offset += var18;
+      int var36 = var1.offset;
+      var1.offset += var20;
+      int var37 = var1.offset;
+      var1.offset += var7 + var8 + var11;
+      int var38 = var1.offset;
+      var1.offset += var7;
+      int var39 = var1.offset;
+      var1.offset += var27;
+      int var40 = var1.offset;
+      var1.offset += var8;
+      int var41 = var1.offset;
+      var1.offset += var17;
+      int var42 = var1.offset;
+      var1.offset += var19;
+      int var43 = var1.offset;
+      var1.offset += var21;
+      int var44 = var1.offset;
+      var1.offset += var12;
+      int var45 = var1.offset;
+      var1.offset += var9;
+      int var46 = var1.offset;
+      var1.offset += var22;
+      int var47 = var1.offset;
+      var1.offset += var23;
+      int var48 = var1.offset;
+      var1.offset += var24;
+      int var49 = var1.offset;
+      var1.offset += var25;
+      int var50 = var1.offset;
+      var1.offset += var5 * 3;
       this.field2881 = new byte[var4];
       class385 var51 = new class385(this.field2881);
-      var51.method5934(1297377380);
-      var51.method5934(6);
+      var51.writeInt(1297377380);
+      var51.writeInt(6);
       var51.method6122(var2 > 1 ? 1 : 0);
       var51.method6122(var2);
       var51.method6122(var3);
-      var1.field4182 = var13;
+      var1.offset = var13;
       int var52 = 0;
       int var53 = 0;
       int var54 = 0;
@@ -186,135 +186,135 @@ public class class240 extends class354 {
 
       label219:
       for(int var60 = 0; var60 < var2; ++var60) {
-         var51.method5934(1297379947);
-         var51.field4182 += 4;
-         int var61 = var51.field4182;
+         var51.writeInt(1297379947);
+         var51.offset += 4;
+         int var61 = var51.offset;
          int var62 = -1;
 
          while(true) {
             while(true) {
                int var63 = var1.method5966();
                var51.method5947(var63);
-               int var64 = var1.field4184[var29++] & 255;
+               int var64 = var1.payload[var29++] & 255;
                boolean var65 = var64 != var62;
                var62 = var64 & 15;
                if (var64 == 7) {
                   if (var65) {
-                     var51.method5931(255);
+                     var51.writeByte(255);
                   }
 
-                  var51.method5931(47);
-                  var51.method5931(0);
-                  var51.method5943(var51.field4182 - var61);
+                  var51.writeByte(47);
+                  var51.writeByte(0);
+                  var51.method5943(var51.offset - var61);
                   continue label219;
                }
 
                if (var64 == 23) {
                   if (var65) {
-                     var51.method5931(255);
+                     var51.writeByte(255);
                   }
 
-                  var51.method5931(81);
-                  var51.method5931(3);
-                  var51.method5931(var1.field4184[var50++]);
-                  var51.method5931(var1.field4184[var50++]);
-                  var51.method5931(var1.field4184[var50++]);
+                  var51.writeByte(81);
+                  var51.writeByte(3);
+                  var51.writeByte(var1.payload[var50++]);
+                  var51.writeByte(var1.payload[var50++]);
+                  var51.writeByte(var1.payload[var50++]);
                } else {
                   var52 ^= var64 >> 4;
                   if (var62 == 0) {
                      if (var65) {
-                        var51.method5931(144 + var52);
+                        var51.writeByte(144 + var52);
                      }
 
-                     var53 += var1.field4184[var37++];
-                     var54 += var1.field4184[var38++];
-                     var51.method5931(var53 & 127);
-                     var51.method5931(var54 & 127);
+                     var53 += var1.payload[var37++];
+                     var54 += var1.payload[var38++];
+                     var51.writeByte(var53 & 127);
+                     var51.writeByte(var54 & 127);
                   } else if (var62 == 1) {
                      if (var65) {
-                        var51.method5931(128 + var52);
+                        var51.writeByte(128 + var52);
                      }
 
-                     var53 += var1.field4184[var37++];
-                     var55 += var1.field4184[var40++];
-                     var51.method5931(var53 & 127);
-                     var51.method5931(var55 & 127);
+                     var53 += var1.payload[var37++];
+                     var55 += var1.payload[var40++];
+                     var51.writeByte(var53 & 127);
+                     var51.writeByte(var55 & 127);
                   } else if (var62 == 2) {
                      if (var65) {
-                        var51.method5931(176 + var52);
+                        var51.writeByte(176 + var52);
                      }
 
-                     var28 = var28 + var1.field4184[var15++] & 127;
-                     var51.method5931(var28);
+                     var28 = var28 + var1.payload[var15++] & 127;
+                     var51.writeByte(var28);
                      byte var66;
                      if (var28 != 0 && var28 != 32) {
                         if (var28 == 1) {
-                           var66 = var1.field4184[var34++];
+                           var66 = var1.payload[var34++];
                         } else if (var28 == 33) {
-                           var66 = var1.field4184[var41++];
+                           var66 = var1.payload[var41++];
                         } else if (var28 == 7) {
-                           var66 = var1.field4184[var35++];
+                           var66 = var1.payload[var35++];
                         } else if (var28 == 39) {
-                           var66 = var1.field4184[var42++];
+                           var66 = var1.payload[var42++];
                         } else if (var28 == 10) {
-                           var66 = var1.field4184[var36++];
+                           var66 = var1.payload[var36++];
                         } else if (var28 == 42) {
-                           var66 = var1.field4184[var43++];
+                           var66 = var1.payload[var43++];
                         } else if (var28 == 99) {
-                           var66 = var1.field4184[var46++];
+                           var66 = var1.payload[var46++];
                         } else if (var28 == 98) {
-                           var66 = var1.field4184[var47++];
+                           var66 = var1.payload[var47++];
                         } else if (var28 == 101) {
-                           var66 = var1.field4184[var48++];
+                           var66 = var1.payload[var48++];
                         } else if (var28 == 100) {
-                           var66 = var1.field4184[var49++];
+                           var66 = var1.payload[var49++];
                         } else if (var28 != 64 && var28 != 65 && var28 != 120 && var28 != 121 && var28 != 123) {
-                           var66 = var1.field4184[var39++];
+                           var66 = var1.payload[var39++];
                         } else {
-                           var66 = var1.field4184[var30++];
+                           var66 = var1.payload[var30++];
                         }
                      } else {
-                        var66 = var1.field4184[var44++];
+                        var66 = var1.payload[var44++];
                      }
 
                      int var67 = var66 + var59[var28];
                      var59[var28] = var67;
-                     var51.method5931(var67 & 127);
+                     var51.writeByte(var67 & 127);
                   } else if (var62 == 3) {
                      if (var65) {
-                        var51.method5931(224 + var52);
+                        var51.writeByte(224 + var52);
                      }
 
-                     var56 += var1.field4184[var45++];
-                     var56 += var1.field4184[var33++] << 7;
-                     var51.method5931(var56 & 127);
-                     var51.method5931(var56 >> 7 & 127);
+                     var56 += var1.payload[var45++];
+                     var56 += var1.payload[var33++] << 7;
+                     var51.writeByte(var56 & 127);
+                     var51.writeByte(var56 >> 7 & 127);
                   } else if (var62 == 4) {
                      if (var65) {
-                        var51.method5931(208 + var52);
+                        var51.writeByte(208 + var52);
                      }
 
-                     var57 += var1.field4184[var32++];
-                     var51.method5931(var57 & 127);
+                     var57 += var1.payload[var32++];
+                     var51.writeByte(var57 & 127);
                   } else if (var62 == 5) {
                      if (var65) {
-                        var51.method5931(160 + var52);
+                        var51.writeByte(160 + var52);
                      }
 
-                     var53 += var1.field4184[var37++];
-                     var58 += var1.field4184[var31++];
-                     var51.method5931(var53 & 127);
-                     var51.method5931(var58 & 127);
+                     var53 += var1.payload[var37++];
+                     var58 += var1.payload[var31++];
+                     var51.writeByte(var53 & 127);
+                     var51.writeByte(var58 & 127);
                   } else {
                      if (var62 != 6) {
                         throw new RuntimeException();
                      }
 
                      if (var65) {
-                        var51.method5931(192 + var52);
+                        var51.writeByte(192 + var52);
                      }
 
-                     var51.method5931(var1.field4184[var44++]);
+                     var51.writeByte(var1.payload[var44++]);
                   }
                }
             }

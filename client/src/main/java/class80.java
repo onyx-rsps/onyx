@@ -32,7 +32,7 @@ public class class80 {
    }
 
    static final void method1859(class384 var0, int var1) {
-      int var3 = var0.field4182;
+      int var3 = var0.offset;
       class83.field1180 = 0;
       class62.method1630(var0);
 
@@ -47,8 +47,8 @@ public class class80 {
          class167.method2888(var0, var5, var6, var7);
       }
 
-      if (var0.field4182 - var3 != var1) {
-         throw new RuntimeException(var0.field4182 - var3 + " " + var1);
+      if (var0.offset - var3 != var1) {
+         throw new RuntimeException(var0.offset - var3 + " " + var1);
       }
    }
 

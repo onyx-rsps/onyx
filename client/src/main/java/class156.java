@@ -213,7 +213,7 @@ public class class156 extends class349 {
          var4 = var1.method5948();
          if (var4 > 0) {
             if (null != this.field1743 && !field1742) {
-               var1.field4182 += var4 * 3;
+               var1.offset += var4 * 3;
             } else {
                this.field1744 = new int[var4];
                this.field1743 = new int[var4];
@@ -230,7 +230,7 @@ public class class156 extends class349 {
          var4 = var1.method5948();
          if (var4 > 0) {
             if (null != this.field1743 && !field1742) {
-               var1.field4182 += 2 * var4;
+               var1.offset += 2 * var4;
             } else {
                this.field1744 = null;
                this.field1743 = new int[var4];
@@ -514,7 +514,7 @@ public class class156 extends class349 {
             }
          }
 
-         if (client.field413 != 5) {
+         if (client.loginType != 5) {
             if (class56.field829 == -1L) {
                class56.field829 = class87.method1989() + 1000L;
             }
@@ -527,7 +527,7 @@ public class class156 extends class349 {
                }
             }
 
-            if (10 == client.field413 || client.field413 == 11) {
+            if (10 == client.loginType || client.loginType == 11) {
                if (class284.field3644 == class292.field3694) {
                   if (class20.field149 == 1 || !class311.field3777 && class20.field149 == 4) {
                      var4 = class56.field825 + 5;

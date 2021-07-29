@@ -46,12 +46,12 @@ public final class class71 extends class354 {
    public static void method1744(class384 var0) {
       class43 var2 = (class43)class42.field356.method4724();
       if (null != var2) {
-         int var3 = var0.field4182;
-         var0.method5934(var2.field358);
+         int var3 = var0.offset;
+         var0.writeInt(var2.field358);
 
          for(int var4 = 0; var4 < var2.field359; ++var4) {
             if (0 != var2.field361[var4]) {
-               var0.method5931(var2.field361[var4]);
+               var0.writeByte(var2.field361[var4]);
             } else {
                try {
                   int var5 = var2.field360[var4];
@@ -60,17 +60,17 @@ public final class class71 extends class354 {
                   if (var5 == 0) {
                      var6 = var2.field364[var4];
                      var7 = var6.getInt((Object)null);
-                     var0.method5931(0);
-                     var0.method5934(var7);
+                     var0.writeByte(0);
+                     var0.writeInt(var7);
                   } else if (var5 == 1) {
                      var6 = var2.field364[var4];
                      var6.setInt((Object)null, var2.field363[var4]);
-                     var0.method5931(0);
+                     var0.writeByte(0);
                   } else if (2 == var5) {
                      var6 = var2.field364[var4];
                      var7 = var6.getModifiers();
-                     var0.method5931(0);
-                     var0.method5934(var7);
+                     var0.writeByte(0);
+                     var0.writeInt(var7);
                   }
 
                   Method var23;
@@ -78,8 +78,8 @@ public final class class71 extends class354 {
                      if (var5 == 4) {
                         var23 = var2.field365[var4];
                         var7 = var23.getModifiers();
-                        var0.method5931(0);
-                        var0.method5934(var7);
+                        var0.writeByte(0);
+                        var0.writeInt(var7);
                      }
                   } else {
                      var23 = var2.field365[var4];
@@ -93,41 +93,41 @@ public final class class71 extends class354 {
 
                      Object var25 = var23.invoke((Object)null, var8);
                      if (null == var25) {
-                        var0.method5931(0);
+                        var0.writeByte(0);
                      } else if (var25 instanceof Number) {
-                        var0.method5931(1);
-                        var0.method5936(((Number)var25).longValue());
+                        var0.writeByte(1);
+                        var0.writeLong(((Number)var25).longValue());
                      } else if (var25 instanceof String) {
-                        var0.method5931(2);
+                        var0.writeByte(2);
                         var0.method5938((String)var25);
                      } else {
-                        var0.method5931(4);
+                        var0.writeByte(4);
                      }
                   }
                } catch (ClassNotFoundException var11) {
-                  var0.method5931(-10);
+                  var0.writeByte(-10);
                } catch (InvalidClassException var12) {
-                  var0.method5931(-11);
+                  var0.writeByte(-11);
                } catch (StreamCorruptedException var13) {
-                  var0.method5931(-12);
+                  var0.writeByte(-12);
                } catch (OptionalDataException var14) {
-                  var0.method5931(-13);
+                  var0.writeByte(-13);
                } catch (IllegalAccessException var15) {
-                  var0.method5931(-14);
+                  var0.writeByte(-14);
                } catch (IllegalArgumentException var16) {
-                  var0.method5931(-15);
+                  var0.writeByte(-15);
                } catch (InvocationTargetException var17) {
-                  var0.method5931(-16);
+                  var0.writeByte(-16);
                } catch (SecurityException var18) {
-                  var0.method5931(-17);
+                  var0.writeByte(-17);
                } catch (IOException var19) {
-                  var0.method5931(-18);
+                  var0.writeByte(-18);
                } catch (NullPointerException var20) {
-                  var0.method5931(-19);
+                  var0.writeByte(-19);
                } catch (Exception var21) {
-                  var0.method5931(-20);
+                  var0.writeByte(-20);
                } catch (Throwable var22) {
-                  var0.method5931(-21);
+                  var0.writeByte(-21);
                }
             }
          }

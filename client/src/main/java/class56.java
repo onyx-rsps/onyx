@@ -70,7 +70,7 @@ public class class56 {
 
    static final void method1580() {
       class229 var1 = class149.method2495(class227.field2655, client.field453.field1205);
-      var1.field2691.method5931(0);
+      var1.field2691.writeByte(0);
       client.field453.method1963(var1);
    }
 }

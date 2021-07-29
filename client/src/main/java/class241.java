@@ -93,8 +93,8 @@ public class class241 extends class354 {
             String var5 = var4.field1303.method6521();
             class86 var6 = client.field453;
             class229 var7 = class149.method2495(class227.field2672, var6.field1205);
-            var7.field2691.method5931(3 + class281.method4532(var5));
-            var7.field2691.method5931(var0);
+            var7.field2691.writeByte(3 + class281.method4532(var5));
+            var7.field2691.writeByte(var0);
             var7.field2691.method6122(var1);
             var7.field2691.method5938(var5);
             var6.method1963(var7);

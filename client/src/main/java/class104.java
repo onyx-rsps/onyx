@@ -8,9 +8,9 @@ public abstract class class104 extends class354 {
 
    public static class229 method2090(int var0, String var1, class292 var2, int var3) {
       class229 var5 = class149.method2495(class227.field2644, client.field453.field1205);
-      var5.field2691.method5931(0);
-      int var6 = var5.field2691.field4182;
-      var5.field2691.method5931(var0);
+      var5.field2691.writeByte(0);
+      int var6 = var5.field2691.offset;
+      var5.field2691.writeByte(var0);
       String var7 = var1.toLowerCase();
       byte var8 = 0;
       if (var7.startsWith(class270.field3406)) {
@@ -125,14 +125,14 @@ public abstract class class104 extends class354 {
          }
       }
 
-      var5.field2691.method5931(var8);
-      var5.field2691.method5931(var9);
+      var5.field2691.writeByte(var8);
+      var5.field2691.writeByte(var9);
       class243.method4149(var5.field2691, var1);
       if (var0 == class257.field3132.method4619()) {
-         var5.field2691.method5931(var3);
+         var5.field2691.writeByte(var3);
       }
 
-      var5.field2691.method5945(var5.field2691.field4182 - var6);
+      var5.field2691.method5945(var5.field2691.offset - var6);
       return var5;
    }
 

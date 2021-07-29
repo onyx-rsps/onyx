@@ -12,9 +12,9 @@ public class class322 extends class348 {
 
    static final void method5133(String var0, int var1) {
       class229 var3 = class149.method2495(class227.field2588, client.field453.field1205);
-      var3.field2691.method5931(class281.method4532(var0) + 1);
+      var3.field2691.writeByte(class281.method4532(var0) + 1);
       var3.field2691.method5938(var0);
-      var3.field2691.method5931(var1);
+      var3.field2691.writeByte(var1);
       client.field453.method1963(var3);
    }
 

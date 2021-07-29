@@ -27,7 +27,7 @@ public class class275 extends class277 {
       this.field3567 = var6;
       int var8 = this.field3563;
       if (class278.field3603 != null) {
-         class278.field3603.field4182 = var8 * 8 + 5;
+         class278.field3603.offset = var8 * 8 + 5;
          int var9 = class278.field3603.method6172();
          int var10 = class278.field3603.method6172();
          this.method4380(var9, var10);
@@ -52,7 +52,7 @@ public class class275 extends class277 {
          long var4 = (long)(var3 + 16711680);
          int var2;
          if (null != class278.field3595 && class278.field3595.field3966 == var4) {
-            var2 = class94.field1248.field4182 * 99 / (class94.field1248.field4184.length - class278.field3595.field3573) + 1;
+            var2 = class94.field1248.offset * 99 / (class94.field1248.payload.length - class278.field3595.field3573) + 1;
          } else {
             var2 = 0;
          }
@@ -344,7 +344,7 @@ public class class275 extends class277 {
          long var5 = (long)(var1 + (var4 << 16));
          int var3;
          if (null != class278.field3595 && var5 == class278.field3595.field3966) {
-            var3 = 1 + class94.field1248.field4182 * 99 / (class94.field1248.field4184.length - class278.field3595.field3573);
+            var3 = 1 + class94.field1248.offset * 99 / (class94.field1248.payload.length - class278.field3595.field3573);
          } else {
             var3 = 0;
          }

@@ -23,14 +23,14 @@ public final class class204 {
 
    static void method3698(byte[] var0) {
       class385 var2 = new class385(var0);
-      var2.field4182 = var0.length - 2;
+      var2.offset = var0.length - 2;
       class399.field4282 = var2.method6043();
       class399.field4284 = new int[class399.field4282];
       class399.field4285 = new int[class399.field4282];
       class106.field1308 = new int[class399.field4282];
       class375.field4156 = new int[class399.field4282];
       class399.field4283 = new byte[class399.field4282][];
-      var2.field4182 = var0.length - 7 - class399.field4282 * 8;
+      var2.offset = var0.length - 7 - class399.field4282 * 8;
       class399.field4281 = var2.method6043();
       class399.field4286 = var2.method6043();
       int var3 = (var2.method5948() & 255) + 1;
@@ -52,7 +52,7 @@ public final class class204 {
          class375.field4156[var4] = var2.method6043();
       }
 
-      var2.field4182 = var0.length - 7 - class399.field4282 * 8 - (var3 - 1) * 3;
+      var2.offset = var0.length - 7 - class399.field4282 * 8 - (var3 - 1) * 3;
       class119.field1407 = new int[var3];
 
       for(var4 = 1; var4 < var3; ++var4) {
@@ -62,7 +62,7 @@ public final class class204 {
          }
       }
 
-      var2.field4182 = 0;
+      var2.offset = 0;
 
       for(var4 = 0; var4 < class399.field4282; ++var4) {
          int var5 = class106.field1308[var4];

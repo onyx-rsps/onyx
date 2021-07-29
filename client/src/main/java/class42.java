@@ -5,7 +5,7 @@ import java.net.URI;
 public class class42 {
    public static class298 field356;
    static class115 field355;
-   static int[] field357;
+   static int[] xteas;
 
    static {
       field356 = new class298();

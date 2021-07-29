@@ -81,7 +81,7 @@ public class class193 extends class201 {
       class385 var6 = new class385(var1);
       class385 var7 = new class385(var1);
       class385 var8 = new class385(var1);
-      var2.field4182 = var1.length - 23;
+      var2.offset = var1.length - 23;
       int var9 = var2.method6043();
       int var10 = var2.method6043();
       int var11 = var2.method5948();
@@ -102,7 +102,7 @@ public class class193 extends class201 {
       int var26;
       if (var11 > 0) {
          this.field2166 = new byte[var11];
-         var2.field4182 = 0;
+         var2.offset = 0;
 
          for(var26 = 0; var26 < var11; ++var26) {
             byte var27 = this.field2166[var26] = var2.method5949();
@@ -223,11 +223,11 @@ public class class193 extends class201 {
          this.field2161 = new short[var11];
       }
 
-      var2.field4182 = var11;
-      var3.field4182 = var38;
-      var4.field4182 = var39;
-      var5.field4182 = var40;
-      var6.field4182 = var32;
+      var2.offset = var11;
+      var3.offset = var38;
+      var4.offset = var39;
+      var5.offset = var40;
+      var6.offset = var32;
       int var48 = 0;
       int var49 = 0;
       int var50 = 0;
@@ -265,13 +265,13 @@ public class class193 extends class201 {
          }
       }
 
-      var2.field4182 = var37;
-      var3.field4182 = var28;
-      var4.field4182 = var30;
-      var5.field4182 = var33;
-      var6.field4182 = var31;
-      var7.field4182 = var35;
-      var8.field4182 = var36;
+      var2.offset = var37;
+      var3.offset = var28;
+      var4.offset = var30;
+      var5.offset = var33;
+      var6.offset = var31;
+      var7.offset = var35;
+      var8.offset = var36;
 
       for(var51 = 0; var51 < var10; ++var51) {
          this.field2184[var51] = (short)var2.method6043();
@@ -300,8 +300,8 @@ public class class193 extends class201 {
          }
       }
 
-      var2.field4182 = var34;
-      var3.field4182 = var29;
+      var2.offset = var34;
+      var3.offset = var29;
       var51 = 0;
       var52 = 0;
       var53 = 0;
@@ -350,12 +350,12 @@ public class class193 extends class201 {
          }
       }
 
-      var2.field4182 = var41;
-      var3.field4182 = var42;
-      var4.field4182 = var43;
-      var5.field4182 = var44;
-      var6.field4182 = var45;
-      var7.field4182 = var46;
+      var2.offset = var41;
+      var3.offset = var42;
+      var4.offset = var43;
+      var5.offset = var44;
+      var6.offset = var45;
+      var7.offset = var46;
 
       for(var55 = 0; var55 < var11; ++var55) {
          var56 = this.field2166[var55] & 255;
@@ -366,7 +366,7 @@ public class class193 extends class201 {
          }
       }
 
-      var2.field4182 = var26;
+      var2.offset = var26;
       var55 = var2.method5948();
       if (var55 != 0) {
          new class211();
@@ -386,7 +386,7 @@ public class class193 extends class201 {
       class385 var6 = new class385(var1);
       class385 var7 = new class385(var1);
       class385 var8 = new class385(var1);
-      var4.field4182 = var1.length - 18;
+      var4.offset = var1.length - 18;
       int var9 = var4.method6043();
       int var10 = var4.method6043();
       int var11 = var4.method5948();
@@ -480,11 +480,11 @@ public class class193 extends class201 {
       }
 
       this.field2184 = new short[var10];
-      var4.field4182 = var21;
-      var5.field4182 = var32;
-      var6.field4182 = var33;
-      var7.field4182 = var45;
-      var8.field4182 = var27;
+      var4.offset = var21;
+      var5.offset = var32;
+      var6.offset = var33;
+      var7.offset = var45;
+      var8.offset = var27;
       int var35 = 0;
       int var36 = 0;
       int var37 = 0;
@@ -522,11 +522,11 @@ public class class193 extends class201 {
          }
       }
 
-      var4.field4182 = var30;
-      var5.field4182 = var26;
-      var6.field4182 = var24;
-      var7.field4182 = var28;
-      var8.field4182 = var25;
+      var4.offset = var30;
+      var5.offset = var26;
+      var6.offset = var24;
+      var7.offset = var28;
+      var8.offset = var25;
 
       for(var38 = 0; var38 < var10; ++var38) {
          this.field2184[var38] = (short)var4.method6043();
@@ -565,8 +565,8 @@ public class class193 extends class201 {
          }
       }
 
-      var4.field4182 = var29;
-      var5.field4182 = var23;
+      var4.offset = var29;
+      var5.offset = var23;
       var38 = 0;
       var39 = 0;
       var40 = 0;
@@ -616,7 +616,7 @@ public class class193 extends class201 {
          }
       }
 
-      var4.field4182 = var31;
+      var4.offset = var31;
 
       for(var42 = 0; var42 < var11; ++var42) {
          this.field2166[var42] = 0;

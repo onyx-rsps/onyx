@@ -5,7 +5,7 @@ public class class100 implements class290 {
    public static final class100 field1277;
    static class372 field1272;
    final int field1273;
-   public final int field1270;
+   public final int authType;
 
    static {
       field1277 = new class100(3, 0);
@@ -15,7 +15,7 @@ public class class100 implements class290 {
    }
 
    class100(int var1, int var2) {
-      this.field1270 = var1;
+      this.authType = var1;
       this.field1273 = var2;
    }
 

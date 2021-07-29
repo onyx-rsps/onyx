@@ -19,7 +19,7 @@ object ClientLauncher {
     init {
         params["title"] = "Onyx"
         params["codebase"] = CODEBASE
-        params["cachedir"] = "onyx"
+        params["cachedir"] = "oldschool"
         params["storebase"] = "0"
         params["applet_minwidth"] = "765"
         params["applet_minheight"] = "503"

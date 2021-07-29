@@ -156,8 +156,8 @@ public class class20 implements MouseListener, MouseMotionListener, FocusListene
             if (var3.field1306 == -1) {
                class86 var4 = client.field453;
                class229 var5 = class149.method2495(class227.field2646, var4.field1205);
-               var5.field2691.method5931(3 + class281.method4532(var3.field1303.method6521()));
-               var5.field2691.method5931(var0);
+               var5.field2691.writeByte(3 + class281.method4532(var3.field1303.method6521()));
+               var5.field2691.writeByte(var0);
                var5.field2691.method6122(var1);
                var5.field2691.method5938(var3.field1303.method6521());
                var4.method1963(var5);

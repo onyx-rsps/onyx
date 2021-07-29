@@ -12,7 +12,7 @@ public class class116 extends class120 {
 
    void method2191(class385 var1) {
       if (var1.method5948() != 255) {
-         --var1.field4182;
+         --var1.offset;
          var1.method5954();
       }
 

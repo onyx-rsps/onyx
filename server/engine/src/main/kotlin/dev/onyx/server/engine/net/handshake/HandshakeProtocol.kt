@@ -7,6 +7,7 @@ import dev.onyx.server.engine.net.Session
 import dev.onyx.server.engine.net.StatusResponse
 import dev.onyx.server.engine.net.ext.then
 import dev.onyx.server.engine.net.js5.JS5Protocol
+import dev.onyx.server.engine.net.login.LoginProtocol
 import io.netty.buffer.ByteBuf
 
 class HandshakeProtocol(session: Session) : Protocol(session) {
@@ -44,7 +45,19 @@ class HandshakeProtocol(session: Session) : Protocol(session) {
     }
 
     private fun decodeLoginHandshake(buf: ByteBuf, out: MutableList<Any>) {
-        println("handshake: login")
+        val request = HandshakeRequest(HandshakeType.LOGIN)
+        out.add(request)
+    }
+
+    /**
+     * ENCODER METHODS
+     */
+
+    override fun encode(msg: Message, out: ByteBuf) {
+        if(msg !is HandshakeResponse) return
+
+        out.writeByte(StatusResponse.SUCCESSFUL.code)
+        out.writeLong(session.seed)
     }
 
     /**
@@ -68,7 +81,10 @@ class HandshakeProtocol(session: Session) : Protocol(session) {
              * Handle LOGIN Handshake
              */
             HandshakeType.LOGIN -> {
-
+                val response = HandshakeResponse(session.seed)
+                session.writeAndFlush(response).then {
+                    session.protocol.set(LoginProtocol(session))
+                }
             }
         }
     }

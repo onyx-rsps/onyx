@@ -25,11 +25,11 @@ public class class196 {
       this.field2216 = var2;
       class385 var3 = new class385(var1);
       class385 var4 = new class385(var1);
-      var3.field4182 = 2;
+      var3.offset = 2;
       int var5 = var3.method5948();
       int var6 = -1;
       int var7 = 0;
-      var4.field4182 = var3.field4182 + var5;
+      var4.offset = var3.offset + var5;
 
       int var8;
       for(var8 = 0; var8 < var5; ++var8) {
@@ -80,7 +80,7 @@ public class class196 {
          }
       }
 
-      if (var4.field4182 != var1.length) {
+      if (var4.offset != var1.length) {
          throw new RuntimeException();
       } else {
          this.field2212 = var7;

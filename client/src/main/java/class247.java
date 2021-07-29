@@ -114,20 +114,20 @@ public class class247 {
    }
 
    public void method4181(class385 var1) {
-      var1.method5931(this.field2931 ? 1 : 0);
+      var1.writeByte(this.field2931 ? 1 : 0);
 
       int var3;
       for(var3 = 0; var3 < 7; ++var3) {
          int var4 = this.field2929[field2933[var3]];
          if (var4 == 0) {
-            var1.method5931(-1);
+            var1.writeByte(-1);
          } else {
-            var1.method5931(var4 - 256);
+            var1.writeByte(var4 - 256);
          }
       }
 
       for(var3 = 0; var3 < 5; ++var3) {
-         var1.method5931(this.field2932[var3]);
+         var1.writeByte(this.field2932[var3]);
       }
 
    }

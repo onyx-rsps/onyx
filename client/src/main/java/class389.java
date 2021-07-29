@@ -32,8 +32,8 @@ public class class389 implements class290 {
             class106 var4 = (class106)client.field638[var0].field1436.get(var1);
             class86 var5 = client.field453;
             class229 var6 = class149.method2495(class227.field2665, var5.field1205);
-            var6.field2691.method5931(4 + class281.method4532(var4.field1303.method6521()));
-            var6.field2691.method5931(var0);
+            var6.field2691.writeByte(4 + class281.method4532(var4.field1303.method6521()));
+            var6.field2691.writeByte(var0);
             var6.field2691.method6122(var1);
             var6.field2691.method5937(var2);
             var6.field2691.method5938(var4.field1303.method6521());

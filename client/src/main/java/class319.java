@@ -29,7 +29,7 @@ public class class319 extends class326 {
 
    public void method5091(class385 var1, int var2) {
       while(true) {
-         if (var1.field4182 < var2) {
+         if (var1.offset < var2) {
             boolean var4 = var1.method5948() == 1;
             class406 var5 = new class406(var1.method5957(), this.field3827);
             class406 var6 = new class406(var1.method5957(), this.field3827);

@@ -148,7 +148,7 @@ public class class126 extends class104 {
 
    void method2083(class385 var1) {
       if (var1.method5948() != 255) {
-         --var1.field4182;
+         --var1.offset;
          this.field1446 = var1.method5954();
       }
 
@@ -173,9 +173,9 @@ public class class126 extends class104 {
 
          client.field647 = class51.field747[2 + class51.field746];
          class229 var14 = class149.method2495(class227.field2653, client.field453.field1205);
-         var14.field2691.method5931(client.field670);
-         var14.field2691.method5931(class125.field1441.field4301);
-         var14.field2691.method5931(client.field647);
+         var14.field2691.writeByte(client.field670);
+         var14.field2691.writeByte(class125.field1441.field4301);
+         var14.field2691.writeByte(client.field647);
          client.field453.method1963(var14);
          return 1;
       } else {
@@ -189,10 +189,10 @@ public class class126 extends class104 {
             var9 = class51.field747[class51.field746];
             var11 = class51.field747[class51.field746 + 1];
             var7 = class149.method2495(class227.field2601, client.field453.field1205);
-            var7.field2691.method5931(class281.method4532(var4) + 2);
+            var7.field2691.writeByte(class281.method4532(var4) + 2);
             var7.field2691.method5938(var4);
-            var7.field2691.method5931(var9 - 1);
-            var7.field2691.method5931(var11);
+            var7.field2691.writeByte(var9 - 1);
+            var7.field2691.writeByte(var11);
             client.field453.method1963(var7);
             return 1;
          } else {
@@ -264,10 +264,10 @@ public class class126 extends class104 {
                      String var10 = class51.field738[1 + class2.field4];
                      var12 = class149.method2495(class227.field2624, client.field453.field1205);
                      var12.field2691.method6122(0);
-                     int var13 = var12.field2691.field4182;
+                     int var13 = var12.field2691.offset;
                      var12.field2691.method5938(var4);
                      class243.method4149(var12.field2691, var10);
-                     var12.field2691.method6034(var12.field2691.field4182 - var13);
+                     var12.field2691.method6034(var12.field2691.offset - var13);
                      client.field453.method1963(var12);
                      return 1;
                   } else if (var0 == 5010) {

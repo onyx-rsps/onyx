@@ -77,14 +77,14 @@ public class class63 implements Callable {
    static final void method1660(String var0) {
       if (class69.field972 != null) {
          class229 var2 = class149.method2495(class227.field2633, client.field453.field1205);
-         var2.field2691.method5931(class281.method4532(var0));
+         var2.field2691.writeByte(class281.method4532(var0));
          var2.field2691.method5938(var0);
          client.field453.method1963(var2);
       }
    }
 
    static void method1659(class385 var0, int var1) {
-      class145.method2450(var0.field4184, var1);
+      class145.method2450(var0.payload, var1);
       class67.method1681(var0, var1);
    }
 }

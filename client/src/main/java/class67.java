@@ -11,7 +11,7 @@ public class class67 extends class354 {
       if (class131.field1471 != null) {
          try {
             class131.field1471.method5795(0L);
-            class131.field1471.method5801(var0.field4184, var1, 24);
+            class131.field1471.method5801(var0.payload, var1, 24);
          } catch (Exception var4) {
          }
       }

@@ -344,7 +344,7 @@ public abstract class class277 {
             } else {
                var22 = class241.method4142(this.field3588[var1], true);
                class385 var9 = new class385(var22);
-               var9.method6042(var2, 5, var9.field4184.length);
+               var9.method6042(var2, 5, var9.payload.length);
             }
 
             byte[] var23 = class47.method815(var22);
@@ -360,7 +360,7 @@ public abstract class class277 {
                var10 -= 4 * var11 * var4;
                class385 var12 = new class385(var23);
                int[] var13 = new int[var4];
-               var12.field4182 = var10;
+               var12.offset = var10;
 
                int var15;
                int var16;
@@ -380,7 +380,7 @@ public abstract class class277 {
                   var13[var15] = 0;
                }
 
-               var12.field4182 = var10;
+               var12.offset = var10;
                var15 = 0;
 
                int var18;

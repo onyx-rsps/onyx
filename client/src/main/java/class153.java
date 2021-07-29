@@ -331,8 +331,8 @@ public class class153 extends class349 {
             }
          }
 
-         if (var1.field4182 != client.field453.field1209) {
-            throw new RuntimeException(var1.field4182 + class79.field1140 + client.field453.field1209);
+         if (var1.offset != client.field453.field1209) {
+            throw new RuntimeException(var1.offset + class79.field1140 + client.field453.field1209);
          } else {
             for(var15 = 0; var15 < client.field685; ++var15) {
                if (client.field567[client.field450[var15]] == null) {

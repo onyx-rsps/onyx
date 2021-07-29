@@ -100,7 +100,7 @@ public class class49 {
                class20.method326(class270.field3402 + var1 + class270.field3403);
             } else {
                class229 var4 = class149.method2495(class227.field2565, client.field453.field1205);
-               var4.field2691.method5931(class281.method4532(var1));
+               var4.field2691.writeByte(class281.method4532(var1));
                var4.field2691.method5938(var1);
                client.field453.method1963(var4);
             }
@@ -142,7 +142,7 @@ public class class49 {
             if (this.field712.method5192(var3)) {
                client.field610 = client.field593;
                class229 var4 = class149.method2495(class227.field2637, client.field453.field1205);
-               var4.field2691.method5931(class281.method4532(var1));
+               var4.field2691.writeByte(class281.method4532(var1));
                var4.field2691.method5938(var1);
                client.field453.method1963(var4);
             }
@@ -159,7 +159,7 @@ public class class49 {
             if (this.field713.method5192(var3)) {
                class125.method2249();
                class229 var4 = class149.method2495(class227.field2579, client.field453.field1205);
-               var4.field2691.method5931(class281.method4532(var1));
+               var4.field2691.writeByte(class281.method4532(var1));
                var4.field2691.method5938(var1);
                client.field453.method1963(var4);
             }

@@ -14,7 +14,7 @@ public class class22 {
       for(int var2 = 0; var2 < 10; ++var2) {
          int var3 = var1.method5948();
          if (var3 != 0) {
-            --var1.field4182;
+            --var1.offset;
             this.field161[var2] = new class40();
             this.field161[var2].method746(var1);
          }

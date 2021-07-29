@@ -67,7 +67,7 @@ public class class122 extends class104 {
       }
 
       class229 var2 = class149.method2495(class227.field2666, client.field453.field1205);
-      var2.field2691.method5931(var0.length() + 1);
+      var2.field2691.writeByte(var0.length() + 1);
       var2.field2691.method5938(var0);
       client.field453.method1963(var2);
    }
@@ -245,7 +245,7 @@ public class class122 extends class104 {
          var9.field2691.method5983(var3);
          var9.field2691.method6077(class281.field3625 + var0);
          var9.field2691.method5983(var1 + class78.field1134);
-         var9.field2691.method5931(class11.field46[82] ? 1 : 0);
+         var9.field2691.writeByte(class11.field46[82] ? 1 : 0);
          client.field453.method1963(var9);
       }
 
@@ -262,7 +262,7 @@ public class class122 extends class104 {
             var10.field2691.method6077(class104.field1295);
             var10.field2691.method5992(class62.field912);
             var10.field2691.method5983(var3);
-            var10.field2691.method5931(class11.field46[82] ? 1 : 0);
+            var10.field2691.writeByte(class11.field46[82] ? 1 : 0);
             var10.field2691.method6122(class11.field41);
             client.field453.method1963(var10);
          }
@@ -316,7 +316,7 @@ public class class122 extends class104 {
             client.field597 = var1;
             var10 = class149.method2495(class227.field2611, client.field453.field1205);
             var10.field2691.method6077(var3);
-            var10.field2691.method5931(class11.field46[82] ? 1 : 0);
+            var10.field2691.writeByte(class11.field46[82] ? 1 : 0);
             client.field453.method1963(var10);
          }
       }
@@ -371,7 +371,7 @@ public class class122 extends class104 {
          var9 = class149.method2495(class227.field2590, client.field453.field1205);
          var9.field2691.method6077(class78.field1134 + var1);
          var9.field2691.method6077(class281.field3625 + var0);
-         var9.field2691.method5931(class11.field46[82] ? 1 : 0);
+         var9.field2691.writeByte(class11.field46[82] ? 1 : 0);
          var9.field2691.method6077(var3);
          client.field453.method1963(var9);
       }
@@ -395,7 +395,7 @@ public class class122 extends class104 {
          client.field644 = var0;
          client.field597 = var1;
          var9 = class149.method2495(class227.field2618, client.field453.field1205);
-         var9.field2691.method5931(class11.field46[82] ? 1 : 0);
+         var9.field2691.writeByte(class11.field46[82] ? 1 : 0);
          var9.field2691.method5984(class11.field41);
          var9.field2691.method5994(class62.field912);
          var9.field2691.method6122(var3);
@@ -449,7 +449,7 @@ public class class122 extends class104 {
          var9.field2691.method6077(var1 + class78.field1134);
          var9.field2691.method6077(class11.field41);
          var9.field2691.method5992(class62.field912);
-         var9.field2691.method5931(class11.field46[82] ? 1 : 0);
+         var9.field2691.writeByte(class11.field46[82] ? 1 : 0);
          var9.field2691.method5983(var3);
          var9.field2691.method6077(class104.field1295);
          var9.field2691.method5984(var0 + class281.field3625);
@@ -488,7 +488,7 @@ public class class122 extends class104 {
          var9.field2691.method6067(class11.field46[82] ? 1 : 0);
          var9.field2691.method5984(var3);
          var9.field2691.method6077(var1 + class78.field1134);
-         var9.field2691.method5934(class25.field185);
+         var9.field2691.writeInt(class25.field185);
          var9.field2691.method6077(var0 + class281.field3625);
          var9.field2691.method6077(client.field565);
          var9.field2691.method6077(client.field564);
@@ -612,7 +612,7 @@ public class class122 extends class104 {
             var9 = class149.method2495(class227.field2573, client.field453.field1205);
             var9.field2691.method6122(var3);
             var9.field2691.method5983(var0);
-            var9.field2691.method5934(var1);
+            var9.field2691.writeInt(var1);
             client.field453.method1963(var9);
             client.field513 = 0;
             class13.field78 = class87.method1995(var1);
@@ -658,7 +658,7 @@ public class class122 extends class104 {
             var9 = class149.method2495(class227.field2612, client.field453.field1205);
             var9.field2691.method6122(var3);
             var9.field2691.method5984(var1 + class78.field1134);
-            var9.field2691.method5931(class11.field46[82] ? 1 : 0);
+            var9.field2691.writeByte(class11.field46[82] ? 1 : 0);
             var9.field2691.method5984(class281.field3625 + var0);
             client.field453.method1963(var9);
          }
@@ -692,7 +692,7 @@ public class class122 extends class104 {
                client.field644 = var0;
                client.field597 = var1;
                var10 = class149.method2495(class227.field2625, client.field453.field1205);
-               var10.field2691.method5931(class11.field46[82] ? 1 : 0);
+               var10.field2691.writeByte(class11.field46[82] ? 1 : 0);
                var10.field2691.method6077(var3);
                client.field453.method1963(var10);
             }
@@ -718,7 +718,7 @@ public class class122 extends class104 {
          class249 var17;
          if (28 == var2) {
             var9 = class149.method2495(class227.field2652, client.field453.field1205);
-            var9.field2691.method5934(var1);
+            var9.field2691.writeInt(var1);
             client.field453.method1963(var9);
             var17 = class87.method1995(var1);
             if (var17.field3080 != null && var17.field3080[0][0] == 5) {
@@ -760,7 +760,7 @@ public class class122 extends class104 {
                client.field644 = var0;
                client.field597 = var1;
                var10 = class149.method2495(class227.field2632, client.field453.field1205);
-               var10.field2691.method5931(class11.field46[82] ? 1 : 0);
+               var10.field2691.writeByte(class11.field46[82] ? 1 : 0);
                var10.field2691.method5983(var3);
                client.field453.method1963(var10);
             }
@@ -768,7 +768,7 @@ public class class122 extends class104 {
 
          if (29 == var2) {
             var9 = class149.method2495(class227.field2652, client.field453.field1205);
-            var9.field2691.method5934(var1);
+            var9.field2691.writeInt(var1);
             client.field453.method1963(var9);
             var17 = class87.method1995(var1);
             if (var17.field3080 != null && 5 == var17.field3080[0][0]) {
@@ -804,7 +804,7 @@ public class class122 extends class104 {
 
             if (var18) {
                var11 = class149.method2495(class227.field2652, client.field453.field1205);
-               var11.field2691.method5934(var1);
+               var11.field2691.writeInt(var1);
                client.field453.method1963(var11);
             }
          }

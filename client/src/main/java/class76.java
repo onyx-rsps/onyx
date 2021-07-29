@@ -65,7 +65,7 @@ public class class76 {
       this.field1121 = 127;
       this.field1116 = 127;
       this.field1115 = new LinkedHashMap();
-      if (var1 != null && var1.field4184 != null) {
+      if (var1 != null && var1.payload != null) {
          int var2 = var1.method5948();
          if (var2 >= 0 && var2 <= field1112) {
             if (var1.method5948() == 1) {
@@ -118,25 +118,25 @@ public class class76 {
 
    class385 method1820() {
       class385 var2 = new class385(100);
-      var2.method5931(field1112);
-      var2.method5931(this.field1113 ? 1 : 0);
-      var2.method5931(this.field1114 ? 1 : 0);
-      var2.method5931(this.field1122);
-      var2.method5931(this.field1115.size());
+      var2.writeByte(field1112);
+      var2.writeByte(this.field1113 ? 1 : 0);
+      var2.writeByte(this.field1114 ? 1 : 0);
+      var2.writeByte(this.field1122);
+      var2.writeByte(this.field1115.size());
       Iterator var3 = this.field1115.entrySet().iterator();
 
       while(var3.hasNext()) {
          Entry var4 = (Entry)var3.next();
-         var2.method5934((Integer)var4.getKey());
-         var2.method5934((Integer)var4.getValue());
+         var2.writeInt((Integer)var4.getKey());
+         var2.writeInt((Integer)var4.getValue());
       }
 
       var2.method5938(this.field1123 != null ? this.field1123 : "");
       var2.method5937(this.field1117);
-      var2.method5931((int)(this.field1118 * 100.0D));
-      var2.method5931(this.field1119);
-      var2.method5931(this.field1121);
-      var2.method5931(this.field1116);
+      var2.writeByte((int)(this.field1118 * 100.0D));
+      var2.writeByte(this.field1119);
+      var2.writeByte(this.field1121);
+      var2.writeByte(this.field1116);
       return var2;
    }
 

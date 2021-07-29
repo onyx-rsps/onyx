@@ -28,7 +28,7 @@ public class class184 {
                class229 var11;
                if (1 == var0) {
                   var11 = class149.method2495(class227.field2643, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -36,7 +36,7 @@ public class class184 {
 
                if (2 == var0) {
                   var11 = class149.method2495(class227.field2645, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -44,7 +44,7 @@ public class class184 {
 
                if (3 == var0) {
                   var11 = class149.method2495(class227.field2617, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -52,7 +52,7 @@ public class class184 {
 
                if (var0 == 4) {
                   var11 = class149.method2495(class227.field2659, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -60,7 +60,7 @@ public class class184 {
 
                if (var0 == 5) {
                   var11 = class149.method2495(class227.field2583, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -68,7 +68,7 @@ public class class184 {
 
                if (6 == var0) {
                   var11 = class149.method2495(class227.field2649, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -76,7 +76,7 @@ public class class184 {
 
                if (7 == var0) {
                   var11 = class149.method2495(class227.field2640, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -84,7 +84,7 @@ public class class184 {
 
                if (var0 == 8) {
                   var11 = class149.method2495(class227.field2608, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -92,7 +92,7 @@ public class class184 {
 
                if (9 == var0) {
                   var11 = class149.method2495(class227.field2654, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);
@@ -100,7 +100,7 @@ public class class184 {
 
                if (10 == var0) {
                   var11 = class149.method2495(class227.field2571, client.field453.field1205);
-                  var11.field2691.method5934(var1);
+                  var11.field2691.writeInt(var1);
                   var11.field2691.method6122(var2);
                   var11.field2691.method6122(var3);
                   client.field453.method1963(var11);

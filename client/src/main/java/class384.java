@@ -20,7 +20,7 @@ public class class384 extends class385 {
    }
 
    public void method5887(int var1) {
-      super.field4184[++super.field4182 - 1] = (byte)(var1 + this.field4177.method6500());
+      super.payload[++super.offset - 1] = (byte)(var1 + this.field4177.method6500());
    }
 
    public static class153 method5928(int var0) {
@@ -41,28 +41,28 @@ public class class384 extends class385 {
    }
 
    public int method5888() {
-      return super.field4184[++super.field4182 - 1] - this.field4177.method6500() & 255;
+      return super.payload[++super.offset - 1] - this.field4177.method6500() & 255;
    }
 
    public boolean method5889() {
-      int var2 = super.field4184[super.field4182] - this.field4177.method6499() & 255;
+      int var2 = super.payload[super.offset] - this.field4177.method6499() & 255;
       return var2 >= 128;
    }
 
    public int method5890() {
-      int var2 = super.field4184[++super.field4182 - 1] - this.field4177.method6500() & 255;
-      return var2 < 128 ? var2 : (var2 - 128 << 8) + (super.field4184[++super.field4182 - 1] - this.field4177.method6500() & 255);
+      int var2 = super.payload[++super.offset - 1] - this.field4177.method6500() & 255;
+      return var2 < 128 ? var2 : (var2 - 128 << 8) + (super.payload[++super.offset - 1] - this.field4177.method6500() & 255);
    }
 
    public void method5891(byte[] var1, int var2, int var3) {
       for(int var5 = 0; var5 < var3; ++var5) {
-         var1[var5 + var2] = (byte)(super.field4184[++super.field4182 - 1] - this.field4177.method6500());
+         var1[var5 + var2] = (byte)(super.payload[++super.offset - 1] - this.field4177.method6500());
       }
 
    }
 
    public void method5892() {
-      this.field4179 = super.field4182 * 8;
+      this.field4179 = super.offset * 8;
    }
 
    public int method5893(int var1) {
@@ -71,21 +71,21 @@ public class class384 extends class385 {
       int var5 = 0;
 
       for(this.field4179 += var1; var1 > var4; var4 = 8) {
-         var5 += (super.field4184[var3++] & field4178[var4]) << var1 - var4;
+         var5 += (super.payload[var3++] & field4178[var4]) << var1 - var4;
          var1 -= var4;
       }
 
       if (var4 == var1) {
-         var5 += super.field4184[var3] & field4178[var4];
+         var5 += super.payload[var3] & field4178[var4];
       } else {
-         var5 += super.field4184[var3] >> var4 - var1 & field4178[var1];
+         var5 += super.payload[var3] >> var4 - var1 & field4178[var1];
       }
 
       return var5;
    }
 
    public void method5913() {
-      super.field4182 = (this.field4179 + 7) / 8;
+      super.offset = (this.field4179 + 7) / 8;
    }
 
    public int method5901(int var1) {

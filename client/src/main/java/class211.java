@@ -5,10 +5,10 @@ public class class211 {
    static class59 method3833(byte[] var0) {
       class59 var2 = new class59();
       class385 var3 = new class385(var0);
-      var3.field4182 = var3.field4184.length - 2;
+      var3.offset = var3.payload.length - 2;
       int var4 = var3.method6043();
-      int var5 = var3.field4184.length - 2 - var4 - 12;
-      var3.field4182 = var5;
+      int var5 = var3.payload.length - 2 - var4 - 12;
+      var3.offset = var5;
       int var6 = var3.method6172();
       var2.field864 = var3.method6043();
       var2.field868 = var3.method6043();
@@ -33,13 +33,13 @@ public class class211 {
          }
       }
 
-      var3.field4182 = 0;
+      var3.offset = 0;
       var2.field863 = var3.method5956();
       var2.field865 = new int[var6];
       var2.field870 = new int[var6];
       var2.field866 = new String[var6];
 
-      for(var8 = 0; var3.field4182 < var5; var2.field865[var8++] = var9) {
+      for(var8 = 0; var3.offset < var5; var2.field865[var8++] = var9) {
          var9 = var3.method6043();
          if (var9 == 3) {
             var2.field866[var8] = var3.method5957();

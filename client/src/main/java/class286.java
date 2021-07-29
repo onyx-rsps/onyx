@@ -39,7 +39,7 @@ public class class286 {
                   break;
                }
 
-               --var1.field4182;
+               --var1.offset;
                if (var1.method6043() != 0) {
                   throw new IllegalStateException("");
                }

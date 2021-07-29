@@ -27,9 +27,9 @@ public class class125 {
       if (null != class278.field3614) {
          try {
             var3 = new class385(4);
-            var3.method5931(var1 ? 2 : 3);
+            var3.writeByte(var1 ? 2 : 3);
             var3.method6111(0);
-            class278.field3614.method5283(var3.field4184, 0, 4);
+            class278.field3614.method5283(var3.payload, 0, 4);
          } catch (IOException var8) {
             try {
                class278.field3614.method5279();
@@ -41,7 +41,7 @@ public class class125 {
          }
       }
 
-      class278.field3608.field4182 = 0;
+      class278.field3608.offset = 0;
       class278.field3595 = null;
       class94.field1248 = null;
       class278.field3609 = 0;
@@ -55,10 +55,10 @@ public class class125 {
                   if (class278.field3613 != 0) {
                      try {
                         var3 = new class385(4);
-                        var3.method5931(4);
-                        var3.method5931(class278.field3613);
+                        var3.writeByte(4);
+                        var3.writeByte(class278.field3613);
                         var3.method6122(0);
-                        class278.field3614.method5283(var3.field4184, 0, 4);
+                        class278.field3614.method5283(var3.payload, 0, 4);
                      } catch (IOException var6) {
                         try {
                            class278.field3614.method5279();

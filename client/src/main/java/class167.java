@@ -299,7 +299,7 @@ public class class167 implements class188 {
          class272 var15 = (class272)class251.method4287(class85.method1959(), var0.method5977());
          boolean var16 = var0.method5948() == 1;
          var9 = var0.method6164();
-         var10 = var0.field4182;
+         var10 = var0.offset;
          if (null != var2.field980 && var2.field979 != null) {
             boolean var11 = false;
             if (var15.field3548 && class13.field80.method1325(var2.field980)) {
@@ -307,9 +307,9 @@ public class class167 implements class188 {
             }
 
             if (!var11 && client.field522 == 0 && !var2.field998) {
-               class83.field1182.field4182 = 0;
-               var0.method5998(class83.field1182.field4184, 0, var9);
-               class83.field1182.field4182 = 0;
+               class83.field1182.offset = 0;
+               var0.method5998(class83.field1182.payload, 0, var9);
+               class83.field1182.offset = 0;
                String var12 = class303.method4915(class286.method4581(class176.method3147(class83.field1182)));
                var2.field1034 = var12.trim();
                var2.field1038 = var6 >> 8;
@@ -331,7 +331,7 @@ public class class167 implements class188 {
             }
          }
 
-         var0.field4182 = var9 + var10;
+         var0.offset = var9 + var10;
       }
 
       if (0 != (var3 & 2048)) {

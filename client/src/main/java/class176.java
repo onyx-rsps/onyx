@@ -37,7 +37,7 @@ public class class176 implements class290 {
          }
 
          byte[] var4 = new byte[var3];
-         var0.field4182 += class252.field3117.method4288(var0.field4184, var0.field4182, var4, 0, var3);
+         var0.offset += class252.field3117.method4288(var0.payload, var0.offset, var4, 0, var3);
          String var5 = class293.method4653(var4, 0, var3);
          var2 = var5;
       } catch (Exception var6) {

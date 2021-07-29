@@ -32,7 +32,7 @@ public class class377 implements class290 {
 
    static final void method5860(String var0) {
       class229 var2 = class149.method2495(class227.field2604, client.field453.field1205);
-      var2.field2691.method5931(class281.method4532(var0));
+      var2.field2691.writeByte(class281.method4532(var0));
       var2.field2691.method5938(var0);
       client.field453.method1963(var2);
    }

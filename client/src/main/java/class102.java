@@ -33,7 +33,7 @@ public class class102 extends class104 {
 
    void method2083(class385 var1) {
       if (var1.method5948() != 255) {
-         --var1.field4182;
+         --var1.offset;
          this.field1285 = var1.method5954();
       }
 

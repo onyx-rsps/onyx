@@ -52,7 +52,7 @@ public final class class70 extends class72 {
    }
 
    final void method1700(class385 var1) {
-      var1.field4182 = 0;
+      var1.offset = 0;
       int var3 = var1.method5948();
       this.field996 = var1.method5949();
       this.field992 = var1.method5949();
@@ -148,7 +148,7 @@ public final class class70 extends class72 {
 
       class138[] var26 = null;
       boolean var27 = false;
-      if (var1.field4182 < var1.field4184.length) {
+      if (var1.offset < var1.payload.length) {
          var9 = var1.method6043();
          var27 = (var9 >> 15 & 1) == 1;
          if (var9 > 0 && 32768 != var9) {

@@ -53,9 +53,9 @@ public class class165 {
          class59.field874.method258(7680, 2160);
       }
 
-      if (client.field413 >= 25) {
+      if (client.loginType >= 25) {
          class229 var2 = class149.method2495(class227.field2572, client.field453.field1205);
-         var2.field2691.method5931(class238.method4117());
+         var2.field2691.writeByte(class238.method4117());
          var2.field2691.method6122(class69.field971);
          var2.field2691.method6122(client.field687);
          client.field453.method1963(var2);

@@ -3,7 +3,7 @@ public class class187 {
    public static final class187 field2116;
    public static final class187 field2117;
    public static final class187 field2118;
-   static long field2120;
+   static long seed;
    static final class187 field2119;
    public final String field2114;
 

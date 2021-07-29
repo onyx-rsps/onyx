@@ -23,13 +23,13 @@ public class class17 {
    }
 
    static void method128(int var0) {
-      if (var0 != client.field413) {
-         if (0 == client.field413) {
+      if (var0 != client.loginType) {
+         if (0 == client.loginType) {
             class59.field874.method181();
          }
 
          if (20 == var0 || 40 == var0 || 45 == var0) {
-            client.field673 = 0;
+            client.loginState = 0;
             client.field439 = 0;
             client.field440 = 0;
             client.field458.method5060(var0);
@@ -43,7 +43,7 @@ public class class17 {
             client.field645 = null;
          }
 
-         if (client.field413 == 25) {
+         if (client.loginType == 25) {
             client.field464 = 0;
             client.field460 = 0;
             client.field461 = 1;
@@ -53,7 +53,7 @@ public class class17 {
 
          if (5 != var0 && 10 != var0) {
             if (20 == var0) {
-               class238.method4112(class106.field1301, class271.field3536, true, client.field413 == 11 ? 4 : 0);
+               class238.method4112(class106.field1301, class271.field3536, true, client.loginType == 11 ? 4 : 0);
             } else if (11 == var0) {
                class238.method4112(class106.field1301, class271.field3536, false, 4);
             } else if (class56.field798) {
@@ -82,9 +82,9 @@ public class class17 {
                if (null != class278.field3614) {
                   try {
                      class385 var2 = new class385(4);
-                     var2.method5931(2);
+                     var2.writeByte(2);
                      var2.method6111(0);
-                     class278.field3614.method5283(var2.field4184, 0, 4);
+                     class278.field3614.method5283(var2.payload, 0, 4);
                   } catch (IOException var5) {
                      try {
                         class278.field3614.method5279();
@@ -102,7 +102,7 @@ public class class17 {
             class238.method4112(class106.field1301, class271.field3536, true, 0);
          }
 
-         client.field413 = var0;
+         client.loginType = var0;
       }
    }
 

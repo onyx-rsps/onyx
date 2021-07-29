@@ -14,7 +14,7 @@ public class class289 {
 
    static void method4616() {
       client.field453.method1975();
-      client.field453.field1201.field4182 = 0;
+      client.field453.field1201.offset = 0;
       client.field453.field1206 = null;
       client.field453.field1212 = null;
       client.field453.field1214 = null;
@@ -50,7 +50,7 @@ public class class289 {
       }
 
       class229 var3 = class149.method2495(class227.field2572, client.field453.field1205);
-      var3.field2691.method5931(class238.method4117());
+      var3.field2691.writeByte(class238.method4117());
       var3.field2691.method6122(class69.field971);
       var3.field2691.method6122(client.field687);
       client.field453.method1963(var3);

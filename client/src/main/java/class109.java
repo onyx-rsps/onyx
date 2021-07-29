@@ -34,7 +34,7 @@ public class class109 extends class104 {
             class229 var9;
             if (var0 == 1) {
                var9 = class149.method2495(class227.field2625, client.field453.field1205);
-               var9.field2691.method5931(0);
+               var9.field2691.writeByte(0);
                var9.field2691.method6077(var4[var7]);
                client.field453.method1963(var9);
             } else if (var0 == 4) {

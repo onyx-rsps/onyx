@@ -40,7 +40,7 @@ public class class47 implements Comparator {
    static final void method807(String var0) {
       if (!var0.equals("")) {
          class229 var2 = class149.method2495(class227.field2655, client.field453.field1205);
-         var2.field2691.method5931(class281.method4532(var0));
+         var2.field2691.writeByte(class281.method4532(var0));
          var2.field2691.method5938(var0);
          client.field453.method1963(var2);
       }

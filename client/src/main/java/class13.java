@@ -37,14 +37,14 @@ public final class class13 extends Canvas {
             class369 var8 = new class369(class131.field1476, "rw", 10000L);
 
             int var10;
-            for(var9 = new class385((int)var8.method5773()); var9.field4182 < var9.field4184.length; var9.field4182 += var10) {
-               var10 = var8.method5779(var9.field4184, var9.field4182, var9.field4184.length - var9.field4182);
+            for(var9 = new class385((int)var8.method5773()); var9.offset < var9.payload.length; var9.offset += var10) {
+               var10 = var8.method5779(var9.payload, var9.offset, var9.payload.length - var9.offset);
                if (-1 == var10) {
                   throw new IOException();
                }
             }
 
-            var9.field4182 = 0;
+            var9.offset = 0;
             var10 = var9.method5948();
             if (var10 < 1 || var10 > 3) {
                throw new IOException("" + var10);
@@ -170,14 +170,14 @@ public final class class13 extends Canvas {
          try {
             class369 var30 = new class369(class131.field1476, "rw", 10000L);
             class385 var34 = new class385(500);
-            var34.method5931(3);
-            var34.method5931(var9 != null ? 1 : 0);
+            var34.writeByte(3);
+            var34.writeByte(var9 != null ? 1 : 0);
             var34.method5940(var22.getPath());
             if (null != var9) {
                var34.method5940(var22.getPath());
             }
 
-            var30.method5780(var34.field4184, 0, var34.field4182);
+            var30.method5780(var34.payload, 0, var34.offset);
             var30.method5776();
          } catch (IOException var16) {
             var16.printStackTrace();

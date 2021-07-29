@@ -181,16 +181,16 @@ public class class293 implements class290 {
             class385 var8 = new class385(new byte[1000]);
 
             while(true) {
-               int var9 = var7.read(var8.field4184, var8.field4182, 1000 - var8.field4182);
+               int var9 = var7.read(var8.payload, var8.offset, 1000 - var8.offset);
                if (-1 == var9) {
-                  var8.field4182 = 0;
+                  var8.offset = 0;
                   long var12 = var8.method5954();
                   var2 = var12;
                   break;
                }
 
-               var8.field4182 += var9;
-               if (var8.field4182 >= 1000) {
+               var8.offset += var9;
+               if (var8.offset >= 1000) {
                   var2 = 0L;
                   break;
                }
@@ -241,7 +241,7 @@ public class class293 implements class290 {
          class56.field803.method6446(382 + class56.field825, 0);
          class89.field1229.method6349(class56.field825 + 382 - class89.field1229.field4263 / 2, 18);
          int var5;
-         if (client.field413 == 0 || 5 == client.field413) {
+         if (client.loginType == 0 || 5 == client.loginType) {
             byte var4 = 20;
             var0.method4922(class270.field3440, class56.field817 + 180, 245 - var4, 16777215, -1);
             var5 = 253 - var4;
@@ -257,7 +257,7 @@ public class class293 implements class290 {
          short var12;
          int var13;
          short var14;
-         if (client.field413 == 20) {
+         if (client.loginType == 20) {
             class305.field3760.method6349(180 + class56.field817 - class305.field3760.field4263 / 2, 271 - class305.field3760.field4264 / 2);
             var12 = 201;
             var0.method4922(class56.field823, class56.field817 + 180, var12, 16776960, 0);
@@ -285,7 +285,7 @@ public class class293 implements class290 {
             }
          }
 
-         if (client.field413 == 10 || client.field413 == 11) {
+         if (client.loginType == 10 || client.loginType == 11) {
             class305.field3760.method6349(class56.field817, 171);
             short var15;
             if (class56.field812 == 0) {
@@ -542,7 +542,7 @@ public class class293 implements class290 {
             }
          }
 
-         if (client.field413 >= 10) {
+         if (client.loginType >= 10) {
             int[] var24 = new int[4];
             class394.method6259(var24);
             class394.method6279(class56.field825, 0, class56.field825 + 765, client.field687);
@@ -552,7 +552,7 @@ public class class293 implements class290 {
          }
 
          class133.field1486[class38.field308.field1114 ? 1 : 0].method6349(class56.field825 + 765 - 40, 463);
-         if (client.field413 > 5 && class284.field3644 == class292.field3694) {
+         if (client.loginType > 5 && class284.field3644 == class292.field3694) {
             if (class236.field2847 != null) {
                var13 = 5 + class56.field825;
                var14 = 463;

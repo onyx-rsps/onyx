@@ -54,10 +54,10 @@ public abstract class class343 implements class216 {
 
    public static void method5419(int var0, int var1, int var2, boolean var3) {
       class229 var5 = class149.method2495(class227.field2635, client.field453.field1205);
-      var5.field2691.method5931(var2);
+      var5.field2691.writeByte(var2);
       var5.field2691.method6122(var1);
       var5.field2691.method6077(var0);
-      var5.field2691.method5934(var3 ? client.field489 * -1636832173 * -2076624933 : 0);
+      var5.field2691.writeInt(var3 ? client.field489 * -1636832173 * -2076624933 : 0);
       client.field453.method1963(var5);
    }
 

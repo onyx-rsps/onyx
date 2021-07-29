@@ -284,7 +284,7 @@ public class class40 {
       this.field325.method452(var1);
       int var2 = var1.method5948();
       if (var2 != 0) {
-         --var1.field4182;
+         --var1.offset;
          this.field345 = new class26();
          this.field345.method452(var1);
          this.field327 = new class26();
@@ -293,7 +293,7 @@ public class class40 {
 
       var2 = var1.method5948();
       if (var2 != 0) {
-         --var1.field4182;
+         --var1.offset;
          this.field330 = new class26();
          this.field330.method452(var1);
          this.field329 = new class26();
@@ -302,7 +302,7 @@ public class class40 {
 
       var2 = var1.method5948();
       if (var2 != 0) {
-         --var1.field4182;
+         --var1.offset;
          this.field336 = new class26();
          this.field336.method452(var1);
          this.field331 = new class26();

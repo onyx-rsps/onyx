@@ -5,11 +5,11 @@ public class class243 extends class349 {
    public final int[] field2908;
 
    public static int method4149(class385 var0, String var1) {
-      int var3 = var0.field4182;
+      int var3 = var0.offset;
       byte[] var4 = class105.method2094(var1);
       var0.method5946(var4.length);
-      var0.field4182 += class252.field3117.method4289(var4, 0, var4.length, var0.field4184, var0.field4182);
-      return var0.field4182 - var3;
+      var0.offset += class252.field3117.method4289(var4, 0, var4.length, var0.payload, var0.offset);
+      return var0.offset - var3;
    }
 
    static int method4150(int var0) {

@@ -16,6 +16,6 @@ public class class1 implements class4 {
       for(var5 = 0L; !var4.method19(var3.method58(), var3.method52(), var5); ++var5) {
       }
 
-      var2.method5936(var5);
+      var2.writeLong(var5);
    }
 }

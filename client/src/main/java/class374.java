@@ -3,7 +3,7 @@ final class class374 implements class373 {
    }
 
    void method5847(Integer var1, class385 var2) {
-      var2.method5934(var1);
+      var2.writeInt(var1);
    }
 
    public Object method5840(class385 var1) {

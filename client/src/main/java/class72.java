@@ -277,7 +277,7 @@ public abstract class class72 extends class201 {
             }
 
             class229 var16 = class149.method2495(class227.field2650, client.field453.field1205);
-            var16.field2691.method5934(var12);
+            var16.field2691.writeInt(var12);
             client.field453.method1963(var16);
             return 1;
          } else {
@@ -285,14 +285,14 @@ public abstract class class72 extends class201 {
             if (var0 == 3105) {
                var14 = class51.field738[--class2.field4];
                var10 = class149.method2495(class227.field2609, client.field453.field1205);
-               var10.field2691.method5931(var14.length() + 1);
+               var10.field2691.writeByte(var14.length() + 1);
                var10.field2691.method5938(var14);
                client.field453.method1963(var10);
                return 1;
             } else if (var0 == 3106) {
                var14 = class51.field738[--class2.field4];
                var10 = class149.method2495(class227.field2638, client.field453.field1205);
-               var10.field2691.method5931(var14.length() + 1);
+               var10.field2691.writeByte(var14.length() + 1);
                var10.field2691.method5938(var14);
                client.field453.method1963(var10);
                return 1;

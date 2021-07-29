@@ -23,8 +23,8 @@ public class class237 {
    }
 
    void method4057(byte[] var1) {
-      this.field2866.field4184 = var1;
-      this.field2866.field4182 = 10;
+      this.field2866.payload = var1;
+      this.field2866.offset = 10;
       int var2 = this.field2866.method6043();
       this.field2854 = this.field2866.method6043();
       this.field2853 = 500000;
@@ -33,11 +33,11 @@ public class class237 {
       class385 var10000;
       int var3;
       int var5;
-      for(var3 = 0; var3 < var2; var10000.field4182 += var5) {
+      for(var3 = 0; var3 < var2; var10000.offset += var5) {
          int var4 = this.field2866.method6172();
          var5 = this.field2866.method6172();
          if (var4 == 1297379947) {
-            this.field2855[var3] = this.field2866.field4182;
+            this.field2855[var3] = this.field2866.offset;
             ++var3;
          }
 
@@ -56,7 +56,7 @@ public class class237 {
    }
 
    void method4058() {
-      this.field2866.field4184 = null;
+      this.field2866.payload = null;
       this.field2855 = null;
       this.field2856 = null;
       this.field2857 = null;
@@ -64,7 +64,7 @@ public class class237 {
    }
 
    boolean method4107() {
-      return this.field2866.field4184 != null;
+      return this.field2866.payload != null;
    }
 
    int method4060() {
@@ -72,15 +72,15 @@ public class class237 {
    }
 
    void method4069(int var1) {
-      this.field2866.field4182 = this.field2856[var1];
+      this.field2866.offset = this.field2856[var1];
    }
 
    void method4062(int var1) {
-      this.field2856[var1] = this.field2866.field4182;
+      this.field2856[var1] = this.field2866.offset;
    }
 
    void method4082() {
-      this.field2866.field4182 = -1;
+      this.field2866.offset = -1;
    }
 
    void method4064(int var1) {
@@ -95,12 +95,12 @@ public class class237 {
    }
 
    int method4063(int var1) {
-      byte var2 = this.field2866.field4184[this.field2866.field4182];
+      byte var2 = this.field2866.payload[this.field2866.offset];
       int var5;
       if (var2 < 0) {
          var5 = var2 & 255;
          this.field2858[var1] = var5;
-         ++this.field2866.field4182;
+         ++this.field2866.offset;
       } else {
          var5 = this.field2858[var1];
       }
@@ -110,16 +110,16 @@ public class class237 {
       } else {
          int var3 = this.field2866.method5966();
          if (var5 == 247 && var3 > 0) {
-            int var4 = this.field2866.field4184[this.field2866.field4182] & 255;
+            int var4 = this.field2866.payload[this.field2866.offset] & 255;
             if (var4 >= 241 && var4 <= 243 || var4 == 246 || var4 == 248 || var4 >= 250 && var4 <= 252 || var4 == 254) {
-               ++this.field2866.field4182;
+               ++this.field2866.offset;
                this.field2858[var1] = var4;
                return this.method4067(var1, var4);
             }
          }
 
          class385 var10000 = this.field2866;
-         var10000.field4182 += var3;
+         var10000.offset += var3;
          return 0;
       }
    }
@@ -132,7 +132,7 @@ public class class237 {
          class385 var10000;
          if (var7 == 47) {
             var10000 = this.field2866;
-            var10000.field4182 += var4;
+            var10000.offset += var4;
             return 1;
          } else if (var7 == 81) {
             int var5 = this.field2866.method5952();
@@ -141,11 +141,11 @@ public class class237 {
             this.field2862 += (long)var6 * (long)(this.field2853 - var5);
             this.field2853 = var5;
             var10000 = this.field2866;
-            var10000.field4182 += var4;
+            var10000.offset += var4;
             return 2;
          } else {
             var10000 = this.field2866;
-            var10000.field4182 += var4;
+            var10000.offset += var4;
             return 3;
          }
       } else {
@@ -201,9 +201,9 @@ public class class237 {
       for(int var4 = 0; var4 < var3; ++var4) {
          this.field2857[var4] = 0;
          this.field2858[var4] = 0;
-         this.field2866.field4182 = this.field2855[var4];
+         this.field2866.offset = this.field2855[var4];
          this.method4064(var4);
-         this.field2856[var4] = this.field2866.field4182;
+         this.field2856[var4] = this.field2866.offset;
       }
 
    }

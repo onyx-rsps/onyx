@@ -1,7 +1,7 @@
 import java.security.SecureRandom;
 
 public class class99 implements class98 {
-   static SecureRandom field1267;
+   static SecureRandom secureRandom;
 
    public class99() {
    }

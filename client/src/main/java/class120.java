@@ -27,7 +27,7 @@ public abstract class class120 extends class354 {
       client.field636 = -1L;
       class332.method5327();
       client.field453.method1975();
-      client.field453.field1201.field4182 = 0;
+      client.field453.field1201.offset = 0;
       client.field453.field1206 = null;
       client.field453.field1212 = null;
       client.field453.field1214 = null;
@@ -122,7 +122,7 @@ public abstract class class120 extends class354 {
       }
 
       class229 var6 = class149.method2495(class227.field2572, client.field453.field1205);
-      var6.field2691.method5931(class238.method4117());
+      var6.field2691.writeByte(class238.method4117());
       var6.field2691.method6122(class69.field971);
       var6.field2691.method6122(client.field687);
       client.field453.method1963(var6);

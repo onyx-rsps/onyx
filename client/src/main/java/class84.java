@@ -250,7 +250,7 @@ public class class84 {
          }
 
          class385 var30 = new class385(var3);
-         var30.method5931(2);
+         var30.writeByte(2);
          var30.method6122(var4);
          Iterator var31 = this.field1186.entrySet().iterator();
 
@@ -260,7 +260,7 @@ public class class84 {
             int var33;
             do {
                if (!var31.hasNext()) {
-                  var2.method5780(var30.field4184, 0, var30.field4182);
+                  var2.method5780(var30.payload, 0, var30.offset);
                   break label187;
                }
 
@@ -292,7 +292,7 @@ public class class84 {
                ++var14;
             }
 
-            var30.method5931(var10.field4159);
+            var30.writeByte(var10.field4159);
             Class var35 = var9.getClass();
             class377[] var16 = new class377[]{class377.field4165, class377.field4164, class377.field4160};
             class377[] var17 = var16;
@@ -349,7 +349,7 @@ public class class84 {
             }
 
             class385 var26 = new class385(var3);
-            if (var26.field4184.length - var26.field4182 >= 1) {
+            if (var26.payload.length - var26.offset >= 1) {
                int var6 = var26.method5948();
                if (var6 >= 0 && var6 <= 2) {
                   int var7;

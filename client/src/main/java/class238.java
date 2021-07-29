@@ -21,7 +21,7 @@ public class class238 extends class354 {
       class385 var2 = new class385(var1);
 
       int var3;
-      for(var3 = 0; 0 != var2.field4184[var2.field4182 + var3]; ++var3) {
+      for(var3 = 0; 0 != var2.payload[var2.offset + var3]; ++var3) {
       }
 
       byte[] var4 = new byte[var3];
@@ -31,13 +31,13 @@ public class class238 extends class354 {
          var4[var5] = var2.method5949();
       }
 
-      ++var2.field4182;
+      ++var2.offset;
       ++var3;
-      var5 = var2.field4182;
-      var2.field4182 += var3;
+      var5 = var2.offset;
+      var2.offset += var3;
 
       int var6;
-      for(var6 = 0; 0 != var2.field4184[var2.field4182 + var6]; ++var6) {
+      for(var6 = 0; 0 != var2.payload[var2.offset + var6]; ++var6) {
       }
 
       byte[] var7 = new byte[var6];
@@ -47,13 +47,13 @@ public class class238 extends class354 {
          var7[var8] = var2.method5949();
       }
 
-      ++var2.field4182;
+      ++var2.offset;
       ++var6;
-      var8 = var2.field4182;
-      var2.field4182 += var6;
+      var8 = var2.offset;
+      var2.offset += var6;
 
       int var9;
-      for(var9 = 0; var2.field4184[var2.field4182 + var9] != 0; ++var9) {
+      for(var9 = 0; var2.payload[var2.offset + var9] != 0; ++var9) {
       }
 
       byte[] var10 = new byte[var9];
@@ -62,7 +62,7 @@ public class class238 extends class354 {
          var10[var11] = var2.method5949();
       }
 
-      ++var2.field4182;
+      ++var2.offset;
       ++var9;
       byte[] var36 = new byte[var9];
       int var12;
@@ -113,7 +113,7 @@ public class class238 extends class354 {
       byte[] var40 = var14 > 0 ? new byte[2 * var14] : null;
 
       int var17;
-      for(var17 = 0; 0 != var2.field4184[var17 + var2.field4182]; ++var17) {
+      for(var17 = 0; 0 != var2.payload[var17 + var2.offset]; ++var17) {
       }
 
       byte[] var18 = new byte[var17];
@@ -123,7 +123,7 @@ public class class238 extends class354 {
          var18[var19] = var2.method5949();
       }
 
-      ++var2.field4182;
+      ++var2.offset;
       ++var17;
       var19 = 0;
 
@@ -178,7 +178,7 @@ public class class238 extends class354 {
                   var20 = -1;
                }
 
-               var23 = var2.field4184[var5++] - 1;
+               var23 = var2.payload[var5++] - 1;
             }
 
             this.field2873[var24] = (byte)var23;
@@ -199,7 +199,7 @@ public class class238 extends class354 {
                   var20 = -1;
                }
 
-               var24 = var2.field4184[var8++] + 16 << 2;
+               var24 = var2.payload[var8++] + 16 << 2;
             }
 
             this.field2868[var25] = (byte)var24;
@@ -516,9 +516,9 @@ public class class238 extends class354 {
          if (null != class278.field3614) {
             try {
                class385 var14 = new class385(4);
-               var14.method5931(3);
+               var14.writeByte(3);
                var14.method6111(0);
-               class278.field3614.method5283(var14.field4184, 0, 4);
+               class278.field3614.method5283(var14.payload, 0, 4);
             } catch (IOException var12) {
                try {
                   class278.field3614.method5279();
