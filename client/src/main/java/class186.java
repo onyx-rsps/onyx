@@ -201,7 +201,7 @@ public abstract class class186 {
                   class47.field398 = (class302)client.field495.get(class361.field4085);
                   class258.field3165 = (class302)client.field495.get(class361.field4093);
                   class130.field1468 = (class302)client.field495.get(class361.field4086);
-                  class230.field2789 = client.field559.method5463();
+                  ServerPacket.field2789 = client.field559.method5463();
                   class56.field807 = class270.field3247;
                   class56.field806 = 40;
                   client.field411 = 60;
@@ -336,8 +336,8 @@ public abstract class class186 {
                      ++var12;
                   }
 
-                  if (class276.field3575 == null) {
-                     class276.field3575 = class133.method2305(class271.field3536, class189.field2122.field3910, 0);
+                  if (CacheBuffer.field3575 == null) {
+                     CacheBuffer.field3575 = class133.method2305(class271.field3536, class189.field2122.field3910, 0);
                   } else {
                      ++var12;
                   }
@@ -400,7 +400,7 @@ public abstract class class186 {
                      int var3 = (int)(Math.random() * 21.0D) - 10;
                      var4 = (int)(Math.random() * 21.0D) - 10;
                      int var5 = (int)(Math.random() * 41.0D) - 20;
-                     class276.field3575[0].method6351(var5 + var2, var5 + var3, var4 + var5);
+                     CacheBuffer.field3575[0].method6351(var5 + var2, var5 + var3, var4 + var5);
                      class56.field807 = class270.field3253;
                      class56.field806 = 70;
                      client.field411 = 90;
@@ -464,7 +464,7 @@ public abstract class class186 {
                   } else {
                      if (class25.field202 == null) {
                         class25.field202 = new class359();
-                        class25.field202.method5544(class38.field302, class16.field85, class323.field3848, class130.field1468, client.field495, class276.field3575);
+                        class25.field202.method5544(class38.field302, class16.field85, class323.field3848, class130.field1468, client.field495, CacheBuffer.field3575);
                      }
 
                      class56.field807 = class270.field3262;
@@ -882,7 +882,7 @@ public abstract class class186 {
       class118.field1400 = var10;
       if (client.field415) {
          byte var31 = 0;
-         var15 = var31 + class278.field3599 + class278.field3607;
+         var15 = var31 + JS5Worker.pendingPriorityCount + JS5Worker.pendingPriorityResponseCount;
          if (0 == var15) {
             client.field415 = false;
          }

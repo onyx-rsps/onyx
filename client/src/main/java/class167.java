@@ -180,7 +180,7 @@ public class class167 implements class188 {
       }
    }
 
-   public void method3256(class385 var1) {
+   public void method3256(Buffer var1) {
       this.field1936 = var1.method5948();
       this.field1933 = var1.method5948();
       this.field1938 = var1.method6043();
@@ -227,7 +227,7 @@ public class class167 implements class188 {
       if (0 != (var3 & 16)) {
          var6 = var0.method5977();
          byte[] var7 = new byte[var6];
-         class385 var8 = new class385(var7);
+         Buffer var8 = new Buffer(var7);
          var0.method6040(var7, 0, var6);
          class83.field1168[var1] = var8;
          var2.method1700(var8);

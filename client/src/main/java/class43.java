@@ -1,7 +1,7 @@
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
-public class class43 extends class354 {
+public class class43 extends Node {
    byte[][][] field362;
    int field358;
    int field359;

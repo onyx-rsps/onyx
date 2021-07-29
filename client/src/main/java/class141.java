@@ -45,7 +45,7 @@ public class class141 extends class349 {
       this.field1534 = var1;
    }
 
-   void method2377(class385 var1) {
+   void method2377(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -56,7 +56,7 @@ public class class141 extends class349 {
       }
    }
 
-   void method2364(class385 var1, int var2) {
+   void method2364(Buffer var1, int var2) {
       if (1 == var2) {
          this.field1535 = var1.method5965();
       } else if (2 == var2) {

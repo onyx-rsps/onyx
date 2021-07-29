@@ -12,7 +12,7 @@ public class class49 {
          byte[] var3 = class140.field1529.method4412(16, var0);
          var2 = new class140();
          if (null != var3) {
-            var2.method2347(new class385(var3));
+            var2.method2347(new Buffer(var3));
          }
 
          class140.field1526.method3882(var2, (long)var0);
@@ -39,7 +39,7 @@ public class class49 {
       this.field714 = 1;
    }
 
-   final void method1319(class385 var1, int var2) {
+   final void method1319(Buffer var1, int var2) {
       this.field712.method5091(var1, var2);
       this.field714 = 2;
       class108.method2107();
@@ -47,7 +47,7 @@ public class class49 {
 
    final void method1322() {
       for(class322 var2 = (class322)this.field712.field3830.method4797(); var2 != null; var2 = (class322)this.field712.field3830.method4798()) {
-         if ((long)var2.field3847 < class87.method1989() / 1000L - 5L) {
+         if ((long)var2.field3847 < Clock.now() / 1000L - 5L) {
             if (var2.field3846 > 0) {
                class121.method2204(5, "", var2.field3844 + class270.field3372);
             }

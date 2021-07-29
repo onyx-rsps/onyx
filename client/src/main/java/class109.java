@@ -11,7 +11,7 @@ public class class109 extends class104 {
       this.this$0 = var1;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       this.field1332 = var1.method6172();
       this.field1331 = var1.method6172();
       this.field1327 = var1.method5948();

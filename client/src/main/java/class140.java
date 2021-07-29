@@ -11,7 +11,7 @@ public class class140 extends class349 {
       this.field1528 = 0;
    }
 
-   void method2347(class385 var1) {
+   void method2347(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (0 == var3) {
@@ -26,7 +26,7 @@ public class class140 extends class349 {
       class65 var5 = (class65)class65.field935.method5746((long)var0);
       if (var5 == null) {
          var5 = new class65();
-         class65.field935.method5737(var5, (long)var0);
+         class65.field935.put(var5, (long)var0);
       }
 
       if (var5.field931.length <= var1) {
@@ -52,7 +52,7 @@ public class class140 extends class349 {
       var5.field932[var1] = var3;
    }
 
-   void method2348(class385 var1, int var2) {
+   void method2348(Buffer var1, int var2) {
       if (5 == var2) {
          this.field1528 = var1.method6043();
       }

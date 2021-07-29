@@ -1,45 +1,45 @@
 import java.util.zip.CRC32;
 
-public class class278 {
+public class JS5Worker {
    public static byte field3613;
    public static class275[] field3612;
-   public static class276 field3595;
+   public static CacheBuffer field3595;
    public static class295 field3602;
-   public static class330 field3614;
-   public static class364 field3598;
-   public static class364 field3600;
+   public static class330 connection;
+   public static class364 pendingPriority;
+   public static class364 pendingPriorityReceived;
    public static class364 field3611;
-   public static class385 field3603;
-   public static class385 field3608;
-   public static int field3596;
-   public static int field3599;
-   public static int field3601;
-   public static int field3604;
+   public static Buffer field3603;
+   public static Buffer field3608;
+   public static int latency;
+   public static int pendingPriorityCount;
+   public static int crcMismatchCount;
+   public static int pendingCount;
    public static int field3605;
-   public static int field3606;
-   public static int field3607;
+   public static int pendingResponseCount;
+   public static int pendingPriorityResponseCount;
    public static int field3609;
    public static CRC32 field3610;
-   public static long field3597;
+   public static long lastAttemptTime;
    static class364 field3615;
 
    static {
-      field3596 = 0;
-      field3598 = new class364(4096);
-      field3599 = 0;
-      field3600 = new class364(32);
-      field3607 = 0;
+      latency = 0;
+      pendingPriority = new class364(4096);
+      pendingPriorityCount = 0;
+      pendingPriorityReceived = new class364(32);
+      pendingPriorityResponseCount = 0;
       field3602 = new class295();
       field3615 = new class364(4096);
-      field3604 = 0;
+      pendingCount = 0;
       field3611 = new class364(4096);
-      field3606 = 0;
-      field3608 = new class385(8);
+      pendingResponseCount = 0;
+      field3608 = new Buffer(8);
       field3609 = 0;
       field3610 = new CRC32();
       field3612 = new class275[256];
       field3613 = 0;
-      field3601 = 0;
+      crcMismatchCount = 0;
       field3605 = 0;
    }
 

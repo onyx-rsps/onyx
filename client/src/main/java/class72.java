@@ -273,7 +273,7 @@ public abstract class class72 extends class201 {
             var14 = class51.field738[--class2.field4];
             var12 = 0;
             if (class250.method4284(var14)) {
-               var12 = class278.method4502(var14);
+               var12 = JS5Worker.method4502(var14);
             }
 
             class229 var16 = class149.method2495(class227.field2650, client.field453.field1205);
@@ -309,7 +309,7 @@ public abstract class class72 extends class201 {
                   var8 = class51.field747[class51.field746];
                   var12 = class51.field747[1 + class51.field746];
                   int var15 = class51.field747[2 + class51.field746];
-                  class249 var17 = class87.method1995(var15);
+                  class249 var17 = Clock.method1995(var15);
                   class65.method1677(var17, var8, var12);
                   return 1;
                } else if (3109 == var0) {

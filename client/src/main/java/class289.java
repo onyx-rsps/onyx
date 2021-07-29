@@ -15,7 +15,7 @@ public class class289 {
    static void method4616() {
       client.field453.method1975();
       client.field453.field1201.offset = 0;
-      client.field453.field1206 = null;
+      client.field453.currentInboundPacket = null;
       client.field453.field1212 = null;
       client.field453.field1214 = null;
       client.field453.field1213 = null;

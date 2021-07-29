@@ -12,7 +12,7 @@ public class class285 {
       return var2;
    }
 
-   class285(class385 var1, byte var2, int var3) {
+   class285(Buffer var1, byte var2, int var3) {
       this.field3651 = var1.method5957();
       this.field3649 = var1.method5957();
       this.field3648 = var1.method6043();

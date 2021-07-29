@@ -1,4 +1,4 @@
-public class class68 extends class354 {
+public class class68 extends Node {
    boolean field964;
    class249 field958;
    class249 field961;

@@ -23,8 +23,8 @@ public class class196 {
       this.field2212 = -1;
       this.field2222 = false;
       this.field2216 = var2;
-      class385 var3 = new class385(var1);
-      class385 var4 = new class385(var1);
+      Buffer var3 = new Buffer(var1);
+      Buffer var4 = new Buffer(var1);
       var3.offset = 2;
       int var5 = var3.method5948();
       int var6 = -1;

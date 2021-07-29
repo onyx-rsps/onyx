@@ -27,7 +27,7 @@ public class class168 {
       this.field1947 = false;
    }
 
-   public void method2890(class385 var1, int var2) {
+   public void method2890(Buffer var1, int var2) {
       this.field1950 = var2;
       this.field1945 = var1.method5957();
       this.field1946 = var1.method5957();
@@ -46,7 +46,7 @@ public class class168 {
       this.method2932();
    }
 
-   class188 method2891(class385 var1) {
+   class188 method2891(Buffer var1) {
       int var3 = var1.method5948();
       class176 var4 = (class176)class251.method4287(class176.method3144(), var3);
       Object var5 = null;

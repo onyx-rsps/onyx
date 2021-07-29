@@ -56,7 +56,7 @@ public class class76 {
       this.method1814(true);
    }
 
-   class76(class385 var1) {
+   class76(Buffer var1) {
       this.field1122 = 1;
       this.field1123 = null;
       this.field1117 = false;
@@ -116,8 +116,8 @@ public class class76 {
    void method1814(boolean var1) {
    }
 
-   class385 method1820() {
-      class385 var2 = new class385(100);
+   Buffer method1820() {
+      Buffer var2 = new Buffer(100);
       var2.writeByte(field1112);
       var2.writeByte(this.field1113 ? 1 : 0);
       var2.writeByte(this.field1114 ? 1 : 0);

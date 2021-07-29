@@ -277,7 +277,7 @@ public class class40 {
       }
    }
 
-   final void method746(class385 var1) {
+   final void method746(Buffer var1) {
       this.field341 = new class26();
       this.field341.method452(var1);
       this.field325 = new class26();

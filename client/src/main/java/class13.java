@@ -29,7 +29,7 @@ public final class class13 extends Canvas {
       String var5 = null;
       String var6 = null;
       boolean var7 = false;
-      class385 var9;
+      Buffer var9;
       int var12;
       File var23;
       if (class131.field1476.exists()) {
@@ -37,7 +37,7 @@ public final class class13 extends Canvas {
             class369 var8 = new class369(class131.field1476, "rw", 10000L);
 
             int var10;
-            for(var9 = new class385((int)var8.method5773()); var9.offset < var9.payload.length; var9.offset += var10) {
+            for(var9 = new Buffer((int)var8.method5773()); var9.offset < var9.payload.length; var9.offset += var10) {
                var10 = var8.method5779(var9.payload, var9.offset, var9.payload.length - var9.offset);
                if (-1 == var10) {
                   throw new IOException();
@@ -169,7 +169,7 @@ public final class class13 extends Canvas {
 
          try {
             class369 var30 = new class369(class131.field1476, "rw", 10000L);
-            class385 var34 = new class385(500);
+            Buffer var34 = new Buffer(500);
             var34.writeByte(3);
             var34.writeByte(var9 != null ? 1 : 0);
             var34.method5940(var22.getPath());

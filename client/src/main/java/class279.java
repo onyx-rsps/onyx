@@ -18,7 +18,7 @@ public class class279 {
       field3619 = new class280();
    }
 
-   public class279(class385 var1, boolean var2) {
+   public class279(Buffer var1, boolean var2) {
       int var3 = var1.method6043();
       boolean var4 = var1.method5948() == 1;
       byte var5;

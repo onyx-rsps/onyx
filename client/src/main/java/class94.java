@@ -1,5 +1,5 @@
 public class class94 extends class325 {
-   public static class385 field1248;
+   public static Buffer field1248;
    final boolean field1246;
 
    public class94(boolean var1) {

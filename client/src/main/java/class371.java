@@ -17,7 +17,7 @@ class class371 implements Iterator {
             byte[] var4 = var0.method4412(35, var3);
             class141.field1544[var3] = new class141(var3);
             if (var4 != null) {
-               class141.field1544[var3].method2377(new class385(var4));
+               class141.field1544[var3].method2377(new Buffer(var4));
                class141.field1544[var3].method2383();
             }
          }

@@ -12,7 +12,7 @@ public class class142 extends class349 {
       this.field1557 = false;
    }
 
-   void method2400(class385 var1) {
+   void method2400(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -32,7 +32,7 @@ public class class142 extends class349 {
 
    }
 
-   void method2391(class385 var1, int var2) {
+   void method2391(Buffer var1, int var2) {
       if (var2 == 2) {
          this.field1557 = true;
       }

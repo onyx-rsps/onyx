@@ -249,7 +249,7 @@ public class class84 {
             }
          }
 
-         class385 var30 = new class385(var3);
+         Buffer var30 = new Buffer(var3);
          var30.writeByte(2);
          var30.method6122(var4);
          Iterator var31 = this.field1186.entrySet().iterator();
@@ -330,7 +330,7 @@ public class class84 {
       }
 
       this.field1189 = false;
-      this.field1188 = class87.method1989();
+      this.field1188 = Clock.now();
    }
 
    void method1896() {
@@ -348,7 +348,7 @@ public class class84 {
                }
             }
 
-            class385 var26 = new class385(var3);
+            Buffer var26 = new Buffer(var3);
             if (var26.payload.length - var26.offset >= 1) {
                int var6 = var26.method5948();
                if (var6 >= 0 && var6 <= 2) {
@@ -421,7 +421,7 @@ public class class84 {
    }
 
    void method1927() {
-      if (this.field1189 && this.field1188 < class87.method1989() - 60000L) {
+      if (this.field1189 && this.field1188 < Clock.now() - 60000L) {
          this.method1895();
       }
 
@@ -437,7 +437,7 @@ public class class84 {
       if (var0 >= 2000) {
          var0 -= 1000;
          var5 = class51.field747[--class51.field746];
-         var4 = class87.method1995(var5);
+         var4 = Clock.method1995(var5);
       } else {
          var4 = var2 ? class286.field3660 : class51.field750;
       }

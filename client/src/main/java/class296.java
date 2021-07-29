@@ -1,16 +1,16 @@
 public class class296 {
-   class354 field3719;
-   public class354 field3718;
+   Node field3719;
+   public Node field3718;
 
    public class296() {
-      this.field3718 = new class354();
+      this.field3718 = new Node();
       this.field3718.field3965 = this.field3718;
       this.field3718.field3967 = this.field3718;
    }
 
    public void method4671() {
       while(true) {
-         class354 var1 = this.field3718.field3965;
+         Node var1 = this.field3718.field3965;
          if (var1 == this.field3718) {
             this.field3719 = null;
             return;
@@ -20,7 +20,7 @@ public class class296 {
       }
    }
 
-   public void method4672(class354 var1) {
+   public void method4672(Node var1) {
       if (var1.field3967 != null) {
          var1.method5437();
       }
@@ -31,7 +31,7 @@ public class class296 {
       var1.field3965.field3967 = var1;
    }
 
-   public void method4673(class354 var1) {
+   public void method4673(Node var1) {
       if (var1.field3967 != null) {
          var1.method5437();
       }
@@ -42,7 +42,7 @@ public class class296 {
       var1.field3965.field3967 = var1;
    }
 
-   public static void method4674(class354 var0, class354 var1) {
+   public static void method4674(Node var0, Node var1) {
       if (var0.field3967 != null) {
          var0.method5437();
       }
@@ -53,8 +53,8 @@ public class class296 {
       var0.field3965.field3967 = var0;
    }
 
-   public class354 method4699() {
-      class354 var1 = this.field3718.field3965;
+   public Node method4699() {
+      Node var1 = this.field3718.field3965;
       if (var1 == this.field3718) {
          return null;
       } else {
@@ -63,8 +63,8 @@ public class class296 {
       }
    }
 
-   public class354 method4675() {
-      class354 var1 = this.field3718.field3967;
+   public Node method4675() {
+      Node var1 = this.field3718.field3967;
       if (var1 == this.field3718) {
          return null;
       } else {
@@ -73,8 +73,8 @@ public class class296 {
       }
    }
 
-   public class354 method4687() {
-      class354 var1 = this.field3718.field3965;
+   public Node method4687() {
+      Node var1 = this.field3718.field3965;
       if (var1 == this.field3718) {
          this.field3719 = null;
          return null;
@@ -84,8 +84,8 @@ public class class296 {
       }
    }
 
-   public class354 method4694() {
-      class354 var1 = this.field3718.field3967;
+   public Node method4694() {
+      Node var1 = this.field3718.field3967;
       if (var1 == this.field3718) {
          this.field3719 = null;
          return null;
@@ -95,8 +95,8 @@ public class class296 {
       }
    }
 
-   public class354 method4678() {
-      class354 var1 = this.field3719;
+   public Node method4678() {
+      Node var1 = this.field3719;
       if (var1 == this.field3718) {
          this.field3719 = null;
          return null;
@@ -106,8 +106,8 @@ public class class296 {
       }
    }
 
-   public class354 method4679() {
-      class354 var1 = this.field3719;
+   public Node method4679() {
+      Node var1 = this.field3719;
       if (var1 == this.field3718) {
          this.field3719 = null;
          return null;

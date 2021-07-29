@@ -306,9 +306,9 @@ public class class251 {
                      class249.field3039[var0][var3] = new class249();
                      class249.field3039[var0][var3].field2958 = var3 + (var0 << 16);
                      if (var4[0] == -1) {
-                        class249.field3039[var0][var3].method4219(new class385(var4));
+                        class249.field3039[var0][var3].method4219(new Buffer(var4));
                      } else {
-                        class249.field3039[var0][var3].method4218(new class385(var4));
+                        class249.field3039[var0][var3].method4218(new Buffer(var4));
                      }
                   }
                }

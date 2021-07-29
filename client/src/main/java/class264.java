@@ -107,7 +107,7 @@ public class class264 {
       }
 
       if (null != class152.field1694) {
-         long var11 = class87.method1989();
+         long var11 = Clock.now();
          long var4 = class152.field1694.getCollectionTime();
          if (-1L != class19.field123) {
             long var6 = var4 - class19.field123;

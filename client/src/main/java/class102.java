@@ -16,7 +16,7 @@ public class class102 extends class104 {
          byte[] var3 = class154.field1703.method4412(34, var0);
          var2 = new class154();
          if (var3 != null) {
-            var2.method2570(new class385(var3));
+            var2.method2570(new Buffer(var3));
          }
 
          var2.method2569();
@@ -31,7 +31,7 @@ public class class102 extends class104 {
       this.field1284 = null;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       if (var1.method5948() != 255) {
          --var1.offset;
          this.field1285 = var1.method5954();

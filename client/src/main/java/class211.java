@@ -4,7 +4,7 @@ public class class211 {
 
    static class59 method3833(byte[] var0) {
       class59 var2 = new class59();
-      class385 var3 = new class385(var0);
+      Buffer var3 = new Buffer(var0);
       var3.offset = var3.payload.length - 2;
       int var4 = var3.method6043();
       int var5 = var3.payload.length - 2 - var4 - 12;

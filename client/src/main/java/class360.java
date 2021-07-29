@@ -20,7 +20,7 @@ public class class360 {
          if (this.field4083.containsKey(var6)) {
             var3.put(var6, this.field4083.get(var6));
          } else {
-            class302 var7 = class230.method3918(this.field4082, this.field4081, var6.field4090, "");
+            class302 var7 = ServerPacket.method3918(this.field4082, this.field4081, var6.field4090, "");
             if (null != var7) {
                this.field4083.put(var6, var7);
                var3.put(var6, var7);
@@ -93,7 +93,7 @@ public class class360 {
          var15 = class79.method1843(var6);
          class156 var16 = class124.method2243(var15);
          if (-1 != var16.field1764) {
-            class397 var17 = class276.field3575[var16.field1764];
+            class397 var17 = CacheBuffer.field3575[var16.field1764];
             if (null != var17) {
                int var18 = (var16.field1750 * 4 - var17.field4263) / 2;
                int var19 = (var16.field1751 * 4 - var17.field4264) / 2;
@@ -170,7 +170,7 @@ public class class360 {
          var11 = class79.method1843(var6);
          class156 var12 = class124.method2243(var11);
          if (-1 != var12.field1764) {
-            class397 var25 = class276.field3575[var12.field1764];
+            class397 var25 = CacheBuffer.field3575[var12.field1764];
             if (var25 != null) {
                var24 = (var12.field1750 * 4 - var25.field4263) / 2;
                var15 = (var12.field1751 * 4 - var25.field4264) / 2;
@@ -209,7 +209,7 @@ public class class360 {
          var8 = class79.method1843(var6);
          class156 var20 = class124.method2243(var8);
          if (-1 != var20.field1764) {
-            class397 var21 = class276.field3575[var20.field1764];
+            class397 var21 = CacheBuffer.field3575[var20.field1764];
             if (var21 != null) {
                var11 = (var20.field1750 * 4 - var21.field4263) / 2;
                int var22 = (var20.field1751 * 4 - var21.field4264) / 2;

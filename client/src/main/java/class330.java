@@ -19,7 +19,7 @@ public abstract class class330 {
 
    public abstract int method5282(byte[] var1, int var2, int var3) throws IOException;
 
-   public abstract void method5283(byte[] var1, int var2, int var3) throws IOException;
+   public abstract void write(byte[] var1, int var2, int var3) throws IOException;
 
    public abstract boolean method5294(int var1) throws IOException;
 }

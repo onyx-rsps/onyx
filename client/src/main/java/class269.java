@@ -28,7 +28,7 @@ public class class269 {
             return;
          }
 
-         var1.field3550.method4382(var1.field3552, (int)var1.field3966, var1.field3551, false);
+         var1.field3550.method4382(var1.field3552, (int)var1.key, var1.field3551, false);
       }
    }
 }

@@ -35,7 +35,7 @@ public final class class221 {
          } else {
             if (var3.method3893()) {
                class224 var5 = new class224(var4, var3.field2562);
-               this.field2552.method5727(var5, var3.field3966);
+               this.field2552.method5727(var5, var3.key);
                this.field2553.method4812(var5);
                var5.field3958 = 0L;
                var3.method5437();
@@ -107,7 +107,7 @@ public final class class221 {
             }
          } else if (++var2.field3958 > (long)var1) {
             class222 var3 = new class222(var2.method3891(), var2.field2562);
-            this.field2552.method5727(var3, var2.field3966);
+            this.field2552.method5727(var3, var2.key);
             class301.method4813(var3, var2);
             var2.method5437();
             var2.method5435();

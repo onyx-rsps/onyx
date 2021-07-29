@@ -2,7 +2,7 @@ public class class163 extends class177 {
    class163() {
    }
 
-   void method2853(class385 var1) {
+   void method2853(Buffer var1) {
       int var3 = var1.method5948();
       if (class183.field2096.field2094 != var3) {
          throw new IllegalStateException("");
@@ -18,7 +18,7 @@ public class class163 extends class177 {
       }
    }
 
-   void method3156(class385 var1) {
+   void method3156(Buffer var1) {
       super.field2052 = Math.min(super.field2052, 4);
       super.field2055 = new short[1][64][64];
       super.field2062 = new short[super.field2052][64][64];

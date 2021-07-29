@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public final class class170 {
-   static class87 field1992;
+   static Clock field1992;
    static int field1982;
    boolean field1975;
    boolean field1979;
@@ -42,8 +42,8 @@ public final class class170 {
          System.nanoTime();
          int var5 = var1.method4428(class187.field2118.field2114);
          int var6 = var1.method4430(var5, var2);
-         class385 var7 = new class385(var1.method4432(class187.field2118.field2114, var2));
-         class385 var8 = new class385(var1.method4432(class187.field2116.field2114, var2));
+         Buffer var7 = new Buffer(var1.method4432(class187.field2118.field2114, var2));
+         Buffer var8 = new Buffer(var1.method4432(class187.field2116.field2114, var2));
          System.nanoTime();
          System.nanoTime();
          this.field1991 = new class189();

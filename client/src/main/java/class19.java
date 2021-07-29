@@ -383,7 +383,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
       }
 
       this.field107 = false;
-      this.field121 = class87.method1989();
+      this.field121 = Clock.now();
    }
 
    protected final boolean method154() {
@@ -429,7 +429,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
                   }
 
                   String var4 = var2.substring(6, var3);
-                  if (class250.method4284(var4) && class278.method4502(var4) < 10) {
+                  if (class250.method4284(var4) && JS5Worker.method4502(var4) < 10) {
                      this.method182("wrongjava");
                      return;
                   }
@@ -452,7 +452,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
 
          class85.field1199 = (class137)var7;
 
-         while(field117 == 0L || class87.method1989() < field117) {
+         while(field117 == 0L || Clock.now() < field117) {
             class259.field3167 = class85.field1199.method2329(field102, field103);
 
             for(int var8 = 0; var8 < class259.field3167; ++var8) {
@@ -471,7 +471,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
    }
 
    void method165() {
-      long var2 = class87.method1989();
+      long var2 = Clock.now();
       long var4 = field112[class328.field3864];
       field112[class328.field3864] = var2;
       class328.field3864 = 1 + class328.field3864 & 31;
@@ -487,7 +487,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
 
    void method166() {
       Container var2 = this.method250();
-      long var3 = class87.method1989();
+      long var3 = Clock.now();
       long var5 = field105[class133.field1485];
       field105[class133.field1485] = var3;
       class133.field1485 = 1 + class133.field1485 & 31;
@@ -575,13 +575,13 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
 
    public final void stop() {
       if (field115 == this && !field100) {
-         field117 = class87.method1989() + 4000L;
+         field117 = Clock.now() + 4000L;
       }
    }
 
    public final void destroy() {
       if (field115 == this && !field100) {
-         field117 = class87.method1989();
+         field117 = Clock.now();
          class210.method3831(5000L);
          this.method168();
       }
@@ -594,7 +594,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
    public final synchronized void paint(Graphics var1) {
       if (field115 == this && !field100) {
          this.field116 = true;
-         if (class87.method1989() - this.field121 > 1000L) {
+         if (Clock.now() - this.field121 > 1000L) {
             Rectangle var2 = var1.getClipBounds();
             if (null == var2 || var2.width >= class69.field971 && var2.height >= client.field687) {
                this.field107 = true;
@@ -651,11 +651,11 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
          Color var6 = new Color(140, 17, 17);
 
          try {
-            if (RSA.field795 == null) {
-               RSA.field795 = this.field106.createImage(304, 34);
+            if (class410.field795 == null) {
+               class410.field795 = this.field106.createImage(304, 34);
             }
 
-            Graphics var7 = RSA.field795.getGraphics();
+            Graphics var7 = class410.field795.getGraphics();
             var7.setColor(var6);
             var7.drawRect(0, 0, 303, 33);
             var7.fillRect(2, 2, var1 * 3, 30);
@@ -665,7 +665,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
             var7.setFont(class7.field13);
             var7.setColor(Color.white);
             var7.drawString(var2, (304 - class95.field1250.stringWidth(var2)) / 2, 22);
-            var5.drawImage(RSA.field795, class69.field971 / 2 - 152, client.field687 / 2 - 18, (ImageObserver)null);
+            var5.drawImage(class410.field795, class69.field971 / 2 - 152, client.field687 / 2 - 18, (ImageObserver)null);
          } catch (Exception var10) {
             int var8 = class69.field971 / 2 - 152;
             int var9 = client.field687 / 2 - 18;
@@ -686,7 +686,7 @@ public abstract class class19 extends Applet implements Runnable, FocusListener,
    }
 
    protected final void method181() {
-      RSA.field795 = null;
+      class410.field795 = null;
       class7.field13 = null;
       class95.field1250 = null;
    }

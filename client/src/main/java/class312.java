@@ -24,25 +24,25 @@ public class class312 {
    }
 
    public void method5055() {
-      this.field3786 = class87.method1989();
+      this.field3786 = Clock.now();
    }
 
    public void method5056() {
       if (this.field3786 != -1L) {
-         this.field3785 = class87.method1989() - this.field3786;
+         this.field3785 = Clock.now() - this.field3786;
          this.field3786 = -1L;
       }
 
    }
 
    public void method5060(int var1) {
-      this.field3781 = class87.method1989();
+      this.field3781 = Clock.now();
       this.field3787 = var1;
    }
 
    public void method5075() {
       if (-1L != this.field3781) {
-         this.field3783 = class87.method1989() - this.field3781;
+         this.field3783 = Clock.now() - this.field3781;
          this.field3781 = -1L;
       }
 
@@ -59,7 +59,7 @@ public class class312 {
       this.method5075();
    }
 
-   public void method5065(class385 var1) {
+   public void method5065(Buffer var1) {
       class263.method4334(var1, this.field3785);
       class263.method4334(var1, this.field3783);
       class263.method4334(var1, this.field3789);

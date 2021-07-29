@@ -8,7 +8,7 @@ public class class122 extends class104 {
       this.this$0 = var1;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       this.field1422 = var1.method6172();
       this.field1421 = var1.method6172();
    }
@@ -85,7 +85,7 @@ public class class122 extends class104 {
          var9.field2691.method5983(var0);
          client.field453.method1963(var9);
          client.field513 = 0;
-         class13.field78 = class87.method1995(var1);
+         class13.field78 = Clock.method1995(var1);
          client.field514 = var0;
       }
 
@@ -173,7 +173,7 @@ public class class122 extends class104 {
          var9.field2691.method6122(var0);
          client.field453.method1963(var9);
          client.field513 = 0;
-         class13.field78 = class87.method1995(var1);
+         class13.field78 = Clock.method1995(var1);
          client.field514 = var0;
       }
 
@@ -187,7 +187,7 @@ public class class122 extends class104 {
          var9.field2691.method5983(class11.field41);
          client.field453.method1963(var9);
          client.field513 = 0;
-         class13.field78 = class87.method1995(var1);
+         class13.field78 = Clock.method1995(var1);
          client.field514 = var0;
       }
 
@@ -214,7 +214,7 @@ public class class122 extends class104 {
          var9.field2691.method5984(var3);
          client.field453.method1963(var9);
          client.field513 = 0;
-         class13.field78 = class87.method1995(var1);
+         class13.field78 = Clock.method1995(var1);
          client.field514 = var0;
       }
 
@@ -280,7 +280,7 @@ public class class122 extends class104 {
 
       class249 var15;
       if (1005 == var2) {
-         var15 = class87.method1995(var1);
+         var15 = Clock.method1995(var1);
          if (null != var15 && var15.field3087[var0] >= 100000) {
             class121.method2204(27, "", var15.field3087[var0] + " x " + class11.method93(var3).field1836);
          } else {
@@ -290,7 +290,7 @@ public class class122 extends class104 {
          }
 
          client.field513 = 0;
-         class13.field78 = class87.method1995(var1);
+         class13.field78 = Clock.method1995(var1);
          client.field514 = var0;
       }
 
@@ -301,7 +301,7 @@ public class class122 extends class104 {
          var9.field2691.method6122(var0);
          client.field453.method1963(var9);
          client.field513 = 0;
-         class13.field78 = class87.method1995(var1);
+         class13.field78 = Clock.method1995(var1);
          client.field514 = var0;
       }
 
@@ -383,7 +383,7 @@ public class class122 extends class104 {
          var9.field2691.method6077(var0);
          client.field453.method1963(var9);
          client.field513 = 0;
-         class13.field78 = class87.method1995(var1);
+         class13.field78 = Clock.method1995(var1);
          client.field514 = var0;
       }
 
@@ -497,7 +497,7 @@ public class class122 extends class104 {
 
       if (38 == var2) {
          class166.method2877();
-         var15 = class87.method1995(var1);
+         var15 = Clock.method1995(var1);
          client.field561 = 1;
          class11.field41 = var0;
          class62.field912 = var1;
@@ -565,7 +565,7 @@ public class class122 extends class104 {
             var9.field2691.method5992(var1);
             client.field453.method1963(var9);
             client.field513 = 0;
-            class13.field78 = class87.method1995(var1);
+            class13.field78 = Clock.method1995(var1);
             client.field514 = var0;
          }
 
@@ -576,7 +576,7 @@ public class class122 extends class104 {
             var9.field2691.method6122(var0);
             client.field453.method1963(var9);
             client.field513 = 0;
-            class13.field78 = class87.method1995(var1);
+            class13.field78 = Clock.method1995(var1);
             client.field514 = var0;
          }
 
@@ -593,7 +593,7 @@ public class class122 extends class104 {
             var9.field2691.method5984(var3);
             client.field453.method1963(var9);
             client.field513 = 0;
-            class13.field78 = class87.method1995(var1);
+            class13.field78 = Clock.method1995(var1);
             client.field514 = var0;
          }
 
@@ -604,7 +604,7 @@ public class class122 extends class104 {
             var9.field2691.method5992(var1);
             client.field453.method1963(var9);
             client.field513 = 0;
-            class13.field78 = class87.method1995(var1);
+            class13.field78 = Clock.method1995(var1);
             client.field514 = var0;
          }
 
@@ -615,7 +615,7 @@ public class class122 extends class104 {
             var9.field2691.writeInt(var1);
             client.field453.method1963(var9);
             client.field513 = 0;
-            class13.field78 = class87.method1995(var1);
+            class13.field78 = Clock.method1995(var1);
             client.field514 = var0;
          }
 
@@ -644,7 +644,7 @@ public class class122 extends class104 {
             var9.field2691.method5984(client.field564);
             client.field453.method1963(var9);
             client.field513 = 0;
-            class13.field78 = class87.method1995(var1);
+            class13.field78 = Clock.method1995(var1);
             client.field514 = var0;
          }
 
@@ -720,7 +720,7 @@ public class class122 extends class104 {
             var9 = class149.method2495(class227.field2652, client.field453.field1205);
             var9.field2691.writeInt(var1);
             client.field453.method1963(var9);
-            var17 = class87.method1995(var1);
+            var17 = Clock.method1995(var1);
             if (var17.field3080 != null && var17.field3080[0][0] == 5) {
                var14 = var17.field3080[0][1];
                class244.field2911[var14] = 1 - class244.field2911[var14];
@@ -770,7 +770,7 @@ public class class122 extends class104 {
             var9 = class149.method2495(class227.field2652, client.field453.field1205);
             var9.field2691.writeInt(var1);
             client.field453.method1963(var9);
-            var17 = class87.method1995(var1);
+            var17 = Clock.method1995(var1);
             if (var17.field3080 != null && 5 == var17.field3080[0][0]) {
                var14 = var17.field3080[0][1];
                if (var17.field3082[0] != class244.field2911[var14]) {
@@ -796,7 +796,7 @@ public class class122 extends class104 {
          }
 
          if (var2 == 24) {
-            var15 = class87.method1995(var1);
+            var15 = Clock.method1995(var1);
             boolean var18 = true;
             if (var15.field2962 > 0) {
                var18 = class377.method5858(var15);
@@ -901,7 +901,7 @@ public class class122 extends class104 {
          } else {
             if (client.field561 != 0) {
                client.field561 = 0;
-               class81.method1869(class87.method1995(class62.field912));
+               class81.method1869(Clock.method1995(class62.field912));
             }
 
             if (client.field563) {

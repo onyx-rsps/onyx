@@ -1,9 +1,9 @@
-public class class354 {
-   public class354 field3965;
-   public class354 field3967;
-   public long field3966;
+public class Node {
+   public Node field3965;
+   public Node field3967;
+   public long key;
 
-   public class354() {
+   public Node() {
    }
 
    public void method5437() {

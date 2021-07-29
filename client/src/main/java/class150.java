@@ -39,7 +39,7 @@ public class class150 extends class349 {
       class92.method2026(var0, var1, var7, var8, var4, var5);
    }
 
-   void method2504(class385 var1) {
+   void method2504(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -50,7 +50,7 @@ public class class150 extends class349 {
       }
    }
 
-   void method2511(class385 var1, int var2) {
+   void method2511(Buffer var1, int var2) {
       if (var2 == 1) {
          this.field1663 = var1.method6043();
       } else if (2 == var2) {

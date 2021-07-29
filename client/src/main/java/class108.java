@@ -10,7 +10,7 @@ public class class108 extends class104 {
       this.field1322 = -1;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       this.field1322 = var1.method6043();
       this.field1321 = var1.method5949();
    }
@@ -69,7 +69,7 @@ public class class108 extends class104 {
    }
 
    static void method2105() {
-      for(class67 var1 = (class67)client.field569.method5736(); var1 != null; var1 = (class67)client.field569.method5739()) {
+      for(class67 var1 = (class67)client.field569.first(); var1 != null; var1 = (class67)client.field569.method5739()) {
          int var2 = var1.field950;
          if (class251.method4294(var2)) {
             boolean var3 = true;
@@ -84,8 +84,8 @@ public class class108 extends class104 {
             }
 
             if (!var3) {
-               var5 = (int)var1.field3966;
-               class249 var6 = class87.method1995(var5);
+               var5 = (int)var1.key;
+               class249 var6 = Clock.method1995(var5);
                if (null != var6) {
                   class81.method1869(var6);
                }

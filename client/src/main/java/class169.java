@@ -131,7 +131,7 @@ public class class169 {
          }
       }
 
-      class385 var29 = new class385(var0);
+      Buffer var29 = new Buffer(var0);
 
       for(var11 = 0; var11 < 4; ++var11) {
          for(int var12 = 0; var12 < 64; ++var12) {

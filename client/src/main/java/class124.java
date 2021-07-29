@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.BitSet;
 import java.util.List;
 
-public class class124 extends class354 {
+public class class124 extends Node {
    public static int field1439;
    static class275 field1440;
    boolean field1432;
@@ -348,7 +348,7 @@ public class class124 extends class354 {
       new BitSet(65536);
    }
 
-   public class124(class385 var1) {
+   public class124(Buffer var1) {
       this.field1435 = true;
       this.field1430 = null;
       this.method2224(var1);
@@ -397,7 +397,7 @@ public class class124 extends class354 {
       }
    }
 
-   void method2224(class385 var1) {
+   void method2224(Buffer var1) {
       int var3 = var1.method5948();
       if (0 != (var3 & 1)) {
          this.field1432 = true;
@@ -412,7 +412,7 @@ public class class124 extends class354 {
          var4 = var1.method5948();
       }
 
-      super.field3966 = var1.method5954();
+      super.key = var1.method5954();
       this.field1434 = var1.method5954();
       this.field1430 = var1.method5957();
       var1.method6178();
@@ -453,7 +453,7 @@ public class class124 extends class354 {
          var2 = new class156();
          var2.field1753 = var0;
          if (var3 != null) {
-            var2.method2637(new class385(var3));
+            var2.method2637(new Buffer(var3));
          }
 
          var2.method2628();

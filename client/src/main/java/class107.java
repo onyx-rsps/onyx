@@ -4,13 +4,13 @@ public class class107 {
    int field1310;
    long field1309;
 
-   public class107(class385 var1) {
+   public class107(Buffer var1) {
       this.field1310 = -1;
       this.field1311 = new class298();
       this.method2097(var1);
    }
 
-   void method2097(class385 var1) {
+   void method2097(Buffer var1) {
       this.field1309 = var1.method5954();
       this.field1310 = var1.method6172();
 
@@ -53,7 +53,7 @@ public class class107 {
          }
 
          ((class104)var4).method2083(var1);
-         this.field1311.method4721((class354)var4);
+         this.field1311.method4721((Node)var4);
       }
 
    }
@@ -74,9 +74,9 @@ public class class107 {
       class67 var4 = new class67();
       var4.field950 = var1;
       var4.field949 = var2;
-      client.field569.method5737(var4, (long)var0);
+      client.field569.put(var4, (long)var0);
       class312.method5077(var1);
-      class249 var5 = class87.method1995(var0);
+      class249 var5 = Clock.method1995(var0);
       class81.method1869(var5);
       if (client.field574 != null) {
          class81.method1869(client.field574);

@@ -50,7 +50,7 @@ public class class155 extends class349 {
       this.field1716 = -1;
    }
 
-   void method2606(class385 var1) {
+   void method2606(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -61,7 +61,7 @@ public class class155 extends class349 {
       }
    }
 
-   void method2621(class385 var1, int var2) {
+   void method2621(Buffer var1, int var2) {
       if (1 == var2) {
          this.field1715 = var1.method5965();
       } else if (var2 == 2) {

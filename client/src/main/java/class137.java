@@ -42,9 +42,9 @@ public abstract class class137 {
 
    static void method2321(int var0, int var1) {
       long var3 = (long)(var1 + (var0 << 16));
-      class276 var5 = (class276)class278.field3615.method5746(var3);
+      CacheBuffer var5 = (CacheBuffer) JS5Worker.field3615.method5746(var3);
       if (null != var5) {
-         class278.field3602.method4660(var5);
+         JS5Worker.field3602.method4660(var5);
       }
    }
 

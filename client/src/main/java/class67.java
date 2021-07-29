@@ -1,4 +1,4 @@
-public class class67 extends class354 {
+public class class67 extends Node {
    boolean field948;
    int field949;
    int field950;
@@ -7,7 +7,7 @@ public class class67 extends class354 {
       this.field948 = false;
    }
 
-   public static void method1681(class385 var0, int var1) {
+   public static void method1681(Buffer var0, int var1) {
       if (class131.field1471 != null) {
          try {
             class131.field1471.method5795(0L);

@@ -26,7 +26,7 @@ public class class115 {
    public String[] field1363;
    public String[] field1373;
 
-   public class115(class385 var1) {
+   public class115(Buffer var1) {
       this.field1364 = 0;
       this.field1368 = null;
       this.field1365 = 0;
@@ -124,7 +124,7 @@ public class class115 {
       if (this.field1385 == null) {
          return null;
       } else {
-         class354 var3 = this.field1385.method5716((long)var1);
+         Node var3 = this.field1385.method5716((long)var1);
          return null != var3 && var3 instanceof class353 ? new Integer(((class353)var3).field3964) : null;
       }
    }
@@ -351,7 +351,7 @@ public class class115 {
 
    boolean method2133(int var1, int var2) {
       if (null != this.field1385) {
-         class354 var4 = this.field1385.method5716((long)var1);
+         Node var4 = this.field1385.method5716((long)var1);
          if (null != var4) {
             if (var4 instanceof class353) {
                class353 var5 = (class353)var4;
@@ -380,7 +380,7 @@ public class class115 {
       var2 <<= var3;
       var2 &= var8;
       if (this.field1385 != null) {
-         class354 var9 = this.field1385.method5716((long)var1);
+         Node var9 = this.field1385.method5716((long)var1);
          if (null != var9) {
             if (var9 instanceof class353) {
                class353 var10 = (class353)var9;
@@ -405,7 +405,7 @@ public class class115 {
 
    boolean method2162(int var1, long var2) {
       if (null != this.field1385) {
-         class354 var4 = this.field1385.method5716((long)var1);
+         Node var4 = this.field1385.method5716((long)var1);
          if (null != var4) {
             if (var4 instanceof class352) {
                class352 var5 = (class352)var4;
@@ -435,7 +435,7 @@ public class class115 {
       }
 
       if (this.field1385 != null) {
-         class354 var4 = this.field1385.method5716((long)var1);
+         Node var4 = this.field1385.method5716((long)var1);
          if (null != var4) {
             if (var4 instanceof class350) {
                class350 var5 = (class350)var4;
@@ -445,7 +445,7 @@ public class class115 {
                   }
 
                   var5.method5437();
-                  this.field1385.method5727(new class350(var2), var5.field3966);
+                  this.field1385.method5727(new class350(var2), var5.key);
                   return true;
                }
             }
@@ -460,7 +460,7 @@ public class class115 {
       return true;
    }
 
-   void method2135(class385 var1) {
+   void method2135(Buffer var1) {
       int var3 = var1.method5948();
       if (var3 >= 1 && var3 <= 6) {
          int var4 = var1.method5948();

@@ -27,7 +27,7 @@ public class class319 extends class326 {
       }
    }
 
-   public void method5091(class385 var1, int var2) {
+   public void method5091(Buffer var1, int var2) {
       while(true) {
          if (var1.offset < var2) {
             boolean var4 = var1.method5948() == 1;

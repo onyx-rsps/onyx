@@ -25,11 +25,11 @@ public class class328 extends class324 {
    static int method5277(int var0, class59 var1, boolean var2) {
       class249 var6;
       if (var0 == 2700) {
-         var6 = class87.method1995(class51.field747[--class51.field746]);
+         var6 = Clock.method1995(class51.field747[--class51.field746]);
          class51.field747[++class51.field746 - 1] = var6.field3088;
          return 1;
       } else if (var0 == 2701) {
-         var6 = class87.method1995(class51.field747[--class51.field746]);
+         var6 = Clock.method1995(class51.field747[--class51.field746]);
          if (var6.field3088 != -1) {
             class51.field747[++class51.field746 - 1] = var6.field3089;
          } else {

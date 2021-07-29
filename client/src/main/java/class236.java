@@ -70,8 +70,8 @@ public class class236 extends class31 {
          var7 = new int[]{var4};
       }
 
-      for(class351 var8 = (class351)var1.field2882.method5736(); var8 != null; var8 = (class351)var1.field2882.method5739()) {
-         int var9 = (int)var8.field3966;
+      for(class351 var8 = (class351)var1.field2882.first(); var8 != null; var8 = (class351)var1.field2882.method5739()) {
+         int var9 = (int)var8.key;
          class238 var10 = (class238)this.field2828.method5746((long)var9);
          if (var10 == null) {
             var10 = class84.method1926(var2, var9);
@@ -80,7 +80,7 @@ public class class236 extends class31 {
                continue;
             }
 
-            this.field2828.method5737(var10, (long)var9);
+            this.field2828.put(var10, (long)var9);
          }
 
          if (!var10.method4111(var3, var8.field3962, var7)) {
@@ -96,14 +96,14 @@ public class class236 extends class31 {
    }
 
    synchronized void method4010() {
-      for(class238 var2 = (class238)this.field2828.method5736(); null != var2; var2 = (class238)this.field2828.method5739()) {
+      for(class238 var2 = (class238)this.field2828.first(); null != var2; var2 = (class238)this.field2828.method5739()) {
          var2.method4110();
       }
 
    }
 
    public synchronized void method3970() {
-      for(class238 var2 = (class238)this.field2828.method5736(); null != var2; var2 = (class238)this.field2828.method5739()) {
+      for(class238 var2 = (class238)this.field2828.first(); null != var2; var2 = (class238)this.field2828.method5739()) {
          var2.method5437();
       }
 

@@ -12,7 +12,7 @@ public class class189 extends class168 {
    class189() {
    }
 
-   void method3262(class385 var1, class385 var2, int var3, boolean var4) {
+   void method3262(Buffer var1, Buffer var2, int var3, boolean var4) {
       this.method2890(var1, var3);
       int var6 = var2.method6043();
       this.field2125 = new HashSet(var6);
@@ -48,7 +48,7 @@ public class class189 extends class168 {
       this.method3260(var2, var4);
    }
 
-   void method3260(class385 var1, boolean var2) {
+   void method3260(Buffer var1, boolean var2) {
       this.field2124 = new LinkedList();
       int var4 = var1.method6043();
 
@@ -63,8 +63,8 @@ public class class189 extends class168 {
 
    }
 
-   public static class230[] method3268() {
-      return new class230[]{class230.field2788, class230.field2747, class230.field2694, class230.field2693, class230.field2696, class230.field2769, class230.field2698, class230.field2720, class230.field2700, class230.field2701, class230.field2702, class230.field2703, class230.field2768, class230.field2705, class230.field2706, class230.field2707, class230.field2708, class230.field2758, class230.field2756, class230.field2711, class230.field2695, class230.field2713, class230.field2714, class230.field2715, class230.field2749, class230.field2712, class230.field2751, class230.field2719, class230.field2718, class230.field2729, class230.field2722, class230.field2704, class230.field2724, class230.field2725, class230.field2726, class230.field2727, class230.field2757, class230.field2716, class230.field2730, class230.field2731, class230.field2732, class230.field2775, class230.field2734, class230.field2735, class230.field2736, class230.field2737, class230.field2738, class230.field2739, class230.field2710, class230.field2741, class230.field2742, class230.field2743, class230.field2721, class230.field2745, class230.field2746, class230.field2728, class230.field2733, class230.field2782, class230.field2750, class230.field2771, class230.field2752, class230.field2753, class230.field2748, class230.field2755, class230.field2723, class230.field2770, class230.field2699, class230.field2759, class230.field2760, class230.field2761, class230.field2762, class230.field2763, class230.field2764, class230.field2709, class230.field2766, class230.field2767, class230.field2717, class230.field2784, class230.field2778, class230.field2744, class230.field2772, class230.field2773, class230.field2774, class230.field2692, class230.field2776, class230.field2777, class230.field2765, class230.field2779, class230.field2780, class230.field2781, class230.field2754, class230.field2783, class230.field2697, class230.field2785, class230.field2786};
+   public static ServerPacket[] method3268() {
+      return new ServerPacket[]{ServerPacket.field2788, ServerPacket.field2747, ServerPacket.field2694, ServerPacket.field2693, ServerPacket.field2696, ServerPacket.field2769, ServerPacket.field2698, ServerPacket.field2720, ServerPacket.field2700, ServerPacket.field2701, ServerPacket.field2702, ServerPacket.field2703, ServerPacket.field2768, ServerPacket.field2705, ServerPacket.field2706, ServerPacket.field2707, ServerPacket.field2708, ServerPacket.field2758, ServerPacket.field2756, ServerPacket.field2711, ServerPacket.field2695, ServerPacket.field2713, ServerPacket.field2714, ServerPacket.field2715, ServerPacket.field2749, ServerPacket.field2712, ServerPacket.field2751, ServerPacket.field2719, ServerPacket.field2718, ServerPacket.field2729, ServerPacket.field2722, ServerPacket.field2704, ServerPacket.field2724, ServerPacket.field2725, ServerPacket.field2726, ServerPacket.field2727, ServerPacket.field2757, ServerPacket.field2716, ServerPacket.field2730, ServerPacket.field2731, ServerPacket.field2732, ServerPacket.field2775, ServerPacket.field2734, ServerPacket.field2735, ServerPacket.field2736, ServerPacket.field2737, ServerPacket.field2738, ServerPacket.field2739, ServerPacket.field2710, ServerPacket.field2741, ServerPacket.field2742, ServerPacket.field2743, ServerPacket.field2721, ServerPacket.field2745, ServerPacket.field2746, ServerPacket.field2728, ServerPacket.field2733, ServerPacket.field2782, ServerPacket.field2750, ServerPacket.field2771, ServerPacket.field2752, ServerPacket.field2753, ServerPacket.field2748, ServerPacket.field2755, ServerPacket.field2723, ServerPacket.field2770, ServerPacket.field2699, ServerPacket.field2759, ServerPacket.field2760, ServerPacket.field2761, ServerPacket.field2762, ServerPacket.field2763, ServerPacket.field2764, ServerPacket.field2709, ServerPacket.field2766, ServerPacket.field2767, ServerPacket.field2717, ServerPacket.field2784, ServerPacket.field2778, ServerPacket.field2744, ServerPacket.field2772, ServerPacket.field2773, ServerPacket.field2774, ServerPacket.field2692, ServerPacket.field2776, ServerPacket.field2777, ServerPacket.field2765, ServerPacket.field2779, ServerPacket.field2780, ServerPacket.field2781, ServerPacket.field2754, ServerPacket.field2783, ServerPacket.field2697, ServerPacket.field2785, ServerPacket.field2786};
    }
 
    static class48 method3261() {

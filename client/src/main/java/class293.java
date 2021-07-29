@@ -111,7 +111,7 @@ public class class293 implements class290 {
       if (var0 >= 2000) {
          var0 -= 1000;
          var4 = class51.field747[--class51.field746];
-         var5 = class87.method1995(var4);
+         var5 = Clock.method1995(var4);
       } else {
          var5 = var2 ? class286.field3660 : class51.field750;
       }
@@ -178,7 +178,7 @@ public class class293 implements class290 {
             var6.write("data1=req");
             var6.flush();
             InputStream var7 = var5.getInputStream();
-            class385 var8 = new class385(new byte[1000]);
+            Buffer var8 = new Buffer(new byte[1000]);
 
             while(true) {
                int var9 = var7.read(var8.payload, var8.offset, 1000 - var8.offset);

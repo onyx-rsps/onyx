@@ -33,7 +33,7 @@ public abstract class class177 {
       if (!this.method3161()) {
          byte[] var3 = var1.method4412(this.field2047, this.field2054);
          if (var3 != null) {
-            this.method3156(new class385(var3));
+            this.method3156(new Buffer(var3));
             this.field2060 = true;
             this.field2056 = true;
          }
@@ -51,7 +51,7 @@ public abstract class class177 {
       this.field2056 = false;
    }
 
-   void method3175(int var1, int var2, class385 var3) {
+   void method3175(int var1, int var2, Buffer var3) {
       int var5 = var3.method5948();
       if (0 != var5) {
          if (0 != (var5 & 1)) {
@@ -63,7 +63,7 @@ public abstract class class177 {
       }
    }
 
-   void method3154(int var1, int var2, class385 var3, int var4) {
+   void method3154(int var1, int var2, Buffer var3, int var4) {
       boolean var6 = (var4 & 2) != 0;
       if (var6) {
          this.field2062[0][var1][var2] = (short)var3.method5948();
@@ -72,7 +72,7 @@ public abstract class class177 {
       this.field2055[0][var1][var2] = (short)var3.method5948();
    }
 
-   void method3153(int var1, int var2, class385 var3, int var4) {
+   void method3153(int var1, int var2, Buffer var3, int var4) {
       int var6 = 1 + ((var4 & 24) >> 3);
       boolean var7 = 0 != (var4 & 2);
       boolean var8 = 0 != (var4 & 4);
@@ -119,5 +119,5 @@ public abstract class class177 {
       return this.field2053;
    }
 
-   abstract void method3156(class385 var1);
+   abstract void method3156(Buffer var1);
 }

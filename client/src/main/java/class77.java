@@ -1,4 +1,4 @@
-public class class77 extends class354 {
+public class class77 extends Node {
    class144 field1129;
    class298 field1128;
 
@@ -89,7 +89,7 @@ public class class77 extends class354 {
 
             if (var1 == 1 && var4.field3076 != null) {
                if (var4.field3031 >= 0) {
-                  class249 var7 = class87.method1995(var4.field2958);
+                  class249 var7 = Clock.method1995(var4.field2958);
                   if (null == var7 || var7.field3061 == null || var4.field3031 >= var7.field3061.length || var4 != var7.field3061[var4.field3031]) {
                      continue;
                   }

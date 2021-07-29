@@ -28,7 +28,7 @@ public class class176 implements class290 {
       return this.field2042;
    }
 
-   public static String method3147(class385 var0) {
+   public static String method3147(Buffer var0) {
       String var2;
       try {
          int var3 = var0.method5962();

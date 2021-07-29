@@ -2,14 +2,14 @@ import java.io.IOException;
 
 public class class86 {
    boolean field1211;
-   class230 field1206;
-   class230 field1212;
-   class230 field1213;
-   class230 field1214;
+   ServerPacket currentInboundPacket;
+   ServerPacket field1212;
+   ServerPacket field1213;
+   ServerPacket field1214;
    class298 field1202;
    class330 field1208;
    class384 field1201;
-   class385 field1204;
+   Buffer field1204;
    int field1203;
    int field1209;
    int field1210;
@@ -19,9 +19,9 @@ public class class86 {
    class86() {
       this.field1202 = new class298();
       this.field1203 = 0;
-      this.field1204 = new class385(5000);
+      this.field1204 = new Buffer(5000);
       this.field1201 = new class384(40000);
-      this.field1206 = null;
+      this.currentInboundPacket = null;
       this.field1209 = 0;
       this.field1211 = true;
       this.field1210 = 0;
@@ -44,7 +44,7 @@ public class class86 {
          while(true) {
             class229 var2 = (class229)this.field1202.method4724();
             if (var2 == null || var2.field2688 > this.field1204.payload.length - this.field1204.offset) {
-               this.field1208.method5283(this.field1204.payload, 0, this.field1204.offset);
+               this.field1208.write(this.field1204.payload, 0, this.field1204.offset);
                this.field1216 = 0;
                break;
             }

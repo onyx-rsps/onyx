@@ -90,12 +90,12 @@ public class class274 implements Runnable {
 
             if (null != var1) {
                if (var1.field3555 == 0) {
-                  var1.field3552.method5353((int)var1.field3966, var1.field3551, var1.field3551.length);
+                  var1.field3552.method5353((int)var1.key, var1.field3551, var1.field3551.length);
                   synchronized(field3558) {
                      var1.method5437();
                   }
                } else if (1 == var1.field3555) {
-                  var1.field3551 = var1.field3552.method5347((int)var1.field3966);
+                  var1.field3551 = var1.field3552.method5347((int)var1.key);
                   synchronized(field3558) {
                      field3556.method4672(var1);
                   }

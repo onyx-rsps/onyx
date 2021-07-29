@@ -18,7 +18,7 @@ public class class139 extends class349 {
       class42.method766(var0, var1, "openjs", var2);
    }
 
-   void method2336(class385 var1) {
+   void method2336(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -29,7 +29,7 @@ public class class139 extends class349 {
       }
    }
 
-   void method2344(class385 var1, int var2) {
+   void method2344(Buffer var1, int var2) {
       if (var2 == 2) {
          this.field1523 = var1.method6043();
       }
@@ -63,7 +63,7 @@ public class class139 extends class349 {
       class249 var4;
       if (var0 >= 2000) {
          var0 -= 1000;
-         var4 = class87.method1995(class51.field747[--class51.field746]);
+         var4 = Clock.method1995(class51.field747[--class51.field746]);
       } else {
          var4 = var2 ? class286.field3660 : class51.field750;
       }

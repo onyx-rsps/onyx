@@ -137,14 +137,14 @@ public class class162 {
 
    static final void method2850(class67 var0, boolean var1) {
       int var3 = var0.field950;
-      int var4 = (int)var0.field3966;
+      int var4 = (int)var0.key;
       var0.method5437();
       if (var1) {
          class5.method16(var3);
       }
 
       class48.method1314(var3);
-      class249 var5 = class87.method1995(var4);
+      class249 var5 = Clock.method1995(var4);
       if (null != var5) {
          class81.method1869(var5);
       }

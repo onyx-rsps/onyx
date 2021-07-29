@@ -1,6 +1,6 @@
 public class class237 {
    static final byte[] field2859;
-   class385 field2866;
+   Buffer field2866;
    int field2853;
    int field2854;
    int[] field2855;
@@ -14,11 +14,11 @@ public class class237 {
    }
 
    class237() {
-      this.field2866 = new class385((byte[])null);
+      this.field2866 = new Buffer((byte[])null);
    }
 
    class237(byte[] var1) {
-      this.field2866 = new class385((byte[])null);
+      this.field2866 = new Buffer((byte[])null);
       this.method4057(var1);
    }
 
@@ -30,7 +30,7 @@ public class class237 {
       this.field2853 = 500000;
       this.field2855 = new int[var2];
 
-      class385 var10000;
+      Buffer var10000;
       int var3;
       int var5;
       for(var3 = 0; var3 < var2; var10000.offset += var5) {
@@ -118,7 +118,7 @@ public class class237 {
             }
          }
 
-         class385 var10000 = this.field2866;
+         Buffer var10000 = this.field2866;
          var10000.offset += var3;
          return 0;
       }
@@ -129,7 +129,7 @@ public class class237 {
       if (var2 == 255) {
          int var7 = this.field2866.method5948();
          var4 = this.field2866.method5966();
-         class385 var10000;
+         Buffer var10000;
          if (var7 == 47) {
             var10000 = this.field2866;
             var10000.offset += var4;

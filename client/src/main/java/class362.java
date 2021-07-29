@@ -1,8 +1,8 @@
 import java.util.Iterator;
 
 public class class362 implements Iterator {
-   class354 field4098;
-   class354 field4100;
+   Node field4098;
+   Node field4100;
    class363 field4099;
    int field4097;
 
@@ -19,7 +19,7 @@ public class class362 implements Iterator {
    }
 
    public Object next() {
-      class354 var1;
+      Node var1;
       if (this.field4098 != this.field4099.field4102[this.field4097 - 1]) {
          var1 = this.field4098;
          this.field4098 = var1.field3965;

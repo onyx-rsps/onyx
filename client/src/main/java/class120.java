@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Date;
 
-public abstract class class120 extends class354 {
+public abstract class class120 extends Node {
    class120() {
    }
 
@@ -28,7 +28,7 @@ public abstract class class120 extends class354 {
       class332.method5327();
       client.field453.method1975();
       client.field453.field1201.offset = 0;
-      client.field453.field1206 = null;
+      client.field453.currentInboundPacket = null;
       client.field453.field1212 = null;
       client.field453.field1214 = null;
       client.field453.field1213 = null;
@@ -98,7 +98,7 @@ public abstract class class120 extends class354 {
          class5.method16(client.field568);
       }
 
-      for(class67 var5 = (class67)client.field569.method5736(); null != var5; var5 = (class67)client.field569.method5739()) {
+      for(class67 var5 = (class67)client.field569.first(); null != var5; var5 = (class67)client.field569.method5739()) {
          class162.method2850(var5, true);
       }
 
@@ -313,7 +313,7 @@ public abstract class class120 extends class354 {
       }
    }
 
-   abstract void method2191(class385 var1);
+   abstract void method2191(Buffer var1);
 
    abstract void method2192(class124 var1);
 }

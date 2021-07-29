@@ -1,4 +1,4 @@
-public final class class197 extends class354 {
+public final class class197 extends Node {
    boolean field2238;
    boolean field2239;
    boolean field2240;

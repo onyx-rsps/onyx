@@ -79,20 +79,20 @@ public class class17 {
                class147.field1612 = 0;
                class146.field1598 = false;
                class124.field1439 = 2;
-               if (null != class278.field3614) {
+               if (null != JS5Worker.connection) {
                   try {
-                     class385 var2 = new class385(4);
+                     Buffer var2 = new Buffer(4);
                      var2.writeByte(2);
-                     var2.method6111(0);
-                     class278.field3614.method5283(var2.payload, 0, 4);
+                     var2.writeMedium(0);
+                     JS5Worker.connection.write(var2.payload, 0, 4);
                   } catch (IOException var5) {
                      try {
-                        class278.field3614.method5279();
+                        JS5Worker.connection.method5279();
                      } catch (Exception var4) {
                      }
 
-                     ++class278.field3605;
-                     class278.field3614 = null;
+                     ++JS5Worker.field3605;
+                     JS5Worker.connection = null;
                   }
                }
 

@@ -48,7 +48,7 @@ public class class131 {
                if (4 == var7) {
                   var10 = var3[var5++] << 16;
                   var10 += var3[var5++];
-                  var11 = class87.method1995(var10);
+                  var11 = Clock.method1995(var10);
                   var12 = var3[var5++];
                   if (var12 != -1 && (!class11.method93(var12).field1808 || client.field562)) {
                      for(var13 = 0; var13 < var11.field3086.length; ++var13) {
@@ -86,7 +86,7 @@ public class class131 {
                if (var7 == 10) {
                   var10 = var3[var5++] << 16;
                   var10 += var3[var5++];
-                  var11 = class87.method1995(var10);
+                  var11 = Clock.method1995(var10);
                   var12 = var3[var5++];
                   if (-1 != var12 && (!class11.method93(var12).field1808 || client.field562)) {
                      for(var13 = 0; var13 < var11.field3086.length; ++var13) {

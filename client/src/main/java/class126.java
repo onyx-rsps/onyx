@@ -69,7 +69,7 @@ public class class126 extends class104 {
       return class44.method772(var0, var1, true);
    }
 
-   static final void method2253(class385 var0, int var1, int var2, int var3, int var4, int var5, int var6) {
+   static final void method2253(Buffer var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       int var8;
       if (var2 >= 0 && var2 < 104 && var3 >= 0 && var3 < 104) {
          class62.field901[var1][var2][var3] = 0;
@@ -81,7 +81,7 @@ public class class126 extends class104 {
                   int[] var15 = class62.field911[0][var2];
                   int var12 = var4 + var2 + 932731;
                   int var13 = var5 + 556238 + var3;
-                  int var14 = class230.method3921(var12 + '\ub135', var13 + 91923, 4) - 128 + (class230.method3921(var12 + 10294, '\u93bd' + var13, 2) - 128 >> 1) + (class230.method3921(var12, var13, 1) - 128 >> 2);
+                  int var14 = ServerPacket.method3921(var12 + '\ub135', var13 + 91923, 4) - 128 + (ServerPacket.method3921(var12 + 10294, '\u93bd' + var13, 2) - 128 >> 1) + (ServerPacket.method3921(var12, var13, 1) - 128 >> 2);
                   var14 = 35 + (int)((double)var14 * 0.3D);
                   if (var14 < 10) {
                      var14 = 10;
@@ -146,7 +146,7 @@ public class class126 extends class104 {
       this.field1447 = null;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       if (var1.method5948() != 255) {
          --var1.offset;
          this.field1446 = var1.method5954();

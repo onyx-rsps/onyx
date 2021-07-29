@@ -36,7 +36,7 @@ public class class159 extends class349 {
       this.field1876 = 2;
    }
 
-   void method2806(class385 var1) {
+   void method2806(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -47,7 +47,7 @@ public class class159 extends class349 {
       }
    }
 
-   void method2775(class385 var1, int var2) {
+   void method2775(Buffer var1, int var2) {
       int var4;
       int var5;
       if (1 == var2) {
@@ -358,7 +358,7 @@ public class class159 extends class349 {
                } else if (var0 == 3923) {
                   var4 = class51.field747[--class51.field746];
                   var5 = (class285)class293.field3711.field3617.get(var4);
-                  long var6 = class87.method1989() - class178.field2067 - var5.field3646;
+                  long var6 = Clock.now() - class178.field2067 - var5.field3646;
                   int var8 = (int)(var6 / 3600000L);
                   int var9 = (int)((var6 - (long)(var8 * 3600000)) / 60000L);
                   int var10 = (int)((var6 - (long)(var8 * 3600000) - (long)(var9 * '\uea60')) / 1000L);

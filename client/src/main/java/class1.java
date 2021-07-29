@@ -2,13 +2,13 @@ public class class1 implements class4 {
    public class1() {
    }
 
-   public class385 method11(class385 var1) {
-      class385 var2 = new class385(100);
+   public Buffer method11(Buffer var1) {
+      Buffer var2 = new Buffer(100);
       this.method4(var1, var2);
       return var2;
    }
 
-   void method4(class385 var1, class385 var2) {
+   void method4(Buffer var1, Buffer var2) {
       class9 var3 = new class9(var1);
       class6 var4 = new class6(var3);
 

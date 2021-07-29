@@ -12,7 +12,7 @@ public class class256 {
          if (var5 == 0) {
             throw new RuntimeException();
          } else {
-            class249 var7 = class87.method1995(var4);
+            class249 var7 = Clock.method1995(var4);
             if (null == var7.field3061) {
                var7.field3061 = new class249[1 + var12];
             }
@@ -50,12 +50,12 @@ public class class256 {
          class249 var10;
          if (101 == var0) {
             var10 = var2 ? class286.field3660 : class51.field750;
-            class249 var11 = class87.method1995(var10.field2958);
+            class249 var11 = Clock.method1995(var10.field2958);
             var11.field3061[var10.field3031] = null;
             class81.method1869(var11);
             return 1;
          } else if (var0 == 102) {
-            var10 = class87.method1995(class51.field747[--class51.field746]);
+            var10 = Clock.method1995(class51.field747[--class51.field746]);
             var10.field3061 = null;
             class81.method1869(var10);
             return 1;
@@ -67,7 +67,7 @@ public class class256 {
             return 1;
          } else if (var0 != 200) {
             if (201 == var0) {
-               var10 = class87.method1995(class51.field747[--class51.field746]);
+               var10 = Clock.method1995(class51.field747[--class51.field746]);
                if (var10 != null) {
                   class51.field747[++class51.field746 - 1] = 1;
                   if (var2) {

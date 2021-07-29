@@ -72,7 +72,7 @@ public class class148 extends class349 {
    void method2466() {
    }
 
-   void method2469(class385 var1) {
+   void method2469(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (0 == var3) {
@@ -83,7 +83,7 @@ public class class148 extends class349 {
       }
    }
 
-   void method2468(class385 var1, int var2) {
+   void method2468(Buffer var1, int var2) {
       int var4;
       int var5;
       if (1 == var2) {
@@ -393,7 +393,7 @@ public class class148 extends class349 {
    }
 
    static int method2484(int var0, class59 var1, boolean var2) {
-      class249 var4 = class87.method1995(class51.field747[--class51.field746]);
+      class249 var4 = Clock.method1995(class51.field747[--class51.field746]);
       if (2500 == var0) {
          class51.field747[++class51.field746 - 1] = var4.field2971;
          return 1;

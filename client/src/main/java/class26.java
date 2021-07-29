@@ -21,14 +21,14 @@ public class class26 {
       this.field203[1] = 65535;
    }
 
-   final void method452(class385 var1) {
+   final void method452(Buffer var1) {
       this.field213 = var1.method5948();
       this.field208 = var1.method6172();
       this.field207 = var1.method6172();
       this.method462(var1);
    }
 
-   final void method462(class385 var1) {
+   final void method462(Buffer var1) {
       this.field206 = var1.method5948();
       this.field205 = new int[this.field206];
       this.field203 = new int[this.field206];

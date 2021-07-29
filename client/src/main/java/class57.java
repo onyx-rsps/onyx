@@ -90,7 +90,7 @@ public final class class57 extends class201 {
          }
       }
 
-      class385 var11 = new class385(var0);
+      Buffer var11 = new Buffer(var0);
 
       for(var8 = 0; var8 < 4; ++var8) {
          for(var9 = 0; var9 < 64; ++var9) {

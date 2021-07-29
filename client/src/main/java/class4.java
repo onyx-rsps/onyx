@@ -1,3 +1,3 @@
 public interface class4 {
-   class385 method11(class385 var1);
+   Buffer method11(Buffer var1);
 }

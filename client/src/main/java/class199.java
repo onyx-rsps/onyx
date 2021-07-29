@@ -1,4 +1,4 @@
-public class class199 extends class354 {
+public class class199 extends Node {
    static class275 field2277;
    int field2275;
    int field2278;
@@ -7,7 +7,7 @@ public class class199 extends class354 {
 
    class199(int var1, byte[] var2) {
       this.field2278 = var1;
-      class385 var3 = new class385(var2);
+      Buffer var3 = new Buffer(var2);
       this.field2275 = var3.method5948();
       this.field2274 = new int[this.field2275];
       this.field2276 = new int[this.field2275][];

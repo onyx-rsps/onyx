@@ -22,7 +22,7 @@ public class class205 implements class213 {
       this.field2378 = new class195[var1.method4438(0)];
 
       for(int var9 = 0; var9 < var8; ++var9) {
-         class385 var10 = new class385(var1.method4412(0, var7[var9]));
+         Buffer var10 = new Buffer(var1.method4412(0, var7[var9]));
          this.field2378[var7[var9]] = new class195(var10);
       }
 

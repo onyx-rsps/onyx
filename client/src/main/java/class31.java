@@ -1,4 +1,4 @@
-public abstract class class31 extends class354 {
+public abstract class class31 extends Node {
    class31 field252;
    class41 field253;
    int field254;

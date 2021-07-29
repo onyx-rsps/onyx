@@ -26,7 +26,7 @@ public class class28 {
             return null;
          } else {
             var8 = var9.method351();
-            this.field221.method5737(var8, var6);
+            this.field221.put(var8, var6);
             if (var3 != null) {
                var3[0] -= var8.field165.length;
             }
@@ -53,7 +53,7 @@ public class class28 {
                return null;
             }
 
-            this.field228.method5737(var9, var6);
+            this.field228.put(var9, var6);
          }
 
          var8 = var9.method677(var3);
@@ -61,7 +61,7 @@ public class class28 {
             return null;
          } else {
             var9.method5437();
-            this.field221.method5737(var8, var6);
+            this.field221.put(var8, var6);
             return var8;
          }
       }

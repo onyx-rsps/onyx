@@ -15,7 +15,7 @@ public class class101 extends class104 {
          byte[] var3 = class139.field1525.method4412(5, var0);
          var2 = new class139();
          if (var3 != null) {
-            var2.method2336(new class385(var3));
+            var2.method2336(new Buffer(var3));
          }
 
          class139.field1522.method3882(var2, (long)var0);
@@ -32,7 +32,7 @@ public class class101 extends class104 {
          byte[] var5 = class152.field1692.method4412(14, var0);
          var4 = new class152();
          if (var5 != null) {
-            var4.method2534(new class385(var5));
+            var4.method2534(new Buffer(var5));
          }
 
          class152.field1689.method3882(var4, (long)var0);
@@ -56,7 +56,7 @@ public class class101 extends class104 {
       this.field1279 = -1;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       this.field1279 = var1.method6043();
       this.field1280 = var1.method6172();
       this.field1278 = var1.method5948();

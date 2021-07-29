@@ -9,7 +9,7 @@ public class class9 {
       this.field30 = var3;
    }
 
-   class9(class385 var1) {
+   class9(Buffer var1) {
       this(var1.method5948(), var1.method5948(), var1.method5957());
    }
 

@@ -20,7 +20,7 @@ public class class119 extends class104 {
       this.field1405 = 0;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       if (var1.method5948() != 255) {
          --var1.offset;
          this.field1404 = var1.method5954();
@@ -34,7 +34,7 @@ public class class119 extends class104 {
       var1.method2124(this.field1404, this.field1403, this.field1405);
    }
 
-   public static void method2188(class385 var0, int var1) {
+   public static void method2188(Buffer var0, int var1) {
       class43 var3 = new class43();
       var3.field359 = var0.method5948();
       var3.field358 = var0.method6172();

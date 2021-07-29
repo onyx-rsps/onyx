@@ -83,7 +83,7 @@ public class class63 implements Callable {
       }
    }
 
-   static void method1659(class385 var0, int var1) {
+   static void method1659(Buffer var0, int var1) {
       class145.method2450(var0.payload, var1);
       class67.method1681(var0, var1);
    }

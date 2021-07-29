@@ -25,7 +25,7 @@ public class class145 {
       class135.method2319();
       class153.field1697.method3883();
       class44.method771();
-      class87.method1990();
+      Clock.method1990();
       class13.method108();
       ((class205)class198.field2269).method3700();
       class59.field862.method3883();
@@ -82,7 +82,7 @@ public class class145 {
       class309.method5038(var0, var1, client.field447, 0, 24);
    }
 
-   static void method2451(class385 var0) {
+   static void method2451(Buffer var0) {
       if (null != client.field447) {
          var0.method6003(client.field447, 0, client.field447.length);
       } else {

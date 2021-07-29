@@ -1,4 +1,4 @@
-public final class class50 extends class354 {
+public final class class50 extends Node {
    static class296 field720;
    static class398 field736;
    class156 field733;
@@ -20,7 +20,7 @@ public final class class50 extends class354 {
       field720 = new class296();
    }
 
-   static final class363 method1392(class385 var0, class363 var1) {
+   static final class363 method1392(Buffer var0, class363 var1) {
       int var3 = var0.method5948();
       int var4;
       if (var1 == null) {
@@ -38,7 +38,7 @@ public final class class50 extends class354 {
             var7 = new class353(var0.method6172());
          }
 
-         var1.method5727((class354)var7, (long)var6);
+         var1.method5727((Node)var7, (long)var6);
       }
 
       return var1;
@@ -72,7 +72,7 @@ public final class class50 extends class354 {
    }
 
    public static class249 method1394(int var0, int var1) {
-      class249 var3 = class87.method1995(var0);
+      class249 var3 = Clock.method1995(var0);
       if (var1 == -1) {
          return var3;
       } else {

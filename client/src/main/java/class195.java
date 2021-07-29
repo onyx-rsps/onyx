@@ -1,4 +1,4 @@
-public class class195 extends class354 {
+public class class195 extends Node {
    static int[] field2211;
    boolean field2202;
    boolean field2210;
@@ -11,7 +11,7 @@ public class class195 extends class354 {
    int[] field2207;
    int[] field2208;
 
-   class195(class385 var1) {
+   class195(Buffer var1) {
       this.field2210 = false;
       this.field2201 = var1.method6043();
       this.field2202 = var1.method5948() == 1;

@@ -69,7 +69,7 @@ public class class138 {
    }
 
    static final void method2332(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7, class200 var8, class160[] var9) {
-      class385 var11 = new class385(var0);
+      Buffer var11 = new Buffer(var0);
       int var12 = -1;
 
       while(true) {

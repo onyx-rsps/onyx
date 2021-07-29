@@ -1,4 +1,4 @@
-public abstract class class104 extends class354 {
+public abstract class class104 extends Node {
    static class124 field1294;
    static int field1295;
 
@@ -139,7 +139,7 @@ public abstract class class104 extends class354 {
    class104() {
    }
 
-   abstract void method2083(class385 var1);
+   abstract void method2083(Buffer var1);
 
    abstract void method2084(class115 var1);
 }

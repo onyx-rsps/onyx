@@ -8,7 +8,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-public final class class71 extends class354 {
+public final class class71 extends Node {
    int field1008;
    int field1009;
    int field1010;
@@ -35,7 +35,7 @@ public final class class71 extends class354 {
          byte[] var3 = class143.field1565.method4412(3, var0);
          var2 = new class143();
          if (null != var3) {
-            var2.method2405(new class385(var3));
+            var2.method2405(new Buffer(var3));
          }
 
          class143.field1568.method3882(var2, (long)var0);

@@ -31,7 +31,7 @@ public class class100 implements class290 {
          byte[] var3 = class146.field1601.method4412(8, var0);
          var2 = new class146();
          if (null != var3) {
-            var2.method2454(new class385(var3));
+            var2.method2454(new Buffer(var3));
          }
 
          class146.field1597.method3882(var2, (long)var0);

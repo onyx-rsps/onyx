@@ -23,7 +23,7 @@ public class class143 extends class349 {
       this.field1573 = false;
    }
 
-   void method2405(class385 var1) {
+   void method2405(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (0 == var3) {
@@ -34,7 +34,7 @@ public class class143 extends class349 {
       }
    }
 
-   void method2407(class385 var1, int var2) {
+   void method2407(Buffer var1, int var2) {
       if (var2 == 1) {
          this.field1566 = var1.method5948();
       } else {

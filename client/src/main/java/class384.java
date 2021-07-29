@@ -1,4 +1,4 @@
-public class class384 extends class385 {
+public class class384 extends Buffer {
    static final int[] field4178;
    class401 field4177;
    int field4179;
@@ -31,7 +31,7 @@ public class class384 extends class385 {
          byte[] var3 = class153.field1698.method4412(11, var0);
          var2 = new class153();
          if (var3 != null) {
-            var2.method2545(new class385(var3));
+            var2.method2545(new Buffer(var3));
          }
 
          var2.method2547();

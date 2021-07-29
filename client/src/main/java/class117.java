@@ -40,7 +40,7 @@ public class class117 extends class120 {
       this.field1395 = -1;
    }
 
-   void method2191(class385 var1) {
+   void method2191(Buffer var1) {
       var1.method5948();
       this.field1395 = var1.method6043();
       this.field1396 = var1.method5949();

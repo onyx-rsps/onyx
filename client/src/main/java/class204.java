@@ -22,7 +22,7 @@ public final class class204 {
    }
 
    static void method3698(byte[] var0) {
-      class385 var2 = new class385(var0);
+      Buffer var2 = new Buffer(var0);
       var2.offset = var0.length - 2;
       class399.field4282 = var2.method6043();
       class399.field4284 = new int[class399.field4282];

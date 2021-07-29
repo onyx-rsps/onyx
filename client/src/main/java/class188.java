@@ -9,5 +9,5 @@ public interface class188 {
 
    class245 method3249(int var1, int var2);
 
-   void method3256(class385 var1);
+   void method3256(Buffer var1);
 }

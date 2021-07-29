@@ -17,7 +17,7 @@ public class class153 extends class349 {
    void method2547() {
    }
 
-   void method2545(class385 var1) {
+   void method2545(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -28,7 +28,7 @@ public class class153 extends class349 {
       }
    }
 
-   void method2553(class385 var1, int var2) {
+   void method2553(Buffer var1, int var2) {
       if (var2 == 1) {
          byte var5 = var1.method5949();
          int var6 = var5 & 255;

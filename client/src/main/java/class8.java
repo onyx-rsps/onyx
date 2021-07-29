@@ -7,7 +7,7 @@ public class class8 {
    static int field27;
    ExecutorService field22;
    Future field24;
-   final class385 field23;
+   final Buffer field23;
    final class4 field25;
 
    public static class203 method50(class277 var0, class277 var1, int var2, boolean var3) {
@@ -44,7 +44,7 @@ public class class8 {
       }
    }
 
-   public class8(class385 var1, class4 var2) {
+   public class8(Buffer var1, class4 var2) {
       this.field22 = Executors.newSingleThreadExecutor();
       this.field23 = var1;
       this.field25 = var2;
@@ -76,9 +76,9 @@ public class class8 {
       this.field22 = null;
    }
 
-   public class385 method48() {
+   public Buffer method48() {
       try {
-         return (class385)this.field24.get();
+         return (Buffer)this.field24.get();
       } catch (Exception var3) {
          return null;
       }

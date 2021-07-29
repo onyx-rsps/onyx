@@ -9,7 +9,7 @@ public class class123 extends class104 {
       this.field1429 = -1;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       this.field1429 = var1.method6043();
    }
 
@@ -123,7 +123,7 @@ public class class123 extends class104 {
          return null;
       } else {
          for(int var3 = 0; var3 < var2; ++var3) {
-            var0 = class87.method1995(var0.field3001);
+            var0 = Clock.method1995(var0.field3001);
             if (null == var0) {
                return null;
             }

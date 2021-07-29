@@ -11,7 +11,7 @@ public class class135 extends class137 {
       this.field1500 = 256;
       this.field1501 = 1;
       this.field1505 = 0;
-      this.field1503 = class87.method1989();
+      this.field1503 = Clock.now();
 
       for(int var1 = 0; var1 < 10; ++var1) {
          this.field1502[var1] = this.field1503;
@@ -31,7 +31,7 @@ public class class135 extends class137 {
       int var5 = this.field1501;
       this.field1500 = 300;
       this.field1501 = 1;
-      this.field1503 = class87.method1989();
+      this.field1503 = Clock.now();
       if (this.field1502[this.field1504] == 0L) {
          this.field1500 = var4;
          this.field1501 = var5;
@@ -86,7 +86,7 @@ public class class135 extends class137 {
 
       try {
          var1 = class78.method1836("", class69.field976.field3208, true);
-         class385 var2 = class38.field308.method1820();
+         Buffer var2 = class38.field308.method1820();
          var1.method5780(var2.payload, 0, var2.offset);
       } catch (Exception var4) {
       }

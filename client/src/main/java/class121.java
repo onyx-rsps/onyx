@@ -5,7 +5,7 @@ public class class121 {
    long field1413;
    long field1419;
 
-   public class121(class385 var1) {
+   public class121(Buffer var1) {
       this.field1413 = -1L;
       this.field1411 = new class298();
       this.method2211(var1);
@@ -15,7 +15,7 @@ public class class121 {
       class130.method2276(var0, var1, var2, (String)null);
    }
 
-   void method2211(class385 var1) {
+   void method2211(Buffer var1) {
       this.field1419 = var1.method5954();
       this.field1413 = var1.method5954();
 
@@ -38,13 +38,13 @@ public class class121 {
          }
 
          ((class120)var4).method2191(var1);
-         this.field1411.method4721((class354)var4);
+         this.field1411.method4721((Node)var4);
       }
 
    }
 
    public void method2203(class124 var1) {
-      if (var1.field3966 == this.field1419 && var1.field1434 == this.field1413) {
+      if (var1.key == this.field1419 && var1.field1434 == this.field1413) {
          for(class120 var3 = (class120)this.field1411.method4724(); null != var3; var3 = (class120)this.field1411.method4726()) {
             var3.method2192(var1);
          }

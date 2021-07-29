@@ -26,14 +26,14 @@ public class class275 extends class277 {
       this.field3563 = var3;
       this.field3567 = var6;
       int var8 = this.field3563;
-      if (class278.field3603 != null) {
-         class278.field3603.offset = var8 * 8 + 5;
-         int var9 = class278.field3603.method6172();
-         int var10 = class278.field3603.method6172();
+      if (JS5Worker.field3603 != null) {
+         JS5Worker.field3603.offset = var8 * 8 + 5;
+         int var9 = JS5Worker.field3603.method6172();
+         int var10 = JS5Worker.field3603.method6172();
          this.method4380(var9, var10);
       } else {
          class134.method2317((class275)null, 255, 255, 0, (byte)0, true);
-         class278.field3612[var8] = this;
+         JS5Worker.field3612[var8] = this;
       }
 
    }
@@ -51,8 +51,8 @@ public class class275 extends class277 {
          int var3 = this.field3563;
          long var4 = (long)(var3 + 16711680);
          int var2;
-         if (null != class278.field3595 && class278.field3595.field3966 == var4) {
-            var2 = class94.field1248.offset * 99 / (class94.field1248.payload.length - class278.field3595.field3573) + 1;
+         if (null != JS5Worker.field3595 && JS5Worker.field3595.key == var4) {
+            var2 = class94.field1248.offset * 99 / (class94.field1248.payload.length - JS5Worker.field3595.field3573) + 1;
          } else {
             var2 = 0;
          }
@@ -76,7 +76,7 @@ public class class275 extends class277 {
          byte[] var5 = null;
          synchronized(class274.field3558) {
             for(class273 var7 = (class273)class274.field3558.method4687(); var7 != null; var7 = (class273)class274.field3558.method4678()) {
-               if ((long)var1 == var7.field3966 && var7.field3552 == var3 && 0 == var7.field3555) {
+               if ((long)var1 == var7.key && var7.field3552 == var3 && 0 == var7.field3555) {
                   var5 = var7.field3551;
                   break;
                }
@@ -104,7 +104,7 @@ public class class275 extends class277 {
          byte[] var7 = null;
          synchronized(class274.field3558) {
             for(class273 var9 = (class273)class274.field3558.method4687(); null != var9; var9 = (class273)class274.field3558.method4678()) {
-               if ((long)var4 == var9.field3966 && var9.field3552 == var5 && 0 == var9.field3555) {
+               if ((long)var4 == var9.key && var9.field3552 == var5 && 0 == var9.field3555) {
                   var7 = var9.field3551;
                   break;
                }
@@ -134,7 +134,7 @@ public class class275 extends class277 {
             class334 var7 = this.field3566;
             class273 var8 = new class273();
             var8.field3555 = 0;
-            var8.field3966 = (long)var6;
+            var8.key = (long)var6;
             var8.field3551 = var2;
             var8.field3552 = var7;
             synchronized(class274.field3558) {
@@ -162,7 +162,7 @@ public class class275 extends class277 {
             class334 var18 = this.field3564;
             class273 var20 = new class273();
             var20.field3555 = 0;
-            var20.field3966 = (long)var1;
+            var20.key = (long)var1;
             var20.field3551 = var2;
             var20.field3552 = var18;
             synchronized(class274.field3558) {
@@ -222,7 +222,7 @@ public class class275 extends class277 {
             return;
          }
 
-         class385 var12 = new class385(class47.method815(var3));
+         Buffer var12 = new Buffer(class47.method815(var3));
          int var13 = var12.method5948();
          if (5 != var13 && 6 != var13) {
             throw new RuntimeException(var13 + "," + this.field3563 + "," + var2);
@@ -305,7 +305,7 @@ public class class275 extends class277 {
                class334 var3 = this.field3564;
                class273 var5 = new class273();
                var5.field3555 = 1;
-               var5.field3966 = (long)var2;
+               var5.key = (long)var2;
                var5.field3552 = var3;
                var5.field3550 = this;
                synchronized(class274.field3558) {
@@ -343,8 +343,8 @@ public class class275 extends class277 {
          int var4 = this.field3563;
          long var5 = (long)(var1 + (var4 << 16));
          int var3;
-         if (null != class278.field3595 && var5 == class278.field3595.field3966) {
-            var3 = 1 + class94.field1248.offset * 99 / (class94.field1248.payload.length - class278.field3595.field3573);
+         if (null != JS5Worker.field3595 && var5 == JS5Worker.field3595.key) {
+            var3 = 1 + class94.field1248.offset * 99 / (class94.field1248.payload.length - JS5Worker.field3595.field3573);
          } else {
             var3 = 0;
          }

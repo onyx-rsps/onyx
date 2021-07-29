@@ -5,7 +5,7 @@ public class class322 extends class348 {
    public short field3846;
 
    class322(class406 var1, int var2) {
-      this.field3847 = (int)(class87.method1989() / 1000L);
+      this.field3847 = (int)(Clock.now() / 1000L);
       this.field3844 = var1;
       this.field3846 = (short)var2;
    }

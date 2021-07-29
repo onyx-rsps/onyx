@@ -344,10 +344,10 @@ public class class79 {
                   } catch (Exception var24) {
                      var10 = true;
                      StringBuilder var13 = new StringBuilder(30);
-                     var13.append("").append(var5.field3966).append(" ");
+                     var13.append("").append(var5.key).append(" ");
 
                      for(var14 = class51.field748 - 1; var14 >= 0; --var14) {
-                        var13.append("").append(class51.field749[var14].field368.field3966).append(" ");
+                        var13.append("").append(class51.field749[var14].field368.key).append(" ");
                      }
 
                      var13.append("").append(var9);

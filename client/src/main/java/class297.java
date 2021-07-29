@@ -2,8 +2,8 @@ import java.util.Iterator;
 
 public class class297 implements Iterator {
    class298 field3720;
-   class354 field3721;
-   class354 field3722;
+   Node field3721;
+   Node field3722;
 
    class297(class298 var1) {
       this.field3722 = null;
@@ -21,7 +21,7 @@ public class class297 implements Iterator {
    }
 
    public Object next() {
-      class354 var1 = this.field3721;
+      Node var1 = this.field3721;
       if (var1 == this.field3720.field3723) {
          var1 = null;
          this.field3721 = null;

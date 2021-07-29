@@ -4,7 +4,7 @@ public class class243 extends class349 {
    public final int[] field2905;
    public final int[] field2908;
 
-   public static int method4149(class385 var0, String var1) {
+   public static int method4149(Buffer var0, String var1) {
       int var3 = var0.offset;
       byte[] var4 = class105.method2094(var1);
       var0.method5946(var4.length);

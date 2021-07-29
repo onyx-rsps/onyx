@@ -43,7 +43,7 @@ public final class class215 {
             var9 = class51.field747[class51.field746 + 1];
             int var6 = class51.field747[2 + class51.field746];
             if (var6 >= 1 && var6 <= 10) {
-               class80 var7 = new class80(var6, var8, var9, class87.method1995(var8).field3088);
+               class80 var7 = new class80(var6, var8, var9, Clock.method1995(var8).field3088);
                class51.field755.add(var7);
                return 1;
             } else {
@@ -56,7 +56,7 @@ public final class class215 {
          throw new RuntimeException();
       } else {
          if (var0 >= 2000) {
-            var4 = class87.method1995(class51.field747[--class51.field746]);
+            var4 = Clock.method1995(class51.field747[--class51.field746]);
          } else {
             var4 = var2 ? class286.field3660 : class51.field750;
          }

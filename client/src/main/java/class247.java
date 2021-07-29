@@ -113,7 +113,7 @@ public class class247 {
       }
    }
 
-   public void method4181(class385 var1) {
+   public void method4181(Buffer var1) {
       var1.writeByte(this.field2931 ? 1 : 0);
 
       int var3;

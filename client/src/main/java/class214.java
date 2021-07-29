@@ -102,7 +102,7 @@ public final class class214 {
          }
       }
 
-      class230.method3920(class131.field1475);
+      ServerPacket.method3920(class131.field1475);
 
       try {
          File var14 = new File(class235.field2823, "random.dat");

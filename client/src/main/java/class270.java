@@ -618,7 +618,7 @@ public class class270 {
             class78.field1135 = class170.field1992.method1983(new URL(class310.field3776));
          } else if (class78.field1135.method1999()) {
             byte[] var1 = class78.field1135.method1998();
-            class385 var2 = new class385(var1);
+            Buffer var2 = new Buffer(var1);
             var2.method6172();
             class48.field692 = var2.method6043();
             class16.field86 = new class48[class48.field692];

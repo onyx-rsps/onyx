@@ -122,7 +122,7 @@ public class class359 {
       this.field4043 = new HashMap(var9.length);
 
       for(int var10 = 0; var10 < var9.length; ++var10) {
-         class385 var11 = new class385(this.field4044.method4412(var8, var9[var10]));
+         Buffer var11 = new Buffer(this.field4044.method4412(var8, var9[var10]));
          class168 var12 = new class168();
          var12.method2890(var11, var9[var10]);
          this.field4043.put(var12.method2899(), var12);
@@ -185,7 +185,7 @@ public class class359 {
    }
 
    public void method5485(int var1, int var2, boolean var3, boolean var4) {
-      long var6 = class87.method1989();
+      long var6 = Clock.now();
       this.method5486(var1, var2, var4, var6);
       if (this.method5517() || !var4 && !var3) {
          this.method5490();
@@ -283,7 +283,7 @@ public class class359 {
    final void method5489(int var1, int var2, boolean var3) {
       this.field4030 = var1;
       this.field4025 = var2;
-      class87.method1989();
+      Clock.now();
       if (var3) {
          this.method5490();
       }

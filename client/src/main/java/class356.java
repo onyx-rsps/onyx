@@ -1,4 +1,4 @@
-public class class356 extends class354 {
+public class class356 extends Node {
    static byte[][] field4011;
    boolean field3980;
    boolean field3993;
@@ -55,7 +55,7 @@ public class class356 extends class354 {
       this.field3994 = var25;
    }
 
-   public void method5456(class385 var1) {
+   public void method5456(Buffer var1) {
       var1.writeByte(8);
       var1.writeByte(this.field3986);
       var1.writeByte(this.field3980 ? 1 : 0);
@@ -67,7 +67,7 @@ public class class356 extends class354 {
       var1.writeByte(this.field3993 ? 1 : 0);
       var1.method6122(this.field4010);
       var1.writeByte(this.field3996);
-      var1.method6111(this.field4006);
+      var1.writeMedium(this.field4006);
       var1.method6122(this.field3998);
       var1.method5939(this.field3978);
       var1.method5939(this.field3987);

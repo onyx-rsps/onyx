@@ -1,4 +1,4 @@
-public class class229 extends class354 {
+public class class229 extends Node {
    static class229[] field2689;
    static int field2687;
    public class227 field2685;

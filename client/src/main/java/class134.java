@@ -173,38 +173,38 @@ public final class class134 extends class330 implements Runnable {
 
    static void method2317(class275 var0, int var1, int var2, int var3, byte var4, boolean var5) {
       long var7 = (long)((var1 << 16) + var2);
-      class276 var9 = (class276)class278.field3598.method5746(var7);
+      CacheBuffer var9 = (CacheBuffer) JS5Worker.pendingPriority.method5746(var7);
       if (var9 == null) {
-         var9 = (class276)class278.field3600.method5746(var7);
+         var9 = (CacheBuffer) JS5Worker.pendingPriorityReceived.method5746(var7);
          if (var9 == null) {
-            var9 = (class276)class278.field3615.method5746(var7);
+            var9 = (CacheBuffer) JS5Worker.field3615.method5746(var7);
             if (null != var9) {
                if (var5) {
                   var9.method5435();
-                  class278.field3598.method5737(var9, var7);
-                  --class278.field3604;
-                  ++class278.field3599;
+                  JS5Worker.pendingPriority.put(var9, var7);
+                  --JS5Worker.pendingCount;
+                  ++JS5Worker.pendingPriorityCount;
                }
 
             } else {
                if (!var5) {
-                  var9 = (class276)class278.field3611.method5746(var7);
+                  var9 = (CacheBuffer) JS5Worker.field3611.method5746(var7);
                   if (var9 != null) {
                      return;
                   }
                }
 
-               var9 = new class276();
+               var9 = new CacheBuffer();
                var9.field3577 = var0;
                var9.field3574 = var3;
                var9.field3573 = var4;
                if (var5) {
-                  class278.field3598.method5737(var9, var7);
-                  ++class278.field3599;
+                  JS5Worker.pendingPriority.put(var9, var7);
+                  ++JS5Worker.pendingPriorityCount;
                } else {
-                  class278.field3602.method4659(var9);
-                  class278.field3615.method5737(var9, var7);
-                  ++class278.field3604;
+                  JS5Worker.field3602.method4659(var9);
+                  JS5Worker.field3615.put(var9, var7);
+                  ++JS5Worker.pendingCount;
                }
 
             }
@@ -284,7 +284,7 @@ public final class class134 extends class330 implements Runnable {
 
    }
 
-   public void method5283(byte[] var1, int var2, int var3) throws IOException {
+   public void write(byte[] var1, int var2, int var3) throws IOException {
       this.method2308(var1, var2, var3);
    }
 

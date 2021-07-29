@@ -28,7 +28,7 @@ public class class372 extends class341 implements class219 {
       byte[] var3 = this.field4151.method4412(this.field4150, var1);
       class342 var4 = new class342(var1);
       if (null != var3) {
-         var4.method5411(new class385(var3));
+         var4.method5411(new Buffer(var3));
       }
 
       return var4;

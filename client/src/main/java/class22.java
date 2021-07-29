@@ -5,10 +5,10 @@ public class class22 {
 
    public static class22 method357(class277 var0, int var1, int var2) {
       byte[] var3 = var0.method4412(var1, var2);
-      return var3 == null ? null : new class22(new class385(var3));
+      return var3 == null ? null : new class22(new Buffer(var3));
    }
 
-   class22(class385 var1) {
+   class22(Buffer var1) {
       this.field161 = new class40[10];
 
       for(int var2 = 0; var2 < 10; ++var2) {

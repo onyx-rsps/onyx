@@ -21,7 +21,7 @@ public class class111 extends class104 {
       this.this$0 = var1;
    }
 
-   void method2083(class385 var1) {
+   void method2083(Buffer var1) {
       this.field1343 = var1.method5948() == 1;
       this.field1340 = var1.method5949();
       this.field1341 = var1.method5949();

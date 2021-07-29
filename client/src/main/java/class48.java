@@ -36,7 +36,7 @@ public class class48 {
          byte[] var3 = class159.field1875.method4412(12, var0);
          var2 = new class159();
          if (null != var3) {
-            var2.method2806(new class385(var3));
+            var2.method2806(new Buffer(var3));
          }
 
          var2.method2776();
@@ -407,8 +407,8 @@ public class class48 {
    }
 
    static void method1314(int var0) {
-      for(class353 var2 = (class353)client.field469.method5736(); null != var2; var2 = (class353)client.field469.method5739()) {
-         if ((long)var0 == (var2.field3966 >> 48 & 65535L)) {
+      for(class353 var2 = (class353)client.field469.first(); null != var2; var2 = (class353)client.field469.method5739()) {
+         if ((long)var0 == (var2.key >> 48 & 65535L)) {
             var2.method5437();
          }
       }

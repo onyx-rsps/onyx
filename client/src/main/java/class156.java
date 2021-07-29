@@ -77,7 +77,7 @@ public class class156 extends class349 {
          byte[] var3 = class155.field1711.method4412(32, var0);
          var2 = new class155();
          if (var3 != null) {
-            var2.method2606(new class385(var3));
+            var2.method2606(new Buffer(var3));
          }
 
          class155.field1709.method3882(var2, (long)var0);
@@ -195,7 +195,7 @@ public class class156 extends class349 {
 
    }
 
-   void method2637(class385 var1) {
+   void method2637(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -206,7 +206,7 @@ public class class156 extends class349 {
       }
    }
 
-   void method2630(class385 var1, int var2) {
+   void method2630(Buffer var1, int var2) {
       int var4;
       int var5;
       if (var2 == 1) {
@@ -516,10 +516,10 @@ public class class156 extends class349 {
 
          if (client.loginType != 5) {
             if (class56.field829 == -1L) {
-               class56.field829 = class87.method1989() + 1000L;
+               class56.field829 = Clock.now() + 1000L;
             }
 
-            long var23 = class87.method1989();
+            long var23 = Clock.now();
             if (class17.method138() && -1L == class56.field813) {
                class56.field813 = var23;
                if (class56.field813 > class56.field829) {

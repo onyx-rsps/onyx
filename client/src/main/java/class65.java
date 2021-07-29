@@ -1,6 +1,6 @@
 import java.util.Date;
 
-public class class65 extends class354 {
+public class class65 extends Node {
    static class364 field935;
    static int field934;
    int[] field931;
@@ -36,7 +36,7 @@ public class class65 extends class354 {
       class249 var4;
       if (var0 >= 2000) {
          var0 -= 1000;
-         var4 = class87.method1995(class51.field747[--class51.field746]);
+         var4 = Clock.method1995(class51.field747[--class51.field746]);
       } else {
          var4 = var2 ? class286.field3660 : class51.field750;
       }

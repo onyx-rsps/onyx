@@ -1,6 +1,6 @@
 import java.io.IOException;
 
-public class class238 extends class354 {
+public class class238 extends Node {
    byte[] field2868;
    byte[] field2873;
    byte[] field2874;
@@ -18,7 +18,7 @@ public class class238 extends class354 {
       this.field2872 = new class234[128];
       this.field2873 = new byte[128];
       this.field2875 = new int[128];
-      class385 var2 = new class385(var1);
+      Buffer var2 = new Buffer(var1);
 
       int var3;
       for(var3 = 0; 0 != var2.payload[var2.offset + var3]; ++var3) {
@@ -513,20 +513,20 @@ public class class238 extends class354 {
             class124.field1439 = 2;
          }
 
-         if (null != class278.field3614) {
+         if (null != JS5Worker.connection) {
             try {
-               class385 var14 = new class385(4);
+               Buffer var14 = new Buffer(4);
                var14.writeByte(3);
-               var14.method6111(0);
-               class278.field3614.method5283(var14.payload, 0, 4);
+               var14.writeMedium(0);
+               JS5Worker.connection.write(var14.payload, 0, 4);
             } catch (IOException var12) {
                try {
-                  class278.field3614.method5279();
+                  JS5Worker.connection.method5279();
                } catch (Exception var11) {
                }
 
-               ++class278.field3605;
-               class278.field3614 = null;
+               ++JS5Worker.field3605;
+               JS5Worker.connection = null;
             }
          }
 

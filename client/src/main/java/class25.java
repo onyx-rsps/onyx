@@ -32,7 +32,7 @@ public class class25 {
          var2 = new class150();
          var2.field1678 = var0;
          if (var3 != null) {
-            var2.method2504(new class385(var3));
+            var2.method2504(new Buffer(var3));
          }
 
          class150.field1660.method3882(var2, (long)var0);
@@ -98,7 +98,7 @@ public class class25 {
 
    protected class25() {
       this.field195 = 32;
-      this.field186 = class87.method1989();
+      this.field186 = Clock.now();
       this.field200 = 0L;
       this.field191 = 0;
       this.field188 = 0;
@@ -116,7 +116,7 @@ public class class25 {
 
    public final synchronized void method391() {
       if (this.field183 != null) {
-         long var2 = class87.method1989();
+         long var2 = Clock.now();
 
          try {
             if (this.field200 != 0L) {
@@ -217,7 +217,7 @@ public class class25 {
             }
          }
 
-         var2 = new class76(new class385(var3));
+         var2 = new class76(new Buffer(var3));
       } catch (Exception var7) {
       }
 
@@ -242,7 +242,7 @@ public class class25 {
          this.method410();
       } catch (Exception var3) {
          this.method402();
-         this.field200 = class87.method1989() + 2000L;
+         this.field200 = Clock.now() + 2000L;
       }
 
    }
@@ -393,7 +393,7 @@ public class class25 {
          this.field184.method641(var1, 0, var2);
       }
 
-      this.field186 = class87.method1989();
+      this.field186 = Clock.now();
    }
 
    final void method389(class31 var1, int var2) {
@@ -448,7 +448,7 @@ public class class25 {
       class229 var1 = class149.method2495(class227.field2657, client.field453.field1205);
       client.field453.method1963(var1);
 
-      for(class67 var2 = (class67)client.field569.method5736(); null != var2; var2 = (class67)client.field569.method5739()) {
+      for(class67 var2 = (class67)client.field569.first(); null != var2; var2 = (class67)client.field569.method5739()) {
          if (0 == var2.field949 || 3 == var2.field949) {
             class162.method2850(var2, true);
          }

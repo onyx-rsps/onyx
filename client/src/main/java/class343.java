@@ -4,7 +4,7 @@ public abstract class class343 implements class216 {
    class343(int var1) {
    }
 
-   public void method5411(class385 var1) {
+   public void method5411(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -61,5 +61,5 @@ public abstract class class343 implements class216 {
       client.field453.method1963(var5);
    }
 
-   abstract void method5409(class385 var1, int var2);
+   abstract void method5409(Buffer var1, int var2);
 }

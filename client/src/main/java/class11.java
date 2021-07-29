@@ -55,7 +55,7 @@ public final class class11 implements KeyListener, FocusListener {
          var2 = new class157();
          var2.field1802 = var0;
          if (null != var3) {
-            var2.method2687(new class385(var3));
+            var2.method2687(new Buffer(var3));
          }
 
          var2.method2686();
@@ -91,8 +91,8 @@ public final class class11 implements KeyListener, FocusListener {
             if (null != var2.field1831) {
                boolean var7 = false;
 
-               for(class354 var5 = var2.field1831.method5719(); null != var5; var5 = var2.field1831.method5720()) {
-                  class153 var6 = class384.method5928((int)var5.field3966);
+               for(Node var5 = var2.field1831.method5719(); null != var5; var5 = var2.field1831.method5720()) {
+                  class153 var6 = class384.method5928((int)var5.key);
                   if (var6.field1699) {
                      var5.method5437();
                   } else {

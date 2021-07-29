@@ -1,7 +1,7 @@
 import java.awt.Image;
 import java.math.BigInteger;
 
-public class RSA {
+public class class410 {
    static Image field795;
    static final BigInteger publicModulus;
    static final BigInteger publicExponent;
@@ -11,7 +11,7 @@ public class RSA {
       publicModulus = new BigInteger(ClientLauncher.INSTANCE.getMODULUS(), 16);
    }
 
-   public static synchronized byte[] method1544(int var0) {
+   public static synchronized byte[] newSyncPooledBuffer(int var0) {
       return class310.method5045(var0, false);
    }
 }

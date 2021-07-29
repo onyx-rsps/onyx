@@ -34,7 +34,7 @@ public class class361 {
       class249 var5;
       if (var0 >= 2000) {
          var0 -= 1000;
-         var5 = class87.method1995(class51.field747[--class51.field746]);
+         var5 = Clock.method1995(class51.field747[--class51.field746]);
          var4 = false;
       } else {
          var5 = var2 ? class286.field3660 : class51.field750;
@@ -164,7 +164,7 @@ public class class361 {
    }
 
    static int method5701(int var0, class59 var1, boolean var2) {
-      class249 var4 = class87.method1995(class51.field747[--class51.field746]);
+      class249 var4 = Clock.method1995(class51.field747[--class51.field746]);
       if (var0 == 2800) {
          class51.field747[++class51.field746 - 1] = class104.method2082(class241.method4140(var4));
          return 1;

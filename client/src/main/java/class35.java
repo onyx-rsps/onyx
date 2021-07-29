@@ -1,4 +1,4 @@
-public class class35 extends class354 {
+public class class35 extends Node {
    static boolean field265;
    static boolean[] field282;
    static byte[] field288;
@@ -87,7 +87,7 @@ public class class35 extends class354 {
    }
 
    void method673(byte[] var1) {
-      class385 var2 = new class385(var1);
+      Buffer var2 = new Buffer(var1);
       this.field266 = var2.method6172();
       this.field273 = var2.method6172();
       this.field294 = var2.method6172();

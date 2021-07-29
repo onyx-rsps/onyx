@@ -3,7 +3,7 @@ public class class263 {
       Math.sqrt(8192.0D);
    }
 
-   static void method4334(class385 var0, long var1) {
+   static void method4334(Buffer var0, long var1) {
       var1 /= 10L;
       if (var1 < 0L) {
          var1 = 0L;

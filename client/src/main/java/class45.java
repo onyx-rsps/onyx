@@ -100,7 +100,7 @@ public class class45 extends class349 {
          if (var0.length() == 0) {
             var4 = var4 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
          } else {
-            var4 = var4 + "; Expires=" + class65.method1675(class87.method1989() + 94608000000L) + "; Max-Age=" + 94608000L;
+            var4 = var4 + "; Expires=" + class65.method1675(Clock.now() + 94608000000L) + "; Max-Age=" + 94608000L;
          }
 
          class15.method112(class59.field874, "document.cookie=\"" + var4 + "\"");

@@ -33,7 +33,7 @@ public class class320 extends class326 {
       this.field3833 = class325.method5183(var1);
    }
 
-   public final void method5114(class385 var1) {
+   public final void method5114(Buffer var1) {
       this.method5104(var1.method5957());
       long var3 = var1.method5954();
       long var6 = var3;
@@ -81,7 +81,7 @@ public class class320 extends class326 {
       }
    }
 
-   public final void method5106(class385 var1) {
+   public final void method5106(Buffer var1) {
       class406 var3 = new class406(var1.method5957(), this.field3831);
       int var4 = var1.method6043();
       byte var5 = var1.method5949();

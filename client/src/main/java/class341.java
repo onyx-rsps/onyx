@@ -12,7 +12,7 @@ public abstract class class341 extends class217 implements class392 {
       return null != var3 && var3.method5410() ? var3.method5417() : null;
    }
 
-   public class393 method5407(class385 var1) {
+   public class393 method5407(Buffer var1) {
       int var3 = var1.method6043();
       class343 var4 = this.method5401(var3);
       class393 var5 = new class393(var3);

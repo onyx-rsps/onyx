@@ -51,7 +51,7 @@ public final class class70 extends class72 {
       this.field1004 = false;
    }
 
-   final void method1700(class385 var1) {
+   final void method1700(Buffer var1) {
       var1.offset = 0;
       int var3 = var1.method5948();
       this.field996 = var1.method5949();

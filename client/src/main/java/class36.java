@@ -1,4 +1,4 @@
-public abstract class class36 extends class354 {
+public abstract class class36 extends Node {
    int field299;
 
    abstract void method710();

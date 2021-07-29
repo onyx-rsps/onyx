@@ -3,6 +3,6 @@ public class class342 extends class343 {
       super(var1);
    }
 
-   void method5409(class385 var1, int var2) {
+   void method5409(Buffer var1, int var2) {
    }
 }

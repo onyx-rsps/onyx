@@ -37,7 +37,7 @@ public class class331 extends class330 {
       return this.field3878.method5307(var1, var2, var3);
    }
 
-   public void method5283(byte[] var1, int var2, int var3) throws IOException {
+   public void write(byte[] var1, int var2, int var3) throws IOException {
       this.field3876.method5344(var1, var2, var3);
    }
 

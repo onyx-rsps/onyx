@@ -14,7 +14,7 @@ public class class317 extends class326 {
       return new class327[var1];
    }
 
-   public void method5080(class385 var1, int var2) {
+   public void method5080(Buffer var1, int var2) {
       while(true) {
          if (var1.offset < var2) {
             int var4 = var1.method5948();

@@ -1,4 +1,4 @@
-public class class249 extends class354 {
+public class class249 extends Node {
    public static boolean field2956;
    public static class249[][] field3039;
    static class223 field2952;
@@ -296,7 +296,7 @@ public class class249 extends class354 {
       }
    }
 
-   void method4218(class385 var1) {
+   void method4218(Buffer var1) {
       this.field2993 = false;
       this.field2977 = var1.method5948();
       this.field2961 = var1.method5948();
@@ -547,7 +547,7 @@ public class class249 extends class354 {
 
    }
 
-   void method4219(class385 var1) {
+   void method4219(Buffer var1) {
       var1.method5948();
       this.field2993 = true;
       this.field2977 = var1.method5948();
@@ -683,7 +683,7 @@ public class class249 extends class354 {
       this.field3062 = this.method4221(var1);
    }
 
-   Object[] method4220(class385 var1) {
+   Object[] method4220(Buffer var1) {
       int var3 = var1.method5948();
       if (0 == var3) {
          return null;
@@ -704,7 +704,7 @@ public class class249 extends class354 {
       }
    }
 
-   int[] method4221(class385 var1) {
+   int[] method4221(Buffer var1) {
       int var3 = var1.method5948();
       if (var3 == 0) {
          return null;

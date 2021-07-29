@@ -206,7 +206,7 @@ public abstract class class303 extends class394 {
                      if (!var7.equals("gt")) {
                         if (var7.startsWith("img=")) {
                            try {
-                              int var8 = class278.method4502(var7.substring(4));
+                              int var8 = JS5Worker.method4502(var7.substring(4));
                               var4 += field3741[var8].field4267;
                               var3 = -1;
                            } catch (Exception var9) {
@@ -287,7 +287,7 @@ public abstract class class303 extends class394 {
                      var11 = '>';
                   } else if (var16.startsWith("img=")) {
                      try {
-                        int var17 = class278.method4502(var16.substring(4));
+                        int var17 = JS5Worker.method4502(var16.substring(4));
                         var4 += field3741[var17].field4267;
                         var11 = 0;
                      } catch (Exception var18) {
@@ -633,7 +633,7 @@ public abstract class class303 extends class394 {
                      if (!var8.equals("gt")) {
                         if (var8.startsWith("img=")) {
                            try {
-                              var9 = class278.method4502(var8.substring(4));
+                              var9 = JS5Worker.method4502(var8.substring(4));
                               class397 var13 = field3741[var9];
                               var13.method6349(var2, var3 + this.field3738 - var13.field4268);
                               var2 += var13.field4267;
@@ -736,7 +736,7 @@ public abstract class class303 extends class394 {
                               }
 
                               ++var8;
-                              var14 = class278.method4502(var11.substring(4));
+                              var14 = JS5Worker.method4502(var11.substring(4));
                               class397 var18 = field3741[var14];
                               var18.method6349(var2 + var12, var3 + this.field3738 - var18.field4268 + var13);
                               var2 += var18.field4267;

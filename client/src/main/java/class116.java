@@ -10,7 +10,7 @@ public class class116 extends class120 {
       this.field1389 = null;
    }
 
-   void method2191(class385 var1) {
+   void method2191(Buffer var1) {
       if (var1.method5948() != 255) {
          --var1.offset;
          var1.method5954();

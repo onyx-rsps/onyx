@@ -6,12 +6,12 @@ import java.net.URLConnection;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class class87 implements Runnable {
+public class Clock implements Runnable {
    Queue field1220;
    final Thread field1217;
    volatile boolean field1218;
 
-   public static final synchronized long method1989() {
+   public static final synchronized long now() {
       long var1 = System.currentTimeMillis();
       if (var1 < class281.field3626) {
          class382.field4174 += class281.field3626 - var1;
@@ -21,7 +21,7 @@ public class class87 implements Runnable {
       return class382.field4174 + var1;
    }
 
-   public class87() {
+   public Clock() {
       this.field1220 = new LinkedList();
       this.field1217 = new Thread(this);
       this.field1217.setPriority(1);

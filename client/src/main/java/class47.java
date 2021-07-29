@@ -6,7 +6,7 @@ public class class47 implements Comparator {
    boolean field399;
 
    static final byte[] method815(byte[] var0) {
-      class385 var2 = new class385(var0);
+      Buffer var2 = new Buffer(var0);
       int var3 = var2.method5948();
       int var4 = var2.method6172();
       if (var4 < 0 || class277.field3592 != 0 && var4 > class277.field3592) {

@@ -1,4 +1,4 @@
-public class class273 extends class354 {
+public class class273 extends Node {
    static int field3553;
    byte[] field3551;
    class275 field3550;
@@ -9,7 +9,7 @@ public class class273 extends class354 {
    }
 
    static int method4367(int var0, class59 var1, boolean var2) {
-      class249 var4 = class87.method1995(class51.field747[--class51.field746]);
+      class249 var4 = Clock.method1995(class51.field747[--class51.field746]);
       if (var0 == 2600) {
          class51.field747[++class51.field746 - 1] = var4.field3054;
          return 1;

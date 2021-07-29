@@ -1,13 +1,13 @@
-public class class240 extends class354 {
+public class class240 extends Node {
    byte[] field2881;
    class364 field2882;
 
    static class240 method4132(class277 var0, int var1, int var2) {
       byte[] var3 = var0.method4412(var1, var2);
-      return var3 == null ? null : new class240(new class385(var3));
+      return var3 == null ? null : new class240(new Buffer(var3));
    }
 
-   class240(class385 var1) {
+   class240(Buffer var1) {
       var1.offset = var1.payload.length - 3;
       int var2 = var1.method5948();
       int var3 = var1.method6043();
@@ -167,7 +167,7 @@ public class class240 extends class354 {
       int var50 = var1.offset;
       var1.offset += var5 * 3;
       this.field2881 = new byte[var4];
-      class385 var51 = new class385(this.field2881);
+      Buffer var51 = new Buffer(this.field2881);
       var51.writeInt(1297377380);
       var51.writeInt(6);
       var51.method6122(var2 > 1 ? 1 : 0);
@@ -387,7 +387,7 @@ public class class240 extends class354 {
                         class351 var14 = (class351)this.field2882.method5746((long)var13);
                         if (var14 == null) {
                            var14 = new class351(new byte[128]);
-                           this.field2882.method5737(var14, (long)var13);
+                           this.field2882.put(var14, (long)var13);
                         }
 
                         var14.field3962[var11] = 1;

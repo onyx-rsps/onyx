@@ -65,7 +65,7 @@ public class class20 implements MouseListener, MouseMotionListener, FocusListene
          field146 = 0;
          field136 = var1.getX();
          field147 = var1.getY();
-         field148 = class87.method1989();
+         field148 = Clock.now();
          field154 = this.method308(var1);
          if (field154 != 0) {
             field143 = field154;

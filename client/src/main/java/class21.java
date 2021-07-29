@@ -31,7 +31,7 @@ public class class21 extends class31 {
 
    }
 
-   void method330(class354 var1, class36 var2) {
+   void method330(Node var1, class36 var2) {
       while(var1 != this.field157.field3718 && ((class36)var1).field299 <= var2.field299) {
          var1 = var1.field3965;
       }
@@ -43,7 +43,7 @@ public class class21 extends class31 {
    void method332(class36 var1) {
       var1.method5437();
       var1.method710();
-      class354 var2 = this.field157.field3718.field3965;
+      Node var2 = this.field157.field3718.field3965;
       if (var2 == this.field157.field3718) {
          this.field158 = -1;
       } else {

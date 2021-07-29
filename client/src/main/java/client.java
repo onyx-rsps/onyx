@@ -294,13 +294,13 @@ public final class client extends class19 implements class318 {
    static final class46 field494;
    static final int[] field468;
    static final int[] field531;
-   class385 field596;
+   Buffer field596;
    class8 field446;
 
    static final int method1270(long var0, String var2) {
       Random var4 = new Random();
-      class385 var5 = new class385(128);
-      class385 var6 = new class385(128);
+      Buffer var5 = new Buffer(128);
+      Buffer var6 = new Buffer(128);
       int[] var7 = new int[]{var4.nextInt(), var4.nextInt(), (int)(var0 >> 32), (int)var0};
       var5.writeByte(10);
 
@@ -335,11 +335,11 @@ public final class client extends class19 implements class318 {
          var8 += 8 - var8 % 8;
       }
 
-      class385 var9 = new class385(var8);
+      Buffer var9 = new Buffer(var8);
       var9.method5938(var2);
       var9.offset = var8;
       var9.method5932(var7);
-      class385 var10 = new class385(var9.offset + var6.offset + 5 + var5.offset);
+      Buffer var10 = new Buffer(var9.offset + var6.offset + 5 + var5.offset);
       var10.writeByte(2);
       var10.writeByte(var5.offset);
       var10.method6003(var5.payload, 0, var5.offset);
@@ -382,7 +382,7 @@ public final class client extends class19 implements class318 {
          var25.write("data2=" + class137.method2328(var13) + "&dest=" + class137.method2328("passwordchoice.ws"));
          var25.flush();
          InputStream var26 = var24.getInputStream();
-         var10 = new class385(new byte[1000]);
+         var10 = new Buffer(new byte[1000]);
 
          do {
             var18 = var26.read(var10.payload, var10.offset, 1000 - var10.offset);
@@ -1217,7 +1217,7 @@ public final class client extends class19 implements class318 {
       class244.field2915 = class248.field2944;
       class8.field26 = class248.field2941;
       class209.field2499 = class248.field2943;
-      class170.field1992 = new class87();
+      class170.field1992 = new Clock();
       this.method157();
       this.method158();
       class13.field79 = this.method155();
@@ -1235,7 +1235,7 @@ public final class client extends class19 implements class318 {
 
    protected final void method178() {
       ++field452;
-      this.method1131();
+      this.processJS5Responses();
       class269.method4358();
 
       int var2;
@@ -1392,7 +1392,7 @@ public final class client extends class19 implements class318 {
 
                int var5;
                int var6;
-               class385 var10;
+               Buffer var10;
                int var11;
                int var12;
                int var13;
@@ -1413,7 +1413,7 @@ public final class client extends class19 implements class318 {
                      }
 
                      boolean var9 = true;
-                     var10 = new class385(var4);
+                     var10 = new Buffer(var4);
                      var11 = -1;
 
                      label1339:
@@ -1555,7 +1555,7 @@ public final class client extends class19 implements class318 {
                            class263.method4333();
                            class200 var8 = class166.field1925;
                            class160[] var60 = field465;
-                           var10 = new class385(var54);
+                           var10 = new Buffer(var54);
                            var11 = -1;
 
                            while(true) {
@@ -1770,7 +1770,7 @@ public final class client extends class19 implements class318 {
                                     byte[] var71 = class151.field1683.method4412(1, var20);
                                     var70 = new class151();
                                     if (null != var71) {
-                                       var70.method2516(new class385(var71), var20);
+                                       var70.method2516(new Buffer(var71), var20);
                                     }
 
                                     var70.method2515();
@@ -1803,7 +1803,7 @@ public final class client extends class19 implements class318 {
                                     byte[] var73 = class151.field1683.method4412(1, var67);
                                     var72 = new class151();
                                     if (null != var73) {
-                                       var72.method2516(new class385(var73), var67);
+                                       var72.method2516(new Buffer(var73), var67);
                                     }
 
                                     var72.method2515();
@@ -1904,7 +1904,7 @@ public final class client extends class19 implements class318 {
                                              byte[] var40 = class158.field1855.method4412(4, var38);
                                              var39 = new class158();
                                              if (null != var40) {
-                                                var39.method2758(new class385(var40), var38);
+                                                var39.method2758(new Buffer(var40), var38);
                                              }
 
                                              var39.method2757();
@@ -1941,7 +1941,7 @@ public final class client extends class19 implements class318 {
                                           byte[] var42 = class158.field1855.method4412(4, var78);
                                           var41 = new class158();
                                           if (null != var42) {
-                                             var41.method2758(new class385(var42), var78);
+                                             var41.method2758(new Buffer(var42), var78);
                                           }
 
                                           var41.method2757();
@@ -2299,7 +2299,7 @@ public final class client extends class19 implements class318 {
          class179.field2070.method393();
       }
 
-      if ((10 == loginType || 20 == loginType || loginType == 30) && 0L != field625 && class87.method1989() > field625) {
+      if ((10 == loginType || 20 == loginType || loginType == 30) && 0L != field625 && Clock.now() > field625) {
          class165.method2864(class238.method4117());
       }
 
@@ -2390,8 +2390,8 @@ public final class client extends class19 implements class318 {
          class142.field1560.method394();
       }
 
-      if (null != class278.field3614) {
-         class278.field3614.method5279();
+      if (null != JS5Worker.connection) {
+         JS5Worker.connection.method5279();
       }
 
       class249.method4258();
@@ -2414,55 +2414,55 @@ public final class client extends class19 implements class318 {
 
    }
 
-   void method1131() {
+   void processJS5Responses() {
       if (loginType != 1000) {
-         long var3 = class87.method1989();
-         int var5 = (int)(var3 - class278.field3597);
-         class278.field3597 = var3;
-         if (var5 > 200) {
-            var5 = 200;
+         long time = Clock.now();
+         int deltaTime = (int)(time - JS5Worker.lastAttemptTime);
+         JS5Worker.lastAttemptTime = time;
+         if (deltaTime > 200) {
+            deltaTime = 200;
          }
 
-         class278.field3596 += var5;
+         JS5Worker.latency += deltaTime;
          boolean var2;
-         if (0 == class278.field3606 && class278.field3607 == 0 && 0 == class278.field3604 && class278.field3599 == 0) {
+         if (0 == JS5Worker.pendingResponseCount && JS5Worker.pendingPriorityResponseCount == 0 && 0 == JS5Worker.pendingCount && JS5Worker.pendingPriorityCount == 0) {
             var2 = true;
-         } else if (null == class278.field3614) {
+         } else if (null == JS5Worker.connection) {
             var2 = false;
          } else {
             try {
                label242: {
-                  if (class278.field3596 > 30000) {
+                  if (JS5Worker.latency > 30000) {
                      throw new IOException();
                   }
 
-                  class276 var6;
-                  class385 var7;
-                  while(class278.field3607 < 200 && class278.field3599 > 0) {
-                     var6 = (class276)class278.field3598.method5736();
-                     var7 = new class385(4);
-                     var7.writeByte(1);
-                     var7.method6111((int)var6.field3966);
-                     class278.field3614.method5283(var7.payload, 0, 4);
-                     class278.field3600.method5737(var6, var6.field3966);
-                     --class278.field3599;
-                     ++class278.field3607;
+                  CacheBuffer cacheBuf;
+                  Buffer buf;
+                  while(JS5Worker.pendingPriorityResponseCount < 200 && JS5Worker.pendingPriorityCount > 0) {
+                     cacheBuf = (CacheBuffer) JS5Worker.pendingPriority.first();
+                     buf = new Buffer(4);
+                     buf.writeByte(1);
+                     buf.writeMedium((int)cacheBuf.key);
+                     JS5Worker.connection.write(buf.payload, 0, 4);
+                     JS5Worker.pendingPriorityReceived.put(cacheBuf, cacheBuf.key);
+                     --JS5Worker.pendingPriorityCount;
+                     ++JS5Worker.pendingPriorityResponseCount;
                   }
 
-                  while(class278.field3606 < 200 && class278.field3604 > 0) {
-                     var6 = (class276)class278.field3602.method4664();
-                     var7 = new class385(4);
-                     var7.writeByte(0);
-                     var7.method6111((int)var6.field3966);
-                     class278.field3614.method5283(var7.payload, 0, 4);
-                     var6.method5435();
-                     class278.field3611.method5737(var6, var6.field3966);
-                     --class278.field3604;
-                     ++class278.field3606;
+                  while(JS5Worker.pendingResponseCount < 200 && JS5Worker.pendingCount > 0) {
+                     cacheBuf = (CacheBuffer) JS5Worker.field3602.method4664();
+                     buf = new Buffer(4);
+                     buf.writeByte(0);
+                     buf.writeMedium((int)cacheBuf.key);
+                     JS5Worker.connection.write(buf.payload, 0, 4);
+                     cacheBuf.method5435();
+                     JS5Worker.field3611.put(cacheBuf, cacheBuf.key);
+                     --JS5Worker.pendingCount;
+                     ++JS5Worker.pendingResponseCount;
                   }
 
                   for(int var21 = 0; var21 < 100; ++var21) {
-                     int var22 = class278.field3614.method5280();
+                     int var22 = JS5Worker.connection.method5280();
                      if (var22 < 0) {
                         throw new IOException();
                      }
@@ -2471,11 +2471,11 @@ public final class client extends class19 implements class318 {
                         break;
                      }
 
-                     class278.field3596 = 0;
+                     JS5Worker.latency = 0;
                      byte var8 = 0;
-                     if (null == class278.field3595) {
+                     if (null == JS5Worker.field3595) {
                         var8 = 8;
-                     } else if (0 == class278.field3609) {
+                     } else if (0 == JS5Worker.field3609) {
                         var8 = 1;
                      }
 
@@ -2485,39 +2485,39 @@ public final class client extends class19 implements class318 {
                      int var13;
                      byte[] var10000;
                      int var10001;
-                     class385 var25;
+                     Buffer var25;
                      if (var8 > 0) {
-                        var9 = var8 - class278.field3608.offset;
+                        var9 = var8 - JS5Worker.field3608.offset;
                         if (var9 > var22) {
                            var9 = var22;
                         }
 
-                        class278.field3614.method5282(class278.field3608.payload, class278.field3608.offset, var9);
-                        if (class278.field3613 != 0) {
+                        JS5Worker.connection.method5282(JS5Worker.field3608.payload, JS5Worker.field3608.offset, var9);
+                        if (JS5Worker.field3613 != 0) {
                            for(var10 = 0; var10 < var9; ++var10) {
-                              var10000 = class278.field3608.payload;
-                              var10001 = class278.field3608.offset + var10;
-                              var10000[var10001] ^= class278.field3613;
+                              var10000 = JS5Worker.field3608.payload;
+                              var10001 = JS5Worker.field3608.offset + var10;
+                              var10000[var10001] ^= JS5Worker.field3613;
                            }
                         }
 
-                        var25 = class278.field3608;
+                        var25 = JS5Worker.field3608;
                         var25.offset += var9;
-                        if (class278.field3608.offset < var8) {
+                        if (JS5Worker.field3608.offset < var8) {
                            break;
                         }
 
-                        if (class278.field3595 == null) {
-                           class278.field3608.offset = 0;
-                           var10 = class278.field3608.method5948();
-                           var11 = class278.field3608.method6043();
-                           int var12 = class278.field3608.method5948();
-                           var13 = class278.field3608.method6172();
+                        if (JS5Worker.field3595 == null) {
+                           JS5Worker.field3608.offset = 0;
+                           var10 = JS5Worker.field3608.method5948();
+                           var11 = JS5Worker.field3608.method6043();
+                           int var12 = JS5Worker.field3608.method5948();
+                           var13 = JS5Worker.field3608.method6172();
                            long var14 = (long)((var10 << 16) + var11);
-                           class276 var16 = (class276)class278.field3600.method5746(var14);
+                           CacheBuffer var16 = (CacheBuffer) JS5Worker.pendingPriorityReceived.method5746(var14);
                            class59.field878 = true;
                            if (null == var16) {
-                              var16 = (class276)class278.field3611.method5746(var14);
+                              var16 = (CacheBuffer) JS5Worker.field3611.method5746(var14);
                               class59.field878 = false;
                            }
 
@@ -2526,23 +2526,23 @@ public final class client extends class19 implements class318 {
                            }
 
                            int var17 = var12 == 0 ? 5 : 9;
-                           class278.field3595 = var16;
-                           class94.field1248 = new class385(var17 + var13 + class278.field3595.field3573);
+                           JS5Worker.field3595 = var16;
+                           class94.field1248 = new Buffer(var17 + var13 + JS5Worker.field3595.field3573);
                            class94.field1248.writeByte(var12);
                            class94.field1248.writeInt(var13);
-                           class278.field3609 = 8;
-                           class278.field3608.offset = 0;
-                        } else if (class278.field3609 == 0) {
-                           if (-1 == class278.field3608.payload[0]) {
-                              class278.field3609 = 1;
-                              class278.field3608.offset = 0;
+                           JS5Worker.field3609 = 8;
+                           JS5Worker.field3608.offset = 0;
+                        } else if (JS5Worker.field3609 == 0) {
+                           if (-1 == JS5Worker.field3608.payload[0]) {
+                              JS5Worker.field3609 = 1;
+                              JS5Worker.field3608.offset = 0;
                            } else {
-                              class278.field3595 = null;
+                              JS5Worker.field3595 = null;
                            }
                         }
                      } else {
-                        var9 = class94.field1248.payload.length - class278.field3595.field3573;
-                        var10 = 512 - class278.field3609;
+                        var9 = class94.field1248.payload.length - JS5Worker.field3595.field3573;
+                        var10 = 512 - JS5Worker.field3609;
                         if (var10 > var9 - class94.field1248.offset) {
                            var10 = var9 - class94.field1248.offset;
                         }
@@ -2551,69 +2551,69 @@ public final class client extends class19 implements class318 {
                            var10 = var22;
                         }
 
-                        class278.field3614.method5282(class94.field1248.payload, class94.field1248.offset, var10);
-                        if (0 != class278.field3613) {
+                        JS5Worker.connection.method5282(class94.field1248.payload, class94.field1248.offset, var10);
+                        if (0 != JS5Worker.field3613) {
                            for(var11 = 0; var11 < var10; ++var11) {
                               var10000 = class94.field1248.payload;
                               var10001 = var11 + class94.field1248.offset;
-                              var10000[var10001] ^= class278.field3613;
+                              var10000[var10001] ^= JS5Worker.field3613;
                            }
                         }
 
                         var25 = class94.field1248;
                         var25.offset += var10;
-                        class278.field3609 += var10;
+                        JS5Worker.field3609 += var10;
                         if (var9 == class94.field1248.offset) {
-                           if (class278.field3595.field3966 == 16711935L) {
-                              class278.field3603 = class94.field1248;
+                           if (JS5Worker.field3595.key == 16711935L) {
+                              JS5Worker.field3603 = class94.field1248;
 
                               for(var11 = 0; var11 < 256; ++var11) {
-                                 class275 var23 = class278.field3612[var11];
+                                 class275 var23 = JS5Worker.field3612[var11];
                                  if (null != var23) {
-                                    class278.field3603.offset = 5 + 8 * var11;
-                                    var13 = class278.field3603.method6172();
-                                    int var24 = class278.field3603.method6172();
+                                    JS5Worker.field3603.offset = 5 + 8 * var11;
+                                    var13 = JS5Worker.field3603.method6172();
+                                    int var24 = JS5Worker.field3603.method6172();
                                     var23.method4380(var13, var24);
                                  }
                               }
                            } else {
-                              class278.field3610.reset();
-                              class278.field3610.update(class94.field1248.payload, 0, var9);
-                              var11 = (int)class278.field3610.getValue();
-                              if (var11 != class278.field3595.field3574) {
+                              JS5Worker.field3610.reset();
+                              JS5Worker.field3610.update(class94.field1248.payload, 0, var9);
+                              var11 = (int) JS5Worker.field3610.getValue();
+                              if (var11 != JS5Worker.field3595.field3574) {
                                  try {
-                                    class278.field3614.method5279();
+                                    JS5Worker.connection.method5279();
                                  } catch (Exception var19) {
                                  }
 
-                                 ++class278.field3601;
-                                 class278.field3614 = null;
-                                 class278.field3613 = (byte)((int)(Math.random() * 255.0D + 1.0D));
+                                 ++JS5Worker.crcMismatchCount;
+                                 JS5Worker.connection = null;
+                                 JS5Worker.field3613 = (byte)((int)(Math.random() * 255.0D + 1.0D));
                                  var2 = false;
                                  break label242;
                               }
 
-                              class278.field3601 = 0;
-                              class278.field3605 = 0;
-                              class278.field3595.field3577.method4398((int)(class278.field3595.field3966 & 65535L), class94.field1248.payload, (class278.field3595.field3966 & 16711680L) == 16711680L, class59.field878);
+                              JS5Worker.crcMismatchCount = 0;
+                              JS5Worker.field3605 = 0;
+                              JS5Worker.field3595.field3577.method4398((int)(JS5Worker.field3595.key & 65535L), class94.field1248.payload, (JS5Worker.field3595.key & 16711680L) == 16711680L, class59.field878);
                            }
 
-                           class278.field3595.method5437();
+                           JS5Worker.field3595.method5437();
                            if (class59.field878) {
-                              --class278.field3607;
+                              --JS5Worker.pendingPriorityResponseCount;
                            } else {
-                              --class278.field3606;
+                              --JS5Worker.pendingResponseCount;
                            }
 
-                           class278.field3609 = 0;
-                           class278.field3595 = null;
+                           JS5Worker.field3609 = 0;
+                           JS5Worker.field3595 = null;
                            class94.field1248 = null;
                         } else {
-                           if (512 != class278.field3609) {
+                           if (512 != JS5Worker.field3609) {
                               break;
                            }
 
-                           class278.field3609 = 0;
+                           JS5Worker.field3609 = 0;
                         }
                      }
                   }
@@ -2622,29 +2622,29 @@ public final class client extends class19 implements class318 {
                }
             } catch (IOException var20) {
                try {
-                  class278.field3614.method5279();
+                  JS5Worker.connection.method5279();
                } catch (Exception var18) {
                }
 
-               ++class278.field3605;
-               class278.field3614 = null;
+               ++JS5Worker.field3605;
+               JS5Worker.connection = null;
                var2 = false;
             }
          }
 
          if (!var2) {
-            this.method1113();
+            this.doJS5Cycle();
          }
 
       }
    }
 
-   void method1113() {
-      if (class278.field3601 >= 4) {
+   void doJS5Cycle() {
+      if (JS5Worker.crcMismatchCount >= 4) {
          this.method182("js5crc");
          loginType = 1000;
       } else {
-         if (class278.field3605 >= 4) {
+         if (JS5Worker.field3605 >= 4) {
             if (loginType <= 5) {
                this.method182("js5io");
                loginType = 1000;
@@ -2652,7 +2652,7 @@ public final class client extends class19 implements class318 {
             }
 
             field436 = 3000;
-            class278.field3605 = 3;
+            JS5Worker.field3605 = 3;
          }
 
          if (--field436 + 1 <= 0) {
@@ -2682,12 +2682,12 @@ public final class client extends class19 implements class318 {
                      class85.field1197 = new class134((Socket)class239.field2879.field1510, class19.field101, 5000);
                   }
 
-                  class385 var5 = new class385(5);
+                  Buffer var5 = new Buffer(5);
                   var5.writeByte(15);
                   var5.writeInt(198);
-                  class85.field1197.method5283(var5.payload, 0, 5);
+                  class85.field1197.write(var5.payload, 0, 5);
                   ++field438;
-                  class147.field1610 = class87.method1989();
+                  class147.field1610 = Clock.now();
                }
 
                if (field438 == 3) {
@@ -2699,7 +2699,7 @@ public final class client extends class19 implements class318 {
                      }
 
                      ++field438;
-                  } else if (class87.method1989() - class147.field1610 > 30000L) {
+                  } else if (Clock.now() - class147.field1610 > 30000L) {
                      this.method823(-2);
                      return;
                   }
@@ -2891,7 +2891,7 @@ public final class client extends class19 implements class318 {
                switch(field448.authType) {
                case 0:
                case 1:
-                  loginBuf.method6111(class283.field3640);
+                  loginBuf.writeMedium(class283.field3640);
                   ++loginBuf.offset;
                   break;
                case 2:
@@ -2905,7 +2905,7 @@ public final class client extends class19 implements class318 {
                loginBuf.method5938(class56.field818);
             }
 
-            loginBuf.method5971(RSA.publicExponent, RSA.publicModulus);
+            loginBuf.method5971(class410.publicExponent, class410.publicModulus);
             class42.xteas = encodeXteas;
             class229 var7 = class160.method2843();
             var7.field2685 = null;
@@ -2933,8 +2933,8 @@ public final class client extends class19 implements class318 {
             class145.method2451(var7.field2691);
             var7.field2691.method5938(class150.field1661);
             var7.field2691.writeInt(class408.field4314);
-            class385 var10 = new class385(class230.field2789.method5457());
-            class230.field2789.method5456(var10);
+            Buffer var10 = new Buffer(ServerPacket.field2789.method5457());
+            ServerPacket.field2789.method5456(var10);
             var7.field2691.method6003(var10.payload, 0, var10.payload.length);
             var7.field2691.writeByte(field410);
             var7.field2691.writeInt(0);
@@ -3128,14 +3128,14 @@ public final class client extends class19 implements class318 {
                field526 = ((class330)var2).method5281();
                ((class330)var2).method5282(var3.payload, 0, 1);
                var3.offset = 0;
-               class230[] var23 = class189.method3268();
+               ServerPacket[] var23 = class189.method3268();
                int var29 = var3.method5890();
                if (var29 < 0 || var29 >= var23.length) {
                   throw new IOException(var29 + " " + var3.offset);
                }
 
-               field453.field1206 = var23[var29];
-               field453.field1209 = field453.field1206.field2740;
+               field453.currentInboundPacket = var23[var29];
+               field453.field1209 = field453.currentInboundPacket.length;
                ((class330)var2).method5282(var3.payload, 0, 2);
                var3.offset = 0;
                field453.field1209 = var3.method6043();
@@ -3157,7 +3157,7 @@ public final class client extends class19 implements class318 {
                   class44.method769(var3);
                   class20.field137 = -1;
                   class239.method4125(false, var3);
-                  field453.field1206 = null;
+                  field453.currentInboundPacket = null;
                }
 
             } else {
@@ -3428,7 +3428,7 @@ public final class client extends class19 implements class318 {
                      var19 = class149.method2495(class227.field2564, field453.field1205);
                      var19.field2691.method6122(0);
                      var20 = var19.field2691.offset;
-                     long var22 = class87.method1989();
+                     long var22 = Clock.now();
 
                      for(var6 = 0; var6 < class11.field36; ++var6) {
                         long var27 = var22 - field636;
@@ -3437,7 +3437,7 @@ public final class client extends class19 implements class318 {
                         }
 
                         field636 = var22;
-                        var19.field2691.method6111((int)var27);
+                        var19.field2691.writeMedium((int)var27);
                         var19.field2691.writeByte(class11.field54[var6]);
                      }
 
@@ -3988,7 +3988,7 @@ public final class client extends class19 implements class318 {
                                              break;
                                           }
 
-                                          var33 = class87.method1995(var32.field3001);
+                                          var33 = Clock.method1995(var32.field3001);
                                        } while(null == var33 || null == var33.field3061 || var32.field3031 >= var33.field3061.length || var33.field3061[var32.field3031] != var32);
 
                                        class95.method2055(var30);
@@ -4000,7 +4000,7 @@ public final class client extends class19 implements class318 {
                                     break;
                                  }
 
-                                 var33 = class87.method1995(var32.field3001);
+                                 var33 = Clock.method1995(var32.field3001);
                               } while(null == var33 || var33.field3061 == null || var32.field3031 >= var33.field3061.length || var32 != var33.field3061[var32.field3031]);
 
                               class95.method2055(var30);
@@ -4012,7 +4012,7 @@ public final class client extends class19 implements class318 {
                            break;
                         }
 
-                        var33 = class87.method1995(var32.field3001);
+                        var33 = Clock.method1995(var32.field3001);
                      } while(var33 == null || null == var33.field3061 || var32.field3031 >= var33.field3061.length || var33.field3061[var32.field3031] != var32);
 
                      class95.method2055(var30);
@@ -4031,7 +4031,7 @@ public final class client extends class19 implements class318 {
    }
 
    protected final void method163() {
-      field625 = class87.method1989() + 500L;
+      field625 = Clock.now() + 500L;
       this.method827();
       if (field568 != -1) {
          this.method833(true);
@@ -4180,9 +4180,9 @@ public final class client extends class19 implements class318 {
       field556 = 0;
    }
 
-   final boolean method829(class86 var1) {
-      class330 var3 = var1.method1968();
-      class384 var4 = var1.field1201;
+   final boolean method829(class86 netWriter) {
+      class330 var3 = netWriter.method1968();
+      class384 var4 = netWriter.field1201;
       if (var3 == null) {
          return false;
       } else {
@@ -4190,15 +4190,15 @@ public final class client extends class19 implements class318 {
          int var7;
          try {
             int var23;
-            if (var1.field1206 == null) {
-               if (var1.field1211) {
+            if (netWriter.currentInboundPacket == null) {
+               if (netWriter.field1211) {
                   if (!var3.method5294(1)) {
                      return false;
                   }
 
-                  var3.method5282(var1.field1201.payload, 0, 1);
-                  var1.field1210 = 0;
-                  var1.field1211 = false;
+                  var3.method5282(netWriter.field1201.payload, 0, 1);
+                  netWriter.field1210 = 0;
+                  netWriter.field1211 = false;
                }
 
                var4.offset = 0;
@@ -4207,53 +4207,53 @@ public final class client extends class19 implements class318 {
                      return false;
                   }
 
-                  var3.method5282(var1.field1201.payload, 1, 1);
-                  var1.field1210 = 0;
+                  var3.method5282(netWriter.field1201.payload, 1, 1);
+                  netWriter.field1210 = 0;
                }
 
-               var1.field1211 = true;
-               class230[] var5 = class189.method3268();
+               netWriter.field1211 = true;
+               ServerPacket[] var5 = class189.method3268();
                var23 = var4.method5890();
                if (var23 < 0 || var23 >= var5.length) {
                   throw new IOException(var23 + " " + var4.offset);
                }
 
-               var1.field1206 = var5[var23];
-               var1.field1209 = var1.field1206.field2740;
+               netWriter.currentInboundPacket = var5[var23];
+               netWriter.field1209 = netWriter.currentInboundPacket.length;
             }
 
-            if (-1 == var1.field1209) {
+            if (-1 == netWriter.field1209) {
                if (!var3.method5294(1)) {
                   return false;
                }
 
-               var1.method1968().method5282(var4.payload, 0, 1);
-               var1.field1209 = var4.payload[0] & 255;
+               netWriter.method1968().method5282(var4.payload, 0, 1);
+               netWriter.field1209 = var4.payload[0] & 255;
             }
 
-            if (var1.field1209 == -2) {
+            if (netWriter.field1209 == -2) {
                if (!var3.method5294(2)) {
                   return false;
                }
 
-               var1.method1968().method5282(var4.payload, 0, 2);
+               netWriter.method1968().method5282(var4.payload, 0, 2);
                var4.offset = 0;
-               var1.field1209 = var4.method6043();
+               netWriter.field1209 = var4.method6043();
             }
 
-            if (!var3.method5294(var1.field1209)) {
+            if (!var3.method5294(netWriter.field1209)) {
                return false;
             }
 
             var4.offset = 0;
-            var3.method5282(var4.payload, 0, var1.field1209);
-            var1.field1210 = 0;
+            var3.method5282(var4.payload, 0, netWriter.field1209);
+            netWriter.field1210 = 0;
             field458.method5055();
-            var1.field1213 = var1.field1214;
-            var1.field1214 = var1.field1212;
-            var1.field1212 = var1.field1206;
+            netWriter.field1213 = netWriter.field1214;
+            netWriter.field1214 = netWriter.field1212;
+            netWriter.field1212 = netWriter.currentInboundPacket;
             boolean var37;
-            if (var1.field1206 == class230.field2721) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2721) {
                var37 = var4.method6178();
                if (var37) {
                   if (class368.field4128 == null) {
@@ -4263,24 +4263,24 @@ public final class client extends class19 implements class318 {
                   class368.field4128 = null;
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2709) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2709) {
                if (-1 != field568) {
                   class163.method2852(field568, 0);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             int var21;
             class249 var72;
-            if (class230.field2732 == var1.field1206) {
+            if (ServerPacket.field2732 == netWriter.currentInboundPacket) {
                var21 = var4.method5995();
-               var72 = class87.method1995(var21);
+               var72 = Clock.method1995(var21);
 
                for(var7 = 0; var7 < var72.field3086.length; ++var7) {
                   var72.field3086[var7] = -1;
@@ -4288,25 +4288,25 @@ public final class client extends class19 implements class318 {
                }
 
                class81.method1869(var72);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2730 == var1.field1206) {
-               class80.method1859(var4, var1.field1209);
+            if (ServerPacket.field2730 == netWriter.currentInboundPacket) {
+               class80.method1859(var4, netWriter.field1209);
                class155.method2619();
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2782) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2782) {
                field670 = var4.method6164();
                field647 = var4.method5979();
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2720) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2720) {
                for(var21 = 0; var21 < field524.length; ++var21) {
                   if (null != field524[var21]) {
                      field524[var21].field1053 = -1;
@@ -4319,13 +4319,13 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             String var63;
             boolean var65;
-            if (class230.field2741 == var1.field1206) {
+            if (ServerPacket.field2741 == netWriter.currentInboundPacket) {
                var21 = var4.method5962();
                var65 = var4.method5948() == 1;
                var63 = "";
@@ -4342,24 +4342,24 @@ public final class client extends class19 implements class318 {
                   class121.method2204(var21, var63, var45);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2771) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2771) {
                var21 = var4.method5997();
-               var72 = class87.method1995(var21);
+               var72 = Clock.method1995(var21);
                var72.field2950 = 3;
                var72.field3002 = class20.field140.field979.method4198();
                class81.method1869(var72);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             int var16;
             byte var20;
             String var60;
-            if (class230.field2726 == var1.field1206) {
+            if (ServerPacket.field2726 == netWriter.currentInboundPacket) {
                var20 = var4.method5949();
                var6 = var4.method5957();
                long var66 = (long)var4.method6043();
@@ -4403,7 +4403,7 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
@@ -4411,7 +4411,7 @@ public final class client extends class19 implements class318 {
             int var32;
             int var36;
             int var38;
-            if (class230.field2776 == var1.field1206) {
+            if (ServerPacket.field2776 == netWriter.currentInboundPacket) {
                field615 = true;
                class377.field4166 = var4.method5948();
                class192.field2148 = var4.method5948();
@@ -4437,7 +4437,7 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
@@ -4446,7 +4446,7 @@ public final class client extends class19 implements class318 {
             long var24;
             String var35;
             String var53;
-            if (class230.field2738 == var1.field1206) {
+            if (ServerPacket.field2738 == netWriter.currentInboundPacket) {
                var35 = var4.method5957();
                var24 = (long)var4.method6043();
                var8 = (long)var4.method5952();
@@ -4483,35 +4483,35 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2763) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2763) {
                class125.field1441 = class158.method2772(var4.method5948());
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2702 == var1.field1206) {
+            if (ServerPacket.field2702 == netWriter.currentInboundPacket) {
                class13.method99(class228.field2681);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2746) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2746) {
                class13.method99(class228.field2677);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2700 == var1.field1206) {
+            if (ServerPacket.field2700 == netWriter.currentInboundPacket) {
                class13.method99(class228.field2679);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2778) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2778) {
                var35 = var4.method5957();
                var23 = var4.method5977();
                var7 = var4.method5977();
@@ -4524,19 +4524,19 @@ public final class client extends class19 implements class318 {
                   field533[var7 - 1] = var23 == 0;
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2749) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2749) {
                var35 = var4.method5957();
                var6 = class303.method4915(class286.method4581(class176.method3147(var4)));
                class121.method2204(6, var35, var6);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2745 == var1.field1206) {
+            if (ServerPacket.field2745 == netWriter.currentInboundPacket) {
                field424 = var4.method5948();
                if (field424 == 1) {
                   field425 = var4.method6043();
@@ -4578,11 +4578,11 @@ public final class client extends class19 implements class318 {
                   field426 = var4.method6043();
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2783) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2783) {
                var35 = var4.method5957();
                Object[] var70 = new Object[var35.length() + 1];
 
@@ -4598,11 +4598,11 @@ public final class client extends class19 implements class318 {
                class68 var64 = new class68();
                var64.field955 = var70;
                class95.method2055(var64);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2761) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2761) {
                var20 = var4.method5981();
                var23 = var4.method6076();
                class244.field2912[var23] = var20;
@@ -4612,11 +4612,11 @@ public final class client extends class19 implements class318 {
 
                class46.method801(var23);
                field594[++field552 - 1 & 31] = var23;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2784) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2784) {
                class58.field859 = var4.method5948();
                class292.field3695 = var4.method5979();
 
@@ -4635,11 +4635,11 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2751) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2751) {
                var21 = var4.method6172();
                class67 var68 = (class67)field569.method5746((long)var21);
                if (var68 != null) {
@@ -4651,15 +4651,15 @@ public final class client extends class19 implements class318 {
                   field574 = null;
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             class249 var30;
-            if (class230.field2764 == var1.field1206) {
+            if (ServerPacket.field2764 == netWriter.currentInboundPacket) {
                var21 = var4.method5963();
                var23 = var4.method5990();
-               var30 = class87.method1995(var21);
+               var30 = Clock.method1995(var21);
                if (var30.field3005 != var23 || -1 == var23) {
                   var30.field3005 = var23;
                   var30.field3094 = 0;
@@ -4667,29 +4667,29 @@ public final class client extends class19 implements class318 {
                   class81.method1869(var30);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2774) {
-               byte[] var69 = new byte[var1.field1209];
+            if (netWriter.currentInboundPacket == ServerPacket.field2774) {
+               byte[] var69 = new byte[netWriter.field1209];
                var4.method5891(var69, 0, var69.length);
-               class385 var67 = new class385(var69);
+               Buffer var67 = new Buffer(var69);
                var63 = var67.method5957();
                class139.method2345(var63, true, false);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2719 == var1.field1206) {
+            if (ServerPacket.field2719 == netWriter.currentInboundPacket) {
                class108.method2105();
                field432 = var4.method5948();
                field517 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2755) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2755) {
                for(var21 = 0; var21 < class244.field2911.length; ++var21) {
                   if (class244.field2911[var21] != class244.field2912[var21]) {
                      class244.field2911[var21] = class244.field2912[var21];
@@ -4698,99 +4698,99 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2736 == var1.field1206) {
+            if (ServerPacket.field2736 == netWriter.currentInboundPacket) {
                field615 = false;
 
                for(var21 = 0; var21 < 5; ++var21) {
                   field656[var21] = false;
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2750) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2750) {
                var21 = var4.method5997();
                var65 = var4.method6164() == 1;
-               var30 = class87.method1995(var21);
+               var30 = Clock.method1995(var21);
                if (var65 != var30.field2978) {
                   var30.field2978 = var65;
                   class81.method1869(var30);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2737) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2737) {
                var21 = var4.method5995();
                var23 = var4.method6076();
                var7 = var23 >> 10 & 31;
                var31 = var23 >> 5 & 31;
                var32 = var23 & 31;
                var36 = (var31 << 11) + (var7 << 19) + (var32 << 3);
-               class249 var48 = class87.method1995(var21);
+               class249 var48 = Clock.method1995(var21);
                if (var48.field2983 != var36) {
                   var48.field2983 = var36;
                   class81.method1869(var48);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2703 == var1.field1206) {
+            if (ServerPacket.field2703 == netWriter.currentInboundPacket) {
                if (null != class69.field972) {
                   class69.field972.method5106(var4);
                }
 
                class19.method300();
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2768 == var1.field1206) {
+            if (ServerPacket.field2768 == netWriter.currentInboundPacket) {
                class13.method99(class228.field2678);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2706) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2706) {
                class292.field3695 = var4.method5977();
                class58.field859 = var4.method5979();
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2707 == var1.field1206) {
-               class13.field80.method1319(var4, var1.field1209);
+            if (ServerPacket.field2707 == netWriter.currentInboundPacket) {
+               class13.field80.method1319(var4, netWriter.field1209);
                field610 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2696) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2696) {
                field646 = var4.method5948();
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             class249 var29;
-            if (class230.field2724 == var1.field1206) {
+            if (ServerPacket.field2724 == netWriter.currentInboundPacket) {
                var21 = var4.method6172();
                var23 = var4.method6043();
                var7 = var4.method5988();
-               var29 = class87.method1995(var21);
+               var29 = Clock.method1995(var21);
                var29.field3014 = var23 + (var7 << 16);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2753) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2753) {
                var21 = var4.method6172();
                var23 = var4.method6043();
                if (var21 < -70000) {
@@ -4798,7 +4798,7 @@ public final class client extends class19 implements class318 {
                }
 
                if (var21 >= 0) {
-                  var30 = class87.method1995(var21);
+                  var30 = Clock.method1995(var21);
                } else {
                   var30 = null;
                }
@@ -4834,17 +4834,17 @@ public final class client extends class19 implements class318 {
 
                class108.method2105();
                field641[++field575 - 1 & 31] = var23 & 32767;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             class249 var34;
-            if (class230.field2748 == var1.field1206) {
+            if (ServerPacket.field2748 == netWriter.currentInboundPacket) {
                var21 = var4.method6043();
                var23 = var4.method5988();
                var7 = var4.method5987();
                var31 = var4.method5997();
-               var34 = class87.method1995(var31);
+               var34 = Clock.method1995(var31);
                if (var23 != var34.field3009 || var34.field3010 != var7 || var34.field3000 != var21) {
                   var34.field3009 = var23;
                   var34.field3010 = var7;
@@ -4852,11 +4852,11 @@ public final class client extends class19 implements class318 {
                   class81.method1869(var34);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2713) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2713) {
                var21 = var4.method5948();
                if (var4.method5948() == 0) {
                   field620[var21] = new class286();
@@ -4867,11 +4867,11 @@ public final class client extends class19 implements class318 {
                }
 
                field607 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2722 == var1.field1206) {
+            if (ServerPacket.field2722 == netWriter.currentInboundPacket) {
                class108.method2105();
                var21 = var4.method5948();
                var23 = var4.method5995();
@@ -4887,12 +4887,12 @@ public final class client extends class19 implements class318 {
                }
 
                field428[++field599 - 1 & 31] = var21;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2758 == var1.field1206) {
-               if (0 == var1.field1209) {
+            if (ServerPacket.field2758 == netWriter.currentInboundPacket) {
+               if (0 == netWriter.field1209) {
                   class69.field972 = null;
                } else {
                   if (class69.field972 == null) {
@@ -4903,25 +4903,25 @@ public final class client extends class19 implements class318 {
                }
 
                class19.method300();
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2767) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2767) {
                var21 = var4.method6172();
                var23 = var4.method6043();
-               var30 = class87.method1995(var21);
+               var30 = Clock.method1995(var21);
                if (var30.field2950 != 1 || var23 != var30.field3002) {
                   var30.field2950 = 1;
                   var30.field3002 = var23;
                   class81.method1869(var30);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2717 == var1.field1206) {
+            if (ServerPacket.field2717 == netWriter.currentInboundPacket) {
                var21 = var4.method5948();
                var23 = var4.method5948();
                var7 = var4.method5948();
@@ -4931,22 +4931,22 @@ public final class client extends class19 implements class318 {
                field609[var21] = var7;
                field659[var21] = var31;
                field660[var21] = 0;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2708) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2708) {
                var21 = var4.method6172();
                if (field489 != var21) {
                   field489 = var21;
                   class340.method5393();
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2781 == var1.field1206) {
+            if (ServerPacket.field2781 == netWriter.currentInboundPacket) {
                class51.method1524();
                var20 = var4.method5949();
                class107 var61 = new class107(var4);
@@ -4958,11 +4958,11 @@ public final class client extends class19 implements class318 {
                }
 
                var61.method2096(var52);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2779 == var1.field1206) {
+            if (ServerPacket.field2779 == netWriter.currentInboundPacket) {
                var21 = var4.method6043();
                field568 = var21;
                this.method833(false);
@@ -4973,22 +4973,22 @@ public final class client extends class19 implements class318 {
                   field617[var23] = true;
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2756 == var1.field1206) {
+            if (ServerPacket.field2756 == netWriter.currentInboundPacket) {
                var21 = var4.method5988();
                if (65535 == var21) {
                   var21 = -1;
                }
 
                class42.method764(var21);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2698) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2698) {
                var21 = var4.method5988();
                if (65535 == var21) {
                   var21 = -1;
@@ -4996,14 +4996,14 @@ public final class client extends class19 implements class318 {
 
                var23 = var4.method5991();
                class88.method2000(var21, var23);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             class67 var33;
             long var39;
-            if (var1.field1206 == class230.field2747) {
-               var21 = var1.field1209 + var4.offset;
+            if (netWriter.currentInboundPacket == ServerPacket.field2747) {
+               var21 = netWriter.field1209 + var4.offset;
                var23 = var4.method6043();
                var7 = var4.method6043();
                if (field568 != var23) {
@@ -5033,7 +5033,7 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               for(var33 = (class67)field569.method5736(); var33 != null; var33 = (class67)field569.method5739()) {
+               for(var33 = (class67)field569.first(); var33 != null; var33 = (class67)field569.method5739()) {
                   if (var33.field948) {
                      var33.field948 = false;
                   } else {
@@ -5051,21 +5051,21 @@ public final class client extends class19 implements class318 {
 
                   for(int var47 = var32; var47 <= var36; ++var47) {
                      var39 = (long)var47 + ((long)var31 << 32);
-                     field469.method5737(new class353(var38), var39);
+                     field469.put(new class353(var38), var39);
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2766) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2766) {
                class45.method799(var4.method5957());
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2752) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2752) {
                var21 = var4.method5997();
                var23 = var4.method6172();
                class67 var42 = (class67)field569.method5746((long)var21);
@@ -5076,15 +5076,15 @@ public final class client extends class19 implements class318 {
 
                if (var42 != null) {
                   var42.method5437();
-                  field569.method5737(var42, (long)var23);
+                  field569.put(var42, (long)var23);
                }
 
-               var34 = class87.method1995(var21);
+               var34 = Clock.method1995(var21);
                if (null != var34) {
                   class81.method1869(var34);
                }
 
-               var34 = class87.method1995(var23);
+               var34 = Clock.method1995(var23);
                if (var34 != null) {
                   class81.method1869(var34);
                   class81.method1868(class249.field3039[var34.field2958 >>> 16], var34, true);
@@ -5094,17 +5094,17 @@ public final class client extends class19 implements class318 {
                   class163.method2852(field568, 1);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2757) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2757) {
                class153.method2544(true, var4);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2692) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2692) {
                var21 = var4.method5977();
                var23 = var4.method5987();
                var7 = var4.method6172();
@@ -5114,54 +5114,54 @@ public final class client extends class19 implements class318 {
                }
 
                class107.method2098(var7, var23, var21);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2734 == var1.field1206) {
+            if (ServerPacket.field2734 == netWriter.currentInboundPacket) {
                var21 = var4.method5997();
                var6 = var4.method5957();
-               var30 = class87.method1995(var21);
+               var30 = Clock.method1995(var21);
                if (!var6.equals(var30.field3042)) {
                   var30.field3042 = var6;
                   class81.method1869(var30);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2733) {
-               class119.method2188(var4, var1.field1209);
-               var1.field1206 = null;
+            if (netWriter.currentInboundPacket == ServerPacket.field2733) {
+               class119.method2188(var4, netWriter.field1209);
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2695) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2695) {
                class292.field3695 = var4.method6164();
                class58.field859 = var4.method6164();
 
-               while(var4.offset < var1.field1209) {
+               while(var4.offset < netWriter.field1209) {
                   var21 = var4.method5948();
                   class228 var54 = class215.method3851()[var21];
                   class13.method99(var54);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2727 == var1.field1206) {
+            if (ServerPacket.field2727 == netWriter.currentInboundPacket) {
                class51.method1524();
                var20 = var4.method5949();
-               if (1 == var1.field1209) {
+               if (1 == netWriter.field1209) {
                   if (var20 >= 0) {
                      field637[var20] = null;
                   } else {
                      class42.field355 = null;
                   }
 
-                  var1.field1206 = null;
+                  netWriter.currentInboundPacket = null;
                   return true;
                }
 
@@ -5171,20 +5171,20 @@ public final class client extends class19 implements class318 {
                   class42.field355 = new class115(var4);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2773 == var1.field1206) {
+            if (ServerPacket.field2773 == netWriter.currentInboundPacket) {
                var21 = var4.method6043();
                var23 = var4.method5948();
                var7 = var4.method6043();
                class128.method2256(var21, var23, var7);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2728 == var1.field1206) {
+            if (ServerPacket.field2728 == netWriter.currentInboundPacket) {
                for(var21 = 0; var21 < class282.field3631; ++var21) {
                   class140 var49 = class49.method1383(var21);
                   if (null != var49) {
@@ -5195,42 +5195,42 @@ public final class client extends class19 implements class318 {
 
                class108.method2105();
                field552 += 32;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2744 == var1.field1206) {
+            if (ServerPacket.field2744 == netWriter.currentInboundPacket) {
                class153.method2544(false, var4);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2718 == var1.field1206) {
+            if (ServerPacket.field2718 == netWriter.currentInboundPacket) {
                class13.field80.method1329();
                field610 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2769 == var1.field1206) {
+            if (ServerPacket.field2769 == netWriter.currentInboundPacket) {
                class44.field372 = null;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2735) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2735) {
                class13.method99(class228.field2680);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2694) {
-               class239.method4125(false, var1.field1201);
-               var1.field1206 = null;
+            if (netWriter.currentInboundPacket == ServerPacket.field2694) {
+               class239.method4125(false, netWriter.field1201);
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2777) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2777) {
                var21 = var4.method6172();
                var23 = var4.method6043();
                if (var21 < -70000) {
@@ -5238,12 +5238,12 @@ public final class client extends class19 implements class318 {
                }
 
                if (var21 >= 0) {
-                  var30 = class87.method1995(var21);
+                  var30 = Clock.method1995(var21);
                } else {
                   var30 = null;
                }
 
-               for(; var4.offset < var1.field1209; class140.method2362(var23, var31, var32 - 1, var36)) {
+               for(; var4.offset < netWriter.field1209; class140.method2362(var23, var31, var32 - 1, var36)) {
                   var31 = var4.method5962();
                   var32 = var4.method6043();
                   var36 = 0;
@@ -5266,26 +5266,26 @@ public final class client extends class19 implements class318 {
 
                class108.method2105();
                field641[++field575 - 1 & 31] = var23 & 32767;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2765 == var1.field1206) {
+            if (ServerPacket.field2765 == netWriter.currentInboundPacket) {
                var37 = var4.method5948() == 1;
                if (var37) {
-                  class178.field2067 = class87.method1989() - var4.method5954();
+                  class178.field2067 = Clock.now() - var4.method5954();
                   class293.field3711 = new class279(var4, true);
                } else {
                   class293.field3711 = null;
                }
 
                field480 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
             long var10;
-            if (var1.field1206 == class230.field2785) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2785) {
                var35 = var4.method5957();
                var24 = var4.method5954();
                var8 = (long)var4.method6043();
@@ -5316,35 +5316,35 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2759 == var1.field1206) {
+            if (ServerPacket.field2759 == netWriter.currentInboundPacket) {
                field423 = var4.method6076() * 30;
                field517 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2742) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2742) {
                var21 = var4.method5948();
                class178.method3185(var21);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2716) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2716) {
                field606 = field593;
                var20 = var4.method5949();
-               if (var1.field1209 == 1) {
+               if (netWriter.field1209 == 1) {
                   if (var20 >= 0) {
                      field638[var20] = null;
                   } else {
                      class322.field3845 = null;
                   }
 
-                  var1.field1206 = null;
+                  netWriter.currentInboundPacket = null;
                   return true;
                }
 
@@ -5354,17 +5354,17 @@ public final class client extends class19 implements class318 {
                   class322.field3845 = new class124(var4);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2712 == var1.field1206) {
+            if (ServerPacket.field2712 == netWriter.currentInboundPacket) {
                class13.method99(class228.field2684);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2705 == var1.field1206) {
+            if (ServerPacket.field2705 == netWriter.currentInboundPacket) {
                var21 = var4.method5987();
                if (var21 == 65535) {
                   var21 = -1;
@@ -5380,33 +5380,33 @@ public final class client extends class19 implements class318 {
 
                for(var32 = var21; var32 <= var7; ++var32) {
                   var10 = ((long)var31 << 32) + (long)var32;
-                  class354 var40 = field469.method5746(var10);
+                  Node var40 = field469.method5746(var10);
                   if (var40 != null) {
                      var40.method5437();
                   }
 
-                  field469.method5737(new class353(var23), var10);
+                  field469.put(new class353(var23), var10);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2729 == var1.field1206) {
-               class13.field80.field713.method5080(var4, var1.field1209);
+            if (ServerPacket.field2729 == netWriter.currentInboundPacket) {
+               class13.field80.field713.method5080(var4, netWriter.field1209);
                class253.method4302();
                field610 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2693 == var1.field1206) {
+            if (ServerPacket.field2693 == netWriter.currentInboundPacket) {
                class145.method2449();
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return false;
             }
 
-            if (var1.field1206 == class230.field2739) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2739) {
                var21 = var4.method5995();
                var23 = var4.method6043();
                if (65535 == var23) {
@@ -5414,12 +5414,12 @@ public final class client extends class19 implements class318 {
                }
 
                var7 = var4.method5995();
-               var29 = class87.method1995(var7);
+               var29 = Clock.method1995(var7);
                class157 var9;
                if (!var29.field2993) {
                   if (var23 == -1) {
                      var29.field2950 = 0;
-                     var1.field1206 = null;
+                     netWriter.currentInboundPacket = null;
                      return true;
                   }
 
@@ -5455,15 +5455,15 @@ public final class client extends class19 implements class318 {
                   class81.method1869(var29);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2701 == var1.field1206) {
+            if (ServerPacket.field2701 == netWriter.currentInboundPacket) {
                var21 = var4.method5951();
                var23 = var4.method5989();
                var7 = var4.method5995();
-               var29 = class87.method1995(var7);
+               var29 = Clock.method1995(var7);
                if (var23 != var29.field2947 || var29.field3019 != var21 || 0 != var29.field3063 || var29.field2964 != 0) {
                   var29.field2947 = var23;
                   var29.field3019 = var21;
@@ -5476,11 +5476,11 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2762) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2762) {
                var21 = var4.method6043();
                var23 = var4.method5995();
                class244.field2912[var21] = var23;
@@ -5490,11 +5490,11 @@ public final class client extends class19 implements class318 {
 
                class46.method801(var21);
                field594[++field552 - 1 & 31] = var21;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2704) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2704) {
                field615 = true;
                class108.field1324 = var4.method5948();
                class155.field1714 = var4.method5948();
@@ -5507,17 +5507,17 @@ public final class client extends class19 implements class318 {
                   class337.field3924 = class123.method2216(class65.field934, class358.field4012, class285.field3652) - class7.field15;
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2780 == var1.field1206) {
+            if (ServerPacket.field2780 == netWriter.currentInboundPacket) {
                class13.method99(class228.field2675);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2725) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2725) {
                var21 = var4.method6172();
                var23 = var4.method6172();
                var7 = class264.method4339();
@@ -5527,19 +5527,19 @@ public final class client extends class19 implements class318 {
                var28.field2691.method5994(var21);
                var28.field2691.method5972(var23);
                field453.method1963(var28);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2715) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2715) {
                var21 = var4.method6043();
                class203.method3692(var21);
                field641[++field575 - 1 & 31] = var21 & 32767;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2711) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2711) {
                if (class44.field372 == null) {
                   class44.field372 = new class340(class287.field3664);
                }
@@ -5547,36 +5547,36 @@ public final class client extends class19 implements class318 {
                class393 var25 = class287.field3664.method5407(var4);
                class44.field372.field3936.method5750(var25.field4241, var25.field4242);
                field600[++field601 - 1 & 31] = var25.field4241;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2772) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2772) {
                class13.method99(class228.field2676);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2699) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2699) {
                var4.offset += 28;
                if (var4.method5973()) {
                   class63.method1659(var4, var4.offset - 28);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2697 == var1.field1206) {
-               class239.method4125(true, var1.field1201);
-               var1.field1206 = null;
+            if (ServerPacket.field2697 == netWriter.currentInboundPacket) {
+               class239.method4125(true, netWriter.field1201);
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2760 == var1.field1206) {
+            if (ServerPacket.field2760 == netWriter.currentInboundPacket) {
                var21 = var4.method5997();
                var23 = var4.method6076();
-               var30 = class87.method1995(var21);
+               var30 = Clock.method1995(var21);
                if (null != var30 && 0 == var30.field2977) {
                   if (var23 > var30.field3091 - var30.field2990) {
                      var23 = var30.field3091 - var30.field2990;
@@ -5592,39 +5592,39 @@ public final class client extends class19 implements class318 {
                   }
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2710 == var1.field1206) {
+            if (ServerPacket.field2710 == netWriter.currentInboundPacket) {
                class108.method2105();
                field576 = var4.method5951();
                field517 = field593;
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2770) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2770) {
                class13.method99(class228.field2682);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2754) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2754) {
                var21 = var4.method6076();
                var23 = var4.method5997();
-               var30 = class87.method1995(var23);
+               var30 = Clock.method1995(var23);
                if (var30.field2950 != 2 || var30.field3002 != var21) {
                   var30.field2950 = 2;
                   var30.field3002 = var21;
                   class81.method1869(var30);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2714) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2714) {
                class48 var22 = new class48();
                var22.field701 = var4.method5957();
                var22.field697 = var4.method6043();
@@ -5634,24 +5634,24 @@ public final class client extends class19 implements class318 {
                var3.method5279();
                var3 = null;
                class157.method2717(var22);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return false;
             }
 
-            if (var1.field1206 == class230.field2775) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2775) {
                class13.method99(class228.field2683);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2731) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2731) {
                var21 = var4.method5948();
                class250.method4286(var21);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return false;
             }
 
-            if (class230.field2786 == var1.field1206) {
+            if (ServerPacket.field2786 == netWriter.currentInboundPacket) {
                field644 = var4.method5948();
                if (255 == field644) {
                   field644 = 0;
@@ -5662,17 +5662,17 @@ public final class client extends class19 implements class318 {
                   field597 = 0;
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2743) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2743) {
                class44.field372 = new class340(class287.field3664);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (class230.field2788 == var1.field1206) {
+            if (ServerPacket.field2788 == netWriter.currentInboundPacket) {
                field606 = field593;
                var20 = var4.method5949();
                class121 var26 = new class121(var4);
@@ -5684,11 +5684,11 @@ public final class client extends class19 implements class318 {
                }
 
                var26.method2203(var27);
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            if (var1.field1206 == class230.field2723) {
+            if (netWriter.currentInboundPacket == ServerPacket.field2723) {
                var20 = var4.method5949();
                var24 = (long)var4.method6043();
                var8 = (long)var4.method5952();
@@ -5714,18 +5714,18 @@ public final class client extends class19 implements class318 {
                   class130.method2276(var15, "", var53, var13.field1430);
                }
 
-               var1.field1206 = null;
+               netWriter.currentInboundPacket = null;
                return true;
             }
 
-            class333.method5330("" + (var1.field1206 != null ? var1.field1206.field2787 * 1005948575 * -820114081 : -1) + class79.field1140 + (var1.field1214 != null ? var1.field1214.field2787 * 1005948575 * -820114081 : -1) + class79.field1140 + (var1.field1213 != null ? -820114081 * var1.field1213.field2787 * 1005948575 : -1) + class79.field1140 + var1.field1209, (Throwable)null);
+            class333.method5330("" + (netWriter.currentInboundPacket != null ? netWriter.currentInboundPacket.opcode * 1005948575 * -820114081 : -1) + class79.field1140 + (netWriter.field1214 != null ? netWriter.field1214.opcode * 1005948575 * -820114081 : -1) + class79.field1140 + (netWriter.field1213 != null ? -820114081 * netWriter.field1213.opcode * 1005948575 : -1) + class79.field1140 + netWriter.field1209, (Throwable)null);
             class145.method2449();
          } catch (IOException var18) {
             class175.method3140();
          } catch (Exception var19) {
-            var6 = "" + (var1.field1206 != null ? var1.field1206.field2787 * 1005948575 * -820114081 : -1) + class79.field1140 + (var1.field1214 != null ? var1.field1214.field2787 * 1005948575 * -820114081 : -1) + class79.field1140 + (null != var1.field1213 ? var1.field1213.field2787 * 1005948575 * -820114081 : -1) + class79.field1140 + var1.field1209 + class79.field1140 + (class281.field3625 + class20.field140.field1076[0]) + class79.field1140 + (class20.field140.field1077[0] + class78.field1134) + class79.field1140;
+            var6 = "" + (netWriter.currentInboundPacket != null ? netWriter.currentInboundPacket.opcode * 1005948575 * -820114081 : -1) + class79.field1140 + (netWriter.field1214 != null ? netWriter.field1214.opcode * 1005948575 * -820114081 : -1) + class79.field1140 + (null != netWriter.field1213 ? netWriter.field1213.opcode * 1005948575 * -820114081 : -1) + class79.field1140 + netWriter.field1209 + class79.field1140 + (class281.field3625 + class20.field140.field1076[0]) + class79.field1140 + (class20.field140.field1077[0] + class78.field1134) + class79.field1140;
 
-            for(var7 = 0; var7 < var1.field1209 && var7 < 50; ++var7) {
+            for(var7 = 0; var7 < netWriter.field1209 && var7 < 50; ++var7) {
                var6 = var6 + var4.payload[var7] + class79.field1140;
             }
 
@@ -5816,7 +5816,7 @@ public final class client extends class19 implements class318 {
                      label279: {
                         var5 = field678[var3];
                         var6 = field547[var3];
-                        class249 var7 = class87.method1995(var6);
+                        class249 var7 = Clock.method1995(var6);
                         if (!class147.method2464(class241.method4140(var7))) {
                            var9 = class241.method4140(var7);
                            boolean var8 = 0 != (var9 >> 29 & 1);
@@ -5838,7 +5838,7 @@ public final class client extends class19 implements class318 {
                            class81.method1869(field688);
                         }
 
-                        field688 = class87.method1995(var6);
+                        field688 = Clock.method1995(var6);
                         field516 = var5;
                         field404 = class20.field150;
                         field584 = class20.field151;
@@ -5902,7 +5902,7 @@ public final class client extends class19 implements class318 {
    }
 
    void method834(class249 var1) {
-      class249 var3 = var1.field3001 == -1 ? null : class87.method1995(var1.field3001);
+      class249 var3 = var1.field3001 == -1 ? null : Clock.method1995(var1.field3001);
       int var4;
       int var5;
       if (var3 == null) {

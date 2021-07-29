@@ -100,7 +100,7 @@ public class class157 extends class349 {
    void method2686() {
    }
 
-   void method2687(class385 var1) {
+   void method2687(Buffer var1) {
       while(true) {
          int var3 = var1.method5948();
          if (var3 == 0) {
@@ -111,7 +111,7 @@ public class class157 extends class349 {
       }
    }
 
-   void method2688(class385 var1, int var2) {
+   void method2688(Buffer var1, int var2) {
       if (1 == var2) {
          this.field1795 = var1.method6043();
       } else if (var2 == 2) {

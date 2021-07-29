@@ -1,35 +1,35 @@
 import java.math.BigInteger;
 
-public class class385 extends class354 {
-   static int[] field4183;
-   static long[] field4181;
+public class Buffer extends Node {
+   static int[] crc32Table;
+   static long[] crc64Table;
    public byte[] payload;
    public int offset;
 
    static {
-      field4183 = new int[256];
+      crc32Table = new int[256];
 
-      int var2;
-      for(int var1 = 0; var1 < 256; ++var1) {
-         int var0 = var1;
+      int j;
+      for(int i = 0; i < 256; ++i) {
+         int crc = i;
 
-         for(var2 = 0; var2 < 8; ++var2) {
-            if (1 == (var0 & 1)) {
-               var0 = var0 >>> 1 ^ -306674912;
+         for(j = 0; j < 8; ++j) {
+            if (1 == (crc & 1)) {
+               crc = crc >>> 1 ^ -306674912;
             } else {
-               var0 >>>= 1;
+               crc >>>= 1;
             }
          }
 
-         field4183[var1] = var0;
+         crc32Table[i] = crc;
       }
 
-      field4181 = new long[256];
+      crc64Table = new long[256];
 
-      for(var2 = 0; var2 < 256; ++var2) {
-         long var4 = (long)var2;
+      for(j = 0; j < 256; ++j) {
+         long var4 = (long)j;
 
-         for(int var3 = 0; var3 < 8; ++var3) {
+         for(int k = 0; k < 8; ++k) {
             if ((var4 & 1L) == 1L) {
                var4 = var4 >>> 1 ^ -3932672073523589310L;
             } else {
@@ -37,18 +37,18 @@ public class class385 extends class354 {
             }
          }
 
-         field4181[var2] = var4;
+         crc64Table[j] = var4;
       }
 
    }
 
-   public class385(int var1) {
-      this.payload = RSA.method1544(var1);
+   public Buffer(int size) {
+      this.payload = class410.newSyncPooledBuffer(size);
       this.offset = 0;
    }
 
-   public class385(byte[] var1) {
-      this.payload = var1;
+   public Buffer(byte[] payload) {
+      this.payload = payload;
       this.offset = 0;
    }
 
@@ -69,7 +69,7 @@ public class class385 extends class354 {
       this.payload[++this.offset - 1] = (byte)var1;
    }
 
-   public void method6111(int var1) {
+   public void writeMedium(int var1) {
       this.payload[++this.offset - 1] = (byte)(var1 >> 16);
       this.payload[++this.offset - 1] = (byte)(var1 >> 8);
       this.payload[++this.offset - 1] = (byte)var1;
@@ -176,7 +176,7 @@ public class class385 extends class354 {
 
    }
 
-   public void method5942(class385 var1) {
+   public void method5942(Buffer var1) {
       this.method6003(var1.payload, 0, var1.offset);
    }
 

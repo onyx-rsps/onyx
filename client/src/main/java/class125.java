@@ -13,78 +13,78 @@ public class class125 {
    }
 
    public static void method2248(class330 var0, boolean var1) {
-      if (class278.field3614 != null) {
+      if (JS5Worker.connection != null) {
          try {
-            class278.field3614.method5279();
+            JS5Worker.connection.method5279();
          } catch (Exception var9) {
          }
 
-         class278.field3614 = null;
+         JS5Worker.connection = null;
       }
 
-      class278.field3614 = var0;
-      class385 var3;
-      if (null != class278.field3614) {
+      JS5Worker.connection = var0;
+      Buffer var3;
+      if (null != JS5Worker.connection) {
          try {
-            var3 = new class385(4);
+            var3 = new Buffer(4);
             var3.writeByte(var1 ? 2 : 3);
-            var3.method6111(0);
-            class278.field3614.method5283(var3.payload, 0, 4);
+            var3.writeMedium(0);
+            JS5Worker.connection.write(var3.payload, 0, 4);
          } catch (IOException var8) {
             try {
-               class278.field3614.method5279();
+               JS5Worker.connection.method5279();
             } catch (Exception var7) {
             }
 
-            ++class278.field3605;
-            class278.field3614 = null;
+            ++JS5Worker.field3605;
+            JS5Worker.connection = null;
          }
       }
 
-      class278.field3608.offset = 0;
-      class278.field3595 = null;
+      JS5Worker.field3608.offset = 0;
+      JS5Worker.field3595 = null;
       class94.field1248 = null;
-      class278.field3609 = 0;
+      JS5Worker.field3609 = 0;
 
       while(true) {
-         class276 var10 = (class276)class278.field3600.method5736();
+         CacheBuffer var10 = (CacheBuffer) JS5Worker.pendingPriorityReceived.first();
          if (var10 == null) {
             while(true) {
-               var10 = (class276)class278.field3611.method5736();
+               var10 = (CacheBuffer) JS5Worker.field3611.first();
                if (var10 == null) {
-                  if (class278.field3613 != 0) {
+                  if (JS5Worker.field3613 != 0) {
                      try {
-                        var3 = new class385(4);
+                        var3 = new Buffer(4);
                         var3.writeByte(4);
-                        var3.writeByte(class278.field3613);
+                        var3.writeByte(JS5Worker.field3613);
                         var3.method6122(0);
-                        class278.field3614.method5283(var3.payload, 0, 4);
+                        JS5Worker.connection.write(var3.payload, 0, 4);
                      } catch (IOException var6) {
                         try {
-                           class278.field3614.method5279();
+                           JS5Worker.connection.method5279();
                         } catch (Exception var5) {
                         }
 
-                        ++class278.field3605;
-                        class278.field3614 = null;
+                        ++JS5Worker.field3605;
+                        JS5Worker.connection = null;
                      }
                   }
 
-                  class278.field3596 = 0;
-                  class278.field3597 = class87.method1989();
+                  JS5Worker.latency = 0;
+                  JS5Worker.lastAttemptTime = Clock.now();
                   return;
                }
 
-               class278.field3602.method4660(var10);
-               class278.field3615.method5737(var10, var10.field3966);
-               ++class278.field3604;
-               --class278.field3606;
+               JS5Worker.field3602.method4660(var10);
+               JS5Worker.field3615.put(var10, var10.key);
+               ++JS5Worker.pendingCount;
+               --JS5Worker.pendingResponseCount;
             }
          }
 
-         class278.field3598.method5737(var10, var10.field3966);
-         ++class278.field3599;
-         --class278.field3607;
+         JS5Worker.pendingPriority.put(var10, var10.key);
+         ++JS5Worker.pendingPriorityCount;
+         --JS5Worker.pendingPriorityResponseCount;
       }
    }
 

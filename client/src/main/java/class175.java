@@ -56,7 +56,7 @@ public class class175 implements class188 {
          byte[] var4 = class152.field1692.method4412(14, var0);
          var3 = new class152();
          if (null != var4) {
-            var3.method2534(new class385(var4));
+            var3.method2534(new Buffer(var4));
          }
 
          class152.field1689.method3882(var3, (long)var0);
@@ -101,7 +101,7 @@ public class class175 implements class188 {
       }
    }
 
-   public void method3256(class385 var1) {
+   public void method3256(Buffer var1) {
       this.field2032 = var1.method5948();
       this.field2023 = var1.method5948();
       this.field2029 = var1.method6043();

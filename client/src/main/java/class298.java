@@ -2,11 +2,11 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public class class298 implements Iterable, Collection {
-   class354 field3723;
-   class354 field3724;
+   Node field3723;
+   Node field3724;
 
    public class298() {
-      this.field3723 = new class354();
+      this.field3723 = new Node();
       this.field3723.field3965 = this.field3723;
       this.field3723.field3967 = this.field3723;
    }
@@ -18,7 +18,7 @@ public class class298 implements Iterable, Collection {
 
    }
 
-   public void method4721(class354 var1) {
+   public void method4721(Node var1) {
       if (var1.field3967 != null) {
          var1.method5437();
       }
@@ -29,7 +29,7 @@ public class class298 implements Iterable, Collection {
       var1.field3965.field3967 = var1;
    }
 
-   public void method4722(class354 var1) {
+   public void method4722(Node var1) {
       if (var1.field3967 != null) {
          var1.method5437();
       }
@@ -40,7 +40,7 @@ public class class298 implements Iterable, Collection {
       var1.field3965.field3967 = var1;
    }
 
-   public static void method4778(class354 var0, class354 var1) {
+   public static void method4778(Node var0, Node var1) {
       if (var0.field3967 != null) {
          var0.method5437();
       }
@@ -51,12 +51,12 @@ public class class298 implements Iterable, Collection {
       var0.field3965.field3967 = var0;
    }
 
-   public class354 method4724() {
-      return this.method4725((class354)null);
+   public Node method4724() {
+      return this.method4725((Node)null);
    }
 
-   class354 method4725(class354 var1) {
-      class354 var2;
+   Node method4725(Node var1) {
+      Node var2;
       if (var1 == null) {
          var2 = this.field3723.field3965;
       } else {
@@ -72,8 +72,8 @@ public class class298 implements Iterable, Collection {
       }
    }
 
-   public class354 method4726() {
-      class354 var1 = this.field3724;
+   public Node method4726() {
+      Node var1 = this.field3724;
       if (var1 == this.field3723) {
          this.field3724 = null;
          return null;
@@ -86,7 +86,7 @@ public class class298 implements Iterable, Collection {
    int method4733() {
       int var1 = 0;
 
-      for(class354 var2 = this.field3723.field3965; var2 != this.field3723; var2 = var2.field3965) {
+      for(Node var2 = this.field3723.field3965; var2 != this.field3723; var2 = var2.field3965) {
          ++var1;
       }
 
@@ -97,11 +97,11 @@ public class class298 implements Iterable, Collection {
       return this.field3723.field3965 == this.field3723;
    }
 
-   class354[] method4729() {
-      class354[] var1 = new class354[this.method4733()];
+   Node[] method4729() {
+      Node[] var1 = new Node[this.method4733()];
       int var2 = 0;
 
-      for(class354 var3 = this.field3723.field3965; var3 != this.field3723; var3 = var3.field3965) {
+      for(Node var3 = this.field3723.field3965; var3 != this.field3723; var3 = var3.field3965) {
          var1[var2++] = var3;
       }
 
@@ -131,14 +131,14 @@ public class class298 implements Iterable, Collection {
    public Object[] toArray(Object[] var1) {
       int var2 = 0;
 
-      for(class354 var3 = this.field3723.field3965; var3 != this.field3723; var3 = var3.field3965) {
+      for(Node var3 = this.field3723.field3965; var3 != this.field3723; var3 = var3.field3965) {
          var1[var2++] = var3;
       }
 
       return var1;
    }
 
-   boolean method4732(class354 var1) {
+   boolean method4732(Node var1) {
       this.method4721(var1);
       return true;
    }

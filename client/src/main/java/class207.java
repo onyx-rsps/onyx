@@ -1125,7 +1125,7 @@ public class class207 extends class201 {
                var13 = field2459[var10];
                int var14;
                if (!var1 || var11 != -5000 && var12 != -5000 && var13 != -5000) {
-                  if (var2 && class278.method4503(field2431[var8], field2431[var9], field2431[var10], var11, var12, var13, var6)) {
+                  if (var2 && JS5Worker.method4503(field2431[var8], field2431[var9], field2431[var10], var11, var12, var13, var6)) {
                      class208.field2485[++class208.field2484 - 1] = var4;
                      var2 = false;
                   }

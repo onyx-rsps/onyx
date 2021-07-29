@@ -59,7 +59,7 @@ public class class185 implements class188 {
       }
    }
 
-   public void method3256(class385 var1) {
+   public void method3256(Buffer var1) {
       this.field2105 = var1.method5948();
       this.field2103 = var1.method5948();
       this.field2104 = var1.method6043();

@@ -227,7 +227,7 @@ public class class227 implements class226 {
       int var4 = -1;
 
       for(int var5 = var1; var5 < var2; ++var5) {
-         var4 = var4 >>> 8 ^ class385.field4183[(var4 ^ var0[var5]) & 255];
+         var4 = var4 >>> 8 ^ Buffer.crc32Table[(var4 ^ var0[var5]) & 255];
       }
 
       var4 = ~var4;
