@@ -5,13 +5,13 @@ public class class120 {
    long field1412;
    long field1418;
 
-   public class120(class384 var1) {
+   public class120(Buffer var1) {
       this.field1412 = -1L;
       this.field1410 = new class297();
       this.method2415(var1);
    }
 
-   void method2415(class384 var1) {
+   void method2415(Buffer var1) {
       this.field1418 = var1.method6566();
       this.field1412 = var1.method6566();
 

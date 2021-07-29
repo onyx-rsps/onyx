@@ -42,7 +42,7 @@ public class class48 {
       }
    }
 
-   final void method1362(class384 var1, int var2) {
+   final void method1362(Buffer var1, int var2) {
       this.field711.method5618(var1, var2);
       this.field713 = 2;
       class107.method2225();
@@ -162,7 +162,7 @@ public class class48 {
          byte[] var3 = class139.field1528.method4920(16, var0);
          var2 = new class139();
          if (var3 != null) {
-            var2.method2630(new class384(var3));
+            var2.method2630(new Buffer(var3));
          }
 
          class139.field1525.method4308(var2, (long)var0);

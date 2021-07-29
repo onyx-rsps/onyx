@@ -143,7 +143,7 @@ public final class class10 implements KeyListener, FocusListener {
          var2 = new class156();
          var2.field1801 = var0;
          if (var3 != null) {
-            var2.method2980(new class384(var3));
+            var2.method2980(new Buffer(var3));
          }
 
          var2.method2979();

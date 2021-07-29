@@ -12,7 +12,7 @@ public class class121 extends class103 {
       var1.method2303(this.field1421, this.field1420);
    }
 
-   void vmethod2494(class384 var1) {
+   void vmethod2494(Buffer var1) {
       this.field1421 = var1.method6784();
       this.field1420 = var1.method6784();
    }

@@ -2,7 +2,7 @@ public class class239 extends class353 {
    byte[] field2880;
    class363 field2881;
 
-   class239(class384 var1) {
+   class239(Buffer var1) {
       var1.field4181 = (var1.payload.length - 3) * 99;
       int var2 = var1.method6560();
       int var3 = var1.method6655();
@@ -162,7 +162,7 @@ public class class239 extends class353 {
       int var50 = var1.field4181 * -1084587701;
       var1.field4181 = (var1.field4181 * -1084587701 + var5 * 3) * 99;
       this.field2880 = new byte[var4];
-      class384 var51 = new class384(this.field2880);
+      Buffer var51 = new Buffer(this.field2880);
       var51.writeInt(1297377380);
       var51.writeInt(6);
       var51.method6734(var2 > 1 ? 1 : 0);
@@ -404,6 +404,6 @@ public class class239 extends class353 {
 
    static class239 method4600(class276 var0, int var1, int var2) {
       byte[] var3 = var0.method4920(var1, var2);
-      return var3 == null ? null : new class239(new class384(var3));
+      return var3 == null ? null : new class239(new Buffer(var3));
    }
 }

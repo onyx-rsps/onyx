@@ -12,14 +12,14 @@ public class class141 extends class348 {
       this.field1556 = false;
    }
 
-   void method2674(class384 var1, int var2) {
+   void method2674(Buffer var1, int var2) {
       if (var2 == 2) {
          this.field1556 = true;
       }
 
    }
 
-   void method2683(class384 var1) {
+   void method2683(Buffer var1) {
       while(true) {
          int var3 = var1.method6560();
          if (var3 == 0) {

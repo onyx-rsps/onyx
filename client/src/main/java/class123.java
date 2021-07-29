@@ -18,7 +18,7 @@ public class class123 extends class353 {
       new BitSet(65536);
    }
 
-   public class123(class384 var1) {
+   public class123(Buffer var1) {
       this.field1434 = true;
       this.field1429 = null;
       this.method2446(var1);
@@ -33,7 +33,7 @@ public class class123 extends class353 {
       return this.field1435.size();
    }
 
-   void method2446(class384 var1) {
+   void method2446(Buffer var1) {
       int var3 = var1.method6560();
       if ((var3 & 1) != 0) {
          this.field1431 = true;
@@ -123,7 +123,7 @@ public class class123 extends class353 {
          var2 = new class155();
          var2.field1752 = var0;
          if (var3 != null) {
-            var2.method2930(new class384(var3));
+            var2.method2930(new Buffer(var3));
          }
 
          var2.method2921();

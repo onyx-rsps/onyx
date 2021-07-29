@@ -14,7 +14,7 @@ public class class316 extends class325 {
       return new class326[var1];
    }
 
-   public void method5602(class384 var1, int var2) {
+   public void method5602(Buffer var1, int var2) {
       while(true) {
          if (var1.field4181 * -1084587701 < var2) {
             int var4 = var1.method6560();

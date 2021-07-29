@@ -210,7 +210,7 @@ public final class class69 extends class71 {
 
    }
 
-   final void method1749(class384 var1) {
+   final void method1749(Buffer var1) {
       var1.field4181 = 0;
       int var3 = var1.method6560();
       this.field995 = var1.method6561();

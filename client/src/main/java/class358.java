@@ -473,7 +473,7 @@ public class class358 {
       this.field4042 = new HashMap(var9.length);
 
       for(int var10 = 0; var10 < var9.length; ++var10) {
-         class384 var11 = new class384(this.field4043.method4920(var8, var9[var10]));
+         Buffer var11 = new Buffer(this.field4043.method4920(var8, var9[var10]));
          class167 var12 = new class167();
          var12.method3220(var11, var9[var10]);
          this.field4042.put(var12.method3229(), var12);

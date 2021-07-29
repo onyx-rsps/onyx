@@ -97,7 +97,7 @@ public class class292 implements class289 {
          class55.field802.method7066(class55.field824 + 382, 0);
          class88.field1228.method6969(class55.field824 + 382 - class88.field1228.field4262 / 2, 18);
          int var5;
-         if (client.field412 == 0 || client.field412 == 5) {
+         if (client.gameState == 0 || client.gameState == 5) {
             byte var4 = 20;
             var0.method5441("RuneScape is loading - please wait...", class55.field816 + 180, 245 - var4, 16777215, -1);
             var5 = 253 - var4;
@@ -113,7 +113,7 @@ public class class292 implements class289 {
          short var17;
          int var18;
          short var19;
-         if (client.field412 == 20) {
+         if (client.gameState == 20) {
             class304.field3759.method6969(class55.field816 + 180 - class304.field3759.field4262 / 2, 271 - class304.field3759.field4263 / 2);
             var17 = 201;
             var0.method5441(class55.field822, class55.field816 + 180, var17, 16776960, 0);
@@ -141,7 +141,7 @@ public class class292 implements class289 {
             }
          }
 
-         if (client.field412 == 10 || client.field412 == 11) {
+         if (client.gameState == 10 || client.gameState == 11) {
             class304.field3759.method6969(class55.field816, 171);
             short var12;
             if (class55.field811 == 0) {
@@ -398,7 +398,7 @@ public class class292 implements class289 {
             }
          }
 
-         if (client.field412 >= 10) {
+         if (client.gameState >= 10) {
             int[] var13 = new int[4];
             class393.method6874(var13);
             class393.method6894(class55.field824, 0, class55.field824 + 765, client.field686);
@@ -408,7 +408,7 @@ public class class292 implements class289 {
          }
 
          class132.field1485[class37.field307.field1113 ? 1 : 0].method6969(class55.field824 + 765 - 40, 463);
-         if (client.field412 > 5 && class283.field3643 == class291.field3693) {
+         if (client.gameState > 5 && class283.field3643 == class291.field3693) {
             if (class235.field2846 != null) {
                var18 = class55.field824 + 5;
                var19 = 463;
@@ -454,7 +454,7 @@ public class class292 implements class289 {
             var6.write("data1=req");
             var6.flush();
             InputStream var7 = var5.getInputStream();
-            class384 var8 = new class384(new byte[1000]);
+            Buffer var8 = new Buffer(new byte[1000]);
 
             while(true) {
                int var9 = var7.read(var8.payload, var8.field4181 * -1084587701, 1000 - var8.field4181 * -1084587701);

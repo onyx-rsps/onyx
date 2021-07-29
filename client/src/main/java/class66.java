@@ -7,7 +7,7 @@ public class class66 extends class353 {
       this.field947 = false;
    }
 
-   public static void method1730(class384 var0, int var1) {
+   public static void method1730(Buffer var0, int var1) {
       if (class130.field1470 != null) {
          try {
             class130.field1470.method6378(0L);

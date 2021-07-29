@@ -26,7 +26,7 @@ public class class376 implements class289 {
       return this.field4158;
    }
 
-   public Object method6464(class384 var1) {
+   public Object method6464(Buffer var1) {
       return this.field4162.vmethod6468(var1);
    }
 

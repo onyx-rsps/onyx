@@ -67,7 +67,7 @@ public class class174 implements class187 {
       }
    }
 
-   public void vmethod3660(class384 var1) {
+   public void vmethod3660(Buffer var1) {
       this.field2031 = var1.method6560();
       this.field2022 = var1.method6560();
       this.field2028 = var1.method6655();
@@ -97,7 +97,7 @@ public class class174 implements class187 {
          byte[] var8 = class151.field1691.method4920(14, var0);
          var3 = new class151();
          if (var8 != null) {
-            var3.method2827(new class384(var8));
+            var3.method2827(new Buffer(var8));
          }
 
          class151.field1688.method4308(var3, (long)var0);

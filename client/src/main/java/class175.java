@@ -35,7 +35,7 @@ public class class175 implements class289 {
       class19.field142 = 0;
    }
 
-   public static String method3535(class384 var0) {
+   public static String method3535(Buffer var0) {
       String var2;
       try {
          int var3 = var0.method6574();

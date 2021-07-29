@@ -50,7 +50,7 @@ public class class311 {
       this.field3785 = class86.currentTime();
    }
 
-   public void method5584(class384 var1) {
+   public void method5584(Buffer var1) {
       class262.method4818(var1, this.field3784);
       class262.method4818(var1, this.field3782);
       class262.method4818(var1, this.field3788);

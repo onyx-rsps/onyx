@@ -6,8 +6,8 @@ import java.awt.Color
 import java.awt.Dimension
 import java.awt.GridLayout
 import java.net.URL
-import javax.swing.JDialog
-import javax.swing.JFrame
+import javax.swing.*
+import kotlin.system.exitProcess
 
 object ClientLauncher {
 
@@ -55,6 +55,13 @@ object ClientLauncher {
 
         FlatOneDarkIJTheme.setup()
 
+        val icons = listOf(
+            "logo-64.png",
+            "logo-128.png",
+            "logo-256.png",
+            "logo-400.png"
+        ).map { ImageIcon(ClientLauncher::class.java.classLoader.getResource(it)).image }
+
         val applet = client()
         applet.background = Color.BLACK
         applet.preferredSize = Dimension(params["applet_minwidth"]!!.toInt(), params["applet_minheight"]!!.toInt())
@@ -65,11 +72,47 @@ object ClientLauncher {
         applet.isVisible = true
         applet.init()
 
+        val menuBar = JMenuBar().also { menuBar ->
+            JMenu("File").also { menu ->
+                JMenuItem("Exit").also { item ->
+                    item.addActionListener {
+                        exitProcess(0)
+                    }
+                    menu.add(item)
+                }
+                menuBar.add(menu)
+            }
+
+            JMenu("Edit").also { menu ->
+                JMenuItem("Preferences").also { item ->
+                    menu.add(item)
+                }
+                menuBar.add(menu)
+            }
+
+            JMenu("View").also { menu ->
+                JMenuItem("Developer Tools").also { item ->
+                    menu.add(item)
+                }
+                menuBar.add(menu)
+            }
+
+            JMenu("Help").also { menu ->
+                JMenuItem("About").also { item ->
+                    menu.add(item)
+                }
+                menuBar.add(menu)
+            }
+        }
+
         val frame = JFrame("Onyx")
         frame.defaultCloseOperation = JFrame.EXIT_ON_CLOSE
+        frame.iconImages = icons
+        frame.jMenuBar = menuBar
         frame.layout = GridLayout(1, 0)
         frame.add(applet)
         frame.pack()
+        frame.minimumSize = frame.size
         frame.setLocationRelativeTo(null)
         frame.isVisible = true
     }

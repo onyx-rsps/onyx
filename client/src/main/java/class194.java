@@ -11,7 +11,7 @@ public class class194 extends class353 {
    int[] field2206;
    int[] field2207;
 
-   class194(class384 var1) {
+   class194(Buffer var1) {
       this.field2209 = false;
       this.field2200 = var1.method6655();
       this.field2201 = var1.method6560() == 1;

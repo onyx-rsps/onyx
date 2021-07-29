@@ -12,7 +12,7 @@ public class class188 extends class167 {
    class188() {
    }
 
-   void method3664(class384 var1, boolean var2) {
+   void method3664(Buffer var1, boolean var2) {
       this.field2123 = new LinkedList();
       int var4 = var1.method6655();
 
@@ -27,7 +27,7 @@ public class class188 extends class167 {
 
    }
 
-   void method3666(class384 var1, class384 var2, int var3, boolean var4) {
+   void method3666(Buffer var1, Buffer var2, int var3, boolean var4) {
       this.method3220(var1, var3);
       int var6 = var2.method6655();
       this.field2124 = new HashSet(var6);

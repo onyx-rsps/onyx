@@ -3,7 +3,7 @@ public class class21 {
    int field161;
    int field162;
 
-   class21(class384 var1) {
+   class21(Buffer var1) {
       this.field160 = new class39[10];
 
       for(int var2 = 0; var2 < 10; ++var2) {
@@ -96,6 +96,6 @@ public class class21 {
 
    public static class21 method417(class276 var0, int var1, int var2) {
       byte[] var3 = var0.method4920(var1, var2);
-      return var3 == null ? null : new class21(new class384(var3));
+      return var3 == null ? null : new class21(new Buffer(var3));
    }
 }

@@ -67,7 +67,7 @@ public class class355 extends class353 {
       return var3;
    }
 
-   public void method6037(class384 var1) {
+   public void method6037(Buffer var1) {
       var1.writeByte(8);
       var1.writeByte(this.field3985);
       var1.writeByte(this.field3979 ? 1 : 0);

@@ -1,7 +1,7 @@
 public class class146 implements class289 {
    public static int field1611;
    static String field1614;
-   static long idleTime;
+   static long js5StartTime;
    static final class146 field1607;
    static final class146 field1608;
    static final class146 field1612;

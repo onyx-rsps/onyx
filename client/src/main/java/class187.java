@@ -9,5 +9,5 @@ public interface class187 {
 
    int[] vmethod3651(int var1, int var2, int var3);
 
-   void vmethod3660(class384 var1);
+   void vmethod3660(Buffer var1);
 }

@@ -18,7 +18,7 @@ public class class237 extends class353 {
       this.field2871 = new class233[128];
       this.field2872 = new byte[128];
       this.field2874 = new int[128];
-      class384 var2 = new class384(var1);
+      Buffer var2 = new Buffer(var1);
 
       int var3;
       for(var3 = 0; var2.payload[var3 + var2.field4181 * -1084587701] != 0; ++var3) {
@@ -556,7 +556,7 @@ public class class237 extends class353 {
 
          if (class277.field3613 != null) {
             try {
-               class384 var12 = new class384(4);
+               Buffer var12 = new Buffer(4);
                var12.writeByte(3);
                var12.method6723(0);
                class277.field3613.write(var12.payload, 0, 4);

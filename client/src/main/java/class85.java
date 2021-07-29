@@ -9,7 +9,7 @@ public class class85 {
    class297 field1201;
    class329 field1207;
    class383 field1200;
-   class384 field1203;
+   Buffer field1203;
    int field1202;
    int field1208;
    int field1209;
@@ -19,7 +19,7 @@ public class class85 {
    class85() {
       this.field1201 = new class297();
       this.field1202 = 0;
-      this.field1203 = new class384(5000);
+      this.field1203 = new Buffer(5000);
       this.field1200 = new class383(40000);
       this.field1205 = null;
       this.field1208 = 0;

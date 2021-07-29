@@ -19,7 +19,7 @@ public class class116 extends class119 {
       var3.field1302 = new class405(this.field1393);
    }
 
-   void vmethod2490(class384 var1) {
+   void vmethod2490(Buffer var1) {
       var1.method6560();
       this.field1394 = var1.method6655();
       this.field1395 = var1.method6561();

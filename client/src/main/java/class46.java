@@ -35,7 +35,7 @@ public class class46 implements Comparator {
    }
 
    static final byte[] method897(byte[] var0) {
-      class384 var2 = new class384(var0);
+      Buffer var2 = new Buffer(var0);
       int var3 = var2.method6560();
       int var4 = var2.method6784();
       if (var4 >= 0 && (class276.field3591 == 0 || var4 <= class276.field3591)) {

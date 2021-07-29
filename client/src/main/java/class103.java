@@ -7,7 +7,7 @@ public abstract class class103 extends class353 {
 
    abstract void vmethod2499(class114 var1);
 
-   abstract void vmethod2494(class384 var1);
+   abstract void vmethod2494(Buffer var1);
 
    public static int method2182(int var0) {
       return var0 >> 11 & 63;

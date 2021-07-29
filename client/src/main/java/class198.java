@@ -7,7 +7,7 @@ public class class198 extends class353 {
 
    class198(int var1, byte[] var2) {
       this.field2277 = var1;
-      class384 var3 = new class384(var2);
+      Buffer var3 = new Buffer(var2);
       this.field2274 = var3.method6560();
       this.field2273 = new int[this.field2274];
       this.field2275 = new int[this.field2274][];

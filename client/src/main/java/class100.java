@@ -16,7 +16,7 @@ public class class100 extends class103 {
       var1.method2302(this.field1278, this.field1279, this.field1277, this.field1280);
    }
 
-   void vmethod2494(class384 var1) {
+   void vmethod2494(Buffer var1) {
       this.field1278 = var1.method6655();
       this.field1279 = var1.method6784();
       this.field1277 = var1.method6560();
@@ -133,7 +133,7 @@ public class class100 extends class103 {
          byte[] var9 = class151.field1691.method4920(14, var0);
          var4 = new class151();
          if (var9 != null) {
-            var4.method2827(new class384(var9));
+            var4.method2827(new Buffer(var9));
          }
 
          class151.field1688.method4308(var4, (long)var0);
@@ -160,7 +160,7 @@ public class class100 extends class103 {
          byte[] var3 = class138.field1524.method4920(5, var0);
          var2 = new class138();
          if (var3 != null) {
-            var2.method2619(new class384(var3));
+            var2.method2619(new Buffer(var3));
          }
 
          class138.field1521.method4308(var2, (long)var0);

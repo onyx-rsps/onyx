@@ -59,7 +59,7 @@ public class class47 {
          byte[] var3 = class158.field1874.method4920(12, var0);
          var2 = new class158();
          if (var3 != null) {
-            var2.method3099(new class384(var3));
+            var2.method3099(new Buffer(var3));
          }
 
          var2.method3069();

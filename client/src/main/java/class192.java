@@ -471,11 +471,11 @@ public class class192 extends class200 {
    void method3722(byte[] var1) {
       boolean var2 = false;
       boolean var3 = false;
-      class384 var4 = new class384(var1);
-      class384 var5 = new class384(var1);
-      class384 var6 = new class384(var1);
-      class384 var7 = new class384(var1);
-      class384 var8 = new class384(var1);
+      Buffer var4 = new Buffer(var1);
+      Buffer var5 = new Buffer(var1);
+      Buffer var6 = new Buffer(var1);
+      Buffer var7 = new Buffer(var1);
+      Buffer var8 = new Buffer(var1);
       var4.field4181 = (var1.length - 18) * 99;
       int var9 = var4.method6655();
       int var10 = var4.method6655();
@@ -938,13 +938,13 @@ public class class192 extends class200 {
    }
 
    void method3735(byte[] var1) {
-      class384 var2 = new class384(var1);
-      class384 var3 = new class384(var1);
-      class384 var4 = new class384(var1);
-      class384 var5 = new class384(var1);
-      class384 var6 = new class384(var1);
-      class384 var7 = new class384(var1);
-      class384 var8 = new class384(var1);
+      Buffer var2 = new Buffer(var1);
+      Buffer var3 = new Buffer(var1);
+      Buffer var4 = new Buffer(var1);
+      Buffer var5 = new Buffer(var1);
+      Buffer var6 = new Buffer(var1);
+      Buffer var7 = new Buffer(var1);
+      Buffer var8 = new Buffer(var1);
       var2.field4181 = (var1.length - 23) * 99;
       int var9 = var2.method6655();
       int var10 = var2.method6655();

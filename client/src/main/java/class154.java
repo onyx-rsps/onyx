@@ -46,7 +46,7 @@ public class class154 extends class348 {
       this.field1715 = -1;
    }
 
-   void method2914(class384 var1, int var2) {
+   void method2914(Buffer var1, int var2) {
       if (var2 == 1) {
          this.field1714 = var1.method6577();
       } else if (var2 == 2) {
@@ -109,7 +109,7 @@ public class class154 extends class348 {
 
    }
 
-   void method2899(class384 var1) {
+   void method2899(Buffer var1) {
       while(true) {
          int var3 = var1.method6560();
          if (var3 == 0) {

@@ -68,7 +68,7 @@ public class class171 implements class187 {
    void method3469() {
    }
 
-   public void vmethod3660(class384 var1) {
+   public void vmethod3660(Buffer var1) {
       this.field1997 = var1.method6560();
       this.field2002 = var1.method6560();
       this.field1999 = var1.method6655();

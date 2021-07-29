@@ -53,7 +53,7 @@ public class class164 {
          class58.field873.method301(7680, 2160);
       }
 
-      if (client.field412 >= 25) {
+      if (client.gameState >= 25) {
          class228 var2 = class148.method2788(class226.field2571, client.field452.field1204);
          var2.field2690.writeByte(class237.method4568());
          var2.field2690.method6734(class68.field970);

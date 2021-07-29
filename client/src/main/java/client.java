@@ -92,7 +92,7 @@ public final class client extends class18 implements class317 {
    static int field406;
    static int field409;
    static int field410;
-   static int field412;
+   static int gameState;
    static int field415;
    static int field417;
    static int field418;
@@ -294,7 +294,7 @@ public final class client extends class18 implements class317 {
    static final class45 field493;
    static final int[] field467;
    static final int[] field530;
-   class384 field595;
+   Buffer field595;
    class7 field445;
 
    static {
@@ -307,7 +307,7 @@ public final class client extends class18 implements class317 {
       field409 = -1;
       field473 = -1;
       field411 = false;
-      field412 = 0;
+      gameState = 0;
       field414 = true;
       field451 = 0;
       field416 = 1L;
@@ -582,7 +582,7 @@ public final class client extends class18 implements class317 {
    }
 
    void method1212() {
-      if (field412 != 1000) {
+      if (gameState != 1000) {
          long var3 = class86.currentTime();
          int var5 = (int)(var3 - class277.field3596);
          class277.field3596 = var3;
@@ -604,10 +604,10 @@ public final class client extends class18 implements class317 {
                   }
 
                   class275 var6;
-                  class384 var7;
+                  Buffer var7;
                   while(class277.field3606 < 200 && class277.field3598 > 0) {
                      var6 = (class275)class277.field3597.method6317();
-                     var7 = new class384(4);
+                     var7 = new Buffer(4);
                      var7.writeByte(1);
                      var7.method6723((int)var6.field3965);
                      class277.field3613.write(var7.payload, 0, 4);
@@ -618,7 +618,7 @@ public final class client extends class18 implements class317 {
 
                   while(class277.field3605 < 200 && class277.field3603 > 0) {
                      var6 = (class275)class277.field3601.method5179();
-                     var7 = new class384(4);
+                     var7 = new Buffer(4);
                      var7.writeByte(0);
                      var7.method6723((int)var6.field3965);
                      class277.field3613.write(var7.payload, 0, 4);
@@ -652,7 +652,7 @@ public final class client extends class18 implements class317 {
                      int var13;
                      byte[] var10000;
                      int var10001;
-                     class384 var26;
+                     Buffer var26;
                      if (var8 > 0) {
                         var9 = var8 - class277.field3607.field4181 * -1084587701;
                         if (var9 > var19) {
@@ -694,7 +694,7 @@ public final class client extends class18 implements class317 {
 
                            int var17 = var12 == 0 ? 5 : 9;
                            class277.field3594 = var16;
-                           class93.field1247 = new class384(var17 + var13 + class277.field3594.field3572);
+                           class93.field1247 = new Buffer(var17 + var13 + class277.field3594.field3572);
                            class93.field1247.writeByte(var12);
                            class93.field1247.writeInt(var13);
                            class277.field3608 = 8;
@@ -945,18 +945,18 @@ public final class client extends class18 implements class317 {
       if (field503 < 2 || var1 != 7 && var1 != 9) {
          if (field503 >= 2 && var1 == 6) {
             this.js5Error("js5connect_outofdate");
-            field412 = 1000;
+            gameState = 1000;
          } else if (field503 >= 4) {
-            if (field412 <= 5) {
+            if (gameState <= 5) {
                this.js5Error("js5connect");
-               field412 = 1000;
+               gameState = 1000;
             } else {
                field435 = 3000;
             }
          }
-      } else if (field412 <= 5) {
+      } else if (gameState <= 5) {
          this.js5Error("js5connect_full");
-         field412 = 1000;
+         gameState = 1000;
       } else {
          field435 = 3000;
       }
@@ -1465,7 +1465,7 @@ public final class client extends class18 implements class317 {
             if (class229.field2773 == var1.field1205) {
                byte[] var50 = new byte[var1.field1208];
                var4.method6503(var50, 0, var50.length);
-               class384 var65 = new class384(var50);
+               Buffer var65 = new Buffer(var50);
                var72 = var65.method6569();
                class138.method2628(var72, true, false);
                var1.field1205 = null;
@@ -2625,7 +2625,7 @@ public final class client extends class18 implements class317 {
          field656 = var2;
       }
 
-      if (field412 == 0) {
+      if (gameState == 0) {
          class185.method3644();
          class84.field1198.vmethod2605();
 
@@ -2638,7 +2638,7 @@ public final class client extends class18 implements class317 {
          }
 
          class258.field3166 = 0;
-      } else if (field412 == 5) {
+      } else if (gameState == 5) {
          class155.method2938(this);
          class185.method3644();
          class84.field1198.vmethod2605();
@@ -2652,11 +2652,11 @@ public final class client extends class18 implements class317 {
          }
 
          class258.field3166 = 0;
-      } else if (field412 != 10 && field412 != 11) {
-         if (field412 == 20) {
+      } else if (gameState != 10 && gameState != 11) {
+         if (gameState == 20) {
             class155.method2938(this);
             this.method1175();
-         } else if (field412 == 25) {
+         } else if (gameState == 25) {
             class231.method4358(false);
             field459 = 0;
             boolean var71 = true;
@@ -2686,7 +2686,7 @@ public final class client extends class18 implements class317 {
                var71 = true;
 
                int var6;
-               class384 var10;
+               Buffer var10;
                int var11;
                int var12;
                int var13;
@@ -2708,7 +2708,7 @@ public final class client extends class18 implements class317 {
                      }
 
                      boolean var9 = true;
-                     var10 = new class384(var4);
+                     var10 = new Buffer(var4);
                      var11 = -1;
 
                      label1153:
@@ -2850,7 +2850,7 @@ public final class client extends class18 implements class317 {
                            class262.method4817();
                            class199 var52 = class165.field1924;
                            class159[] var53 = field464;
-                           var10 = new class384(var5);
+                           var10 = new Buffer(var5);
                            var11 = -1;
 
                            while(true) {
@@ -3065,7 +3065,7 @@ public final class client extends class18 implements class317 {
                                     byte[] var58 = class150.field1682.method4920(1, var20);
                                     var75 = new class150();
                                     if (var58 != null) {
-                                       var75.method2809(new class384(var58), var20);
+                                       var75.method2809(new Buffer(var58), var20);
                                     }
 
                                     var75.method2808();
@@ -3098,7 +3098,7 @@ public final class client extends class18 implements class317 {
                                     byte[] var60 = class150.field1682.method4920(1, var54);
                                     var81 = new class150();
                                     if (var60 != null) {
-                                       var81.method2809(new class384(var60), var54);
+                                       var81.method2809(new Buffer(var60), var54);
                                     }
 
                                     var81.method2808();
@@ -3199,7 +3199,7 @@ public final class client extends class18 implements class317 {
                                              byte[] var40 = class157.field1854.method4920(4, var38);
                                              var39 = new class157();
                                              if (var40 != null) {
-                                                var39.method3051(new class384(var40), var38);
+                                                var39.method3051(new Buffer(var40), var38);
                                              }
 
                                              var39.method3050();
@@ -3236,7 +3236,7 @@ public final class client extends class18 implements class317 {
                                           byte[] var42 = class157.field1854.method4920(4, var62);
                                           var41 = new class157();
                                           if (var42 != null) {
-                                             var41.method3051(new class384(var42), var62);
+                                             var41.method3051(new Buffer(var42), var62);
                                           }
 
                                           var41.method3050();
@@ -3574,9 +3574,9 @@ public final class client extends class18 implements class317 {
          class155.method2938(this);
       }
 
-      if (field412 == 30) {
+      if (gameState == 30) {
          this.method909();
-      } else if (field412 == 40 || field412 == 45) {
+      } else if (gameState == 40 || gameState == 45) {
          this.method1175();
       }
 
@@ -3591,12 +3591,12 @@ public final class client extends class18 implements class317 {
    void doJS5Cycle() {
       if (class277.field3600 >= 4) {
          this.js5Error("js5crc");
-         field412 = 1000;
+         gameState = 1000;
       } else {
          if (class277.field3604 >= 4) {
-            if (field412 <= 5) {
+            if (gameState <= 5) {
                this.js5Error("js5io");
-               field412 = 1000;
+               gameState = 1000;
                return;
             }
 
@@ -3631,16 +3631,16 @@ public final class client extends class18 implements class317 {
                      class84.js5Socket = new class133((Socket)class238.field2878.field1509, class18.field100, 5000);
                   }
 
-                  class384 handshakeBuf = new class384(5);
+                  Buffer handshakeBuf = new Buffer(5);
                   handshakeBuf.writeByte(15);
                   handshakeBuf.writeInt(198);
                   class84.js5Socket.write(handshakeBuf.payload, 0, 5);
                   ++js5State;
-                  class146.idleTime = class86.currentTime();
+                  class146.js5StartTime = class86.currentTime();
                }
 
                if (js5State == 3) {
-                  if (class84.js5Socket.available() > 0 || !field456 && field412 <= 5) {
+                  if (class84.js5Socket.available() > 0 || !field456 && gameState <= 5) {
                      int status = class84.js5Socket.read();
                      if (status != 0) {
                         this.error(status);
@@ -3648,14 +3648,14 @@ public final class client extends class18 implements class317 {
                      }
 
                      ++js5State;
-                  } else if (class86.currentTime() - class146.idleTime > 30000L) {
+                  } else if (class86.currentTime() - class146.js5StartTime > 30000L) {
                      this.error(-2);
                      return;
                   }
                }
 
                if (js5State == 4) {
-                  class124.method2470(class84.js5Socket, field412 > 20);
+                  class124.startJS5RequestCycle(class84.js5Socket, gameState > 20);
                   class238.field2878 = null;
                   class84.js5Socket = null;
                   js5State = 0;
@@ -3805,7 +3805,7 @@ public final class client extends class18 implements class317 {
          class178.field2069.method453();
       }
 
-      if ((field412 == 10 || field412 == 20 || field412 == 30) && 0L != field624 && class86.currentTime() > field624) {
+      if ((gameState == 10 || gameState == 20 || gameState == 30) && 0L != field624 && class86.currentTime() > field624) {
          class164.method3159(class237.method4568());
       }
 
@@ -3816,14 +3816,14 @@ public final class client extends class18 implements class317 {
          }
       }
 
-      if (field412 == 0) {
+      if (gameState == 0) {
          this.method223(class55.field805, class55.field806, var1);
-      } else if (field412 == 5) {
+      } else if (gameState == 5) {
          class292.method5172(class129.field1467, class46.field397, class257.field3164);
-      } else if (field412 != 10 && field412 != 11) {
-         if (field412 == 20) {
+      } else if (gameState != 10 && gameState != 11) {
+         if (gameState == 20) {
             class292.method5172(class129.field1467, class46.field397, class257.field3164);
-         } else if (field412 == 25) {
+         } else if (gameState == 25) {
             if (field463 == 1) {
                if (field459 > field460) {
                   field460 = field459;
@@ -3841,25 +3841,25 @@ public final class client extends class18 implements class317 {
             } else {
                class11.method112("Loading - please wait.", false);
             }
-         } else if (field412 == 30) {
+         } else if (gameState == 30) {
             this.method1194();
-         } else if (field412 == 40) {
+         } else if (gameState == 40) {
             class11.method112("Connection lost" + "<br>" + "Please wait - attempting to reestablish", false);
-         } else if (field412 == 45) {
+         } else if (gameState == 45) {
             class11.method112("Please wait...", false);
          }
       } else {
          class292.method5172(class129.field1467, class46.field397, class257.field3164);
       }
 
-      if (field412 == 30 && field623 == 0 && !var1 && !field612) {
+      if (gameState == 30 && field623 == 0 && !var1 && !field612) {
          for(var4 = 0; var4 < field590; ++var4) {
             if (field617[var4]) {
                class263.field3193.vmethod6947(field622[var4], field625[var4], field621[var4], field618[var4]);
                field617[var4] = false;
             }
          }
-      } else if (field412 > 0) {
+      } else if (gameState > 0) {
          class263.field3193.vmethod6948(0, 0);
 
          for(var4 = 0; var4 < field590; ++var4) {
@@ -3890,7 +3890,7 @@ public final class client extends class18 implements class317 {
          for(var2 = 0; var2 < 100 && this.method913(field452); ++var2) {
          }
 
-         if (field412 == 30) {
+         if (gameState == 30) {
             while(true) {
                class42 var3 = (class42)class41.field355.method5239();
                boolean var32;
@@ -4178,7 +4178,7 @@ public final class client extends class18 implements class317 {
                      class263.field3193.method6955();
                   }
 
-                  if (field412 != 30) {
+                  if (gameState != 30) {
                      return;
                   }
 
@@ -4792,7 +4792,7 @@ public final class client extends class18 implements class317 {
             var24.writeInt(var26[2]);
             var24.writeInt(var26[3]);
             var24.method6548(class186.field2119);
-            if (field412 == 40) {
+            if (gameState == 40) {
                var24.writeInt(class41.field356[0]);
                var24.writeInt(class41.field356[1]);
                var24.writeInt(class41.field356[2]);
@@ -4823,7 +4823,7 @@ public final class client extends class18 implements class317 {
             var7.field2685 = 0;
             var7.field2690 = new class383(5000);
             var7.field2690.field4181 = 0;
-            if (field412 == 40) {
+            if (gameState == 40) {
                var7.field2690.writeByte(class230.field2792.field2795);
             } else {
                var7.field2690.writeByte(class230.field2789.field2795);
@@ -4844,7 +4844,7 @@ public final class client extends class18 implements class317 {
             class144.method2734(var7.field2690);
             var7.field2690.method6550(class149.field1660);
             var7.field2690.writeInt(class407.field4313);
-            class384 var10 = new class384(class229.field2788.method6038());
+            Buffer var10 = new Buffer(class229.field2788.method6038());
             class229.field2788.method6037(var10);
             var7.field2690.method6615(var10.payload, 0, var10.payload.length);
             var7.field2690.writeByte(field409);
@@ -4887,11 +4887,11 @@ public final class client extends class18 implements class317 {
 
          if (field672 == 6 && ((class329)var2).available() > 0) {
             var34 = ((class329)var2).read();
-            if (var34 == 21 && field412 == 20) {
+            if (var34 == 21 && gameState == 20) {
                field672 = 12;
             } else if (var34 == 2) {
                field672 = 14;
-            } else if (var34 == 15 && field412 == 40) {
+            } else if (var34 == 15 && gameState == 40) {
                field452.field1208 = -1;
                field672 = 19;
             } else if (var34 == 64) {
@@ -5508,8 +5508,8 @@ public final class client extends class18 implements class317 {
 
    static final int method1313(long var0, String var2) {
       Random var4 = new Random();
-      class384 var5 = new class384(128);
-      class384 var6 = new class384(128);
+      Buffer var5 = new Buffer(128);
+      Buffer var6 = new Buffer(128);
       int[] var7 = new int[]{var4.nextInt(), var4.nextInt(), (int)(var0 >> 32), (int)var0};
       var5.writeByte(10);
 
@@ -5544,11 +5544,11 @@ public final class client extends class18 implements class317 {
          var8 += 8 - var8 % 8;
       }
 
-      class384 var9 = new class384(var8);
+      Buffer var9 = new Buffer(var8);
       var9.method6550(var2);
       var9.field4181 = var8 * 99;
       var9.method6544(var7);
-      class384 var10 = new class384(var9.field4181 * -1084587701 + var6.field4181 * -1084587701 + var5.field4181 * -1084587701 + 5);
+      Buffer var10 = new Buffer(var9.field4181 * -1084587701 + var6.field4181 * -1084587701 + var5.field4181 * -1084587701 + 5);
       var10.writeByte(2);
       var10.writeByte(var5.field4181 * -1084587701);
       var10.method6615(var5.payload, 0, var5.field4181 * -1084587701);
@@ -5591,7 +5591,7 @@ public final class client extends class18 implements class317 {
          var22.write("data2=" + class136.method2611(var13) + "&dest=" + class136.method2611("passwordchoice.ws"));
          var22.flush();
          InputStream var23 = var27.getInputStream();
-         var10 = new class384(new byte[1000]);
+         var10 = new Buffer(new byte[1000]);
 
          do {
             var18 = var23.read(var10.payload, var10.field4181 * -1084587701, 1000 - var10.field4181 * -1084587701);

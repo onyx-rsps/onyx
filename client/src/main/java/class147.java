@@ -87,7 +87,7 @@ public class class147 extends class348 {
       return var3 != -1 ? class96.method2133(var3) : null;
    }
 
-   void method2756(class384 var1, int var2) {
+   void method2756(Buffer var1, int var2) {
       int var4;
       int var5;
       if (var2 == 1) {
@@ -328,7 +328,7 @@ public class class147 extends class348 {
    void method2754() {
    }
 
-   void method2757(class384 var1) {
+   void method2757(Buffer var1) {
       while(true) {
          int var3 = var1.method6560();
          if (var3 == 0) {

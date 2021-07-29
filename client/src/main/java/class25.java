@@ -21,7 +21,7 @@ public class class25 {
       this.field202[1] = 65535;
    }
 
-   final void method512(class384 var1) {
+   final void method512(Buffer var1) {
       this.field212 = var1.method6560();
       this.field207 = var1.method6784();
       this.field206 = var1.method6784();
@@ -36,7 +36,7 @@ public class class25 {
       this.field208 = 0;
    }
 
-   final void method522(class384 var1) {
+   final void method522(Buffer var1) {
       this.field205 = var1.method6560();
       this.field204 = new int[this.field205];
       this.field202 = new int[this.field205];

@@ -40,7 +40,7 @@ public class class57 {
          byte[] var3 = class141.field1560.method4920(19, var0);
          var2 = new class141();
          if (var3 != null) {
-            var2.method2683(new class384(var3));
+            var2.method2683(new Buffer(var3));
          }
 
          class141.field1555.method4308(var2, (long)var0);

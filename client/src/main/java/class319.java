@@ -54,7 +54,7 @@ public class class319 extends class325 {
 
    }
 
-   public final void method5638(class384 var1) {
+   public final void method5638(Buffer var1) {
       class405 var3 = new class405(var1.method6569(), this.field3830);
       int var4 = var1.method6655();
       byte var5 = var1.method6561();
@@ -91,7 +91,7 @@ public class class319 extends class325 {
 
    }
 
-   public final void method5650(class384 var1) {
+   public final void method5650(Buffer var1) {
       this.method5636(var1.method6569());
       long var3 = var1.method6566();
       long var6 = var3;

@@ -4,7 +4,7 @@ public class class210 {
 
    static class58 method4251(byte[] var0) {
       class58 var2 = new class58();
-      class384 var3 = new class384(var0);
+      Buffer var3 = new Buffer(var0);
       var3.field4181 = (var3.payload.length - 2) * 99;
       int var4 = var3.method6655();
       int var5 = var3.payload.length - 2 - var4 - 12;

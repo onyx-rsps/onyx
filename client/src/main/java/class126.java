@@ -21,7 +21,7 @@ public class class126 extends class119 {
 
    }
 
-   void vmethod2490(class384 var1) {
+   void vmethod2490(Buffer var1) {
       this.field1452 = var1.method6568();
       if (this.field1452 != null) {
          var1.method6560();

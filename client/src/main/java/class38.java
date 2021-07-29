@@ -83,7 +83,7 @@ public class class38 {
       }
    }
 
-   final void method812(class384 var1, class25 var2) {
+   final void method812(Buffer var1, class25 var2) {
       int var3 = var1.method6560();
       this.field320[0] = var3 >> 4;
       this.field320[1] = var3 & 15;

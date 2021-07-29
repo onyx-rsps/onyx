@@ -18,7 +18,7 @@ public abstract class class342 implements class215 {
       }
    }
 
-   public void method5988(class384 var1) {
+   public void method5988(Buffer var1) {
       while(true) {
          int var3 = var1.method6560();
          if (var3 == 0) {
@@ -52,7 +52,7 @@ public abstract class class342 implements class215 {
       }
    }
 
-   abstract void vmethod5986(class384 var1, int var2);
+   abstract void vmethod5986(Buffer var1, int var2);
 
    public static void method5996(int var0, int var1, int var2, boolean var3) {
       class228 var5 = class148.method2788(class226.field2634, client.field452.field1204);

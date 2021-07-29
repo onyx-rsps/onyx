@@ -18,7 +18,7 @@ public class class115 extends class119 {
       var1.method2451(var3);
    }
 
-   void vmethod2490(class384 var1) {
+   void vmethod2490(Buffer var1) {
       if (var1.method6560() != 255) {
          var1.field4181 -= 99;
          var1.method6566();

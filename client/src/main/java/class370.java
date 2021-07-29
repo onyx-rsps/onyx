@@ -35,7 +35,7 @@ class class370 implements Iterator {
             byte[] var4 = var0.method4920(35, var3);
             class140.field1543[var3] = new class140(var3);
             if (var4 != null) {
-               class140.field1543[var3].method2660(new class384(var4));
+               class140.field1543[var3].method2660(new Buffer(var4));
                class140.field1543[var3].method2666();
             }
          }

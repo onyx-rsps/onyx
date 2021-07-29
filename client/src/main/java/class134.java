@@ -86,7 +86,7 @@ public class class134 extends class136 {
 
       try {
          var1 = class77.method1897("", class68.field975.field3207, true);
-         class384 var2 = class37.field307.method1875();
+         Buffer var2 = class37.field307.method1875();
          var1.method6364(var2.payload, 0, var2.field4181 * -1084587701);
       } catch (Exception var4) {
       }

@@ -43,7 +43,7 @@ public class class34 extends class353 {
    }
 
    void method753(byte[] var1) {
-      class384 var2 = new class384(var1);
+      Buffer var2 = new Buffer(var1);
       this.field265 = var2.method6784();
       this.field272 = var2.method6784();
       this.field293 = var2.method6784();

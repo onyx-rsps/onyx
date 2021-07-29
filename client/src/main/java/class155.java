@@ -124,7 +124,7 @@ public class class155 extends class348 {
       return var3 != -1 ? class123.method2465(var3) : null;
    }
 
-   void method2923(class384 var1, int var2) {
+   void method2923(Buffer var1, int var2) {
       int var4;
       int var5;
       if (var2 == 1) {
@@ -451,7 +451,7 @@ public class class155 extends class348 {
 
    }
 
-   void method2930(class384 var1) {
+   void method2930(Buffer var1) {
       while(true) {
          int var3 = var1.method6560();
          if (var3 == 0) {
@@ -663,7 +663,7 @@ public class class155 extends class348 {
          byte[] var3 = class154.field1710.method4920(32, var0);
          var2 = new class154();
          if (var3 != null) {
-            var2.method2899(new class384(var3));
+            var2.method2899(new Buffer(var3));
          }
 
          class154.field1708.method4308(var2, (long)var0);
@@ -807,7 +807,7 @@ public class class155 extends class348 {
             }
          }
 
-         if (client.field412 != 5) {
+         if (client.gameState != 5) {
             if (class55.field828 == -1L) {
                class55.field828 = class86.currentTime() + 1000L;
             }
@@ -820,7 +820,7 @@ public class class155 extends class348 {
                }
             }
 
-            if (client.field412 == 10 || client.field412 == 11) {
+            if (client.gameState == 10 || client.gameState == 11) {
                if (class283.field3643 == class291.field3693) {
                   if (class19.field148 == 1 || !class310.field3776 && class19.field148 == 4) {
                      var4 = class55.field824 + 5;

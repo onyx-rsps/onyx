@@ -9,8 +9,8 @@ public class class277 {
    public static class363 field3597;
    public static class363 field3599;
    public static class363 field3610;
-   public static class384 field3602;
-   public static class384 field3607;
+   public static Buffer field3602;
+   public static Buffer field3607;
    public static int field3595;
    public static int field3598;
    public static int field3600;
@@ -34,7 +34,7 @@ public class class277 {
       field3603 = 0;
       field3610 = new class363(4096);
       field3605 = 0;
-      field3607 = new class384(8);
+      field3607 = new Buffer(8);
       field3608 = 0;
       field3609 = new CRC32();
       field3611 = new class274[256];

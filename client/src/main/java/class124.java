@@ -16,7 +16,7 @@ public class class124 {
       client.field609 = client.field592;
    }
 
-   public static void method2470(class329 var0, boolean var1) {
+   public static void startJS5RequestCycle(class329 var0, boolean var1) {
       if (class277.field3613 != null) {
          try {
             class277.field3613.vmethod5858();
@@ -27,10 +27,10 @@ public class class124 {
       }
 
       class277.field3613 = var0;
-      class384 var3;
+      Buffer var3;
       if (class277.field3613 != null) {
          try {
-            var3 = new class384(4);
+            var3 = new Buffer(4);
             var3.writeByte(var1 ? 2 : 3);
             var3.method6723(0);
             class277.field3613.write(var3.payload, 0, 4);
@@ -58,7 +58,7 @@ public class class124 {
                if (var10 == null) {
                   if (class277.field3612 != 0) {
                      try {
-                        var3 = new class384(4);
+                        var3 = new Buffer(4);
                         var3.writeByte(4);
                         var3.writeByte(class277.field3612);
                         var3.method6734(0);

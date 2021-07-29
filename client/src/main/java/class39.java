@@ -60,7 +60,7 @@ public class class39 {
       this.field339 = 0;
    }
 
-   final void method826(class384 var1) {
+   final void method826(Buffer var1) {
       this.field340 = new class25();
       this.field340.method512(var1);
       this.field324 = new class25();

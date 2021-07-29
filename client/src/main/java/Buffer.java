@@ -1,6 +1,6 @@
 import java.math.BigInteger;
 
-public class class384 extends class353 {
+public class Buffer extends class353 {
    static int[] field4182;
    static long[] field4180;
    public byte[] payload;
@@ -42,12 +42,12 @@ public class class384 extends class353 {
 
    }
 
-   public class384(int var1) {
+   public Buffer(int var1) {
       this.payload = class54.method1589(var1);
       this.field4181 = 0;
    }
 
-   public class384(byte[] var1) {
+   public Buffer(byte[] var1) {
       this.payload = var1;
       this.field4181 = 0;
    }
@@ -511,7 +511,7 @@ public class class384 extends class353 {
       return var2;
    }
 
-   public void method6554(class384 var1) {
+   public void method6554(Buffer var1) {
       this.method6615(var1.payload, 0, var1.field4181 * -1084587701);
    }
 

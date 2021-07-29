@@ -13,7 +13,7 @@ public class class104 extends class103 {
       var1.method2301(this.field1297, this.field1298);
    }
 
-   void vmethod2494(class384 var1) {
+   void vmethod2494(Buffer var1) {
       this.field1297 = var1.method6655();
       this.field1298 = var1.method6560() == 1;
    }
@@ -27,7 +27,7 @@ public class class104 extends class103 {
          byte[] var5 = class157.field1854.method4920(4, var0);
          var4 = new class157();
          if (var5 != null) {
-            var4.method3051(new class384(var5), var0);
+            var4.method3051(new Buffer(var5), var0);
          }
 
          var4.method3050();

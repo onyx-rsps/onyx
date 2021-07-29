@@ -82,7 +82,7 @@ public class class144 {
       class16.method163(10);
    }
 
-   static void method2734(class384 var0) {
+   static void method2734(Buffer var0) {
       if (client.field446 != null) {
          var0.method6615(client.field446, 0, client.field446.length);
       } else {

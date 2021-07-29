@@ -12,7 +12,7 @@ public class class102 extends class103 {
       var1.method2295(this.field1287);
    }
 
-   void vmethod2494(class384 var1) {
+   void vmethod2494(Buffer var1) {
       this.field1287 = var1.method6655();
    }
 

@@ -3,11 +3,11 @@ import java.util.concurrent.Callable;
 public class class1 implements Callable {
    static int field3;
    final class3 field0;
-   final class384 field1;
+   final Buffer field1;
    // $FF: synthetic field
    final class7 this$0;
 
-   class1(class7 var1, class384 var2, class3 var3) {
+   class1(class7 var1, Buffer var2, class3 var3) {
       this.this$0 = var1;
       this.field1 = var2;
       this.field0 = var3;

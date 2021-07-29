@@ -1,3 +1,3 @@
 public interface class3 {
-   class384 vmethod15(class384 var1);
+   Buffer vmethod15(Buffer var1);
 }

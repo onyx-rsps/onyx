@@ -333,7 +333,7 @@ public class class246 {
       }
    }
 
-   public void method4644(class384 var1) {
+   public void method4644(Buffer var1) {
       var1.writeByte(this.field2930 ? 1 : 0);
 
       int var3;

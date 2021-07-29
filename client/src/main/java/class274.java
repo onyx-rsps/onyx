@@ -161,7 +161,7 @@ public class class274 extends class276 {
             return;
          }
 
-         class384 var12 = new class384(class46.method897(var3));
+         Buffer var12 = new Buffer(class46.method897(var3));
          int var13 = var12.method6560();
          if (var13 != 5 && var13 != 6) {
             throw new RuntimeException(var13 + "," + this.field3562 + "," + var2);

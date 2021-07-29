@@ -47,7 +47,7 @@ public final class class49 extends class353 {
 
    }
 
-   static final class362 method1435(class384 var0, class362 var1) {
+   static final class362 method1435(Buffer var0, class362 var1) {
       int var3 = var0.method6560();
       int var4;
       if (var1 == null) {

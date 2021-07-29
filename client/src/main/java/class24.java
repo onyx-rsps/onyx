@@ -334,7 +334,7 @@ public class class24 {
          var2 = new class149();
          var2.field1677 = var0;
          if (var3 != null) {
-            var2.method2797(new class384(var3));
+            var2.method2797(new Buffer(var3));
          }
 
          class149.field1659.method4308(var2, (long)var0);
@@ -414,7 +414,7 @@ public class class24 {
             }
          }
 
-         var2 = new class75(new class384(var3));
+         var2 = new class75(new Buffer(var3));
       } catch (Exception var7) {
       }
 

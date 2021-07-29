@@ -7,7 +7,7 @@ public abstract class class119 extends class353 {
 
    abstract void vmethod2487(class123 var1);
 
-   abstract void vmethod2490(class384 var1);
+   abstract void vmethod2490(Buffer var1);
 
    static class202 method2402(int var0) {
       class202 var2 = (class202)class158.field1857.method4306((long)var0);

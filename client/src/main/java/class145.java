@@ -20,7 +20,7 @@ public class class145 extends class348 {
       this.field1601 = 0;
    }
 
-   void method2744(class384 var1, int var2) {
+   void method2744(Buffer var1, int var2) {
       if (var2 == 1) {
          this.field1595 = (char)var1.method6560();
       } else if (var2 == 2) {
@@ -58,7 +58,7 @@ public class class145 extends class348 {
       return this.field1601;
    }
 
-   void method2737(class384 var1) {
+   void method2737(Buffer var1) {
       while(true) {
          int var3 = var1.method6560();
          if (var3 == 0) {

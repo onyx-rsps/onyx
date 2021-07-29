@@ -6,7 +6,7 @@ public class class284 {
    public final int field3647;
    public final long field3645;
 
-   class284(class384 var1, byte var2, int var3) {
+   class284(Buffer var1, byte var2, int var3) {
       this.field3650 = var1.method6569();
       this.field3648 = var1.method6569();
       this.field3647 = var1.method6655();

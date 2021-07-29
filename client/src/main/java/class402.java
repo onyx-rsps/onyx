@@ -10,7 +10,7 @@ public class class402 {
    class402(int var1, int var2) {
    }
 
-   public void method7132(class384 var1, byte[] var2) {
+   public void method7132(Buffer var1, byte[] var2) {
       if (var1.payload[var1.field4181 * -1084587701] == 31 && var1.payload[var1.field4181 * -1084587701 + 1] == -117) {
          if (this.field4301 == null) {
             this.field4301 = new Inflater(true);

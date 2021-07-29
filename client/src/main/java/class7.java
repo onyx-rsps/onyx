@@ -8,9 +8,9 @@ public class class7 {
    ExecutorService field21;
    Future field23;
    final class3 field24;
-   final class384 field22;
+   final Buffer field22;
 
-   public class7(class384 var1, class3 var2) {
+   public class7(Buffer var1, class3 var2) {
       this.field21 = Executors.newSingleThreadExecutor();
       this.field22 = var1;
       this.field24 = var2;
@@ -25,9 +25,9 @@ public class class7 {
       return this.field23.isDone();
    }
 
-   public class384 method57() {
+   public Buffer method57() {
       try {
-         return (class384)this.field23.get();
+         return (Buffer)this.field23.get();
       } catch (Exception var3) {
          return null;
       }

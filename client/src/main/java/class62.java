@@ -53,7 +53,7 @@ public class class62 implements Callable {
       }
    }
 
-   static void method1708(class384 var0, int var1) {
+   static void method1708(Buffer var0, int var1) {
       class144.method2733(var0.payload, var1);
       class66.method1730(var0, var1);
    }

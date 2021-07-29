@@ -31,7 +31,7 @@ public class class242 extends class348 {
       }
    }
 
-   public static int method4617(class384 var0, String var1) {
+   public static int method4617(Buffer var0, String var1) {
       int var3 = var0.field4181 * -1084587701;
       byte[] var4 = class104.method2197(var1);
       var0.method6558(var4.length);

@@ -65,7 +65,7 @@ public class class83 {
             }
          }
 
-         class384 var34 = new class384(var3);
+         Buffer var34 = new Buffer(var3);
          var34.writeByte(2);
          var34.method6734(var4);
          Iterator var35 = this.field1185.entrySet().iterator();
@@ -163,7 +163,7 @@ public class class83 {
             }
          }
 
-         class384 var16 = new class384(var3);
+         Buffer var16 = new Buffer(var3);
          if (var16.payload.length - var16.field4181 * -1084587701 < 1) {
             return;
          }

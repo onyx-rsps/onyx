@@ -22,7 +22,7 @@ public class class269 {
             class77.field1134 = class169.field1991.method2051(new URL(class309.field3775));
          } else if (class77.field1134.method2067()) {
             byte[] var1 = class77.field1134.method2066();
-            class384 var2 = new class384(var1);
+            Buffer var2 = new Buffer(var1);
             var2.method6784();
             class47.field691 = var2.method6655();
             class15.field85 = new class47[class47.field691];

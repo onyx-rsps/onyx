@@ -131,7 +131,7 @@ public final class class56 extends class200 {
          }
       }
 
-      class384 var11 = new class384(var0);
+      Buffer var11 = new Buffer(var0);
 
       for(var8 = 0; var8 < 4; ++var8) {
          for(var9 = 0; var9 < 64; ++var9) {

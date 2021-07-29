@@ -11,8 +11,8 @@ public class class16 {
    }
 
    static void method163(int var0) {
-      if (var0 != client.field412) {
-         if (client.field412 == 0) {
+      if (var0 != client.gameState) {
+         if (client.gameState == 0) {
             class58.field873.method224();
          }
 
@@ -31,7 +31,7 @@ public class class16 {
             client.field644 = null;
          }
 
-         if (client.field412 == 25) {
+         if (client.gameState == 25) {
             client.field463 = 0;
             client.field459 = 0;
             client.field460 = 1;
@@ -41,7 +41,7 @@ public class class16 {
 
          if (var0 != 5 && var0 != 10) {
             if (var0 == 20) {
-               class237.method4563(class105.field1300, class270.field3535, true, client.field412 == 11 ? 4 : 0);
+               class237.method4563(class105.field1300, class270.field3535, true, client.gameState == 11 ? 4 : 0);
             } else if (var0 == 11) {
                class237.method4563(class105.field1300, class270.field3535, false, 4);
             } else if (class55.field797) {
@@ -69,7 +69,7 @@ public class class16 {
                class123.field1438 = 2;
                if (class277.field3613 != null) {
                   try {
-                     class384 var2 = new class384(4);
+                     Buffer var2 = new Buffer(4);
                      var2.writeByte(2);
                      var2.method6723(0);
                      class277.field3613.write(var2.payload, 0, 4);
@@ -90,7 +90,7 @@ public class class16 {
             class237.method4563(class105.field1300, class270.field3535, true, 0);
          }
 
-         client.field412 = var0;
+         client.gameState = var0;
       }
    }
 

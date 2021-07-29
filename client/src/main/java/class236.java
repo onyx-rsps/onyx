@@ -1,6 +1,6 @@
 public class class236 {
    static final byte[] field2858;
-   class384 field2865;
+   Buffer field2865;
    int field2852;
    int field2853;
    int[] field2854;
@@ -14,17 +14,17 @@ public class class236 {
    }
 
    class236(byte[] var1) {
-      this.field2865 = new class384((byte[])null);
+      this.field2865 = new Buffer((byte[])null);
       this.method4508(var1);
    }
 
    class236() {
-      this.field2865 = new class384((byte[])null);
+      this.field2865 = new Buffer((byte[])null);
    }
 
    int method4514(int var1) {
       byte var2 = this.field2865.payload[this.field2865.field4181 * -1084587701];
-      class384 var10000;
+      Buffer var10000;
       int var5;
       if (var2 < 0) {
          var5 = var2 & 255;
@@ -75,7 +75,7 @@ public class class236 {
       this.field2852 = 500000;
       this.field2854 = new int[var2];
 
-      class384 var10000;
+      Buffer var10000;
       int var3;
       int var5;
       for(var3 = 0; var3 < var2; var10000.field4181 = (var10000.field4181 * -1084587701 + var5) * 99) {
@@ -139,7 +139,7 @@ public class class236 {
       if (var2 == 255) {
          int var7 = this.field2865.method6560();
          var4 = this.field2865.method6578();
-         class384 var10000;
+         Buffer var10000;
          if (var7 == 47) {
             var10000 = this.field2865;
             var10000.field4181 = (var10000.field4181 * -1084587701 + var4) * 99;

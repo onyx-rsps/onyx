@@ -228,7 +228,7 @@ public class class226 implements class225 {
       int var4 = -1;
 
       for(int var5 = var1; var5 < var2; ++var5) {
-         var4 = var4 >>> 8 ^ class384.field4182[(var4 ^ var0[var5]) & 255];
+         var4 = var4 >>> 8 ^ Buffer.field4182[(var4 ^ var0[var5]) & 255];
       }
 
       var4 = ~var4;

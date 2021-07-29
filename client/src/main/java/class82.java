@@ -2,8 +2,8 @@ public class class82 {
    static boolean field1182;
    static byte[] field1170;
    static byte[] field1174;
-   static class384 field1181;
-   static class384[] field1167;
+   static Buffer field1181;
+   static Buffer[] field1167;
    static int field1171;
    static int field1173;
    static int field1179;
@@ -17,7 +17,7 @@ public class class82 {
    static {
       field1174 = new byte[2048];
       field1170 = new byte[2048];
-      field1167 = new class384[2048];
+      field1167 = new Buffer[2048];
       field1171 = 0;
       field1177 = new int[2048];
       field1173 = 0;
@@ -27,7 +27,7 @@ public class class82 {
       field1178 = new int[2048];
       field1179 = 0;
       field1180 = new int[2048];
-      field1181 = new class384(new byte[5000]);
+      field1181 = new Buffer(new byte[5000]);
    }
 
    public static void method1954(class276 var0, int var1, int var2, int var3, boolean var4) {

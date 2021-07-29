@@ -313,7 +313,7 @@ public class class248 extends class353 {
       }
    }
 
-   void method4681(class384 var1) {
+   void method4681(Buffer var1) {
       this.field2992 = false;
       this.field2976 = var1.method6560();
       this.field2960 = var1.method6560();
@@ -564,7 +564,7 @@ public class class248 extends class353 {
 
    }
 
-   void method4682(class384 var1) {
+   void method4682(Buffer var1) {
       var1.method6560();
       this.field2992 = true;
       this.field2976 = var1.method6560();
@@ -876,7 +876,7 @@ public class class248 extends class353 {
       }
    }
 
-   Object[] method4683(class384 var1) {
+   Object[] method4683(Buffer var1) {
       int var3 = var1.method6560();
       if (var3 == 0) {
          return null;
@@ -921,7 +921,7 @@ public class class248 extends class353 {
       this.field3037[var1] = var2;
    }
 
-   int[] method4684(class384 var1) {
+   int[] method4684(Buffer var1) {
       int var3 = var1.method6560();
       if (var3 == 0) {
          return null;

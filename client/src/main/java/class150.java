@@ -88,7 +88,7 @@ public class class150 extends class348 {
       this.field1681 = (int)(var13 * (double)this.field1684);
    }
 
-   void method2810(class384 var1, int var2, int var3) {
+   void method2810(Buffer var1, int var2, int var3) {
       if (var2 == 1) {
          this.field1680 = var1.method6564();
       }
@@ -99,7 +99,7 @@ public class class150 extends class348 {
       this.method2807(this.field1680);
    }
 
-   public void method2809(class384 var1, int var2) {
+   public void method2809(Buffer var1, int var2) {
       while(true) {
          int var4 = var1.method6560();
          if (var4 == 0) {

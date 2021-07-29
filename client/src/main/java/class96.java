@@ -30,7 +30,7 @@ public class class96 extends class324 {
          var2 = new class147();
          var2.field1626 = var0;
          if (var3 != null) {
-            var2.method2757(new class384(var3));
+            var2.method2757(new Buffer(var3));
          }
 
          var2.method2754();

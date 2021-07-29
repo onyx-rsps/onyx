@@ -26,7 +26,7 @@ public class class114 {
    public String[] field1362;
    public String[] field1372;
 
-   public class114(class384 var1) {
+   public class114(Buffer var1) {
       this.field1363 = 0;
       this.field1367 = null;
       this.field1364 = 0;
@@ -360,7 +360,7 @@ public class class114 {
       }
    }
 
-   void method2305(class384 var1) {
+   void method2305(Buffer var1) {
       int var3 = var1.method6560();
       if (var3 >= 1 && var3 <= 6) {
          int var4 = var1.method6560();

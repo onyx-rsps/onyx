@@ -14,7 +14,7 @@ public class class125 extends class103 {
       var1.method2297(this.field1445, this.field1446);
    }
 
-   void vmethod2494(class384 var1) {
+   void vmethod2494(Buffer var1) {
       if (var1.method6560() != 255) {
          var1.field4181 -= 99;
          this.field1445 = var1.method6566();
@@ -88,7 +88,7 @@ public class class125 extends class103 {
       return var15;
    }
 
-   static final void method2484(class384 var0, int var1, int var2, int var3, int var4, int var5, int var6) {
+   static final void method2484(Buffer var0, int var1, int var2, int var3, int var4, int var5, int var6) {
       int var8;
       if (var2 >= 0 && var2 < 104 && var3 >= 0 && var3 < 104) {
          class61.field900[var1][var2][var3] = 0;

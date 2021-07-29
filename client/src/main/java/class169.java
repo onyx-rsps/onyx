@@ -165,8 +165,8 @@ public final class class169 {
          System.nanoTime();
          int var5 = var1.method4936(class186.field2117.field2113);
          int var6 = var1.method4938(var5, var2);
-         class384 var7 = new class384(var1.method4940(class186.field2117.field2113, var2));
-         class384 var8 = new class384(var1.method4940(class186.field2115.field2113, var2));
+         Buffer var7 = new Buffer(var1.method4940(class186.field2117.field2113, var2));
+         Buffer var8 = new Buffer(var1.method4940(class186.field2115.field2113, var2));
          System.nanoTime();
          System.nanoTime();
          this.field1990 = new class188();

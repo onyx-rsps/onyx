@@ -10,7 +10,7 @@ public class class285 {
    public class285() {
    }
 
-   public class285(class384 var1, boolean var2) {
+   public class285(Buffer var1, boolean var2) {
       this.field3654 = var1.method6561();
       this.field3653 = var1.method6655();
       this.field3655 = var1.method6784();

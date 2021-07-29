@@ -39,7 +39,7 @@ public abstract class class176 {
       this.field2055 = false;
    }
 
-   void method3541(int var1, int var2, class384 var3, int var4) {
+   void method3541(int var1, int var2, Buffer var3, int var4) {
       int var6 = ((var4 & 24) >> 3) + 1;
       boolean var7 = (var4 & 2) != 0;
       boolean var8 = (var4 & 4) != 0;
@@ -78,7 +78,7 @@ public abstract class class176 {
 
    }
 
-   void method3542(int var1, int var2, class384 var3, int var4) {
+   void method3542(int var1, int var2, Buffer var3, int var4) {
       boolean var6 = (var4 & 2) != 0;
       if (var6) {
          this.field2061[0][var1][var2] = (short)var3.method6560();
@@ -91,7 +91,7 @@ public abstract class class176 {
       if (!this.method3549()) {
          byte[] var3 = var1.method4920(this.field2046, this.field2053);
          if (var3 != null) {
-            this.vmethod3544(new class384(var3));
+            this.vmethod3544(new Buffer(var3));
             this.field2059 = true;
             this.field2055 = true;
          }
@@ -107,9 +107,9 @@ public abstract class class176 {
       return this.field2052;
    }
 
-   abstract void vmethod3544(class384 var1);
+   abstract void vmethod3544(Buffer var1);
 
-   void method3563(int var1, int var2, class384 var3) {
+   void method3563(int var1, int var2, Buffer var3) {
       int var5 = var3.method6560();
       if (var5 != 0) {
          if ((var5 & 1) != 0) {

@@ -20,7 +20,7 @@ public class class118 extends class103 {
       var1.method2294(this.field1403, this.field1402, this.field1404);
    }
 
-   void vmethod2494(class384 var1) {
+   void vmethod2494(Buffer var1) {
       if (var1.method6560() != 255) {
          var1.field4181 -= 99;
          this.field1403 = var1.method6566();
@@ -30,7 +30,7 @@ public class class118 extends class103 {
       this.field1404 = var1.method6655();
    }
 
-   public static void method2392(class384 var0, int var1) {
+   public static void method2392(Buffer var0, int var1) {
       class42 var3 = new class42();
       var3.field358 = var0.method6560();
       var3.field357 = var0.method6784();

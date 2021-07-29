@@ -12,7 +12,7 @@ public class class111 extends class119 {
       var1.method2442(this.field1348);
    }
 
-   void vmethod2490(class384 var1) {
+   void vmethod2490(Buffer var1) {
       this.field1348 = var1.method6655();
       var1.method6560();
       if (var1.method6560() != 255) {

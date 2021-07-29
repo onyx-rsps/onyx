@@ -131,7 +131,7 @@ public abstract class class276 {
 
    void method4918(byte[] var1) {
       this.field3590 = class228.method4345(var1, var1.length);
-      class384 var3 = new class384(class46.method897(var1));
+      Buffer var3 = new Buffer(class46.method897(var1));
       int var4 = var3.method6560();
       if (var4 >= 5 && var4 <= 7) {
          if (var4 >= 6) {
@@ -332,7 +332,7 @@ public abstract class class276 {
                var22 = class240.method4610(this.field3587[var1], false);
             } else {
                var22 = class240.method4610(this.field3587[var1], true);
-               class384 var9 = new class384(var22);
+               Buffer var9 = new Buffer(var22);
                var9.method6654(var2, 5, var9.payload.length);
             }
 
@@ -347,7 +347,7 @@ public abstract class class276 {
                --var10;
                var11 = var26[var10] & 255;
                var10 -= var11 * var4 * 4;
-               class384 var12 = new class384(var26);
+               Buffer var12 = new Buffer(var26);
                int[] var13 = new int[var4];
                var12.field4181 = var10 * 99;
 

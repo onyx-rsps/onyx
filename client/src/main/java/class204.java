@@ -22,7 +22,7 @@ public class class204 implements class212 {
       this.field2377 = new class194[var1.method4946(0)];
 
       for(int var9 = 0; var9 < var8; ++var9) {
-         class384 var10 = new class384(var1.method4920(0, var7[var9]));
+         Buffer var10 = new Buffer(var1.method4920(0, var7[var9]));
          this.field2377[var7[var9]] = new class194(var10);
       }
 

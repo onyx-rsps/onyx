@@ -72,7 +72,7 @@ public final class class51 extends class200 {
          byte[] var3 = class11.field71.method4920(33, var0);
          var2 = new class143();
          if (var3 != null) {
-            var2.method2722(new class384(var3));
+            var2.method2722(new Buffer(var3));
          }
 
          class143.field1579.method4308(var2, (long)var0);

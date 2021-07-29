@@ -3,7 +3,7 @@ public class class8 {
    final int field28;
    final String field29;
 
-   class8(class384 var1) {
+   class8(Buffer var1) {
       this(var1.method6560(), var1.method6560(), var1.method6569());
    }
 

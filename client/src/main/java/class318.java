@@ -10,7 +10,7 @@ public class class318 extends class325 {
       this.field3826 = var1;
    }
 
-   public void method5618(class384 var1, int var2) {
+   public void method5618(Buffer var1, int var2) {
       while(true) {
          if (var1.field4181 * -1084587701 < var2) {
             boolean var4 = var1.method6560() == 1;

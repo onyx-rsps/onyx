@@ -41,7 +41,7 @@ public final class class12 extends Canvas {
       String var5 = null;
       String var6 = null;
       boolean var7 = false;
-      class384 var9;
+      Buffer var9;
       int var12;
       File var28;
       if (class130.field1475.exists()) {
@@ -49,7 +49,7 @@ public final class class12 extends Canvas {
             class368 var8 = new class368(class130.field1475, "rw", 10000L);
 
             int var10;
-            for(var9 = new class384((int)var8.method6357()); var9.field4181 * -1084587701 < var9.payload.length; var9.field4181 = (var9.field4181 * -1084587701 + var10) * 99) {
+            for(var9 = new Buffer((int)var8.method6357()); var9.field4181 * -1084587701 < var9.payload.length; var9.field4181 = (var9.field4181 * -1084587701 + var10) * 99) {
                var10 = var8.method6363(var9.payload, var9.field4181 * -1084587701, var9.payload.length - var9.field4181 * -1084587701);
                if (var10 == -1) {
                   throw new IOException();
@@ -181,7 +181,7 @@ public final class class12 extends Canvas {
 
          try {
             class368 var35 = new class368(class130.field1475, "rw", 10000L);
-            class384 var33 = new class384(500);
+            Buffer var33 = new Buffer(500);
             var33.writeByte(3);
             var33.writeByte(var9 != null ? 1 : 0);
             var33.method6552(var27.getPath());

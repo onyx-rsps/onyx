@@ -28,7 +28,7 @@ public class class335 {
 
    public void method5931(class276 var1) {
       byte[] var3 = var1.method4927(class334.field3904.field3903);
-      class384 var4 = new class384(var3);
+      Buffer var4 = new Buffer(var3);
 
       while(true) {
          int var5 = var4.method6560();
