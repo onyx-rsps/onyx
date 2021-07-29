@@ -1,5 +1,5 @@
 package dev.onyx.server.engine.model.entity
 
-abstract class LivingEntity {
+abstract class LivingEntity : Entity() {
 
 }
