@@ -27,10 +27,7 @@ class LoginManager {
             /*
              * Load the player from the serializer.
              */
-
-            val username = request.username.sanitize()
-            val password = SHA256.hash(request.password)
-            val player = serializer.load(username, password)
+            val player = serializer.load(request)
 
             /*
              * If loading the player with the provided credentials is null, return
@@ -58,16 +55,6 @@ class LoginManager {
      */
     internal fun processLogouts() {
 
-    }
-
-    private fun String.sanitize(): String {
-        return this
-            .chars()
-            .mapToObj { it.toChar() }
-            .map { if(Character.isWhitespace(it)) '_' else it }
-            .filter { Character.isLetterOrDigit(it) || it == '-' || it == '_' }
-            .map { it.toString() }
-            .collect(Collectors.joining())
     }
 
     companion object {

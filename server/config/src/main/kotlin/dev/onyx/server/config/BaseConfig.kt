@@ -14,7 +14,7 @@ abstract class BaseConfig(filePath: String, private val spec: ConfigSpec = Confi
 
     internal lateinit var config: Config
 
-    internal val file = File(filePath)
+    internal open var file = File(filePath)
 
     abstract val createIfFileNotFound: Boolean
 

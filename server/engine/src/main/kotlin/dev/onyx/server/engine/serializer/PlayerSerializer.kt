@@ -5,11 +5,13 @@ import dev.onyx.server.engine.net.login.LoginRequest
 
 interface PlayerSerializer {
 
-    fun create(request: LoginRequest): Player {
-        throw UnsupportedOperationException()
+    fun create(request: LoginRequest) {
+        /*
+         * No Implementation
+         */
     }
 
-    fun load(username: String, password: String): Player?
+    fun load(request: LoginRequest): Player?
 
     fun save(player: Player)
 

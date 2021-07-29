@@ -1,6 +1,6 @@
 package dev.onyx.server.config.impl.item
 
-enum class GenderItem {
-    MALE,
-    FEMALE
+enum class GenderItem(val id: Int) {
+    MALE(0),
+    FEMALE(1)
 }

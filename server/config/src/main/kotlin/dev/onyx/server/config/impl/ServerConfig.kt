@@ -15,6 +15,7 @@ class ServerConfig : BaseConfig("data/configs/server.yml", Spec) {
         val name by optional("Onyx", "name")
         val revision by optional(198, "revision")
         val devMode by optional(true, "dev-mode")
+        val autoCreateNewPlayerSaves by optional(true, "auto-create-new-player-saves")
         val tickRate by optional(600L, "tick-rate")
         val maxLoginsPerTick by optional(32, "max-logins-per-tick")
 
@@ -39,6 +40,7 @@ class ServerConfig : BaseConfig("data/configs/server.yml", Spec) {
         val name get() = config[Spec.name]
         val revision get() = config[Spec.revision]
         val devMode get() = config[Spec.devMode]
+        val autoCreateNewPlayerSaves get() = config[Spec.autoCreateNewPlayerSaves]
         val tickRate get() = config[Spec.tickRate]
         val maxLoginsPerTick get() = config[Spec.maxLoginsPerTick]
 
