@@ -1,8 +1,9 @@
 package dev.onyx.server.engine.net.login
 
 import dev.onyx.server.cache.GameCache
-import dev.onyx.server.common.RSA
+import dev.onyx.server.common.encrypt.RSA
 import dev.onyx.server.common.inject
+import dev.onyx.server.engine.manager.LoginManager
 import dev.onyx.server.engine.net.Message
 import dev.onyx.server.engine.net.Protocol
 import dev.onyx.server.engine.net.Session
@@ -14,11 +15,11 @@ import io.guthix.js5.util.xteaDecrypt
 import io.netty.buffer.ByteBuf
 import io.netty.buffer.Unpooled
 import java.math.BigInteger
-import java.util.*
 
 class LoginProtocol(session: Session) : Protocol(session) {
 
     private val gameCache: GameCache by inject()
+    private val loginManager: LoginManager by inject()
 
     /**
      * DECODER METHODS
@@ -124,7 +125,6 @@ class LoginProtocol(session: Session) : Protocol(session) {
                 randomBytes,
                 crcs
             )
-
             out.add(request)
         } catch (e : LoginError) {
             buf.skipBytes(buf.readableBytes())
@@ -147,8 +147,7 @@ class LoginProtocol(session: Session) : Protocol(session) {
 
     override fun handle(msg: Message) {
         if(msg !is LoginRequest) return
-
-        println("Login Request: [username=${msg.username} password=${msg.password}]")
+        loginManager.loginQueue.add(msg)
     }
 
     private fun ByteBuf.decryptXTEA(keys: IntArray): ByteBuf {

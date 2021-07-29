@@ -1,4 +1,4 @@
-package dev.onyx.server.common
+package dev.onyx.server.common.encrypt
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider
 import org.bouncycastle.util.io.pem.PemObject
@@ -37,9 +37,9 @@ object RSA {
     fun load() {
         Logger.info("Loading RSA keys.")
 
-        if(!this.exists()) {
+        if(!exists()) {
             Logger.info("Failed to read or open either the private or public RSA key files. Generating new key-pair.")
-            this.generateKeyPair()
+            generateKeyPair()
         }
 
         PemReader(Files.newBufferedReader(privateKeyPath)).use { reader ->

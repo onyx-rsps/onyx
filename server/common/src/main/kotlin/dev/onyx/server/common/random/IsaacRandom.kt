@@ -1,4 +1,4 @@
-package dev.onyx.server.common
+package dev.onyx.server.common.random
 
 /**
  *

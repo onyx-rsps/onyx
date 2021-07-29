@@ -1,13 +1,12 @@
 package dev.onyx.server.engine.net
 
-import dev.onyx.server.common.IsaacRandom
+import dev.onyx.server.common.random.IsaacRandom
 import dev.onyx.server.engine.model.entity.Client
 import dev.onyx.server.engine.model.entity.Player
 import dev.onyx.server.engine.net.handshake.HandshakeProtocol
 import dev.onyx.server.engine.net.pipeline.GameChannelDecoder
 import dev.onyx.server.engine.net.pipeline.GameChannelEncoder
 import dev.onyx.server.engine.net.pipeline.StatusResponseEncoder
-import io.guthix.js5.util.XTEA_ZERO_KEY
 import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandlerContext
 import org.tinylog.kotlin.Logger

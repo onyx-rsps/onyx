@@ -2,7 +2,7 @@ package dev.onyx.server.launcher
 
 import dev.onyx.server.cache.CacheModule
 import dev.onyx.server.cache.GameCache
-import dev.onyx.server.common.RSA
+import dev.onyx.server.common.encrypt.RSA
 import dev.onyx.server.common.get
 import dev.onyx.server.config.ConfigModule
 import dev.onyx.server.config.impl.ServerConfig

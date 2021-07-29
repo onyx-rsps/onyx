@@ -16,6 +16,7 @@ class ServerConfig : BaseConfig("data/configs/server.yml", Spec) {
         val revision by optional(198, "revision")
         val devMode by optional(true, "dev-mode")
         val tickRate by optional(600L, "tick-rate")
+        val maxLoginsPerTick by optional(32, "max-logins-per-tick")
 
         object Network : ConfigSpec("network") {
             val address by optional("0.0.0.0", "address")
@@ -39,7 +40,7 @@ class ServerConfig : BaseConfig("data/configs/server.yml", Spec) {
         val revision get() = config[Spec.revision]
         val devMode get() = config[Spec.devMode]
         val tickRate get() = config[Spec.tickRate]
-
+        val maxLoginsPerTick get() = config[Spec.maxLoginsPerTick]
 
         val network = Network
         object Network {

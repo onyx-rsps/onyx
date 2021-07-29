@@ -1,4 +1,4 @@
-package dev.onyx.server.common
+package dev.onyx.server.common.encrypt
 
 /**
  * An implementation of the XTEA cipher (https://en.wikipedia.org/wiki/XTEA).

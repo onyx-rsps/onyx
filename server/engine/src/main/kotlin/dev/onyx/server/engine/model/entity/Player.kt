@@ -19,4 +19,17 @@ class Player : LivingEntity() {
 
     var appearance: Appearance = Appearance.DEFAULT
 
+    /**
+     * Register the player to the game engine's world.
+     */
+    fun register() {
+        println("registered")
+    }
+
+    /**
+     * Deregister the player to the game engine's world.
+     */
+    fun deregister() {
+        println("deregistered")
+    }
 }

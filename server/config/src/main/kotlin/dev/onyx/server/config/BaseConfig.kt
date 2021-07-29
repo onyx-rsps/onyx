@@ -37,6 +37,7 @@ abstract class BaseConfig(filePath: String, private val spec: ConfigSpec = Confi
             FileFormat.YAML -> Config { addSpec(spec) }.from.yaml.file(file)
             FileFormat.JSON -> Config { addSpec(spec) }.from.json.file(file)
         }
+        this.save()
     }
 
     open fun save() {
