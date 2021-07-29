@@ -1,6 +1,8 @@
 package dev.onyx.server.engine.net
 
 import dev.onyx.server.common.IsaacRandom
+import dev.onyx.server.engine.model.entity.Client
+import dev.onyx.server.engine.model.entity.Player
 import dev.onyx.server.engine.net.handshake.HandshakeProtocol
 import dev.onyx.server.engine.net.pipeline.GameChannelDecoder
 import dev.onyx.server.engine.net.pipeline.GameChannelEncoder
@@ -14,6 +16,9 @@ import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.atomic.AtomicReference
 
 class Session(val ctx: ChannelHandlerContext) {
+
+    lateinit var client: Client internal set
+    val player: Player get() = client.player
 
     val channel get() = ctx.channel()
     val remoteAddress = channel.remoteAddress()
