@@ -1,5 +1,6 @@
 package dev.onyx.server.engine.net
 
+import dev.onyx.server.common.IsaacRandom
 import dev.onyx.server.engine.net.handshake.HandshakeProtocol
 import dev.onyx.server.engine.net.pipeline.GameChannelDecoder
 import dev.onyx.server.engine.net.pipeline.GameChannelEncoder
@@ -21,7 +22,10 @@ class Session(val ctx: ChannelHandlerContext) {
 
     val protocol = AtomicReference<Protocol>(null)
 
-    var xteas = XTEA_ZERO_KEY
+    var xteas = IntArray(4) { 0 }
+
+    val encodeIsaac = IsaacRandom()
+    val decodeIsaac = IsaacRandom()
 
     private val messageQueue = LinkedBlockingQueue<Message>()
 
