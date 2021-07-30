@@ -22,14 +22,29 @@ class World : EventContext, TaskContext {
     val players: PlayerList = PlayerList(MAX_PLAYERS)
 
     fun cycle() {
-        processEventsAndTasks()
+        /*
+         * World
+         */
+        processTasks()
 
+        /*
+         * NPC
+         */
+
+        /*
+         * Player
+         */
+        players.forEach { it.processTasks() }
+
+        /*
+         * Post Tasks
+         */
         postProcessTasks()
     }
 
     fun isFull(): Boolean = players.size + loginManager.loginQueue.size >= MAX_PLAYERS
 
-    private fun processEventsAndTasks() {
+    private fun processTasks() {
         while(true) {
             /*
              * Handle queued events

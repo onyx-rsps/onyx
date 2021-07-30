@@ -1,6 +1,7 @@
 package dev.onyx.server.engine.event.api
 
 import dev.onyx.server.engine.event.type.Event
+import dev.onyx.server.engine.event.type.PlayerEvent
 import dev.onyx.server.engine.event.type.WorldEvent
 import kotlin.reflect.KClass
 
@@ -26,6 +27,10 @@ object EventBus {
 
     fun <T : WorldEvent> fire(event: T) {
         eventListeners[event::class]?.forEach { it.schedule(event, event.world) }
+    }
+
+    fun <T : PlayerEvent> fire(event: T) {
+        eventListeners[event::class]?.forEach { it.schedule(event, event.player) }
     }
 
 }
