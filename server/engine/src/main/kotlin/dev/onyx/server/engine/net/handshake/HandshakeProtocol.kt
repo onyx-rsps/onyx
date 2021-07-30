@@ -56,7 +56,7 @@ class HandshakeProtocol(session: Session) : Protocol(session) {
     override fun encode(msg: Message, out: ByteBuf) {
         if(msg !is HandshakeResponse) return
 
-        out.writeByte(StatusResponse.SUCCESSFUL.code)
+        out.writeByte(StatusResponse.SUCCESSFUL.id)
         out.writeLong(session.seed)
     }
 

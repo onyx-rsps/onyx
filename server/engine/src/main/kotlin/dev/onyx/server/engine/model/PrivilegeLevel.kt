@@ -5,6 +5,10 @@ enum class PrivilegeLevel(val id: Int) {
     MOD(1),
     ADMIN(2);
 
+    fun isModerator(): Boolean {
+        return id > 0
+    }
+
     companion object {
         val values = enumValues<PrivilegeLevel>()
 

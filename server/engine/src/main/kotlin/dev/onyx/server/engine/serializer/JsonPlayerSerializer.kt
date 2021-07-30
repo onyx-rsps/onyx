@@ -3,6 +3,8 @@ package dev.onyx.server.engine.serializer
 import dev.onyx.server.common.hash.SHA256
 import dev.onyx.server.config.impl.PlayerSaveConfig
 import dev.onyx.server.config.impl.ServerConfig
+import dev.onyx.server.config.impl.item.AppearanceItem
+import dev.onyx.server.config.impl.item.GenderItem
 import dev.onyx.server.config.impl.item.TileItem
 import dev.onyx.server.engine.model.Appearance
 import dev.onyx.server.engine.model.Gender
@@ -71,6 +73,7 @@ object JsonPlayerSerializer : PlayerSerializer {
                 colors = playerSave.appearance.colors,
                 gender = Gender.fromId(playerSave.appearance.gender.id)
             )
+            player.member = playerSave.member
 
             return player
         }
@@ -79,7 +82,19 @@ object JsonPlayerSerializer : PlayerSerializer {
     }
 
     override fun save(player: Player) {
+        val playerSave = PlayerSaveConfig(player.client.username.sanitize()).init()
+        playerSave.load()
 
+        playerSave["player.username"] = player.client.username.sanitize()
+        playerSave["player.display-name"] = player.displayName
+        playerSave["player.privilege-level"] = player.privilegeLevel.id
+        playerSave["player.tile"] = TileItem(player.tile.x, player.tile.y, player.tile.level)
+        playerSave["player.appearance"] = AppearanceItem(
+            looks = player.appearance.looks,
+            colors = player.appearance.colors,
+            gender = GenderItem.fromId(player.appearance.gender.id)
+        )
+        playerSave["player.member"] = player.member
     }
 
     private fun String.sanitize(): String {

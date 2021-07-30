@@ -38,6 +38,7 @@ class PlayerSaveConfig(username: String) : BaseConfig("", Spec) {
     val privilegeLevel get() = config[Spec.privilegeLevel]
     val tile get() = config[Spec.tile]
     val appearance get() = config[Spec.appearance]
+    val member get() = config[Spec.member]
 
     object Spec : ConfigSpec("player") {
         val username by required<String>("username")
@@ -46,5 +47,6 @@ class PlayerSaveConfig(username: String) : BaseConfig("", Spec) {
         val privilegeLevel by optional(0, "privilege-level")
         val tile by optional(ServerConfig.playerDefaults.homeTile, "tile")
         val appearance by optional(ServerConfig.playerDefaults.appearance, "appearance")
+        val member by optional(true, "member")
     }
 }

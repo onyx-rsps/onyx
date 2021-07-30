@@ -3,6 +3,7 @@ package dev.onyx.server.engine.net
 import dev.onyx.server.common.random.IsaacRandom
 import dev.onyx.server.engine.model.entity.Client
 import dev.onyx.server.engine.model.entity.Player
+import dev.onyx.server.engine.net.game.GameProtocol
 import dev.onyx.server.engine.net.handshake.HandshakeProtocol
 import dev.onyx.server.engine.net.pipeline.GameChannelDecoder
 import dev.onyx.server.engine.net.pipeline.GameChannelEncoder
@@ -11,7 +12,7 @@ import io.netty.buffer.ByteBuf
 import io.netty.channel.ChannelHandlerContext
 import org.tinylog.kotlin.Logger
 import java.util.*
-import java.util.concurrent.LinkedBlockingQueue
+import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.atomic.AtomicReference
 
 class Session(val ctx: ChannelHandlerContext) {
@@ -31,7 +32,7 @@ class Session(val ctx: ChannelHandlerContext) {
     val encodeIsaac = IsaacRandom()
     val decodeIsaac = IsaacRandom()
 
-    private val messageQueue = LinkedBlockingQueue<Message>()
+    private val messageQueue = ConcurrentLinkedQueue<Message>()
 
     /**
      * Invoked when the session is established to the server.
@@ -80,9 +81,26 @@ class Session(val ctx: ChannelHandlerContext) {
         if(msg !is Message) return
 
         /*
-         * Handle the message.
+         * Queue the incoming messages if the current
+         * protocol is set to the game protocol.
          */
-        protocol.get().handle(msg)
+        if(protocol.get() !is GameProtocol) {
+            protocol.get().handle(msg)
+        } else {
+            messageQueue.add(msg)
+        }
+    }
+
+    /**
+     * Handle in incoming queued messages
+     */
+    fun cycle() {
+        var packetCount = 0
+        while(messageQueue.isNotEmpty() && packetCount < MAX_PACKETS_PER_TICK) {
+            val packet = messageQueue.poll() ?: return
+            protocol.get().handle(packet)
+            packetCount++
+        }
     }
 
     /**
@@ -116,4 +134,7 @@ class Session(val ctx: ChannelHandlerContext) {
 
     fun buffer(): ByteBuf = ctx.alloc().buffer()
 
+    companion object {
+        private const val MAX_PACKETS_PER_TICK = 100
+    }
 }

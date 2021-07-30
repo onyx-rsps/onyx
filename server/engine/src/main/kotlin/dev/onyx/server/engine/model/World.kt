@@ -34,7 +34,7 @@ class World : EventContext, TaskContext {
         /*
          * Player
          */
-        players.forEach { it.processTasks() }
+        players.forEach { it.cycle() }
 
         /*
          * Post Tasks

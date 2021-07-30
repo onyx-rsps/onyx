@@ -138,7 +138,24 @@ class LoginProtocol(session: Session) : Protocol(session) {
      */
 
     override fun encode(msg: Message, out: ByteBuf) {
+        if(msg !is LoginResponse) return
 
+        out.writeByte(StatusResponse.NORMAL.id)
+        /*
+         * Login response length. We will set this at the end.
+         */
+        out.writeByte(0)
+
+        /*
+         * Trusted device information. Not used.
+         */
+        out.writeBoolean(false)
+        out.writeInt(0)
+
+        out.writeByte(msg.player.privilegeLevel.id)
+        out.writeBoolean(msg.player.privilegeLevel.isModerator())
+        out.writeShort(msg.player.index)
+        out.writeBoolean(msg.player.member)
     }
 
     /**

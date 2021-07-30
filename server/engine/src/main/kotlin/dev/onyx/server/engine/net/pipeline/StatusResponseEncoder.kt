@@ -8,7 +8,7 @@ import io.netty.handler.codec.MessageToByteEncoder
 class StatusResponseEncoder : MessageToByteEncoder<StatusResponse>() {
 
     override fun encode(ctx: ChannelHandlerContext, msg: StatusResponse, out: ByteBuf) {
-        out.writeByte(msg.code)
+        out.writeByte(msg.id)
     }
 
 }

@@ -1,6 +1,6 @@
 package dev.onyx.server.engine.net
 
-enum class StatusResponse(val code: Int) : Message {
+enum class StatusResponse(val id: Int) : Message {
     SUCCESSFUL(0),
     DELAY(1),
     NORMAL(2),
