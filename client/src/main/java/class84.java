@@ -357,7 +357,7 @@ public class class84 {
                   int var9;
                   int var10;
                   if (var6 >= 2) {
-                     var7 = var26.method6043();
+                     var7 = var26.readUnsignedShort();
                      var8 = 0;
 
                      while(true) {
@@ -365,7 +365,7 @@ public class class84 {
                            break label231;
                         }
 
-                        var9 = var26.method6043();
+                        var9 = var26.readUnsignedShort();
                         var10 = var26.method5948();
                         class377[] var11 = new class377[]{class377.field4165, class377.field4164, class377.field4160};
                         class377 var12 = (class377)class251.method4287(var11, var10);
@@ -377,17 +377,17 @@ public class class84 {
                         ++var8;
                      }
                   } else {
-                     var7 = var26.method6043();
+                     var7 = var26.readUnsignedShort();
 
                      for(var8 = 0; var8 < var7; ++var8) {
-                        var9 = var26.method6043();
-                        var10 = var26.method6172();
+                        var9 = var26.readUnsignedShort();
+                        var10 = var26.readInt();
                         if (this.field1185[var9]) {
                            this.field1186.put(var9, var10);
                         }
                      }
 
-                     var8 = var26.method6043();
+                     var8 = var26.readUnsignedShort();
                      var9 = 0;
 
                      while(true) {
@@ -395,7 +395,7 @@ public class class84 {
                            break label231;
                         }
 
-                        var26.method6043();
+                        var26.readUnsignedShort();
                         var26.method5957();
                         ++var9;
                      }

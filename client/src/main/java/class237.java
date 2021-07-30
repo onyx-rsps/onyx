@@ -25,8 +25,8 @@ public class class237 {
    void method4057(byte[] var1) {
       this.field2866.payload = var1;
       this.field2866.offset = 10;
-      int var2 = this.field2866.method6043();
-      this.field2854 = this.field2866.method6043();
+      int var2 = this.field2866.readUnsignedShort();
+      this.field2854 = this.field2866.readUnsignedShort();
       this.field2853 = 500000;
       this.field2855 = new int[var2];
 
@@ -34,8 +34,8 @@ public class class237 {
       int var3;
       int var5;
       for(var3 = 0; var3 < var2; var10000.offset += var5) {
-         int var4 = this.field2866.method6172();
-         var5 = this.field2866.method6172();
+         int var4 = this.field2866.readInt();
+         var5 = this.field2866.readInt();
          if (var4 == 1297379947) {
             this.field2855[var3] = this.field2866.offset;
             ++var3;

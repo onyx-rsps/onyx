@@ -36,6 +36,11 @@ class Region(val id: Int) {
         level
     )
 
+    val scene: Scene get() = Scene(
+        x / (Scene.SIZE / SIZE),
+        y / (Scene.SIZE / SIZE)
+    )
+
     companion object {
 
         /**

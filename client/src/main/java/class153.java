@@ -48,7 +48,7 @@ public class class153 extends class349 {
          char var4 = (char)var6;
          this.field1700 = var4;
       } else if (2 == var2) {
-         this.field1696 = var1.method6172();
+         this.field1696 = var1.readInt();
       } else if (4 == var2) {
          this.field1699 = false;
       } else if (var2 == 5) {
@@ -116,8 +116,8 @@ public class class153 extends class349 {
    static final void method2544(boolean var0, class384 var1) {
       client.field529 = 0;
       client.field501 = 0;
-      class384 var3 = client.field453.field1201;
-      var3.method5892();
+      class384 var3 = client.field453.buffer;
+      var3.toBitMode();
       int var4 = var3.method5893(8);
       int var5;
       if (var4 < client.field685) {
@@ -188,9 +188,9 @@ public class class153 extends class349 {
                var16.field1065 = var1.method5981();
                var16.field1064 = var1.method5980();
                var16.field1066 = var1.method5935();
-               var16.field1074 = var1.method6076() + client.field452;
-               var16.field1068 = var1.method6043() + client.field452;
-               var16.field1051 = var1.method6043();
+               var16.field1074 = var1.readUnsignedShortLE() + client.field452;
+               var16.field1068 = var1.readUnsignedShort() + client.field452;
+               var16.field1051 = var1.readUnsignedShort();
                var16.field1027 = 1;
                var16.field1067 = 0;
                var16.field1063 += var16.field1076[0];
@@ -201,7 +201,7 @@ public class class153 extends class349 {
 
             int var17;
             if (0 != (var6 & 32)) {
-               var17 = var1.method6043();
+               var17 = var1.readUnsignedShort();
                var8 = var1.method5988();
                var9 = var16.field1069 - 64 * (var17 - class281.field3625 - class281.field3625);
                var10 = var16.field1059 - 64 * (var8 - class78.field1134 - class78.field1134);
@@ -211,7 +211,7 @@ public class class153 extends class349 {
             }
 
             if (0 != (var6 & 64)) {
-               var16.field1132 = class97.method2065(var1.method6043());
+               var16.field1132 = class97.method2065(var1.readUnsignedShort());
                var16.field1024 = var16.field1132.field1622;
                var16.field1075 = var16.field1132.field1645;
                var16.field1029 = var16.field1132.field1628;
@@ -300,7 +300,7 @@ public class class153 extends class349 {
             }
 
             if ((var6 & 2) != 0) {
-               var16.field1058 = var1.method6076();
+               var16.field1058 = var1.readUnsignedShortLE();
                var17 = var1.method5997();
                var16.field1062 = var17 >> 16;
                var16.field1061 = client.field452 + (var17 & '\uffff');
@@ -316,7 +316,7 @@ public class class153 extends class349 {
             }
 
             if ((var6 & 8) != 0) {
-               var16.field1047 = var1.method6043();
+               var16.field1047 = var1.readUnsignedShort();
                if (65535 == var16.field1047) {
                   var16.field1047 = -1;
                }
@@ -331,8 +331,8 @@ public class class153 extends class349 {
             }
          }
 
-         if (var1.offset != client.field453.field1209) {
-            throw new RuntimeException(var1.offset + class79.field1140 + client.field453.field1209);
+         if (var1.offset != client.field453.gpiBufLength) {
+            throw new RuntimeException(var1.offset + class79.field1140 + client.field453.gpiBufLength);
          } else {
             for(var15 = 0; var15 < client.field685; ++var15) {
                if (client.field567[client.field450[var15]] == null) {

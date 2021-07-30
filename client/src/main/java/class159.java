@@ -51,24 +51,24 @@ public class class159 extends class349 {
       int var4;
       int var5;
       if (1 == var2) {
-         var4 = var1.method6043();
+         var4 = var1.readUnsignedShort();
          this.field1865 = new int[var4];
 
          for(var5 = 0; var5 < var4; ++var5) {
-            this.field1865[var5] = var1.method6043();
+            this.field1865[var5] = var1.readUnsignedShort();
          }
 
          this.field1863 = new int[var4];
 
          for(var5 = 0; var5 < var4; ++var5) {
-            this.field1863[var5] = var1.method6043();
+            this.field1863[var5] = var1.readUnsignedShort();
          }
 
          for(var5 = 0; var5 < var4; ++var5) {
-            this.field1863[var5] += var1.method6043() << 16;
+            this.field1863[var5] += var1.readUnsignedShort() << 16;
          }
       } else if (2 == var2) {
-         this.field1862 = var1.method6043();
+         this.field1862 = var1.readUnsignedShort();
       } else if (var2 == 3) {
          var4 = var1.method5948();
          this.field1870 = new int[var4 + 1];
@@ -83,9 +83,9 @@ public class class159 extends class349 {
       } else if (var2 == 5) {
          this.field1864 = var1.method5948();
       } else if (6 == var2) {
-         this.field1867 = var1.method6043();
+         this.field1867 = var1.readUnsignedShort();
       } else if (var2 == 7) {
-         this.field1872 = var1.method6043();
+         this.field1872 = var1.readUnsignedShort();
       } else if (8 == var2) {
          this.field1873 = var1.method5948();
       } else if (var2 == 9) {
@@ -99,11 +99,11 @@ public class class159 extends class349 {
          this.field1874 = new int[var4];
 
          for(var5 = 0; var5 < var4; ++var5) {
-            this.field1874[var5] = var1.method6043();
+            this.field1874[var5] = var1.readUnsignedShort();
          }
 
          for(var5 = 0; var5 < var4; ++var5) {
-            this.field1874[var5] += var1.method6043() << 16;
+            this.field1874[var5] += var1.readUnsignedShort() << 16;
          }
       } else if (var2 == 13) {
          var4 = var1.method5948();

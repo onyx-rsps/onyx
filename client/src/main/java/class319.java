@@ -33,7 +33,7 @@ public class class319 extends class326 {
             boolean var4 = var1.method5948() == 1;
             class406 var5 = new class406(var1.method5957(), this.field3827);
             class406 var6 = new class406(var1.method5957(), this.field3827);
-            int var7 = var1.method6043();
+            int var7 = var1.readUnsignedShort();
             int var8 = var1.method5948();
             int var9 = var1.method5948();
             boolean var10 = (var9 & 2) != 0;
@@ -41,7 +41,7 @@ public class class319 extends class326 {
             if (var7 > 0) {
                var1.method5957();
                var1.method5948();
-               var1.method6172();
+               var1.readInt();
             }
 
             var1.method5957();

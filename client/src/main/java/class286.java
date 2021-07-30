@@ -12,11 +12,11 @@ public class class286 {
 
    public class286(Buffer var1, boolean var2) {
       this.field3655 = var1.method5949();
-      this.field3654 = var1.method6043();
-      this.field3656 = var1.method6172();
-      this.field3653 = var1.method6172();
-      this.field3657 = var1.method6172();
-      this.field3659 = var1.method6172();
+      this.field3654 = var1.readUnsignedShort();
+      this.field3656 = var1.readInt();
+      this.field3653 = var1.readInt();
+      this.field3657 = var1.readInt();
+      this.field3659 = var1.readInt();
       if (var2) {
          int var4 = 0;
          boolean var5 = false;
@@ -40,7 +40,7 @@ public class class286 {
                }
 
                --var1.offset;
-               if (var1.method6043() != 0) {
+               if (var1.readUnsignedShort() != 0) {
                   throw new IllegalStateException("");
                }
 
@@ -48,7 +48,7 @@ public class class286 {
                   throw new IllegalStateException("");
                }
 
-               var4 = var1.method6172();
+               var4 = var1.readInt();
                var5 = true;
             }
          }

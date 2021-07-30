@@ -8,10 +8,10 @@ public class class86 {
    ServerPacket field1214;
    class298 field1202;
    class330 field1208;
-   class384 field1201;
+   class384 buffer;
    Buffer field1204;
    int field1203;
-   int field1209;
+   int gpiBufLength;
    int field1210;
    int field1216;
    public class401 field1205;
@@ -20,9 +20,9 @@ public class class86 {
       this.field1202 = new class298();
       this.field1203 = 0;
       this.field1204 = new Buffer(5000);
-      this.field1201 = new class384(40000);
+      this.buffer = new class384(40000);
       this.currentInboundPacket = null;
-      this.field1209 = 0;
+      this.gpiBufLength = 0;
       this.field1211 = true;
       this.field1210 = 0;
       this.field1216 = 0;

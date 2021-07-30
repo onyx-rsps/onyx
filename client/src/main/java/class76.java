@@ -84,8 +84,8 @@ public class class76 {
                int var3 = var1.method5948();
 
                for(int var4 = 0; var4 < var3; ++var4) {
-                  int var5 = var1.method6172();
-                  int var6 = var1.method6172();
+                  int var5 = var1.readInt();
+                  int var6 = var1.readInt();
                   this.field1115.put(var5, var6);
                }
             }

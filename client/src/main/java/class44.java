@@ -2,7 +2,7 @@ public class class44 {
    static class340 field372;
    static int field373;
    static int[] field376;
-   static int[][] field370;
+   static int[][] regionXteas;
    class59 field368;
    int field366;
    int[] field374;
@@ -16,12 +16,12 @@ public class class44 {
       return "<col=" + Integer.toHexString(var0) + ">";
    }
 
-   static final void method769(class384 var0) {
-      var0.method5892();
+   static final void decodePlayerGpi(class384 buf) {
+      buf.toBitMode();
       int var2 = client.field665;
       class70 var3 = class20.field140 = client.field524[var2] = new class70();
       var3.field1000 = var2;
-      int var4 = var0.method5893(30);
+      int var4 = buf.method5893(30);
       byte var5 = (byte)(var4 >> 28);
       int var6 = var4 >> 14 & 16383;
       int var7 = var4 & 16383;
@@ -41,7 +41,7 @@ public class class44 {
 
       for(int var8 = 1; var8 < 2048; ++var8) {
          if (var8 != var2) {
-            int var9 = var0.method5893(18);
+            int var9 = buf.method5893(18);
             int var10 = var9 >> 16;
             int var11 = var9 >> 8 & 597;
             int var12 = var9 & 597;
@@ -53,7 +53,7 @@ public class class44 {
          }
       }
 
-      var0.method5913();
+      buf.toByteMode();
    }
 
    public static int method772(CharSequence var0, int var1, boolean var2) {

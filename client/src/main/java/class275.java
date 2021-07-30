@@ -28,8 +28,8 @@ public class class275 extends class277 {
       int var8 = this.field3563;
       if (JS5Worker.field3603 != null) {
          JS5Worker.field3603.offset = var8 * 8 + 5;
-         int var9 = JS5Worker.field3603.method6172();
-         int var10 = JS5Worker.field3603.method6172();
+         int var9 = JS5Worker.field3603.readInt();
+         int var10 = JS5Worker.field3603.readInt();
          this.method4380(var9, var10);
       } else {
          class134.method2317((class275)null, 255, 255, 0, (byte)0, true);
@@ -230,7 +230,7 @@ public class class275 extends class277 {
 
          int var9 = 0;
          if (var13 >= 6) {
-            var9 = var12.method6172();
+            var9 = var12.readInt();
          }
 
          if (this.field3561 != var9) {

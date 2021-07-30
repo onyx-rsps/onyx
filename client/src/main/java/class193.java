@@ -82,8 +82,8 @@ public class class193 extends class201 {
       Buffer var7 = new Buffer(var1);
       Buffer var8 = new Buffer(var1);
       var2.offset = var1.length - 23;
-      int var9 = var2.method6043();
-      int var10 = var2.method6043();
+      int var9 = var2.readUnsignedShort();
+      int var10 = var2.readUnsignedShort();
       int var11 = var2.method5948();
       int var12 = var2.method5948();
       int var13 = var2.method5948();
@@ -91,11 +91,11 @@ public class class193 extends class201 {
       int var15 = var2.method5948();
       int var16 = var2.method5948();
       int var17 = var2.method5948();
-      int var18 = var2.method6043();
-      int var19 = var2.method6043();
-      int var20 = var2.method6043();
-      int var21 = var2.method6043();
-      int var22 = var2.method6043();
+      int var18 = var2.readUnsignedShort();
+      int var19 = var2.readUnsignedShort();
+      int var20 = var2.readUnsignedShort();
+      int var21 = var2.readUnsignedShort();
+      int var22 = var2.readUnsignedShort();
       int var23 = 0;
       int var24 = 0;
       int var25 = 0;
@@ -274,7 +274,7 @@ public class class193 extends class201 {
       var8.offset = var36;
 
       for(var51 = 0; var51 < var10; ++var51) {
-         this.field2184[var51] = (short)var2.method6043();
+         this.field2184[var51] = (short)var2.readUnsignedShort();
          if (var12 == 1) {
             this.field2174[var51] = var3.method5949();
          }
@@ -292,7 +292,7 @@ public class class193 extends class201 {
          }
 
          if (var16 == 1) {
-            this.field2158[var51] = (short)(var7.method6043() - 1);
+            this.field2158[var51] = (short)(var7.readUnsignedShort() - 1);
          }
 
          if (this.field2159 != null && this.field2158[var51] != -1) {
@@ -360,9 +360,9 @@ public class class193 extends class201 {
       for(var55 = 0; var55 < var11; ++var55) {
          var56 = this.field2166[var55] & 255;
          if (var56 == 0) {
-            this.field2167[var55] = (short)var2.method6043();
-            this.field2168[var55] = (short)var2.method6043();
-            this.field2161[var55] = (short)var2.method6043();
+            this.field2167[var55] = (short)var2.readUnsignedShort();
+            this.field2168[var55] = (short)var2.readUnsignedShort();
+            this.field2161[var55] = (short)var2.readUnsignedShort();
          }
       }
 
@@ -370,10 +370,10 @@ public class class193 extends class201 {
       var55 = var2.method5948();
       if (var55 != 0) {
          new class211();
-         var2.method6043();
-         var2.method6043();
-         var2.method6043();
-         var2.method6172();
+         var2.readUnsignedShort();
+         var2.readUnsignedShort();
+         var2.readUnsignedShort();
+         var2.readInt();
       }
 
    }
@@ -387,18 +387,18 @@ public class class193 extends class201 {
       Buffer var7 = new Buffer(var1);
       Buffer var8 = new Buffer(var1);
       var4.offset = var1.length - 18;
-      int var9 = var4.method6043();
-      int var10 = var4.method6043();
+      int var9 = var4.readUnsignedShort();
+      int var10 = var4.readUnsignedShort();
       int var11 = var4.method5948();
       int var12 = var4.method5948();
       int var13 = var4.method5948();
       int var14 = var4.method5948();
       int var15 = var4.method5948();
       int var16 = var4.method5948();
-      int var17 = var4.method6043();
-      int var18 = var4.method6043();
-      int var19 = var4.method6043();
-      int var20 = var4.method6043();
+      int var17 = var4.readUnsignedShort();
+      int var18 = var4.readUnsignedShort();
+      int var19 = var4.readUnsignedShort();
+      int var20 = var4.readUnsignedShort();
       byte var21 = 0;
       int var45 = var21 + var9;
       int var23 = var45;
@@ -529,7 +529,7 @@ public class class193 extends class201 {
       var8.offset = var25;
 
       for(var38 = 0; var38 < var10; ++var38) {
-         this.field2184[var38] = (short)var4.method6043();
+         this.field2184[var38] = (short)var4.readUnsignedShort();
          if (var12 == 1) {
             var39 = var5.method5948();
             if ((var39 & 1) == 1) {
@@ -620,9 +620,9 @@ public class class193 extends class201 {
 
       for(var42 = 0; var42 < var11; ++var42) {
          this.field2166[var42] = 0;
-         this.field2167[var42] = (short)var4.method6043();
-         this.field2168[var42] = (short)var4.method6043();
-         this.field2161[var42] = (short)var4.method6043();
+         this.field2167[var42] = (short)var4.readUnsignedShort();
+         this.field2168[var42] = (short)var4.readUnsignedShort();
+         this.field2161[var42] = (short)var4.readUnsignedShort();
       }
 
       if (this.field2159 != null) {

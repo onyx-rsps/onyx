@@ -31,7 +31,7 @@ public class class139 extends class349 {
 
    void method2344(Buffer var1, int var2) {
       if (var2 == 2) {
-         this.field1523 = var1.method6043();
+         this.field1523 = var1.readUnsignedShort();
       }
 
    }

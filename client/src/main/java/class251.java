@@ -1,6 +1,6 @@
 public class class251 {
    static byte[][][] field3114;
-   static int[] field3110;
+   static int[] regionMapFiles;
    byte[] field3109;
    int[] field3111;
    int[] field3112;

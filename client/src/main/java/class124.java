@@ -418,7 +418,7 @@ public class class124 extends Node {
       var1.method6178();
       this.field1437 = var1.method5949();
       this.field1431 = var1.method5949();
-      int var5 = var1.method6043();
+      int var5 = var1.readUnsignedShort();
       if (var5 > 0) {
          this.field1436 = new ArrayList(var5);
 
@@ -433,7 +433,7 @@ public class class124 extends Node {
             }
 
             var7.field1306 = var1.method5949();
-            var7.field1302 = var1.method6043();
+            var7.field1302 = var1.readUnsignedShort();
             if (var4 >= 3) {
                var1.method6178();
             }

@@ -52,15 +52,15 @@ public class class150 extends class349 {
 
    void method2511(Buffer var1, int var2) {
       if (var2 == 1) {
-         this.field1663 = var1.method6043();
+         this.field1663 = var1.readUnsignedShort();
       } else if (2 == var2) {
-         this.field1664 = var1.method6043();
+         this.field1664 = var1.readUnsignedShort();
       } else if (var2 == 4) {
-         this.field1665 = var1.method6043();
+         this.field1665 = var1.readUnsignedShort();
       } else if (var2 == 5) {
-         this.field1670 = var1.method6043();
+         this.field1670 = var1.readUnsignedShort();
       } else if (6 == var2) {
-         this.field1671 = var1.method6043();
+         this.field1671 = var1.readUnsignedShort();
       } else if (7 == var2) {
          this.field1674 = var1.method5948();
       } else if (var2 == 8) {
@@ -74,8 +74,8 @@ public class class150 extends class349 {
             this.field1666 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.field1672[var5] = (short)var1.method6043();
-               this.field1666[var5] = (short)var1.method6043();
+               this.field1672[var5] = (short)var1.readUnsignedShort();
+               this.field1666[var5] = (short)var1.readUnsignedShort();
             }
          } else if (var2 == 41) {
             var4 = var1.method5948();
@@ -83,8 +83,8 @@ public class class150 extends class349 {
             this.field1668 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.field1667[var5] = (short)var1.method6043();
-               this.field1668[var5] = (short)var1.method6043();
+               this.field1667[var5] = (short)var1.readUnsignedShort();
+               this.field1668[var5] = (short)var1.readUnsignedShort();
             }
          }
       }

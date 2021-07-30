@@ -17,7 +17,7 @@ public class class116 extends class120 {
       }
 
       this.field1389 = var1.method5956();
-      this.field1390 = var1.method6043();
+      this.field1390 = var1.readUnsignedShort();
       this.field1391 = var1.method5949();
       var1.method5954();
    }

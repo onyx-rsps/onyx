@@ -322,8 +322,8 @@ public class class40 {
 
       this.field335 = var1.method5962();
       this.field328 = var1.method5962();
-      this.field344 = var1.method6043();
-      this.field340 = var1.method6043();
+      this.field344 = var1.readUnsignedShort();
+      this.field340 = var1.readUnsignedShort();
       this.field337 = new class39();
       this.field338 = new class26();
       this.field337.method732(var1, this.field338);

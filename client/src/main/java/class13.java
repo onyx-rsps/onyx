@@ -566,7 +566,7 @@ public final class class13 extends Canvas {
    }
 
    static final void method99(class228 var0) {
-      class384 var2 = client.field453.field1201;
+      class384 var2 = client.field453.buffer;
       byte var4;
       int var6;
       int var7;
@@ -584,8 +584,8 @@ public final class class13 extends Canvas {
       if (var0 == class228.field2676) {
          var32 = var2.method5948();
          var4 = var2.method5935();
-         var34 = var2.method6076();
-         var6 = var2.method5987();
+         var34 = var2.readUnsignedShortLE();
+         var6 = var2.readUnsignedShortADD();
          byte var36 = var2.method5949();
          var8 = var2.method5977();
          var9 = class292.field3695 + (var8 >> 4 & 7);
@@ -594,7 +594,7 @@ public final class class13 extends Canvas {
          var12 = var2.method5977() * 4;
          var13 = var2.method5989();
          var14 = var2.method6164();
-         var15 = var2.method6043();
+         var15 = var2.readUnsignedShort();
          var33 = var4 + var9;
          var7 = var36 + var10;
          if (var9 >= 0 && var10 >= 0 && var9 < 104 && var10 < 104 && var33 >= 0 && var7 >= 0 && var33 < 104 && var7 < 104 && 65535 != var6) {
@@ -612,8 +612,8 @@ public final class class13 extends Canvas {
             byte var3 = var2.method5981();
             var4 = var2.method5981();
             byte var5 = var2.method5980();
-            var6 = var2.method5987();
-            var7 = var2.method6043();
+            var6 = var2.readUnsignedShortADD();
+            var7 = var2.readUnsignedShort();
             var8 = var2.method5988();
             var9 = var2.method6164();
             var10 = var9 >> 2;
@@ -623,7 +623,7 @@ public final class class13 extends Canvas {
             var14 = (var13 >> 4 & 7) + class292.field3695;
             var15 = (var13 & 7) + class58.field859;
             byte var16 = var2.method5980();
-            int var17 = var2.method5987();
+            int var17 = var2.readUnsignedShortADD();
             class70 var18;
             if (var8 == client.field665) {
                var18 = class20.field140;
@@ -700,8 +700,8 @@ public final class class13 extends Canvas {
             var33 = var2.method5979();
             var34 = class292.field3695 + (var33 >> 4 & 7);
             var6 = (var33 & 7) + class58.field859;
-            var7 = var2.method6076();
-            var8 = var2.method6043();
+            var7 = var2.readUnsignedShortLE();
+            var8 = var2.readUnsignedShort();
             if (var34 >= 0 && var6 >= 0 && var34 < 104 && var6 < 104) {
                class296 var38 = client.field536[class285.field3652][var34][var6];
                if (null != var38) {
@@ -722,7 +722,7 @@ public final class class13 extends Canvas {
                var32 = var2.method6164();
                var33 = class292.field3695 + (var32 >> 4 & 7);
                var34 = class58.field859 + (var32 & 7);
-               var6 = var2.method5987();
+               var6 = var2.readUnsignedShortADD();
                if (var33 >= 0 && var34 >= 0 && var33 < 104 && var34 < 104) {
                   class296 var35 = client.field536[class285.field3652][var33][var34];
                   if (null != var35) {
@@ -755,7 +755,7 @@ public final class class13 extends Canvas {
 
             } else {
                if (class228.field2682 == var0) {
-                  var32 = var2.method6043();
+                  var32 = var2.readUnsignedShort();
                   var33 = var2.method6164();
                   var34 = (var33 >> 4 & 7) + class292.field3695;
                   var6 = (var33 & 7) + class58.field859;
@@ -780,8 +780,8 @@ public final class class13 extends Canvas {
                   var32 = var2.method6164();
                   var33 = (var32 >> 4 & 7) + class292.field3695;
                   var34 = class58.field859 + (var32 & 7);
-                  var6 = var2.method6076();
-                  var7 = var2.method6076();
+                  var6 = var2.readUnsignedShortLE();
+                  var7 = var2.readUnsignedShortLE();
                   if (var33 >= 0 && var34 >= 0 && var33 < 104 && var34 < 104) {
                      var37 = new class82();
                      var37.field1167 = var6;
@@ -803,7 +803,7 @@ public final class class13 extends Canvas {
                      var7 = var2.method5948();
                      var8 = (var7 >> 4 & 7) + class292.field3695;
                      var9 = class58.field859 + (var7 & 7);
-                     var10 = var2.method6043();
+                     var10 = var2.readUnsignedShort();
                      if (var8 >= 0 && var9 >= 0 && var8 < 104 && var9 < 104) {
                         class65.method1665(class285.field3652, var8, var9, var6, var10, var33, var34, 0, -1);
                      }

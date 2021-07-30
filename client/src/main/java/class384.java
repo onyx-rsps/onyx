@@ -61,7 +61,7 @@ public class class384 extends Buffer {
 
    }
 
-   public void method5892() {
+   public void toBitMode() {
       this.field4179 = super.offset * 8;
    }
 
@@ -84,7 +84,7 @@ public class class384 extends Buffer {
       return var5;
    }
 
-   public void method5913() {
+   public void toByteMode() {
       super.offset = (this.field4179 + 7) / 8;
    }
 

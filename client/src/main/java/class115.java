@@ -482,17 +482,17 @@ public class class115 {
             this.field1363 = null;
          }
 
-         this.field1364 = var1.method6172();
-         this.field1365 = var1.method6172();
+         this.field1364 = var1.readInt();
+         this.field1365 = var1.readInt();
          if (var3 <= 3 && this.field1365 != 0) {
             this.field1365 += 16912800;
          }
 
-         this.field1372 = var1.method6043();
+         this.field1372 = var1.readUnsignedShort();
          this.field1381 = var1.method5948();
          this.field1368 = var1.method5957();
          if (var3 >= 4) {
-            var1.method6172();
+            var1.readInt();
          }
 
          this.field1367 = var1.method5948() == 1;
@@ -537,11 +537,11 @@ public class class115 {
 
                this.field1374[var5] = var1.method5949();
                if (var3 >= 2) {
-                  this.field1376[var5] = var1.method6172();
+                  this.field1376[var5] = var1.readInt();
                }
 
                if (var3 >= 5) {
-                  this.field1377[var5] = var1.method6043();
+                  this.field1377[var5] = var1.readUnsignedShort();
                } else {
                   this.field1377[var5] = 0;
                }
@@ -577,16 +577,16 @@ public class class115 {
          }
 
          if (var3 >= 3) {
-            var5 = var1.method6043();
+            var5 = var1.readUnsignedShort();
             if (var5 > 0) {
                this.field1385 = new class363(var5 < 16 ? class27.method470(var5) : 16);
 
                while(var5-- > 0) {
-                  int var6 = var1.method6172();
+                  int var6 = var1.readInt();
                   int var7 = var6 & 1073741823;
                   int var8 = var6 >>> 30;
                   if (var8 == 0) {
-                     int var9 = var1.method6172();
+                     int var9 = var1.readInt();
                      this.field1385.method5727(new class353(var9), (long)var7);
                   } else if (var8 == 1) {
                      long var11 = var1.method5954();

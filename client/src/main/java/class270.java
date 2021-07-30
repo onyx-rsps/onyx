@@ -619,15 +619,15 @@ public class class270 {
          } else if (class78.field1135.method1999()) {
             byte[] var1 = class78.field1135.method1998();
             Buffer var2 = new Buffer(var1);
-            var2.method6172();
-            class48.field692 = var2.method6043();
+            var2.readInt();
+            class48.field692 = var2.readUnsignedShort();
             class16.field86 = new class48[class48.field692];
 
             class48 var4;
             for(int var3 = 0; var3 < class48.field692; var4.field703 = var3++) {
                var4 = class16.field86[var3] = new class48();
-               var4.field697 = var2.method6043();
-               var4.field700 = var2.method6172();
+               var4.field697 = var2.readUnsignedShort();
+               var4.field700 = var2.readInt();
                var4.field701 = var2.method5957();
                var4.field690 = var2.method5957();
                var4.field702 = var2.method5948();

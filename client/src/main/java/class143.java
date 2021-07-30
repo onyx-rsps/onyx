@@ -45,7 +45,7 @@ public class class143 extends class349 {
             this.field1567 = new int[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.field1567[var5] = var1.method6043();
+               this.field1567[var5] = var1.readUnsignedShort();
             }
          } else if (var2 == 3) {
             this.field1573 = true;
@@ -55,8 +55,8 @@ public class class143 extends class349 {
             this.field1569 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.field1572[var5] = (short)var1.method6043();
-               this.field1569[var5] = (short)var1.method6043();
+               this.field1572[var5] = (short)var1.readUnsignedShort();
+               this.field1569[var5] = (short)var1.readUnsignedShort();
             }
          } else if (41 == var2) {
             var4 = var1.method5948();
@@ -64,11 +64,11 @@ public class class143 extends class349 {
             this.field1571 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.field1570[var5] = (short)var1.method6043();
-               this.field1571[var5] = (short)var1.method6043();
+               this.field1570[var5] = (short)var1.readUnsignedShort();
+               this.field1571[var5] = (short)var1.readUnsignedShort();
             }
          } else if (var2 >= 60 && var2 < 70) {
-            this.field1563[var2 - 60] = var1.method6043();
+            this.field1563[var2 - 60] = var1.readUnsignedShort();
          }
       }
 

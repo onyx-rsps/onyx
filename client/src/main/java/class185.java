@@ -62,10 +62,10 @@ public class class185 implements class188 {
    public void method3256(Buffer var1) {
       this.field2105 = var1.method5948();
       this.field2103 = var1.method5948();
-      this.field2104 = var1.method6043();
-      this.field2106 = var1.method6043();
-      this.field2107 = var1.method6043();
-      this.field2108 = var1.method6043();
+      this.field2104 = var1.readUnsignedShort();
+      this.field2106 = var1.readUnsignedShort();
+      this.field2107 = var1.readUnsignedShort();
+      this.field2108 = var1.readUnsignedShort();
       this.method3203();
    }
 

@@ -40,6 +40,11 @@ class World : EventContext, TaskContext {
          * Post Tasks
          */
         postProcessTasks()
+
+        /*
+         * Player Post Cycle
+         */
+        players.forEach { it.postCycle() }
     }
 
     fun isFull(): Boolean = players.size + loginManager.loginQueue.size >= MAX_PLAYERS

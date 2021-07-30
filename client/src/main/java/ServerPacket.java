@@ -3,7 +3,7 @@ import java.io.File;
 public class ServerPacket {
    public static final ServerPacket field2692;
    public static final ServerPacket field2693;
-   public static final ServerPacket field2694;
+   public static final ServerPacket REBUILD_REGION_NORMAL;
    public static final ServerPacket field2695;
    public static final ServerPacket field2696;
    public static final ServerPacket field2697;
@@ -103,7 +103,7 @@ public class ServerPacket {
    static {
       field2788 = new ServerPacket(0, -2);
       field2747 = new ServerPacket(1, -2);
-      field2694 = new ServerPacket(2, -2);
+      REBUILD_REGION_NORMAL = new ServerPacket(2, -2);
       field2693 = new ServerPacket(3, 0);
       field2696 = new ServerPacket(4, 1);
       field2769 = new ServerPacket(5, 0);

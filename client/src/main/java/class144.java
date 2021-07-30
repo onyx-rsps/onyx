@@ -43,7 +43,7 @@ public class class144 extends class349 {
 
    void method2430(Buffer var1, int var2) {
       if (1 == var2) {
-         var1.method6043();
+         var1.readUnsignedShort();
       } else if (2 == var2) {
          this.field1583 = var1.method5948();
       } else if (3 == var2) {
@@ -51,7 +51,7 @@ public class class144 extends class349 {
       } else if (var2 == 4) {
          this.field1584 = 0;
       } else if (5 == var2) {
-         this.field1587 = var1.method6043();
+         this.field1587 = var1.readUnsignedShort();
       } else if (var2 == 6) {
          var1.method5948();
       } else if (var2 == 7) {
@@ -59,7 +59,7 @@ public class class144 extends class349 {
       } else if (8 == var2) {
          this.field1585 = var1.method5965();
       } else if (11 == var2) {
-         this.field1584 = var1.method6043();
+         this.field1584 = var1.readUnsignedShort();
       } else if (14 == var2) {
          this.field1590 = var1.method5948();
       } else if (var2 == 15) {

@@ -27,7 +27,7 @@ public class class119 extends class104 {
       }
 
       this.field1403 = var1.method5956();
-      this.field1405 = var1.method6043();
+      this.field1405 = var1.readUnsignedShort();
    }
 
    void method2084(class115 var1) {
@@ -37,7 +37,7 @@ public class class119 extends class104 {
    public static void method2188(Buffer var0, int var1) {
       class43 var3 = new class43();
       var3.field359 = var0.method5948();
-      var3.field358 = var0.method6172();
+      var3.field358 = var0.readInt();
       var3.field360 = new int[var3.field359];
       var3.field361 = new int[var3.field359];
       var3.field364 = new Field[var3.field359];
@@ -67,7 +67,7 @@ public class class119 extends class104 {
                   int var13;
                   if (var5 == 3) {
                      for(int var12 = 0; var12 < var8; ++var12) {
-                        var13 = var0.method6172();
+                        var13 = var0.readInt();
                         var11[var12] = new byte[var13];
                         var0.method5960(var11[var12], 0, var13);
                      }
@@ -116,7 +116,7 @@ public class class119 extends class104 {
                var7 = var0.method5957();
                var8 = 0;
                if (1 == var5) {
-                  var8 = var0.method6172();
+                  var8 = var0.readInt();
                }
 
                var3.field360[var4] = var5;

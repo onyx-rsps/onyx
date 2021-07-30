@@ -12,9 +12,9 @@ public class class110 extends class120 {
    }
 
    void method2191(Buffer var1) {
-      this.field1335 = var1.method6043();
+      this.field1335 = var1.readUnsignedShort();
       this.field1334 = var1.method5949();
-      this.field1336 = var1.method6043();
+      this.field1336 = var1.readUnsignedShort();
       var1.method5954();
       this.field1333 = var1.method5957();
    }

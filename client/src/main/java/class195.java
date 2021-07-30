@@ -13,7 +13,7 @@ public class class195 extends Node {
 
    class195(Buffer var1) {
       this.field2210 = false;
-      this.field2201 = var1.method6043();
+      this.field2201 = var1.readUnsignedShort();
       this.field2202 = var1.method5948() == 1;
       int var2 = var1.method5948();
       if (var2 >= 1 && var2 <= 4) {
@@ -21,7 +21,7 @@ public class class195 extends Node {
 
          int var3;
          for(var3 = 0; var3 < var2; ++var3) {
-            this.field2206[var3] = var1.method6043();
+            this.field2206[var3] = var1.readUnsignedShort();
          }
 
          if (var2 > 1) {
@@ -43,7 +43,7 @@ public class class195 extends Node {
          this.field2200 = new int[var2];
 
          for(var3 = 0; var3 < var2; ++var3) {
-            this.field2200[var3] = var1.method6172();
+            this.field2200[var3] = var1.readInt();
          }
 
          this.field2197 = var1.method5948();

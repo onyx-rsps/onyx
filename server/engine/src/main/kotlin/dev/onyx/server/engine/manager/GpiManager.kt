@@ -17,8 +17,8 @@ class GpiManager(val player: Player) {
     val localPlayerIndexes = IntArray(World.MAX_PLAYERS)
     var externalPlayerCount = 0
     val externalPlayerIndexes = IntArray(World.MAX_PLAYERS)
-    val regionIds = IntArray(World.MAX_PLAYERS)
-    val skipFlags = ByteArray(World.MAX_PLAYERS)
+    val tileMultipliers = IntArray(World.MAX_PLAYERS)
+    val skipFlags = IntArray(World.MAX_PLAYERS)
 
     /**
      * Initializes the player's GPI when they first connect to the
@@ -27,11 +27,11 @@ class GpiManager(val player: Player) {
     internal fun initialize() {
         localPlayers[player.index] = player
         localPlayerIndexes[localPlayerCount++] = player.index
+
         for(index in 1 until World.MAX_PLAYERS) {
             if(index != player.index) {
-                val externalPlayer = world.players[index]
-                regionIds[index] = externalPlayer?.tile?.region?.id ?: 0
                 externalPlayerIndexes[externalPlayerCount++] = index
+                tileMultipliers[index] = player.world.players[index]?.tile?.as18BitInteger ?: 0
             }
         }
     }

@@ -9,10 +9,10 @@ public class class163 extends class177 {
       } else {
          super.field2061 = var1.method5948();
          super.field2052 = var1.method5948();
-         super.field2051 = var1.method6043();
-         super.field2048 = var1.method6043();
-         super.field2049 = var1.method6043();
-         super.field2053 = var1.method6043();
+         super.field2051 = var1.readUnsignedShort();
+         super.field2048 = var1.readUnsignedShort();
+         super.field2049 = var1.readUnsignedShort();
+         super.field2053 = var1.readUnsignedShort();
          super.field2047 = var1.method5965();
          super.field2054 = var1.method5965();
       }

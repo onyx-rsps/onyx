@@ -2,7 +2,7 @@ public class class97 extends class325 {
    public static int field1259;
    public static int field1264;
    static int field1266;
-   static int[] field1263;
+   static int[] regionLandscapeFiles;
    final boolean field1261;
 
    public class97(boolean var1) {

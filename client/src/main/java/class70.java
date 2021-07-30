@@ -71,7 +71,7 @@ public final class class70 extends class72 {
             var8 = var1.method5948();
             var5[var6] = (var7 << 8) + var8;
             if (0 == var6 && var5[0] == 65535) {
-               var4 = var1.method6043();
+               var4 = var1.readUnsignedShort();
                break;
             }
 
@@ -95,38 +95,38 @@ public final class class70 extends class72 {
          var25[var7] = var8;
       }
 
-      super.field1030 = var1.method6043();
+      super.field1030 = var1.readUnsignedShort();
       if (super.field1030 == 65535) {
          super.field1030 = -1;
       }
 
-      super.field1052 = var1.method6043();
+      super.field1052 = var1.readUnsignedShort();
       if (65535 == super.field1052) {
          super.field1052 = -1;
       }
 
       super.field1020 = super.field1052;
-      super.field1029 = var1.method6043();
+      super.field1029 = var1.readUnsignedShort();
       if (65535 == super.field1029) {
          super.field1029 = -1;
       }
 
-      super.field1072 = var1.method6043();
+      super.field1072 = var1.readUnsignedShort();
       if (super.field1072 == 65535) {
          super.field1072 = -1;
       }
 
-      super.field1046 = var1.method6043();
+      super.field1046 = var1.readUnsignedShort();
       if (65535 == super.field1046) {
          super.field1046 = -1;
       }
 
-      super.field1021 = var1.method6043();
+      super.field1021 = var1.readUnsignedShort();
       if (65535 == super.field1021) {
          super.field1021 = -1;
       }
 
-      super.field1033 = var1.method6043();
+      super.field1033 = var1.readUnsignedShort();
       if (65535 == super.field1033) {
          super.field1033 = -1;
       }
@@ -140,7 +140,7 @@ public final class class70 extends class72 {
       }
 
       this.field991 = var1.method5948();
-      this.field1007 = var1.method6043();
+      this.field1007 = var1.readUnsignedShort();
       this.field998 = var1.method5948() == 1;
       if (client.field407 == 0 && client.field577 >= 2) {
          this.field998 = false;
@@ -149,7 +149,7 @@ public final class class70 extends class72 {
       class138[] var26 = null;
       boolean var27 = false;
       if (var1.offset < var1.payload.length) {
-         var9 = var1.method6043();
+         var9 = var1.readUnsignedShort();
          var27 = (var9 >> 15 & 1) == 1;
          if (var9 > 0 && 32768 != var9) {
             var26 = new class138[12];
@@ -174,7 +174,7 @@ public final class class70 extends class72 {
 
                      for(var23 = 0; var23 < 2; ++var23) {
                         if (15 != var21[var23]) {
-                           var24 = (short)var1.method6043();
+                           var24 = (short)var1.readUnsignedShort();
                            if (var22) {
                               var19.field1516[var21[var23]] = var24;
                            }
@@ -189,7 +189,7 @@ public final class class70 extends class72 {
 
                      for(var23 = 0; var23 < 2; ++var23) {
                         if (var21[var23] != 15) {
-                           var24 = (short)var1.method6043();
+                           var24 = (short)var1.readUnsignedShort();
                            if (var22) {
                               var19.field1519[var21[var23]] = var24;
                            }

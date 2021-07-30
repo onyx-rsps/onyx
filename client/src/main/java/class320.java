@@ -71,7 +71,7 @@ public class class320 extends class326 {
 
          for(int var14 = 0; var14 < var8; ++var14) {
             class323 var10 = (class323)this.method5194(new class406(var1.method5957(), this.field3831));
-            int var15 = var1.method6043();
+            int var15 = var1.readUnsignedShort();
             var10.method5275(var15, ++this.field3838 - 1);
             var10.field3866 = var1.method5949();
             var1.method5957();
@@ -83,7 +83,7 @@ public class class320 extends class326 {
 
    public final void method5106(Buffer var1) {
       class406 var3 = new class406(var1.method5957(), this.field3831);
-      int var4 = var1.method6043();
+      int var4 = var1.readUnsignedShort();
       byte var5 = var1.method5949();
       boolean var6 = false;
       if (var5 == -128) {

@@ -9,6 +9,7 @@ import dev.onyx.server.engine.model.PrivilegeLevel
 import dev.onyx.server.engine.net.ext.then
 import dev.onyx.server.engine.net.game.GameProtocol
 import dev.onyx.server.engine.net.login.LoginResponse
+import dev.onyx.server.engine.net.packet.server.RebuildRegionNormal
 import org.tinylog.kotlin.Logger
 
 class Player : LivingEntity() {
@@ -20,7 +21,8 @@ class Player : LivingEntity() {
      */
 
     val gpi = GpiManager(this)
-    val chunkManager = SceneManager(this)
+
+    val scene = SceneManager(this)
 
     /**
      * Data Fields.
@@ -45,7 +47,7 @@ class Player : LivingEntity() {
         world.players.add(this)
 
         gpi.initialize()
-        chunkManager.initialize()
+        scene.initialize()
 
         /*
          * Send the login response and switch the player's session protocol
@@ -53,6 +55,7 @@ class Player : LivingEntity() {
          */
         client.writeAndFlush(LoginResponse(this)).then {
             client.session.protocol.set(GameProtocol(client.session))
+            client.write(RebuildRegionNormal(this, includeGpi = true))
         }
 
         EventBus.fire(PlayerLoginEvent(this))
@@ -68,11 +71,11 @@ class Player : LivingEntity() {
          */
         client.session.cycle()
 
-        /*
-         * Flush the buffer at the end of the player's tick.
-         */
-        client.session.flush()
 
         postProcessTasks()
+    }
+
+    internal fun postCycle() {
+        client.flush()
     }
 }

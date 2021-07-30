@@ -24,32 +24,32 @@ public final class class204 {
    static void method3698(byte[] var0) {
       Buffer var2 = new Buffer(var0);
       var2.offset = var0.length - 2;
-      class399.field4282 = var2.method6043();
+      class399.field4282 = var2.readUnsignedShort();
       class399.field4284 = new int[class399.field4282];
       class399.field4285 = new int[class399.field4282];
       class106.field1308 = new int[class399.field4282];
       class375.field4156 = new int[class399.field4282];
       class399.field4283 = new byte[class399.field4282][];
       var2.offset = var0.length - 7 - class399.field4282 * 8;
-      class399.field4281 = var2.method6043();
-      class399.field4286 = var2.method6043();
+      class399.field4281 = var2.readUnsignedShort();
+      class399.field4286 = var2.readUnsignedShort();
       int var3 = (var2.method5948() & 255) + 1;
 
       int var4;
       for(var4 = 0; var4 < class399.field4282; ++var4) {
-         class399.field4284[var4] = var2.method6043();
+         class399.field4284[var4] = var2.readUnsignedShort();
       }
 
       for(var4 = 0; var4 < class399.field4282; ++var4) {
-         class399.field4285[var4] = var2.method6043();
+         class399.field4285[var4] = var2.readUnsignedShort();
       }
 
       for(var4 = 0; var4 < class399.field4282; ++var4) {
-         class106.field1308[var4] = var2.method6043();
+         class106.field1308[var4] = var2.readUnsignedShort();
       }
 
       for(var4 = 0; var4 < class399.field4282; ++var4) {
-         class375.field4156[var4] = var2.method6043();
+         class375.field4156[var4] = var2.readUnsignedShort();
       }
 
       var2.offset = var0.length - 7 - class399.field4282 * 8 - (var3 - 1) * 3;

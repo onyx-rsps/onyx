@@ -25,7 +25,6 @@ dependencies {
 }
 
 tasks.withType<ShadowJar> {
-    group = "onyx"
     archiveBaseName.set("")
     archiveClassifier.set("")
     archiveVersion.set("")

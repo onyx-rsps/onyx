@@ -12,7 +12,7 @@ public class class107 {
 
    void method2097(Buffer var1) {
       this.field1309 = var1.method5954();
-      this.field1310 = var1.method6172();
+      this.field1310 = var1.readInt();
 
       for(int var3 = var1.method5948(); var3 != 0; var3 = var1.method5948()) {
          Object var4;

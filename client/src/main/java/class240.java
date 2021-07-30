@@ -10,7 +10,7 @@ public class class240 extends Node {
    class240(Buffer var1) {
       var1.offset = var1.payload.length - 3;
       int var2 = var1.method5948();
-      int var3 = var1.method6043();
+      int var3 = var1.readUnsignedShort();
       int var4 = 14 + var2 * 10;
       var1.offset = 0;
       int var5 = 0;

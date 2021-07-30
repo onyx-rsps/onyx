@@ -37,7 +37,7 @@ public final class class62 {
 
    static final void method1630(class384 var0) {
       int var2 = 0;
-      var0.method5892();
+      var0.toBitMode();
 
       byte[] var10000;
       int var3;
@@ -63,11 +63,11 @@ public final class class62 {
          }
       }
 
-      var0.method5913();
+      var0.toByteMode();
       if (0 != var2) {
          throw new RuntimeException();
       } else {
-         var0.method5892();
+         var0.toBitMode();
 
          for(var3 = 0; var3 < class83.field1172; ++var3) {
             var4 = class83.field1178[var3];
@@ -89,11 +89,11 @@ public final class class62 {
             }
          }
 
-         var0.method5913();
+         var0.toByteMode();
          if (var2 != 0) {
             throw new RuntimeException();
          } else {
-            var0.method5892();
+            var0.toBitMode();
 
             for(var3 = 0; var3 < class83.field1174; ++var3) {
                var4 = class83.field1170[var3];
@@ -116,11 +116,11 @@ public final class class62 {
                }
             }
 
-            var0.method5913();
+            var0.toByteMode();
             if (var2 != 0) {
                throw new RuntimeException();
             } else {
-               var0.method5892();
+               var0.toBitMode();
 
                for(var3 = 0; var3 < class83.field1174; ++var3) {
                   var4 = class83.field1170[var3];
@@ -143,7 +143,7 @@ public final class class62 {
                   }
                }
 
-               var0.method5913();
+               var0.toByteMode();
                if (0 != var2) {
                   throw new RuntimeException();
                } else {

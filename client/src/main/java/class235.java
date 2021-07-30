@@ -6,7 +6,7 @@ public class class235 {
    public static class277 field2820;
    public static int field2819;
    public static int field2822;
-   static int[] field2821;
+   static int[] regionIds;
    static String field2823;
 
    static {

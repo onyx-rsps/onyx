@@ -183,14 +183,14 @@ public class class167 implements class188 {
    public void method3256(Buffer var1) {
       this.field1936 = var1.method5948();
       this.field1933 = var1.method5948();
-      this.field1938 = var1.method6043();
-      this.field1935 = var1.method6043();
-      this.field1934 = var1.method6043();
-      this.field1937 = var1.method6043();
-      this.field1943 = var1.method6043();
-      this.field1939 = var1.method6043();
-      this.field1940 = var1.method6043();
-      this.field1941 = var1.method6043();
+      this.field1938 = var1.readUnsignedShort();
+      this.field1935 = var1.readUnsignedShort();
+      this.field1934 = var1.readUnsignedShort();
+      this.field1937 = var1.readUnsignedShort();
+      this.field1943 = var1.readUnsignedShort();
+      this.field1939 = var1.readUnsignedShort();
+      this.field1940 = var1.readUnsignedShort();
+      this.field1941 = var1.readUnsignedShort();
       this.method2882();
    }
 
@@ -200,7 +200,7 @@ public class class167 implements class188 {
    static final void method2888(class384 var0, int var1, class70 var2, int var3) {
       byte var5 = -1;
       if (0 != (var3 & 64)) {
-         var2.field1049 = var0.method6043();
+         var2.field1049 = var0.readUnsignedShort();
          if (0 == var2.field1027) {
             var2.field1043 = var2.field1049;
             var2.field1049 = -1;
@@ -209,7 +209,7 @@ public class class167 implements class188 {
 
       int var6;
       if ((var3 & 1024) != 0) {
-         var2.field1058 = var0.method6076();
+         var2.field1058 = var0.readUnsignedShortLE();
          var6 = var0.method5995();
          var2.field1062 = var6 >> 16;
          var2.field1061 = client.field452 + (var6 & '\uffff');
@@ -250,7 +250,7 @@ public class class167 implements class188 {
 
       int var14;
       if ((var3 & 1) != 0) {
-         var6 = var0.method5987();
+         var6 = var0.readUnsignedShortADD();
          if (65535 == var6) {
             var6 = -1;
          }
@@ -260,7 +260,7 @@ public class class167 implements class188 {
       }
 
       if (0 != (var3 & 4)) {
-         var2.field1047 = var0.method6076();
+         var2.field1047 = var0.readUnsignedShortLE();
          if (65535 == var2.field1047) {
             var2.field1047 = -1;
          }
@@ -272,8 +272,8 @@ public class class167 implements class188 {
          var2.field1064 = var0.method5949();
          var2.field1066 = var0.method5935();
          var2.field1074 = var0.method5988() + client.field452;
-         var2.field1068 = var0.method5987() + client.field452;
-         var2.field1051 = var0.method6043();
+         var2.field1068 = var0.readUnsignedShortADD() + client.field452;
+         var2.field1051 = var0.readUnsignedShort();
          if (var2.field1004) {
             var2.field1063 += var2.field1005;
             var2.field1065 += var2.field1006;

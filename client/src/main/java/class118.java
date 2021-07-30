@@ -38,7 +38,7 @@ public class class118 extends class104 {
    }
 
    void method2083(Buffer var1) {
-      this.field1402 = var1.method6043();
+      this.field1402 = var1.readUnsignedShort();
    }
 
    void method2084(class115 var1) {

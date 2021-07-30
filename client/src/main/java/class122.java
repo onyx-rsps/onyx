@@ -9,8 +9,8 @@ public class class122 extends class104 {
    }
 
    void method2083(Buffer var1) {
-      this.field1422 = var1.method6172();
-      this.field1421 = var1.method6172();
+      this.field1422 = var1.readInt();
+      this.field1421 = var1.readInt();
    }
 
    void method2084(class115 var1) {

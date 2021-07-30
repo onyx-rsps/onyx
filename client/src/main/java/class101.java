@@ -57,8 +57,8 @@ public class class101 extends class104 {
    }
 
    void method2083(Buffer var1) {
-      this.field1279 = var1.method6043();
-      this.field1280 = var1.method6172();
+      this.field1279 = var1.readUnsignedShort();
+      this.field1280 = var1.readInt();
       this.field1278 = var1.method5948();
       this.field1281 = var1.method5948();
    }
@@ -69,7 +69,7 @@ public class class101 extends class104 {
 
    static final void method2075(boolean var0, class384 var1) {
       while(true) {
-         if (var1.method5901(client.field453.field1209) >= 27) {
+         if (var1.method5901(client.field453.gpiBufLength) >= 27) {
             int var3 = var1.method5893(15);
             if (32767 != var3) {
                boolean var4 = false;
@@ -142,7 +142,7 @@ public class class101 extends class104 {
             }
          }
 
-         var1.method5913();
+         var1.toByteMode();
          return;
       }
    }

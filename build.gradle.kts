@@ -19,6 +19,7 @@ allprojects {
 
     dependencies {
         implementation(kotlin("stdlib", "_"))
+        implementation(kotlin("reflect", "_"))
     }
 
     java {

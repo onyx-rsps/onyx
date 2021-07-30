@@ -35,7 +35,7 @@ public final class class50 extends Node {
          if (var5) {
             var7 = new class350(var0.method5957());
          } else {
-            var7 = new class353(var0.method6172());
+            var7 = new class353(var0.readInt());
          }
 
          var1.method5727((Node)var7, (long)var6);

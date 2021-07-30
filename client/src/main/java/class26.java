@@ -23,8 +23,8 @@ public class class26 {
 
    final void method452(Buffer var1) {
       this.field213 = var1.method5948();
-      this.field208 = var1.method6172();
-      this.field207 = var1.method6172();
+      this.field208 = var1.readInt();
+      this.field207 = var1.readInt();
       this.method462(var1);
    }
 
@@ -34,8 +34,8 @@ public class class26 {
       this.field203 = new int[this.field206];
 
       for(int var2 = 0; var2 < this.field206; ++var2) {
-         this.field205[var2] = var1.method6043();
-         this.field203[var2] = var1.method6043();
+         this.field205[var2] = var1.readUnsignedShort();
+         this.field203[var2] = var1.readUnsignedShort();
       }
 
    }

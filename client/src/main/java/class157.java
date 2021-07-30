@@ -113,22 +113,22 @@ public class class157 extends class349 {
 
    void method2688(Buffer var1, int var2) {
       if (1 == var2) {
-         this.field1795 = var1.method6043();
+         this.field1795 = var1.readUnsignedShort();
       } else if (var2 == 2) {
          this.field1836 = var1.method5957();
       } else if (var2 == 4) {
-         this.field1800 = var1.method6043();
+         this.field1800 = var1.readUnsignedShort();
       } else if (5 == var2) {
-         this.field1801 = var1.method6043();
+         this.field1801 = var1.readUnsignedShort();
       } else if (var2 == 6) {
-         this.field1822 = var1.method6043();
+         this.field1822 = var1.readUnsignedShort();
       } else if (7 == var2) {
-         this.field1804 = var1.method6043();
+         this.field1804 = var1.readUnsignedShort();
          if (this.field1804 > 32767) {
             this.field1804 -= 65536;
          }
       } else if (8 == var2) {
-         this.field1805 = var1.method6043();
+         this.field1805 = var1.readUnsignedShort();
          if (this.field1805 > 32767) {
             this.field1805 -= 65536;
          }
@@ -137,19 +137,19 @@ public class class157 extends class349 {
       } else if (var2 == 11) {
          this.field1806 = 1;
       } else if (var2 == 12) {
-         this.field1807 = var1.method6172();
+         this.field1807 = var1.readInt();
       } else if (16 == var2) {
          this.field1808 = true;
       } else if (23 == var2) {
-         this.field1812 = var1.method6043();
+         this.field1812 = var1.readUnsignedShort();
          this.field1841 = var1.method5948();
       } else if (var2 == 24) {
-         this.field1813 = var1.method6043();
+         this.field1813 = var1.readUnsignedShort();
       } else if (25 == var2) {
-         this.field1815 = var1.method6043();
+         this.field1815 = var1.readUnsignedShort();
          this.field1817 = var1.method5948();
       } else if (var2 == 26) {
-         this.field1811 = var1.method6043();
+         this.field1811 = var1.readUnsignedShort();
       } else if (var2 >= 30 && var2 < 35) {
          this.field1809[var2 - 30] = var1.method5957();
          if (this.field1809[var2 - 30].equalsIgnoreCase(class270.field3525)) {
@@ -166,8 +166,8 @@ public class class157 extends class349 {
             this.field1797 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.field1796[var5] = (short)var1.method6043();
-               this.field1797[var5] = (short)var1.method6043();
+               this.field1796[var5] = (short)var1.readUnsignedShort();
+               this.field1797[var5] = (short)var1.readUnsignedShort();
             }
          } else if (41 == var2) {
             var4 = var1.method5948();
@@ -175,47 +175,47 @@ public class class157 extends class349 {
             this.field1799 = new short[var4];
 
             for(var5 = 0; var5 < var4; ++var5) {
-               this.field1798[var5] = (short)var1.method6043();
-               this.field1799[var5] = (short)var1.method6043();
+               this.field1798[var5] = (short)var1.readUnsignedShort();
+               this.field1799[var5] = (short)var1.readUnsignedShort();
             }
          } else if (42 == var2) {
             this.field1792 = var1.method5949();
          } else if (var2 == 65) {
             this.field1834 = true;
          } else if (78 == var2) {
-            this.field1818 = var1.method6043();
+            this.field1818 = var1.readUnsignedShort();
          } else if (var2 == 79) {
-            this.field1819 = var1.method6043();
+            this.field1819 = var1.readUnsignedShort();
          } else if (90 == var2) {
-            this.field1816 = var1.method6043();
+            this.field1816 = var1.readUnsignedShort();
          } else if (91 == var2) {
-            this.field1835 = var1.method6043();
+            this.field1835 = var1.readUnsignedShort();
          } else if (92 == var2) {
-            this.field1821 = var1.method6043();
+            this.field1821 = var1.readUnsignedShort();
          } else if (var2 == 93) {
-            this.field1823 = var1.method6043();
+            this.field1823 = var1.readUnsignedShort();
          } else if (var2 == 94) {
-            var1.method6043();
+            var1.readUnsignedShort();
          } else if (95 == var2) {
-            this.field1803 = var1.method6043();
+            this.field1803 = var1.readUnsignedShort();
          } else if (var2 == 97) {
-            this.field1827 = var1.method6043();
+            this.field1827 = var1.readUnsignedShort();
          } else if (var2 == 98) {
-            this.field1789 = var1.method6043();
+            this.field1789 = var1.readUnsignedShort();
          } else if (var2 >= 100 && var2 < 110) {
             if (this.field1824 == null) {
                this.field1824 = new int[10];
                this.field1825 = new int[10];
             }
 
-            this.field1824[var2 - 100] = var1.method6043();
-            this.field1825[var2 - 100] = var1.method6043();
+            this.field1824[var2 - 100] = var1.readUnsignedShort();
+            this.field1825[var2 - 100] = var1.readUnsignedShort();
          } else if (var2 == 110) {
-            this.field1839 = var1.method6043();
+            this.field1839 = var1.readUnsignedShort();
          } else if (var2 == 111) {
-            this.field1826 = var1.method6043();
+            this.field1826 = var1.readUnsignedShort();
          } else if (var2 == 112) {
-            this.field1830 = var1.method6043();
+            this.field1830 = var1.readUnsignedShort();
          } else if (113 == var2) {
             this.field1793 = var1.method5949();
          } else if (114 == var2) {
@@ -223,13 +223,13 @@ public class class157 extends class349 {
          } else if (115 == var2) {
             this.field1833 = var1.method5948();
          } else if (var2 == 139) {
-            this.field1829 = var1.method6043();
+            this.field1829 = var1.readUnsignedShort();
          } else if (var2 == 140) {
-            this.field1786 = var1.method6043();
+            this.field1786 = var1.readUnsignedShort();
          } else if (var2 == 148) {
-            this.field1838 = var1.method6043();
+            this.field1838 = var1.readUnsignedShort();
          } else if (149 == var2) {
-            this.field1820 = var1.method6043();
+            this.field1820 = var1.readUnsignedShort();
          } else if (var2 == 249) {
             this.field1831 = class50.method1392(var1, this.field1831);
          }

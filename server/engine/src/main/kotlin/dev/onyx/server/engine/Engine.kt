@@ -8,6 +8,7 @@ import dev.onyx.server.engine.event.api.EventBus
 import dev.onyx.server.engine.manager.LoginManager
 import dev.onyx.server.engine.model.World
 import dev.onyx.server.engine.net.NetworkServer
+import dev.onyx.server.engine.net.game.PacketRegistry
 import dev.onyx.server.engine.script.ScriptManager
 import org.tinylog.kotlin.Logger
 import java.util.*
@@ -39,6 +40,11 @@ class Engine : TimerTask() {
         if(running) return
 
         Logger.info("Preparing game engine.")
+
+        /*
+         * Load and register game packets.
+         */
+        PacketRegistry.loadPackets()
 
         /*
          * Load all game scripts
@@ -154,6 +160,6 @@ class Engine : TimerTask() {
          * The number of engine game ticks before a debug log entry is written to
          * the console and log files.
          */
-        private const val TICKS_PER_DEBUG_LOG = 5
+        private const val TICKS_PER_DEBUG_LOG = 50
     }
 }

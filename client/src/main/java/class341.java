@@ -13,12 +13,12 @@ public abstract class class341 extends class217 implements class392 {
    }
 
    public class393 method5407(Buffer var1) {
-      int var3 = var1.method6043();
+      int var3 = var1.readUnsignedShort();
       class343 var4 = this.method5401(var3);
       class393 var5 = new class393(var3);
       Class var6 = var4.field3941.field4161;
       if (var6 == Integer.class) {
-         var5.field4242 = var1.method6172();
+         var5.field4242 = var1.readInt();
       } else if (Long.class == var6) {
          var5.field4242 = var1.method5954();
       } else if (String.class == var6) {

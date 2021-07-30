@@ -39,26 +39,26 @@ public class class146 extends class349 {
       } else if (3 == var2) {
          this.field1600 = var1.method5957();
       } else if (4 == var2) {
-         this.field1604 = var1.method6172();
+         this.field1604 = var1.readInt();
       } else {
          int var4;
          if (var2 == 5) {
-            this.field1602 = var1.method6043();
+            this.field1602 = var1.readUnsignedShort();
             this.field1603 = new int[this.field1602];
             this.field1605 = new String[this.field1602];
 
             for(var4 = 0; var4 < this.field1602; ++var4) {
-               this.field1603[var4] = var1.method6172();
+               this.field1603[var4] = var1.readInt();
                this.field1605[var4] = var1.method5957();
             }
          } else if (var2 == 6) {
-            this.field1602 = var1.method6043();
+            this.field1602 = var1.readUnsignedShort();
             this.field1603 = new int[this.field1602];
             this.field1606 = new int[this.field1602];
 
             for(var4 = 0; var4 < this.field1602; ++var4) {
-               this.field1603[var4] = var1.method6172();
-               this.field1606[var4] = var1.method6172();
+               this.field1603[var4] = var1.readInt();
+               this.field1606[var4] = var1.readInt();
             }
          }
       }

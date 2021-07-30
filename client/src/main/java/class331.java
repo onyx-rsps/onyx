@@ -25,7 +25,7 @@ public class class331 extends class330 {
       return this.field3878.method5305(var1);
    }
 
-   public int method5280() throws IOException {
+   public int available() throws IOException {
       return this.field3878.method5325();
    }
 

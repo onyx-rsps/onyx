@@ -20,8 +20,8 @@ public class class22 {
          }
       }
 
-      this.field163 = var1.method6043();
-      this.field162 = var1.method6043();
+      this.field163 = var1.readUnsignedShort();
+      this.field162 = var1.readUnsignedShort();
    }
 
    public class23 method351() {

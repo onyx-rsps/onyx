@@ -19,7 +19,7 @@ public abstract class class120 extends Node {
       }
    }
 
-   static void method2199() {
+   static void resetClientScene() {
       client.field417 = -1L;
       class7.field14.field967 = 0;
       class256.field3128 = true;
@@ -27,12 +27,12 @@ public abstract class class120 extends Node {
       client.field636 = -1L;
       class332.method5327();
       client.field453.method1975();
-      client.field453.field1201.offset = 0;
+      client.field453.buffer.offset = 0;
       client.field453.currentInboundPacket = null;
       client.field453.field1212 = null;
       client.field453.field1214 = null;
       client.field453.field1213 = null;
-      client.field453.field1209 = 0;
+      client.field453.gpiBufLength = 0;
       client.field453.field1210 = 0;
       client.field423 = 0;
       client.field571 = 0;
@@ -55,28 +55,28 @@ public abstract class class120 extends Node {
       client.field685 = 0;
       class83.field1172 = 0;
 
-      int var1;
-      for(var1 = 0; var1 < 2048; ++var1) {
-         class83.field1168[var1] = null;
-         class83.field1171[var1] = 1;
+      int i;
+      for(i = 0; i < 2048; ++i) {
+         class83.field1168[i] = null;
+         class83.field1171[i] = 1;
       }
 
-      for(var1 = 0; var1 < 2048; ++var1) {
-         client.field524[var1] = null;
+      for(i = 0; i < 2048; ++i) {
+         client.field524[i] = null;
       }
 
-      for(var1 = 0; var1 < 32768; ++var1) {
-         client.field567[var1] = null;
+      for(i = 0; i < 32768; ++i) {
+         client.field567[i] = null;
       }
 
       client.field535 = -1;
       client.field538.method4671();
       client.field539.method4671();
 
-      for(var1 = 0; var1 < 4; ++var1) {
-         for(int var2 = 0; var2 < 104; ++var2) {
-            for(int var3 = 0; var3 < 104; ++var3) {
-               client.field536[var1][var2][var3] = null;
+      for(i = 0; i < 4; ++i) {
+         for(int x = 0; x < 104; ++x) {
+            for(int y = 0; y < 104; ++y) {
+               client.field536[i][x][y] = null;
             }
          }
       }
@@ -84,11 +84,11 @@ public abstract class class120 extends Node {
       client.field537 = new class296();
       class13.field80.method1323();
 
-      for(var1 = 0; var1 < class282.field3631; ++var1) {
-         class140 var4 = class49.method1383(var1);
+      for(i = 0; i < class282.field3631; ++i) {
+         class140 var4 = class49.method1383(i);
          if (null != var4) {
-            class244.field2912[var1] = 0;
-            class244.field2911[var1] = 0;
+            class244.field2912[i] = 0;
+            class244.field2911[i] = 0;
          }
       }
 
@@ -109,16 +109,16 @@ public abstract class class120 extends Node {
       client.field544 = false;
       client.field598.method4197((int[])null, new int[]{0, 0, 0, 0, 0}, false, -1);
 
-      for(var1 = 0; var1 < 8; ++var1) {
-         client.field532[var1] = null;
-         client.field533[var1] = false;
+      for(i = 0; i < 8; ++i) {
+         client.field532[i] = null;
+         client.field533[i] = false;
       }
 
       class65.field935 = new class364(32);
       client.field415 = true;
 
-      for(var1 = 0; var1 < 100; ++var1) {
-         client.field617[var1] = true;
+      for(i = 0; i < 100; ++i) {
+         client.field617[i] = true;
       }
 
       class229 var6 = class149.method2495(class227.field2572, client.field453.field1205);
@@ -132,8 +132,8 @@ public abstract class class120 extends Node {
       class322.field3845 = null;
       Arrays.fill(client.field638, (Object)null);
 
-      for(var1 = 0; var1 < 8; ++var1) {
-         client.field620[var1] = new class286();
+      for(i = 0; i < 8; ++i) {
+         client.field620[i] = new class286();
       }
 
       class293.field3711 = null;

@@ -37,7 +37,7 @@ public class class152 extends class349 {
 
    void method2535(Buffer var1, int var2) {
       if (1 == var2) {
-         this.field1690 = var1.method6043();
+         this.field1690 = var1.readUnsignedShort();
          this.field1695 = var1.method5948();
          this.field1688 = var1.method5948();
       }

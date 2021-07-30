@@ -15,10 +15,10 @@ public class class285 {
    class285(Buffer var1, byte var2, int var3) {
       this.field3651 = var1.method5957();
       this.field3649 = var1.method5957();
-      this.field3648 = var1.method6043();
+      this.field3648 = var1.readUnsignedShort();
       this.field3646 = var1.method5954();
-      int var4 = var1.method6172();
-      int var5 = var1.method6172();
+      int var4 = var1.readInt();
+      int var5 = var1.readInt();
       this.field3647 = new class286();
       this.field3647.method4571(2);
       this.field3647.method4572(var2);

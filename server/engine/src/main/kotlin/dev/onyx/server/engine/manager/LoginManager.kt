@@ -52,6 +52,9 @@ class LoginManager {
             return
         }
 
+        session.encodeIsaac.init(request.encodeSeed)
+        session.decodeIsaac.init(request.decodeSeed)
+
         /*
          * Register the player to the game world.
          */

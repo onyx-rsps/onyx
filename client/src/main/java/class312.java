@@ -55,7 +55,7 @@ public class class312 {
       this.field3780 = 0;
    }
 
-   public void method5064() {
+   public void updateClock() {
       this.method5075();
    }
 

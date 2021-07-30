@@ -127,7 +127,7 @@ public class class105 extends class104 {
    }
 
    void method2083(Buffer var1) {
-      this.field1298 = var1.method6043();
+      this.field1298 = var1.readUnsignedShort();
       this.field1299 = var1.method5948() == 1;
    }
 

@@ -93,13 +93,13 @@ public class class141 extends class349 {
                this.field1531[var5] = var1.method5951();
             }
 
-            var1.method6172();
+            var1.readInt();
             var5 = var1.method5948();
             this.field1551 = new int[var5];
 
             int var6;
             for(var6 = 0; var6 < this.field1551.length; ++var6) {
-               this.field1551[var6] = var1.method6172();
+               this.field1551[var6] = var1.readInt();
             }
 
             this.field1552 = new byte[var4];
@@ -113,11 +113,11 @@ public class class141 extends class349 {
             } else if (18 == var2) {
                var1.method5965();
             } else if (19 == var2) {
-               this.field1553 = var1.method6043();
+               this.field1553 = var1.readUnsignedShort();
             } else if (21 == var2) {
-               var1.method6172();
+               var1.readInt();
             } else if (var2 == 22) {
-               var1.method6172();
+               var1.readInt();
             } else if (var2 == 23) {
                var1.method5948();
                var1.method5948();

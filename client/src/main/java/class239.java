@@ -162,123 +162,123 @@ public class class239 extends class31 {
 
    }
 
-   static final void method4125(boolean var0, class384 var1) {
-      client.field481 = var0;
-      int var3;
-      int var5;
-      int var6;
-      int var7;
-      int var8;
-      int var9;
-      if (!client.field481) {
-         var3 = var1.method5987();
-         int var4 = var1.method6076();
-         var5 = var1.method6043();
-         class44.field370 = new int[var5][4];
+   static final void decodeRebuildRegion(boolean isDynamic, class384 buf) {
+      client.inDynamicRegion = isDynamic;
+      int chunkY;
+      int regionCount;
+      int region;
+      int i;
+      int ry;
+      int regionId;
+      if (!client.inDynamicRegion) {
+         chunkY = buf.readUnsignedShortADD();
+         int chunkX = buf.readUnsignedShortLE();
+         regionCount = buf.readUnsignedShort();
+         class44.regionXteas = new int[regionCount][4];
 
-         for(var6 = 0; var6 < var5; ++var6) {
-            for(var7 = 0; var7 < 4; ++var7) {
-               class44.field370[var6][var7] = var1.method6172();
+         for(region = 0; region < regionCount; ++region) {
+            for(i = 0; i < 4; ++i) {
+               class44.regionXteas[region][i] = buf.readInt();
             }
          }
 
-         class235.field2821 = new int[var5];
-         class251.field3110 = new int[var5];
-         class97.field1263 = new int[var5];
-         class227.field2673 = new byte[var5][];
-         class356.field4011 = new byte[var5][];
-         boolean var17 = false;
-         if ((48 == var4 / 8 || var4 / 8 == 49) && 48 == var3 / 8) {
-            var17 = true;
+         class235.regionIds = new int[regionCount];
+         class251.regionMapFiles = new int[regionCount];
+         class97.regionLandscapeFiles = new int[regionCount];
+         class227.field2673 = new byte[regionCount][];
+         class356.field4011 = new byte[regionCount][];
+         boolean forceSend = false;
+         if ((48 == chunkX / 8 || chunkX / 8 == 49) && 48 == chunkY / 8) {
+            forceSend = true;
          }
 
-         if (48 == var4 / 8 && var3 / 8 == 148) {
-            var17 = true;
+         if (48 == chunkX / 8 && chunkY / 8 == 148) {
+            forceSend = true;
          }
 
-         var5 = 0;
+         regionCount = 0;
 
-         for(var7 = (var4 - 6) / 8; var7 <= (var4 + 6) / 8; ++var7) {
-            for(var8 = (var3 - 6) / 8; var8 <= (var3 + 6) / 8; ++var8) {
-               var9 = (var7 << 8) + var8;
-               if (!var17 || var8 != 49 && var8 != 149 && 147 != var8 && var7 != 50 && (var7 != 49 || 47 != var8)) {
-                  class235.field2821[var5] = var9;
-                  class251.field3110[var5] = class199.field2277.method4428("m" + var7 + "_" + var8);
-                  class97.field1263[var5] = class199.field2277.method4428("l" + var7 + "_" + var8);
-                  ++var5;
+         for(int rx = (chunkX - 6) / 8; rx <= (chunkX + 6) / 8; ++rx) {
+            for(ry = (chunkY - 6) / 8; ry <= (chunkY + 6) / 8; ++ry) {
+               regionId = (rx << 8) + ry;
+               if (!forceSend || ry != 49 && ry != 149 && 147 != ry && rx != 50 && (rx != 49 || 47 != ry)) {
+                  class235.regionIds[regionCount] = regionId;
+                  class251.regionMapFiles[regionCount] = class199.field2277.method4428("m" + rx + "_" + ry);
+                  class97.regionLandscapeFiles[regionCount] = class199.field2277.method4428("l" + rx + "_" + ry);
+                  ++regionCount;
                }
             }
          }
 
-         class99.method2072(var4, var3, true);
+         class99.method2072(chunkX, chunkY, true);
       } else {
-         var3 = var1.method5988();
-         boolean var16 = var1.method5979() == 1;
-         var5 = var1.method6043();
-         var6 = var1.method6043();
-         var1.method5892();
+         chunkY = buf.method5988();
+         boolean var16 = buf.method5979() == 1;
+         regionCount = buf.readUnsignedShort();
+         region = buf.readUnsignedShort();
+         buf.toBitMode();
 
          int var10;
-         for(var7 = 0; var7 < 4; ++var7) {
-            for(var8 = 0; var8 < 13; ++var8) {
-               for(var9 = 0; var9 < 13; ++var9) {
-                  var10 = var1.method5893(1);
+         for(i = 0; i < 4; ++i) {
+            for(ry = 0; ry < 13; ++ry) {
+               for(regionId = 0; regionId < 13; ++regionId) {
+                  var10 = buf.method5893(1);
                   if (1 == var10) {
-                     client.field467[var7][var8][var9] = var1.method5893(26);
+                     client.field467[i][ry][regionId] = buf.method5893(26);
                   } else {
-                     client.field467[var7][var8][var9] = -1;
+                     client.field467[i][ry][regionId] = -1;
                   }
                }
             }
          }
 
-         var1.method5913();
-         class44.field370 = new int[var6][4];
+         buf.toByteMode();
+         class44.regionXteas = new int[region][4];
 
-         for(var7 = 0; var7 < var6; ++var7) {
-            for(var8 = 0; var8 < 4; ++var8) {
-               class44.field370[var7][var8] = var1.method6172();
+         for(i = 0; i < region; ++i) {
+            for(ry = 0; ry < 4; ++ry) {
+               class44.regionXteas[i][ry] = buf.readInt();
             }
          }
 
-         class235.field2821 = new int[var6];
-         class251.field3110 = new int[var6];
-         class97.field1263 = new int[var6];
-         class227.field2673 = new byte[var6][];
-         class356.field4011 = new byte[var6][];
-         var6 = 0;
+         class235.regionIds = new int[region];
+         class251.regionMapFiles = new int[region];
+         class97.regionLandscapeFiles = new int[region];
+         class227.field2673 = new byte[region][];
+         class356.field4011 = new byte[region][];
+         region = 0;
 
-         for(var7 = 0; var7 < 4; ++var7) {
-            for(var8 = 0; var8 < 13; ++var8) {
-               for(var9 = 0; var9 < 13; ++var9) {
-                  var10 = client.field467[var7][var8][var9];
+         for(i = 0; i < 4; ++i) {
+            for(ry = 0; ry < 13; ++ry) {
+               for(regionId = 0; regionId < 13; ++regionId) {
+                  var10 = client.field467[i][ry][regionId];
                   if (var10 != -1) {
                      int var11 = var10 >> 14 & 1023;
                      int var12 = var10 >> 3 & 2047;
                      int var13 = (var11 / 8 << 8) + var12 / 8;
 
                      int var14;
-                     for(var14 = 0; var14 < var6; ++var14) {
-                        if (var13 == class235.field2821[var14]) {
+                     for(var14 = 0; var14 < region; ++var14) {
+                        if (var13 == class235.regionIds[var14]) {
                            var13 = -1;
                            break;
                         }
                      }
 
                      if (var13 != -1) {
-                        class235.field2821[var6] = var13;
+                        class235.regionIds[region] = var13;
                         var14 = var13 >> 8 & 255;
                         int var15 = var13 & 255;
-                        class251.field3110[var6] = class199.field2277.method4428("m" + var14 + "_" + var15);
-                        class97.field1263[var6] = class199.field2277.method4428("l" + var14 + "_" + var15);
-                        ++var6;
+                        class251.regionMapFiles[region] = class199.field2277.method4428("m" + var14 + "_" + var15);
+                        class97.regionLandscapeFiles[region] = class199.field2277.method4428("l" + var14 + "_" + var15);
+                        ++region;
                      }
                   }
                }
             }
          }
 
-         class99.method2072(var3, var5, !var16);
+         class99.method2072(chunkY, regionCount, !var16);
       }
 
    }

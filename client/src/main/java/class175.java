@@ -104,16 +104,16 @@ public class class175 implements class188 {
    public void method3256(Buffer var1) {
       this.field2032 = var1.method5948();
       this.field2023 = var1.method5948();
-      this.field2029 = var1.method6043();
+      this.field2029 = var1.readUnsignedShort();
       this.field2028 = var1.method5948();
       this.field2030 = var1.method5948();
-      this.field2027 = var1.method6043();
+      this.field2027 = var1.readUnsignedShort();
       this.field2031 = var1.method5948();
       this.field2025 = var1.method5948();
-      this.field2026 = var1.method6043();
+      this.field2026 = var1.readUnsignedShort();
       this.field2022 = var1.method5948();
       this.field2034 = var1.method5948();
-      this.field2033 = var1.method6043();
+      this.field2033 = var1.readUnsignedShort();
       this.field2024 = var1.method5948();
       this.field2035 = var1.method5948();
       this.method3141();

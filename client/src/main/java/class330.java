@@ -13,7 +13,7 @@ public abstract class class330 {
 
    public abstract void method5279();
 
-   public abstract int method5280() throws IOException;
+   public abstract int available() throws IOException;
 
    public abstract int method5281() throws IOException;
 

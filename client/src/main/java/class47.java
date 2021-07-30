@@ -8,7 +8,7 @@ public class class47 implements Comparator {
    static final byte[] method815(byte[] var0) {
       Buffer var2 = new Buffer(var0);
       int var3 = var2.method5948();
-      int var4 = var2.method6172();
+      int var4 = var2.readInt();
       if (var4 < 0 || class277.field3592 != 0 && var4 > class277.field3592) {
          throw new RuntimeException();
       } else if (0 == var3) {
@@ -16,7 +16,7 @@ public class class47 implements Comparator {
          var2.method5960(var7, 0, var4);
          return var7;
       } else {
-         int var5 = var2.method6172();
+         int var5 = var2.readInt();
          if (var5 >= 0 && (class277.field3592 == 0 || var5 <= class277.field3592)) {
             byte[] var6 = new byte[var5];
             if (1 == var3) {

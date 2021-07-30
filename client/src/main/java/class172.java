@@ -68,13 +68,13 @@ public class class172 implements class188 {
    public void method3256(Buffer var1) {
       this.field1998 = var1.method5948();
       this.field2003 = var1.method5948();
-      this.field2000 = var1.method6043();
+      this.field2000 = var1.readUnsignedShort();
       this.field2004 = var1.method5948();
-      this.field2007 = var1.method6043();
+      this.field2007 = var1.readUnsignedShort();
       this.field2005 = var1.method5948();
-      this.field1999 = var1.method6043();
+      this.field1999 = var1.readUnsignedShort();
       this.field2001 = var1.method5948();
-      this.field2006 = var1.method6043();
+      this.field2006 = var1.readUnsignedShort();
       this.field2002 = var1.method5948();
       this.method3132();
    }

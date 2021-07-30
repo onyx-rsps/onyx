@@ -38,11 +38,5 @@ class Scene(val packed: Int) {
          * The distance in tile to the edge of a [Scene] border to rebuild neighboring regions
          */
         const val REBUILD_DISTANCE = 16
-
-        /**
-         * The distance in tiles that entities are rendered in the scene.
-         */
-        const val RENDER_DISTANCE = 14
-
     }
 }

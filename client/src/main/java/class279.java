@@ -19,7 +19,7 @@ public class class279 {
    }
 
    public class279(Buffer var1, boolean var2) {
-      int var3 = var1.method6043();
+      int var3 = var1.readUnsignedShort();
       boolean var4 = var1.method5948() == 1;
       byte var5;
       if (var4) {
@@ -28,7 +28,7 @@ public class class279 {
          var5 = 0;
       }
 
-      int var6 = var1.method6043();
+      int var6 = var1.readUnsignedShort();
       this.field3617 = new ArrayList(var6);
 
       for(int var7 = 0; var7 < var6; ++var7) {

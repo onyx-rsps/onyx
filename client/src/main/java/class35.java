@@ -88,16 +88,16 @@ public class class35 extends Node {
 
    void method673(byte[] var1) {
       Buffer var2 = new Buffer(var1);
-      this.field266 = var2.method6172();
-      this.field273 = var2.method6172();
-      this.field294 = var2.method6172();
-      this.field269 = var2.method6172();
+      this.field266 = var2.readInt();
+      this.field273 = var2.readInt();
+      this.field294 = var2.readInt();
+      this.field269 = var2.readInt();
       if (this.field269 < 0) {
          this.field269 = ~this.field269;
          this.field271 = true;
       }
 
-      int var3 = var2.method6172();
+      int var3 = var2.readInt();
       this.field286 = new byte[var3][];
 
       for(int var4 = 0; var4 < var3; ++var4) {

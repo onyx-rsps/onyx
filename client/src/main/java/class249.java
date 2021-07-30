@@ -300,20 +300,20 @@ public class class249 extends Node {
       this.field2993 = false;
       this.field2977 = var1.method5948();
       this.field2961 = var1.method5948();
-      this.field2962 = var1.method6043();
+      this.field2962 = var1.readUnsignedShort();
       this.field2947 = var1.method5951();
       this.field3019 = var1.method5951();
-      this.field2969 = var1.method6043();
-      this.field2970 = var1.method6043();
+      this.field2969 = var1.readUnsignedShort();
+      this.field2970 = var1.readUnsignedShort();
       this.field2989 = var1.method5948();
-      this.field3001 = var1.method6043();
+      this.field3001 = var1.readUnsignedShort();
       if (65535 == this.field3001) {
          this.field3001 = -1;
       } else {
          this.field3001 += this.field2958 & -65536;
       }
 
-      this.field3012 = var1.method6043();
+      this.field3012 = var1.readUnsignedShort();
       if (this.field3012 == 65535) {
          this.field3012 = -1;
       }
@@ -326,7 +326,7 @@ public class class249 extends Node {
 
          for(var4 = 0; var4 < var3; ++var4) {
             this.field3099[var4] = var1.method5948();
-            this.field3082[var4] = var1.method6043();
+            this.field3082[var4] = var1.readUnsignedShort();
          }
       }
 
@@ -338,11 +338,11 @@ public class class249 extends Node {
          this.field3080 = new int[var4][];
 
          for(var5 = 0; var5 < var4; ++var5) {
-            var6 = var1.method6043();
+            var6 = var1.readUnsignedShort();
             this.field3080[var5] = new int[var6];
 
             for(var7 = 0; var7 < var6; ++var7) {
-               this.field3080[var5][var7] = var1.method6043();
+               this.field3080[var5][var7] = var1.readUnsignedShort();
                if (this.field3080[var5][var7] == 65535) {
                   this.field3080[var5][var7] = -1;
                }
@@ -351,12 +351,12 @@ public class class249 extends Node {
       }
 
       if (this.field2977 == 0) {
-         this.field3091 = var1.method6043();
+         this.field3091 = var1.readUnsignedShort();
          this.field2978 = var1.method5948() == 1;
       }
 
       if (1 == this.field2977) {
-         var1.method6043();
+         var1.readUnsignedShort();
          var1.method5948();
       }
 
@@ -395,7 +395,7 @@ public class class249 extends Node {
             if (1 == var10) {
                this.field2946[var9] = var1.method5951();
                this.field3028[var9] = var1.method5951();
-               this.field3029[var9] = var1.method6172();
+               this.field3029[var9] = var1.readInt();
             } else {
                this.field3029[var9] = -1;
             }
@@ -420,7 +420,7 @@ public class class249 extends Node {
          this.field3022 = var1.method5948();
          this.field3023 = var1.method5948();
          this.field3021 = var1.method5948();
-         this.field3018 = var1.method6043();
+         this.field3018 = var1.readUnsignedShort();
          if (this.field3018 == 65535) {
             this.field3018 = -1;
          }
@@ -434,59 +434,59 @@ public class class249 extends Node {
       }
 
       if (1 == this.field2977 || 3 == this.field2977 || this.field2977 == 4) {
-         this.field2983 = var1.method6172();
+         this.field2983 = var1.readInt();
       }
 
       if (this.field2977 == 3 || 4 == this.field2977) {
-         this.field2984 = var1.method6172();
-         this.field2985 = var1.method6172();
-         this.field2986 = var1.method6172();
+         this.field2984 = var1.readInt();
+         this.field2985 = var1.readInt();
+         this.field2986 = var1.readInt();
       }
 
       if (this.field2977 == 5) {
-         this.field3084 = var1.method6172();
-         this.field3006 = var1.method6172();
+         this.field3084 = var1.readInt();
+         this.field3006 = var1.readInt();
       }
 
       if (6 == this.field2977) {
          this.field2950 = 1;
-         this.field3002 = var1.method6043();
+         this.field3002 = var1.readUnsignedShort();
          if (65535 == this.field3002) {
             this.field3002 = -1;
          }
 
          this.field3003 = 1;
-         this.field3004 = var1.method6043();
+         this.field3004 = var1.readUnsignedShort();
          if (65535 == this.field3004) {
             this.field3004 = -1;
          }
 
-         this.field3005 = var1.method6043();
+         this.field3005 = var1.readUnsignedShort();
          if (65535 == this.field3005) {
             this.field3005 = -1;
          }
 
-         this.field3048 = var1.method6043();
+         this.field3048 = var1.readUnsignedShort();
          if (this.field3048 == 65535) {
             this.field3048 = -1;
          }
 
-         this.field3000 = var1.method6043();
-         this.field3009 = var1.method6043();
-         this.field3010 = var1.method6043();
+         this.field3000 = var1.readUnsignedShort();
+         this.field3009 = var1.readUnsignedShort();
+         this.field3010 = var1.readUnsignedShort();
       }
 
       if (this.field2977 == 7) {
          this.field3086 = new int[this.field2969 * this.field2970];
          this.field3087 = new int[this.field2970 * this.field2969];
          this.field3022 = var1.method5948();
-         this.field3018 = var1.method6043();
+         this.field3018 = var1.readUnsignedShort();
          if (65535 == this.field3018) {
             this.field3018 = -1;
          }
 
          this.field3024 = var1.method5948() == 1;
-         this.field2983 = var1.method6172();
+         this.field2983 = var1.readInt();
          this.field3025 = var1.method5951();
          this.field3026 = var1.method5951();
          var5 = var1.method5948();
@@ -512,7 +512,7 @@ public class class249 extends Node {
       if (2 == this.field2961 || 2 == this.field2977) {
          this.field3043 = var1.method5957();
          this.field3041 = var1.method5957();
-         var5 = var1.method6043() & 63;
+         var5 = var1.readUnsignedShort() & 63;
          this.field2979 |= var5 << 11;
       }
 
@@ -551,21 +551,21 @@ public class class249 extends Node {
       var1.method5948();
       this.field2993 = true;
       this.field2977 = var1.method5948();
-      this.field2962 = var1.method6043();
+      this.field2962 = var1.readUnsignedShort();
       this.field2947 = var1.method5951();
       this.field3019 = var1.method5951();
-      this.field2969 = var1.method6043();
+      this.field2969 = var1.readUnsignedShort();
       if (this.field2977 == 9) {
          this.field2970 = var1.method5951();
       } else {
-         this.field2970 = var1.method6043();
+         this.field2970 = var1.readUnsignedShort();
       }
 
       this.field3033 = var1.method5949();
       this.field3092 = var1.method5949();
       this.field3063 = var1.method5949();
       this.field2964 = var1.method5949();
-      this.field3001 = var1.method6043();
+      this.field3001 = var1.readUnsignedShort();
       if (this.field3001 == 65535) {
          this.field3001 = -1;
       } else {
@@ -574,53 +574,53 @@ public class class249 extends Node {
 
       this.field2978 = var1.method5948() == 1;
       if (this.field2977 == 0) {
-         this.field2981 = var1.method6043();
-         this.field3091 = var1.method6043();
+         this.field2981 = var1.readUnsignedShort();
+         this.field3091 = var1.readUnsignedShort();
          this.field3102 = var1.method5948() == 1;
       }
 
       if (this.field2977 == 5) {
-         this.field3084 = var1.method6172();
-         this.field3077 = var1.method6043();
+         this.field3084 = var1.readInt();
+         this.field3077 = var1.readUnsignedShort();
          this.field3027 = var1.method5948() == 1;
          this.field2989 = var1.method5948();
          this.field2997 = var1.method5948();
-         this.field2998 = var1.method6172();
+         this.field2998 = var1.readInt();
          this.field2945 = var1.method5948() == 1;
          this.field2963 = var1.method5948() == 1;
       }
 
       if (6 == this.field2977) {
          this.field2950 = 1;
-         this.field3002 = var1.method6043();
+         this.field3002 = var1.readUnsignedShort();
          if (65535 == this.field3002) {
             this.field3002 = -1;
          }
 
          this.field3007 = var1.method5951();
          this.field2960 = var1.method5951();
-         this.field3009 = var1.method6043();
-         this.field3010 = var1.method6043();
-         this.field3011 = var1.method6043();
-         this.field3000 = var1.method6043();
-         this.field3005 = var1.method6043();
+         this.field3009 = var1.readUnsignedShort();
+         this.field3010 = var1.readUnsignedShort();
+         this.field3011 = var1.readUnsignedShort();
+         this.field3000 = var1.readUnsignedShort();
+         this.field3005 = var1.readUnsignedShort();
          if (65535 == this.field3005) {
             this.field3005 = -1;
          }
 
          this.field3015 = var1.method5948() == 1;
-         var1.method6043();
+         var1.readUnsignedShort();
          if (this.field3033 != 0) {
-            this.field3013 = var1.method6043();
+            this.field3013 = var1.readUnsignedShort();
          }
 
          if (0 != this.field3092) {
-            var1.method6043();
+            var1.readUnsignedShort();
          }
       }
 
       if (this.field2977 == 4) {
-         this.field3018 = var1.method6043();
+         this.field3018 = var1.readUnsignedShort();
          if (65535 == this.field3018) {
             this.field3018 = -1;
          }
@@ -630,18 +630,18 @@ public class class249 extends Node {
          this.field3022 = var1.method5948();
          this.field3023 = var1.method5948();
          this.field3024 = var1.method5948() == 1;
-         this.field2983 = var1.method6172();
+         this.field2983 = var1.readInt();
       }
 
       if (this.field2977 == 3) {
-         this.field2983 = var1.method6172();
+         this.field2983 = var1.readInt();
          this.field2987 = var1.method5948() == 1;
          this.field2989 = var1.method5948();
       }
 
       if (this.field2977 == 9) {
          this.field2959 = var1.method5948();
-         this.field2983 = var1.method6172();
+         this.field2983 = var1.readInt();
          this.field2992 = var1.method5948() == 1;
       }
 
@@ -693,7 +693,7 @@ public class class249 extends Node {
          for(int var5 = 0; var5 < var3; ++var5) {
             int var6 = var1.method5948();
             if (0 == var6) {
-               var4[var5] = new Integer(var1.method6172());
+               var4[var5] = new Integer(var1.readInt());
             } else if (var6 == 1) {
                var4[var5] = var1.method5957();
             }
@@ -712,7 +712,7 @@ public class class249 extends Node {
          int[] var4 = new int[var3];
 
          for(int var5 = 0; var5 < var3; ++var5) {
-            var4[var5] = var1.method6172();
+            var4[var5] = var1.readInt();
          }
 
          return var4;

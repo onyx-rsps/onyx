@@ -54,7 +54,7 @@ public class class140 extends class349 {
 
    void method2348(Buffer var1, int var2) {
       if (5 == var2) {
-         this.field1528 = var1.method6043();
+         this.field1528 = var1.readUnsignedShort();
       }
 
    }

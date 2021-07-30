@@ -246,7 +246,7 @@ public class Buffer extends Node {
       return this.payload[++this.offset - 1];
    }
 
-   public int method6043() {
+   public int readUnsignedShort() {
       this.offset += 2;
       return (this.payload[this.offset - 1] & 255) + ((this.payload[this.offset - 2] & 255) << 8);
    }
@@ -266,14 +266,14 @@ public class Buffer extends Node {
       return (this.payload[this.offset - 1] & 255) + ((this.payload[this.offset - 3] & 255) << 16) + ((this.payload[this.offset - 2] & 255) << 8);
    }
 
-   public int method6172() {
+   public int readInt() {
       this.offset += 4;
       return (this.payload[this.offset - 1] & 255) + ((this.payload[this.offset - 4] & 255) << 24) + ((this.payload[this.offset - 3] & 255) << 16) + ((this.payload[this.offset - 2] & 255) << 8);
    }
 
    public long method5954() {
-      long var2 = (long)this.method6172() & 4294967295L;
-      long var4 = (long)this.method6172() & 4294967295L;
+      long var2 = (long)this.readInt() & 4294967295L;
+      long var4 = (long)this.readInt() & 4294967295L;
       return var4 + (var2 << 32);
    }
 
@@ -340,12 +340,12 @@ public class Buffer extends Node {
 
    public int method5961() {
       int var2 = this.payload[this.offset] & 255;
-      return var2 < 128 ? this.method5948() - 64 : this.method6043() - '\uc000';
+      return var2 < 128 ? this.method5948() - 64 : this.readUnsignedShort() - '\uc000';
    }
 
    public int method5962() {
       int var2 = this.payload[this.offset] & 255;
-      return var2 < 128 ? this.method5948() : this.method6043() - '\u8000';
+      return var2 < 128 ? this.method5948() : this.readUnsignedShort() - '\u8000';
    }
 
    public int method6171() {
@@ -361,14 +361,14 @@ public class Buffer extends Node {
    }
 
    public int method6129() {
-      return this.payload[this.offset] < 0 ? this.method6172() & Integer.MAX_VALUE : this.method6043();
+      return this.payload[this.offset] < 0 ? this.readInt() & Integer.MAX_VALUE : this.readUnsignedShort();
    }
 
    public int method5965() {
       if (this.payload[this.offset] < 0) {
-         return this.method6172() & Integer.MAX_VALUE;
+         return this.readInt() & Integer.MAX_VALUE;
       } else {
-         int var2 = this.method6043();
+         int var2 = this.readUnsignedShort();
          return 32767 == var2 ? -1 : var2;
       }
    }
@@ -389,8 +389,8 @@ public class Buffer extends Node {
       this.offset = 0;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         int var5 = this.method6172();
-         int var6 = this.method6172();
+         int var5 = this.readInt();
+         int var6 = this.readInt();
          int var7 = 0;
          int var8 = -1640531527;
 
@@ -411,8 +411,8 @@ public class Buffer extends Node {
       this.offset = 0;
 
       for(int var4 = 0; var4 < var3; ++var4) {
-         int var5 = this.method6172();
-         int var6 = this.method6172();
+         int var5 = this.readInt();
+         int var6 = this.readInt();
          int var7 = -957401312;
          int var8 = -1640531527;
 
@@ -434,8 +434,8 @@ public class Buffer extends Node {
       int var6 = (var3 - var2) / 8;
 
       for(int var7 = 0; var7 < var6; ++var7) {
-         int var8 = this.method6172();
-         int var9 = this.method6172();
+         int var8 = this.readInt();
+         int var9 = this.readInt();
          int var10 = 0;
          int var11 = -1640531527;
 
@@ -458,8 +458,8 @@ public class Buffer extends Node {
       int var6 = (var3 - var2) / 8;
 
       for(int var7 = 0; var7 < var6; ++var7) {
-         int var8 = this.method6172();
-         int var9 = this.method6172();
+         int var8 = this.readInt();
+         int var9 = this.readInt();
          int var10 = -957401312;
          int var11 = -1640531527;
 
@@ -498,7 +498,7 @@ public class Buffer extends Node {
    public boolean method5973() {
       this.offset -= 4;
       int var2 = class227.method3901(this.payload, 0, this.offset);
-      int var3 = this.method6172();
+      int var3 = this.readInt();
       return var2 == var3;
    }
 
@@ -553,12 +553,12 @@ public class Buffer extends Node {
       this.payload[++this.offset - 1] = (byte)(var1 >> 8);
    }
 
-   public int method6076() {
+   public int readUnsignedShortLE() {
       this.offset += 2;
       return (this.payload[this.offset - 2] & 255) + ((this.payload[this.offset - 1] & 255) << 8);
    }
 
-   public int method5987() {
+   public int readUnsignedShortADD() {
       this.offset += 2;
       return (this.payload[this.offset - 1] - 128 & 255) + ((this.payload[this.offset - 2] & 255) << 8);
    }

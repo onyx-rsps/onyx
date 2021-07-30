@@ -1,12 +1,12 @@
 package dev.onyx.server.engine.model.map
 
-class Chunk(val packed: Int) {
+class Chunk(val id: Int) {
 
-    val x: Int get() = packed and 0x7FFF
+    val x: Int get() = id and 0x7FFF
 
-    val y: Int get() = (packed shr 15) and 0x7FFF
+    val y: Int get() = (id shr 15) and 0x7FFF
 
-    val level: Int get() = (packed shr 30) and 0x3
+    val level: Int get() = (id shr 30) and 0x3
 
     constructor(x: Int, y: Int, level: Int = 0) : this(
         (x and 0x7FFF) or ((y and 0x7FFF) shl 15) or (level shl 30)
@@ -28,6 +28,16 @@ class Chunk(val packed: Int) {
         x * SIZE,
         y * SIZE,
         level
+    )
+
+    val region: Region get() = Region(
+        x / (Region.SIZE / SIZE),
+        y / (Region.SIZE / SIZE)
+    )
+
+    val scene: Scene get() = Scene(
+        x / (Scene.SIZE / SIZE),
+        y / (Scene.SIZE / SIZE)
     )
 
     companion object {

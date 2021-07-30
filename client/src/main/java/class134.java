@@ -111,7 +111,7 @@ public final class class134 extends class330 implements Runnable {
       return this.field1490 ? 0 : this.field1498.read();
    }
 
-   public int method5280() throws IOException {
+   public int available() throws IOException {
       return this.field1490 ? 0 : this.field1498.available();
    }
 

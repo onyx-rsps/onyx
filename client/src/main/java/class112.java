@@ -9,7 +9,7 @@ public class class112 extends class120 {
    }
 
    void method2191(Buffer var1) {
-      this.field1349 = var1.method6043();
+      this.field1349 = var1.readUnsignedShort();
       var1.method5948();
       if (var1.method5948() != 255) {
          --var1.offset;

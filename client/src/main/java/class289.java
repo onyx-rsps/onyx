@@ -14,12 +14,12 @@ public class class289 {
 
    static void method4616() {
       client.field453.method1975();
-      client.field453.field1201.offset = 0;
+      client.field453.buffer.offset = 0;
       client.field453.currentInboundPacket = null;
       client.field453.field1212 = null;
       client.field453.field1214 = null;
       client.field453.field1213 = null;
-      client.field453.field1209 = 0;
+      client.field453.gpiBufLength = 0;
       client.field453.field1210 = 0;
       client.field423 = 0;
       client.field545 = 0;
