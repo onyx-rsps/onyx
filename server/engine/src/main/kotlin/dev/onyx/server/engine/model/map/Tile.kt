@@ -25,6 +25,11 @@ class Tile(val packed: Int) {
         y / Chunk.SIZE
     )
 
+    val region: Region get() = Region(
+        x / Region.SIZE,
+        y / Region.SIZE
+    )
+
     fun translate(offsetX: Int, offsetY: Int, offsetLevel: Int = 0) = Tile(
         x + offsetX,
         y + offsetY,

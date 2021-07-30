@@ -55,7 +55,7 @@ class LoginManager {
         /*
          * Register the player to the game world.
          */
-        player.register()
+        player.initialize()
     }
 
     companion object {
