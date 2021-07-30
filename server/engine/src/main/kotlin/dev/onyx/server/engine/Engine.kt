@@ -101,7 +101,7 @@ class Engine : TimerTask() {
             val allocMem = totalMemory / (1024 * 1024)
             val totalMem = maxMemory / (1024 * 1024)
 
-            val debugMessage =  "[Cycle Time: $cycleTimeMs] " +
+            val debugMessage =  "[Cycle Time: ${cycleTime}ms] " +
                                 "[Players Online: $playerCount] " +
                                 "[Memory Usage: used=${usedMem}MB / alloc=${allocMem}MB / total=${totalMem}MB]"
 
@@ -125,6 +125,6 @@ class Engine : TimerTask() {
          * The number of engine game ticks before a debug log entry is written to
          * the console and log files.
          */
-        private const val TICKS_PER_DEBUG_LOG = 50
+        private const val TICKS_PER_DEBUG_LOG = 5
     }
 }

@@ -63,6 +63,10 @@ class Session(val ctx: ChannelHandlerContext) {
         if(channel.isActive) {
             channel.close()
         }
+
+        if(this::client.isInitialized && client.player.isRegistered()) {
+            client.player.deregister()
+        }
     }
 
     /**
