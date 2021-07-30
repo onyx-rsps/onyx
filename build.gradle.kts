@@ -38,8 +38,4 @@ allprojects {
             kotlinOptions.jvmTarget = JavaVersion.VERSION_11.toString()
         }
     }
-
-    tasks.build {
-        group = "onyx"
-    }
 }

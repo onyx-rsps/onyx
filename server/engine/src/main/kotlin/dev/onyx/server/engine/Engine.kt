@@ -8,6 +8,7 @@ import dev.onyx.server.engine.event.api.EventBus
 import dev.onyx.server.engine.manager.LoginManager
 import dev.onyx.server.engine.model.World
 import dev.onyx.server.engine.net.NetworkServer
+import dev.onyx.server.engine.script.ScriptManager
 import org.tinylog.kotlin.Logger
 import java.util.*
 import kotlin.math.absoluteValue
@@ -40,6 +41,11 @@ class Engine : TimerTask() {
         Logger.info("Preparing game engine.")
 
         /*
+         * Load all game scripts
+         */
+        ScriptManager.loadScripts()
+
+        /*
          * Start the game tick scheduler
          */
         Timer().scheduleAtFixedRate(this, 0L, ServerConfig.tickRate)
@@ -54,6 +60,8 @@ class Engine : TimerTask() {
          */
         loginManager.start()
 
+        ScriptManager.scripts.keys.forEach { ScriptManager.enableScript(it) }
+
         running = true
 
         EventBus.fire(EngineStartupEvent())
@@ -67,6 +75,14 @@ class Engine : TimerTask() {
         /*
          * Shutdown game engine components.
          */
+        networkServer.stop()
+
+        ScriptManager.scripts.keys.forEach { ScriptManager.disableScript(it) }
+
+        /*
+         * Unload all game scripts.
+         */
+        ScriptManager.unloadScripts()
 
         running = false
 

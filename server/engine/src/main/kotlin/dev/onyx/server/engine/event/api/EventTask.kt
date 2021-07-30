@@ -4,22 +4,22 @@ import dev.onyx.server.engine.event.type.Event
 import kotlin.reflect.KClass
 
 class EventTask<T : Event>(
-    private val type: KClass<T>,
-    private var action: T.() -> Unit = { }
+    private val type: KClass<T>
 ) {
 
     private var condition: T.() -> Boolean = { true }
 
-    internal fun createListener(): EventListener<T> = EventListener(type, condition, action)
+    constructor(type: KClass<T>, action: T.() -> Unit) : this(type) {
+        EventListener(type, condition, action)
+    }
 
     fun where(condition: T.() -> Boolean): EventTask<T> {
         this.condition = condition
         return this
     }
 
-    fun then(action: T.() -> Unit): EventTask<T> {
-        this.action = action
-        return this
+    fun then(action: T.() -> Unit): EventListener<T> {
+        return EventListener(type, condition, action)
     }
 
 }

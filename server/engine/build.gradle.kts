@@ -6,4 +6,5 @@ dependencies {
     implementation("io.netty:netty-all:_")
     implementation("org.jetbrains.kotlin:kotlin-scripting-common:_")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:_")
+    implementation("io.github.classgraph:classgraph:_")
 }

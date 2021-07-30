@@ -11,9 +11,9 @@ application {
 }
 
 dependencies {
-    project(":server:scripts").dependencyProject.subprojects.forEach { project ->
+    project(":server:game").dependencyProject.subprojects.forEach { project ->
         if(project.buildFile.exists()) {
-            runtimeOnly(project)
+            implementation(project)
         }
     }
 

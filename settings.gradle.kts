@@ -12,7 +12,7 @@ include(":server:common")
 include(":server:config")
 include(":server:cache")
 include(":server:engine")
-includeModules("server:scripts")
+includeModules("server:game")
 
 fun includeModules(module: String) {
     val moduleRelativePath = module.replace(":", "/")

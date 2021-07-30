@@ -15,6 +15,10 @@ interface TaskContext {
         return task
     }
 
+    fun strongTask(action: suspend Task.() -> Unit) = task(TaskType.StrongTask, action)
+
+    fun weakTask(action: suspend Task.() -> Unit) = task(TaskType.WeakTask, action)
+
     fun cancelTasks(type: TaskType) {
         tasks[type]?.forEach { task ->
             task.cancel()
