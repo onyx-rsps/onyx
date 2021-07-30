@@ -12,3 +12,20 @@ include(":server:common")
 include(":server:config")
 include(":server:cache")
 include(":server:engine")
+includeModules("server:scripts")
+
+fun includeModules(module: String) {
+    val moduleRelativePath = module.replace(":", "/")
+    println(moduleRelativePath)
+    val moduleRootDir = rootProject.projectDir.toPath().resolve(moduleRelativePath)
+    if(moduleRootDir.toFile().exists()) {
+        val buildFiles = groovy.ant.FileNameFinder().getFileNames("$moduleRootDir", "**/*.gradle.kts")
+        buildFiles.forEach { filename ->
+            val buildFilePath = java.nio.file.Paths.get(filename)
+            val moduleDir = buildFilePath.parent
+            val relativePath = moduleRootDir.relativize(moduleDir)
+            val moduleName = "$relativePath".replace(File.separator, ":")
+            include(":$module:$moduleName")
+        }
+    }
+}
