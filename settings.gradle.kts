@@ -16,7 +16,6 @@ includeModules("server:scripts")
 
 fun includeModules(module: String) {
     val moduleRelativePath = module.replace(":", "/")
-    println(moduleRelativePath)
     val moduleRootDir = rootProject.projectDir.toPath().resolve(moduleRelativePath)
     if(moduleRootDir.toFile().exists()) {
         val buildFiles = groovy.ant.FileNameFinder().getFileNames("$moduleRootDir", "**/*.gradle.kts")

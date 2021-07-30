@@ -6,21 +6,53 @@ import dev.onyx.server.engine.event.api.EventHandler
 import dev.onyx.server.engine.event.type.Event
 import dev.onyx.server.engine.manager.LoginManager
 import dev.onyx.server.engine.model.list.PlayerList
+import dev.onyx.server.engine.task.Task
+import dev.onyx.server.engine.task.TaskContext
+import dev.onyx.server.engine.task.TaskType
 import java.util.concurrent.LinkedBlockingDeque
 
-class World : EventContext {
+class World : EventContext, TaskContext {
 
     private val loginManager: LoginManager by inject()
 
     override val events = LinkedBlockingDeque<EventHandler<Event>>()
 
+    override val tasks = mutableMapOf<TaskType, MutableSet<Task>>()
+
     val players: PlayerList = PlayerList(MAX_PLAYERS)
 
     fun cycle() {
+        processEventsAndTasks()
 
+        loginManager.processLogins()
+        loginManager.processLogouts()
+
+        postProcessTasks()
     }
 
     fun isFull(): Boolean = players.size + loginManager.loginQueue.size >= MAX_PLAYERS
+
+    private fun processEventsAndTasks() {
+        while(true) {
+            /*
+             * Handle queued events
+             */
+            while(events.isNotEmpty()) {
+                events.poll().handle()
+            }
+
+            /*
+             * Run queued tasks
+             */
+            val resumed = tasks.values.flatMap {
+                it.toList().map(Task::run)
+            }
+
+            if(resumed.all { !it } && events.isEmpty()) {
+                break
+            }
+        }
+    }
 
     companion object {
 
