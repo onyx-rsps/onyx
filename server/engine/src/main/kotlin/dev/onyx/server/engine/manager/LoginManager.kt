@@ -1,63 +1,70 @@
 package dev.onyx.server.engine.manager
 
-import dev.onyx.server.common.hash.SHA256
-import dev.onyx.server.config.impl.ServerConfig
-import dev.onyx.server.engine.model.entity.Player
+import com.google.common.util.concurrent.ThreadFactoryBuilder
 import dev.onyx.server.engine.net.StatusResponse
 import dev.onyx.server.engine.net.login.LoginRequest
 import dev.onyx.server.engine.serializer.JsonPlayerSerializer
-import java.util.concurrent.ConcurrentLinkedDeque
-import java.util.concurrent.ConcurrentLinkedQueue
-import java.util.stream.Collectors
+import org.tinylog.kotlin.Logger
+import java.util.concurrent.Executors
+import java.util.concurrent.LinkedBlockingDeque
 
 class LoginManager {
 
-    internal val loginQueue = ConcurrentLinkedDeque<LoginRequest>()
-    internal val logoutQueue = ConcurrentLinkedQueue<Player>()
+    private val executor = Executors.newFixedThreadPool(LOGIN_THREADS, ThreadFactoryBuilder()
+        .setNameFormat("login-thread")
+        .setUncaughtExceptionHandler { t, e -> Logger.error(e) { "An error occurred in [thread: $t]." } }
+        .build()
+    )
+
+    internal val loginQueue = LinkedBlockingDeque<LoginRequest>()
 
     /**
-     * Processes the login requests from the login queue.
+     * Starts processing login and logout queued requests async.
      */
-    internal fun processLogins() {
-        var loginCount = 0
-        while(loginQueue.isNotEmpty() && loginCount < ServerConfig.maxLoginsPerTick) {
-            val request = loginQueue.poll()
-            val session = request.session
+    fun start() {
+        Logger.info("Starting login queue processor on $LOGIN_THREADS thread.")
 
-            /*
-             * Load the player from the serializer.
-             */
-            val player = serializer.load(request)
-
-            /*
-             * If loading the player with the provided credentials is null, return
-             * the status code 'INVALID_CREDENTIALS' and close the session.
-             */
-            if(player == null) {
-                session.writeAndClose(StatusResponse.INVALID_CREDENTIALS)
-                return
+        executor.execute {
+            while(true) {
+                this.processLogins()
             }
-
-            /*
-             * Register the player to the game world.
-             */
-            player.register()
-
-            /*
-             * Increment the login counter.
-             */
-            loginCount++
         }
     }
 
     /**
-     * Processes the logout requests from the logout queue.
+     * Processes the login requests from the login queue.
      */
-    internal fun processLogouts() {
+    private fun processLogins() {
+        val request = loginQueue.take()
+        val session = request.session
 
+        /*
+         * Load the player from the serializer.
+         */
+        val player = serializer.load(request)
+
+        /*
+         * If loading the player with the provided credentials is null, return
+         * the status code 'INVALID_CREDENTIALS' and close the session.
+         */
+        if(player == null) {
+            session.writeAndClose(StatusResponse.INVALID_CREDENTIALS)
+            return
+        }
+
+        /*
+         * Register the player to the game world.
+         */
+        player.register()
     }
 
     companion object {
+
+        /**
+         * The number of threads that are dedicated to processing Login and logout requests.
+         */
+        private const val LOGIN_THREADS = 4
+
         /**
          * The current player save serializer for loading and saving player data.
          */

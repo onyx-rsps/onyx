@@ -24,9 +24,6 @@ class World : EventContext, TaskContext {
     fun cycle() {
         processEventsAndTasks()
 
-        loginManager.processLogins()
-        loginManager.processLogouts()
-
         postProcessTasks()
     }
 

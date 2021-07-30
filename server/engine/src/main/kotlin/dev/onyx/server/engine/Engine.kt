@@ -2,19 +2,21 @@ package dev.onyx.server.engine
 
 import dev.onyx.server.common.inject
 import dev.onyx.server.config.impl.ServerConfig
+import dev.onyx.server.engine.event.EngineShutdownEvent
+import dev.onyx.server.engine.event.EngineStartupEvent
+import dev.onyx.server.engine.event.api.EventBus
+import dev.onyx.server.engine.manager.LoginManager
 import dev.onyx.server.engine.model.World
 import dev.onyx.server.engine.net.NetworkServer
 import org.tinylog.kotlin.Logger
 import java.util.*
 import kotlin.math.absoluteValue
-import kotlin.math.floor
-import kotlin.math.round
-import kotlin.math.roundToInt
 
 class Engine : TimerTask() {
 
     private val networkServer: NetworkServer by inject()
     private val world: World by inject()
+    private val loginManager: LoginManager by inject()
 
     private var running = false
 
@@ -47,7 +49,14 @@ class Engine : TimerTask() {
          */
         networkServer.start()
 
+        /*
+         * Start login queue processor.
+         */
+        loginManager.start()
+
         running = true
+
+        EventBus.fire(EngineStartupEvent())
     }
 
     fun stop() {
@@ -60,6 +69,8 @@ class Engine : TimerTask() {
          */
 
         running = false
+
+        EventBus.fire(EngineShutdownEvent())
     }
 
     fun isRunning(): Boolean = running
@@ -90,6 +101,8 @@ class Engine : TimerTask() {
          */
         cycleTime += (System.currentTimeMillis() - start).toInt()
 
+        val cycleTimeCopy = this.cycleTime
+
         if(debugTickCounter++ >= TICKS_PER_DEBUG_LOG) {
             val freeMemory = Runtime.getRuntime().freeMemory()
             val totalMemory = Runtime.getRuntime().totalMemory()
@@ -101,7 +114,7 @@ class Engine : TimerTask() {
             val allocMem = totalMemory / (1024 * 1024)
             val totalMem = maxMemory / (1024 * 1024)
 
-            val debugMessage =  "[Cycle Time: ${cycleTime}ms] " +
+            val debugMessage =  "[Cycle Time: ${cycleTimeCopy}ms] " +
                                 "[Players Online: $playerCount] " +
                                 "[Memory Usage: used=${usedMem}MB / alloc=${allocMem}MB / total=${totalMem}MB]"
 
